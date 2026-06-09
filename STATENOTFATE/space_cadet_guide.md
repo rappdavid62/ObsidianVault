@@ -103,41 +103,39 @@ Use these aligned shortcuts to speed up execution and reduce friction:
 
 ---
 
-## 7. Obsidian Mobile Sync Troubleshooting
+## 7. Obsidian Git Sync Guide (Cross-Device Sync)
 
-If your phone or tablet is not syncing or linking up with your desktop Obsidian vault, go through this checklist:
+We have successfully configured your Windows PC to sync your notes to a private GitHub repository. To link your phone and tablet, follow these steps:
 
-### Step 1: Desktop Status Check
-* **OneDrive Client**: Ensure the OneDrive desktop application is running on your PC (press `Win + S`, search for `OneDrive`, and launch it). If it is not running, your local edits will not sync to the cloud.
-* **Corrupted `.git` Cleanup**: We have successfully deleted the corrupted `.git` folder from `C:\Users\rappd\OneDrive\Desktop\ObsidianVault` to prevent OneDrive file lock conflicts. Do not initialize another Git repo inside the OneDrive folder.
+### Part A: Generate a GitHub Personal Access Token (PAT)
+Since GitHub requires secure authentication, you must generate a Personal Access Token (PAT) to log in on your phone and tablet:
+1. **On your PC**: Go to [GitHub Settings](https://github.com/settings/tokens).
+   *(Or navigate on github.com: Click your profile picture -> Settings -> Developer Settings -> Personal Access Tokens -> Tokens (classic))*
+2. Click **Generate new token** -> **Generate new token (classic)**.
+3. Set **Note** to: `Obsidian Mobile Sync`.
+4. Set **Expiration** to: `No expiration` (or a long duration so you don't have to re-auth frequently).
+5. In the scopes list, check the top box for **`repo`** (Full control of private repositories).
+6. Scroll to the bottom and click **Generate token**.
+7. **Important**: Copy the generated token immediately (starts with `ghp_`). Write it down or send it to your mobile devices securely (e.g. via encrypted chat, email, or notepad).
 
-### Step 2: Choose Your Platform Configuration
+### Part B: Clone the Vault on Phone & Tablet
+1. Install **Obsidian** on your phone/tablet from the App Store (iOS) or Play Store (Android).
+2. Create a **new empty vault** on your mobile device (name it `ObsidianVault`).
+3. Enable Community Plugins:
+   - Open Obsidian Settings -> Community Plugins -> click **Turn on community plugins**.
+4. Search for and install the **Obsidian Git** plugin:
+   - Click **Browse**, search for `Obsidian Git`.
+   - Click **Install**, then click **Enable**.
+5. Configure Authentication and Clone:
+   - Go to the **Obsidian Git** plugin settings.
+   - Run the command to clone your repository (you can also trigger this via the Obsidian Command Palette: `Ctrl + P` or swipe down on mobile -> type `Git: Clone`).
+   - Enter your repository URL: `https://github.com/rappdavid62/ObsidianVault.git`
+   - Enter your GitHub username: `rappdavid62`
+   - Enter your GitHub Personal Access Token (the `ghp_...` token) as your password.
+6. Once authenticated, the plugin will clone your entire vault onto your device.
 
-#### 📱 Apple iOS (iPhone or iPad)
-*iOS restricts third-party apps like Obsidian from reading folders inside the OneDrive sandbox. OneDrive sync will NOT work natively on iOS. Use iCloud instead:*
-1. **On PC**: Install **iCloud for Windows** from the Microsoft Store.
-2. **Move Vault**: Move `ObsidianVault` from your Desktop into the `iCloud Drive\Obsidian` folder on your PC.
-3. **On iPhone/iPad**: Install Obsidian and open it. Choose **"Open folder as vault"** and select the folder inside iCloud Drive. It will sync automatically in the background.
-
-#### 🤖 Android Phone or Tablet
-*Android cannot read OneDrive cloud directories directly in third-party apps. You must use a sync manager:*
-1. **On Android**: Install **OneSync** (Autosync for OneDrive) from the Play Store.
-2. **Setup Folder Pair**: Link your OneDrive account and pair the `Desktop/ObsidianVault` cloud directory with a local folder on your Android storage (e.g., `/Documents/ObsidianVault`).
-3. **On Android Obsidian**: Tap **"Open folder as vault"** and choose that local folder.
-
-#### 🔑 Private Git Sync (All Devices)
-*If you prefer to bypass cloud services entirely and sync via Git:*
-1. **On PC**: Create a new **private** GitHub repository named `ObsidianVault` (do not mix this with the PWA code repository).
-2. **Initialize & Push**:
-   ```powershell
-   cd "C:\Users\rappd\OneDrive\Desktop\ObsidianVault"
-   git init
-   git remote add origin https://github.com/rappdavid62/ObsidianVault.git
-   git add .
-   git commit -m "Initial vault commit"
-   git branch -M main
-   git push -u origin main
-   ```
-3. **On Mobile**: Open Obsidian, install the **Obsidian Git** plugin, and clone your private repository using a GitHub **Personal Access Token (PAT)** for authentication.
-
-
+### Part C: Configure Auto-Sync
+In the **Obsidian Git** settings on all devices (PC, phone, tablet), configure the following for automated sync:
+* **Vault backup interval (minutes)**: Set to `5` or `10` (commits and pushes changes automatically).
+* **Pull updates on startup**: Enable (fetches any changes made on other devices when you open Obsidian).
+* **Push on backup**: Enable.
