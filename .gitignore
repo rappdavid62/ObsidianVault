@@ -1,0 +1,16 @@
+# Obsidian system and workspace files
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/plugins/obsidian-git/data.json
+
+# Trash folder
+.trash/
+
+# OS system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# OneDrive temp folders
+.tmp.driveupload/
+.tmp.drivedownload/
