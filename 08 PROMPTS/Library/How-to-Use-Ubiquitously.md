@@ -1,0 +1,1 @@
+[Full updated How-to with sections for Claude, Gemini, Grok integration - as generated in this session]

@@ -1,0 +1,1 @@
+[Full current content of the source-of-truth README from Laptop Sync vault - see previous for details; Obsidian here is now the canonical source for all AI prompts/skills]
