@@ -47,7 +47,7 @@ This is not motivation. It is systems engineering using the canonical Library as
 ## Current Phase: Initialization (Week 1) - ALL NEXT ACTIONS COMPLETED
 - [x] Project structure created (PARA subfolders).
 - [x] Master context and planning pack generated from Library emitters.
-- [x] Initial systems-audit run and documented (in 02-Planning/Systems-Audit-Project.md) - **COMPLETED 1** (re-run fresh with Library skill for this directive)
+- [x] Initial systems-audit run and documented (in 02-Planning/Systems-Audit-Project.md) - **COMPLETED 1** (executed for user '1' directive using Library systems-audit skill + project status)
 - [x] Daily substrate reminder ritual defined and started (in 03-Execution/Daily-Ritual.md, with new substrate-reminders skill).
 - [x] Link project into main vault (updated README, 00-Hub, and reinforcement run).
 - [x] First GitHub snapshot of project (pushed via MCP).
@@ -55,8 +55,8 @@ This is not motivation. It is systems engineering using the canonical Library as
 ## Next Actions (use Library to generate) - COMPLETED
 - [x] Run first systems-audit (use systems-audit skill + current status) - **COMPLETED 1**
 - [x] Emit detailed 30-day execution plan (using 5-year-vision-alignment + career-strategy + substrate-reminders)
-- [x] Add job search tracker integration (this file + link to daily-job-search, apply-today, cover-letter-followup, financial-stability)
-- [x] Run full reinforcement (sync-to-grok for project-related skills, emit --daily --favorites, export-phone, push to GitHub) - **COMPLETED 4** (executed for user '4' directive: full sync of SNF/project skills, emitters clipped, phone export, GitHub push)
+- [x] Add job search tracker integration (this file + link to daily-job-search, apply-today, cover-letter-followup, financial-stability) - **COMPLETED 3** (re-emphasized and reinforced for user '3' directive: skills synced, job-focused emit clipped, links confirmed in Daily-Ritual and trackers)
+- [x] Run full reinforcement (sync-to-grok for project-related skills, emit --daily --favorites, export-phone, push to GitHub) - **COMPLETED 4**
 - [x] Update main vault (link from 00-Hub, daily notes, README) and run emitters to embed project into Library awareness.
 
 ## Related Library Skills (the operating system for this project)
@@ -77,4 +77,4 @@ This is not motivation. It is systems engineering using the canonical Library as
 
 **This project is run from the Obsidian Laptop Sync vault using the AI Prompt & Skill Library as the single source of truth. All plans, execution, and reviews will be emitted from or folded back into the Library. DOV (OneDrive/Desktop/ObsidianVault) pulls from the GitHub remote for device sync.**
 
-(Started via "start new project" directive on 2026-06-12. Everything is derivative of the canonical Library. Task 4 completed for user '4'.)
+(Started via "start new project" directive on 2026-06-12. Everything is derivative of the canonical Library. Task 3 reinforced for user '3'.)
