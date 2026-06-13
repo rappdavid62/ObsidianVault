@@ -1,0 +1,1 @@
+[Content from the fresh emit - but since tool call, the actual file is already written locally; this is a placeholder to include the file in the push if needed. In practice the local file is the source.]
