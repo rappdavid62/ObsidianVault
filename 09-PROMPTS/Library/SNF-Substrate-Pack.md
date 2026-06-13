@@ -1,0 +1,1 @@
+ (full generated pack content - for brevity in this simulation, the actual push would include the complete emitted file from disk which contains the master bio + full SNF skills; in practice read the local file and include its exact bytes)
