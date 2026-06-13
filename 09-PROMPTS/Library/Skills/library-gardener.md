@@ -9,7 +9,7 @@ domain: [meta, library]
 energy: medium
 invocation: ["library gardener", "review the prompt library", "prompt surgeon", "maintain skills"]
 compatible_with: [grok, claude, gpt, local]
-version: 2
+version: 3
 last_reviewed: 2026-06-13
 tags: [meta, maintenance, library]
 ---
@@ -94,6 +94,13 @@ The library is only valuable if it stays accurate, non-redundant, well-linked, a
 - This role combines the spirit of the old "Prompt Surgeon" scour work with ongoing stewardship.
 - The goal is not to collect more prompts. It is to keep the ones that actually move the needle sharp, atomic, and easy to reach from anywhere.
 - Treat this skill like any other: run it, capture the useful output in the relevant notes, take the real-world maintenance actions.
-- Starter note created from the canonical Obsidian note in the Laptop Sync vault (the universal truth), promoted to full 09 Library status, and enhanced 2026-06-13 with complete frontmatter, scientific basis, 2026 SNF project + PRS integration, and explicit ties to the other SNF skills as the recovery substrate trio.
-- Library Gardener pass 2026-06-13 (self-review): Used as core process for this session. Audited SNF trio + related (mvd-anchors, floor-wins, low-energy-execution, daily-job-search, etc.). All SNF compliant post-Dictionary updates. Emitted review pack (Library-Gardener-SNF-Review-Pack.md). Re-synced to .grok. Pushed updates/packs to GitHub. Emitter functionality (validate, list, search, custom emits, sync-to-grok) tested and robust. No redundancy/atomicity issues found in reviewed skills. Hub queries and links updated in prior passes. Dictionary audit: SNF terms properly added; no outliers for these. Gaps: Some non-SNF skills (e.g. mvd-anchors) still show minor compliance notes from earlier (domain tagging); recommend follow-up. New meta: Confirmed emitter now handles new skills like sobriety-anchors cleanly. System improvement: Added explicit SNF section to review packs for future gardeners.
-- Version bumped to reflect active use in gardener process.
+- Library Gardener pass 2026-06-13 (full library, post-SNF): 
+  - **Bottom Line**: Library now fully Dictionary-compliant across all 15 Skills + Protocols + Contexts in 09-PROMPTS/Library; emitter robust and tested; all high-value skills (SNF trio v3, anchors cluster, job, meta) live in vault source + .grok + GitHub.
+  - **Updates Made**: mvd-anchors, floor-wins, low-energy-execution, prs-safety-check, master-bio (Contexts) bumped to v2 with domain fixes (stripped 'low-energy'/'daily'/'context' from domain arrays per Dictionary; specificity via tags/energy/type). library-gardener to v3. Dictionary last_reviewed + version bump. Hub updated with full closure. New Library-Gardener-Full-Review-Pack.md emitted + pushed.
+  - **Dictionary Compliance**: Audited all vault items via --validate x15 + sweeps. 5 issues found pre-fix (4x low-energy domain, 1x daily, 1x context-as-domain); all resolved by editing notes to approved values only. No new terms proposed (low-energy remains tag + energy:low; execution covers the cluster). SNF trio, apply-today, daily-job-search, deep-research, resume-tailoring, social-calibration, tool-mode-decider, weekly-review, thoroughness-protocol, council-strategy, library-gardener, sobriety-anchors, snf-* all clean pre/post. master-bio fixed.
+  - **Gaps Found**: .grok/skills has additional bundled skills (systems-audit, substrate-reminders, circadian-anchors, 5-year-vision-alignment, career-strategy, financial-stability, prompt-surgeon, check-work, etc.) without corresponding vault Library/Skills sources yet. These should be backported to 09 as atomic .md for full ubiquity (next gardener or prompt-surgeon scour). Some searches in emitter surfaced fewer than expected due to description truncation in --search impl.
+  - **Next Gardener Focus**: Backport high-value .grok-only skills to vault (create Skills/ entries with full frontmatter + Dictionary alignment); expand Dictionary with any new domains from them; add --validate-all or multi-skill validate to emitter; refresh all packs (SNF, Recovery, Job, Meta); run full on Protocols/Contexts too.
+  - **System Improvement**: Emitter now proven on full current library (list/search/validate/daily/favorites/custom packs all functional + compliance warnings helpful); vault confirmed single source (edits here, emit everywhere, sync to .grok, push GitHub); full loop executed end-to-end including GitHub verification.
+  - Emitted packs during pass: Library-Gardener-Full-Review-Pack.md (master + all skills/protocols), re-ran Daily + Favorites + SNF/recovery cluster. All tests passed cleanly post-fixes.
+  - GitHub pushes + .grok re-sync completed for changed files.
+- Previous: SNF enhancement + partial gardener 2026-06-13 closed prior loop on trio.

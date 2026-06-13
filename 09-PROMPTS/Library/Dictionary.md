@@ -3,8 +3,8 @@ type: meta
 name: dictionary
 domain: [meta, library]
 tags: [dictionary, vocabulary, standards, taxonomy]
-last_reviewed: 2026-06-08
-version: 1
+last_reviewed: 2026-06-13
+version: 2
 ---
 
 # Skill & Prompt Dictionary (Controlled Vocabulary)
@@ -140,7 +140,6 @@ Use specific, searchable tags. Prefer hyphenated. Group them in your mind as:
 - `priority`: high | medium | low (for Library Gardener focus)
 
 ## How to Use This Dictionary
-
 1. When creating a new note → reference this for `domain`, `energy`, `tags`.
 2. In the Hub and Dataview → use these exact strings for reliable queries.
 3. In the emitter tools → can be extended to suggest or validate values.
