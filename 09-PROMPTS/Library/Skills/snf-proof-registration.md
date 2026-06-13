@@ -9,7 +9,7 @@ domain: [philosophy-snf, recovery, execution, sobriety]
 energy: low
 invocation: ["/proof", "register this win", "log visible proof", "external memory", "this shows effort"]
 compatible_with: [grok, claude, gpt, local]
-version: 2
+version: 3
 last_reviewed: 2026-06-13
 tags: [state-not-fate, philosophy-snf, recovery, visible-proof, external-memory, proof, floor-win, restart-speed, resilience-rate, hope-meter, low-energy, no-shame, mvd, anchors, prediction-error, cognitive-offloading, substrate]
 ---
@@ -49,7 +49,7 @@ Never let a day with any action go unregistered on low-energy or post-lapse days
 
 ## Context to Inject
 - Current energy and any recent lapse, weak period, or "reading error" language.
-- The specific anchor or MVD that was completed (cross-ref [[mvd-anchors]], [[floor-wins]], [[sobriety-anchors]]).
+- The specific anchor or MVD that was completed (cross-ref mvd-anchors, floor-wins, sobriety-anchors).
 - Recent status, job_search_tracker entries, or Proof-Log data.
 - SNF principles from core philosophy: depression as temporary multi-system state (not identity or fate), external memory over internal judgment, restart speed over streak purity, "State, not fate."
 - 2026 Project trackers and 5-year vision constraints (PRS cert, trades path, Cincinnati vision, runway).
@@ -68,6 +68,7 @@ Never let a day with any action go unregistered on low-energy or post-lapse days
 - Core State Not Fate mechanism from canonicals (01_canonical_project_system, 01_snf_core_philosophy, ANTI-GRAVITY, Hope and Activation Start, etc.): "written proof that a bad day no longer erases the week", "visible proof that tomorrow can still be shaped", "external memory", "the project should be measured by restart speed, not streak purity."
 - "Proof" here is not motivational fluff; it is literal externalized data that survives the damaged reward prediction system and the hostile interpretive bias of the state.
 - 2026-06-13 enhancement: Full scientific basis + concrete integration with 2026 SNF project (job_search_tracker, Proof-Log.md), DOV/GitHub sync for ubiquity, sobriety-anchors as co-equal generator, Dictionary-aligned frontmatter + tags, expanded personal examples.
+- Library Gardener pass 2026-06-13: Validated compliant, emitted in review packs, synced to .grok, pushed to GitHub. Emitter functionality tests (validate, --list, --search, --favorites, custom SNF packs) successful. Cross-refs to sobriety-anchors, snf-hope-activation, mvd/floor-wins intact. No content changes needed.
 - Update this note whenever your logging/tracking method changes (new column in job_search_tracker, new Proof-Log format, status block evolution).
 - This skill is foundational for long-term restartability, self-trust rebuild, and the 5-year vision of stable function.
 

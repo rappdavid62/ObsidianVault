@@ -9,7 +9,7 @@ domain: [philosophy-snf, recovery, execution, sobriety]
 energy: low
 invocation: ["/hope", "activate hope", "repair the prediction", "effort can still matter", "one visible win"]
 compatible_with: [grok, claude, gpt, local]
-version: 2
+version: 3
 last_reviewed: 2026-06-13
 tags: [state-not-fate, philosophy-snf, recovery, hope, hope-activation, effort-reconnection, visible-proof, reading-error, low-energy, no-shame, anchors, proof-based-hope, prediction-error, external-memory, substrate, restart-speed]
 ---
@@ -74,6 +74,7 @@ Never promise mood change. Promise only "one result visible enough to count as e
 - Core SNF canonicals (from 01_canonical_project_system, 04_Hope_and_Activation_Start, 01_snf_core_philosophy, ANTI-GRAVITY, etc.): "hope is the brain's prediction that effort can still change something", "one action small enough to survive resistance and one result visible enough to count as evidence", "early success is defined by continuity and proof, not dramatic mood transformation", "written proof that a bad day no longer erases the week", "State, not fate."
 - Explicitly rejects fake optimism and motivational language: "hopeful without sounding fake." Tone must be blunt, respectful of low functioning, evidence-only.
 - 2026-06-13 enhancement: Full scientific basis + concrete 2026 SNF project + DOV/GitHub sync + job_search_tracker + Proof-Log integration + sobriety as co-anchor + richer ubiquitous frontmatter. Aligned to 09 Library standards + Dictionary (philosophy-snf domain).
+- Library Gardener pass 2026-06-13: Validated compliant with Dictionary, included in emitted review packs (SNF-Trio, SNF-Extended, Daily, Favorites), re-synced to .grok/skills/, pushed to GitHub. No further changes; emitter tests (validate, list, search, custom packs) passed cleanly. Links to related (mvd-anchors, sobriety-anchors, floor-wins, etc.) confirmed.
 - This skill is the critical bridge between the floor (MVD + sobriety) and any later ambition/expansion in the 5-year vision.
 
 ## Scientific Basis (substrate reminders)

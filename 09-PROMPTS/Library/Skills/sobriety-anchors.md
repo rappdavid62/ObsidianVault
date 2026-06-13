@@ -8,7 +8,7 @@ domain: [sobriety, philosophy-snf, recovery, execution]
 energy: low
 invocation: ["/sober", "sobriety anchors", "contact the date", "sober floor", "2019-11-01"]
 compatible_with: [grok, claude, gpt, local]
-version: 2
+version: 3
 last_reviewed: 2026-06-13
 tags: [sobriety, recovery, philosophy-snf, state-not-fate, anchors, floor, proof, no-shame, restart, triggers, counter-script, prs, mvd, external-memory, 2019-11-01]
 ---
@@ -19,7 +19,7 @@ tags: [sobriety, recovery, philosophy-snf, state-not-fate, anchors, floor, proof
 **Last synced / enhanced:** 2026-06-13
 
 ## Purpose
-Sobriety (since 2019-11-01) is the load-bearing foundation for everything else: energy management, job reliability, self-trust, PRS work, trades path, and the 5-year vision. This skill turns the abstract "I'm sober" into a tiny, repeatable, proof-generating set of anchors and counter-practices that survive low energy, bad nights, or cravings. It prevents the "one bad day erases everything" reading error and keeps the identity fact ("I made contact with the date today") alive as visible external evidence.
+Sobriety (since 2019-11-01) is the load-bearing foundation for everything else: energy management, job reliability, self-trust, PRS work, trades path, and the 5-year vision. This skill turns the abstract "I'm sober" into a tiny, repeatable, proof-generating set of daily anchors and counter-practices that survive low energy, bad nights, or cravings. It prevents the "one bad day erases everything" reading error and keeps the identity fact ("I made contact with the date today") alive as visible external evidence.
 
 Recovery is not a side project; it is the substrate on which job, energy, social, and long-horizon vision are built. Protecting it with tiny daily anchors is the highest-leverage thing you do.
 
@@ -56,7 +56,7 @@ Recovery is not a side project; it is the substrate on which job, energy, social
 - Current energy and status block (especially runway, social calendar, sleep, emotional load).
 - Recent triggers or near-misses from trackers/notes or job_search_tracker stress.
 - Personal reasons-to-live / counter-script lines (if documented in vault; keep short and believable).
-- PRS lens from [[prs-safety-check]] (self as "client" — professional safety first).
+- PRS lens from prs-safety-check (self as "client" — professional safety first).
 - SNF principles: sobriety as identity fact and substrate, not performance; external proof over internal feeling; restart without punishment.
 
 ## Related Skills & Prompts
@@ -73,6 +73,7 @@ Recovery is not a side project; it is the substrate on which job, energy, social
 - Recovery is not a side project; it is the substrate on which job, energy, social, and 5-year vision are built. Protecting it with tiny daily anchors is the highest-leverage thing you do.
 - Language must stay non-heroic and proof-oriented: "I made contact with the fact of my sobriety today" beats motivational slogans or identity performance.
 - 2026-06-13 enhancement: Promoted to full first-class skill in 09 Library with rich frontmatter (Dictionary-aligned: sobriety + philosophy-snf domains), full scientific basis, concrete 2026 project + PRS + job-search integration, DOV sync notes, and tight pairing with snf-hope-activation + snf-proof-registration as the "SNF recovery trio." Added to Hubs/favorites.
+- Library Gardener pass 2026-06-13: Validated compliant with Dictionary. Included in multiple emitted packs (SNF-Trio, SNF-Extended, Daily, Favorites, Library-Gardener-SNF-Review-Pack). Re-synced to .grok/skills/ and pushed to GitHub. Emitter tests (--validate, --list, --search, --favorites, custom packs) passed; no issues. Links to mvd-anchors, floor-wins, snf-* confirmed. No further edits.
 - Update whenever personal triggers evolve, safe contacts change, or you discover a new counter-script line that actually lands on bad days.
 - Added and reinforced during the full Library expansion (08/09) and 2026 SNF Substrate Systems Project to make sobriety explicit, first-class, and proof-generating alongside other anchors and systems.
 
@@ -84,9 +85,9 @@ Recovery is not a side project; it is the substrate on which job, energy, social
 - External memory + counter to shame: Writing the proof (even "I contacted the date") changes what the substrate has to compute on the next spike. Prevents the reading error that one near-miss = "I'm back to pre-2019."
 
 ## Enhanced Practical Ties to Your 2026 SNF Substrate Systems Project, PRS Work, DOV & 5-Year Vision
-- High-trigger day (money runway pressure, social calendar, PRS exposure): Counter-script "Sober since 2019-11-01 — this is temporary systems state" (spoken aloud) + log one micro-proof in status block or Proof-Log. Ties directly to [[financial-stability]] and [[career-strategy]].
-- Before PRS-related social, group, or interview: Quick anchor review of reasons + one safe contact text (or just "I can reach out"). Use with [[prs-safety-check]] and [[social-calibration]]. Register the prep action as proof of professional reliability.
-- Post-lapse or low-energy collapse: "I made contact with the date today" (or meds + light + one counter-script line) as the floor win. Register in Proof-Log (project + main) to feed [[snf-hope-activation]] and accelerate restart speed. "I restart without punishment."
+- High-trigger day (money runway pressure, social calendar, PRS exposure): Counter-script "Sober since 2019-11-01 — this is temporary systems state" (spoken aloud) + log one micro-proof in status block or Proof-Log. Ties directly to financial-stability and career-strategy.
+- Before PRS-related social, group, or interview: Quick anchor review of reasons + one safe contact text (or just "I can reach out"). Use with prs-safety-check and social-calibration. Register the prep action as proof of professional reliability.
+- Post-lapse or low-energy collapse: "I made contact with the date today" (or meds + light + one counter-script line) as the floor win. Register in Proof-Log (project + main) to feed snf-hope-activation and accelerate restart speed. "I restart without punishment."
 - Daily MVD integration: Sobriety anchors are often the non-negotiable first 1-2 items on any MVD list. They protect the identity floor so job search, trades training, and social reintegration can happen on top of a stable substrate.
 - Weekly systems-audit / 5-year vision: Sobriety proof aggregate (days with registered anchors, trigger responses that worked, continuity despite low energy) shows the foundation enabling the parallel tracks (PRS credential + trades/HVAC path) and the long-horizon Cincinnati vision (stable function → partnership/family). Green sobriety = permission to expand.
 - DOV / OneDrive / GitHub sync: The anchors and their proofs live in the synced vault (status blocks, Proof-Log, Library source). Emit packs for any AI on any device. The fact "sober since 2019-11-01" is now external data that survives fog, travel, or device loss. Pull Library updates so the counter-scripts and trigger lists stay current.
