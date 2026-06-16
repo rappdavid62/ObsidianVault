@@ -27,7 +27,7 @@ Then ingest the original documents and extracted markdown files.
 
 The distilled markdown files in this pack were derived from the included project documents. They are useful for AI retrieval, but the original files remain the source of truth when there is any wording dispute.
 
-See [[../MOCS/00_grok_organization_log]] for the full session log (source searches across drives + .grok conversations, extractions, new Tech/Human/MOCS folders with numbered files, GitHub sync, and handling of the 2026 All Documents / five-year bundles + Canva work per user request to set aside).
+See [[00_grok_organization_log]] for the full session log (source searches across drives + .grok conversations, extractions, new Tech/Human/MOCS folders with numbered files, GitHub sync, and handling of the 2026 All Documents / five-year bundles + Canva work per user request to set aside).
 
 ## Synthesized additions from Grok organization session (June 2026)
 Organization log summary appended for connectivity:

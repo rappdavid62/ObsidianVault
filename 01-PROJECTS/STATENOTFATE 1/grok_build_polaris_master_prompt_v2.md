@@ -355,4 +355,4 @@ AI systems and execution layer integrated:
 - Shared with PWA: Same principles (proof/anchors, low friction, restart without shame, ideal/realistic, energy awareness, external memory, blunt tone). Life Coach + Prompt Library for stabilization layer (job as floor-building). Anti-Gravity for PWA-specific (Polaris, Floor Win, exact UI).
 - Past sessions (Grok/Build) built/refined these and PWA (repo-aware preflight, bug triage for Polaris/state, media for explainers).
 
-See [[../MOCS/00_grok_organization_log]], [[../MOCS/02_ai_systems_moc]], [[../Tech/01_snf_pwa_antigravity_engine]], [[../Tech/02_ai_life_coach_and_prompt_library]] for full.
+See [[00_grok_organization_log]], [[02_ai_systems_moc]], [[01_snf_pwa_antigravity_engine]], [[02_ai_life_coach_and_prompt_library]] for full.

@@ -1,1 +1,0 @@
-The improved version with enhanced --validate (key frontmatter extraction + required keys check + guidance). See local file for full current implementation.

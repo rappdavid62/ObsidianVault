@@ -35,11 +35,11 @@ Go there to review the presentations (export them if you want permanent copies),
 - [[../Human/Personal-Profile-5Year-Vision]] — Bio (PRS cert, sober date, Cincinnati, job targets), constraints, 90-day pictures, 5-year partnership + family vision.
 
 ### Existing STATENOTFATE/ (your prior canonical pack — now cross-linked)
-- [[../STATENOTFATE/00_README]]
-- [[../STATENOTFATE/01_SOURCE_MAP]]
-- [[../STATENOTFATE/five_year_depression_years_and_worksheets_2026_v2]] (the distilled five-year worksheets)
-- [[../STATENOTFATE/03_canonical_five_year_model]]
-- [[../STATENOTFATE/grok_build_polaris_master_prompt_v2]]
+- [[00_README]]
+- [[01_SOURCE_MAP]]
+- [[five_year_depression_years_and_worksheets_2026_v2]] (the distilled five-year worksheets)
+- [[03_canonical_five_year_model]]
+- [[grok_build_polaris_master_prompt_v2]]
 - And the rest of the canonicals (intake, hope system, missing high-impact info, etc.)
 
 ### GitHub Sync (for the PWA repo)

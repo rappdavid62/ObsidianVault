@@ -1,17 +1,16 @@
 ---
 type: skill
 name: prs-safety-check
-aliases: [prs-check, safety-floor, clinical-anchors]
+aliases: [safety, prs-check, /safety, /prscheck]
 description: >
-  Run a quick, non-shaming clinical safety and self-management check using PRS principles before, during, or after any difficult day or decision.
-  Use when energy is low, after a trigger, before high-stakes actions, or as a daily/weekly floor audit aligned with your Peer Recovery Supporter training.
+  Run a structured, compassionate, peer-support safety screen on yourself (leveraging PRS certification). Check risk areas, biological floor, and identity anchors first on difficult mornings or after triggers. Output clear mode guidance: full plan / floor only / reach out.
 domain: [prs, recovery, health]
 energy: low
-invocation: ["/prs", "safety check", "clinical floor", "prs check"]
-compatible_with: [grok, claude, gpt, local]
-version: 2
-last_reviewed: 2026-06-13
-tags: [prs, recovery, clinical-safety, low-energy, sobriety, mvd, floor, no-shame, state-not-fate, prs-track]
+invocation: ["/safety", "prs safety check", "run the safety screen", "am I safe to plan"]
+compatible_with: [grok, claude, gpt, local, all]
+version: 1
+last_reviewed: 2026-06-12
+tags: [prs, recovery, clinical-safety, low-energy, state-not-fate, anchors, no-shame]
 ---
 
 # PRS Safety Check
@@ -76,6 +75,5 @@ Tone must be calm, grounded, non-judgmental, direct — exactly the PRS voice yo
 - It is deliberately non-therapeutic: it is peer support + State Not Fate floor protection.
 - Update whenever your personal safety contacts, local resources, or medication regimen change.
 - This is a "use before you use other skills" gate on difficult days.
-- Library Gardener pass 2026-06-13: Fixed domain compliance (removed 'low-energy' domain value not in Dictionary; now [prs, recovery, health]). Validated compliant post-edit. Included in full review packs + Favorites/Daily/low-energy emits. All emitter tests (--list/--validate/--search/packs) passed. Re-synced to .grok/skills/ and GitHub pushed. Links to mvd-anchors, sobriety-anchors, low-energy-execution, social-calibration, council-strategy confirmed. No body content changes.
 
-Starter note created from Dictionary placeholders (prs + clinical-safety). Expand with your exact safety screening questions, personal safe contacts, and recent examples of when this check changed the plan.
+(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)

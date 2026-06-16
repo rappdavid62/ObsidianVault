@@ -1,9 +1,9 @@
-# Library Tools — The Ubiquity Layer
+# Library Tools — The Ubiquity Layer (Laptop Sync Vault - Universal Truth)
 
-These scripts are what make the Obsidian Library (the single source of truth) actually usable from *anywhere* and *any* AI.
+These scripts make the Obsidian Library (the single source of truth in this Laptop Sync vault) usable from *anywhere* and *any* AI.
 
 The philosophy is simple:
-- Obsidian Library = canonical, versioned, queryable, atomic source of truth.
+- Obsidian Library = canonical, versioned, queryable, atomic source of truth for all AI.
 - These tools = the "emit / export / sync" layer that turns the Library into something you can drop into any chat, IDE, or device with minimal friction.
 
 ## Core Tools
@@ -17,19 +17,19 @@ The most important tool for day-to-day use.
 - `python emit-skill.py --favorites --clip`
 - `python emit-skill.py daily-job-search low-energy-execution --with-master`
 - `python emit-skill.py --validate mvd-anchors` (checks against the Dictionary)
-- `python emit-skill.py --search "low energy job"`
+- `python emit-skill.py --search "job low"`
 
-It now supports:
+It supports:
 - Multiple skills at once
-- `--daily` (core low-energy execution pack)
-- `--favorites` (broader high-value collection)
+- --daily (core low-energy execution pack)
+- --favorites (broader high-value collection)
 - Automatic and explicit validation against the Dictionary
-- `--clip` on Windows
+- --clip on Windows
 - Clean, ready-to-paste output with minimal Obsidian noise
 
 **Recommended alias** (add to PowerShell profile):
 ```powershell
-function skill { & "C:\Users\rappd\OneDrive\Desktop\ObsidianVault\09-PROMPTS\Library\Tools\emit-skill.ps1" @args }
+function skill { & "C:\Users\rappd\My Drive\INBOX\AI Learning\Laptop Sync\08 PROMPTS\Library\Tools\emit-skill.ps1" @args }
 ```
 
 Then from any terminal: `skill --daily --clip`
@@ -58,9 +58,9 @@ Generates a single clean `Mobile-Favorites.md` (or custom path) containing the m
 python export-for-phone.py
 ```
 
-Sync via OneDrive and you have a portable "quick copy" version of your best tools.
+Open the resulting file on your phone (via Google Drive) and you have a portable "quick copy" version of your best tools.
 
-### sync-to-grok.py — Live integration with this environment
+### sync-to-grok.py — Live integration with this Grok environment
 
 Exports selected atomic notes from the Library into real `~/.grok/skills/<name>/SKILL.md` format.
 
@@ -86,7 +86,7 @@ Run this (or a wrapper) after you improve or create important skills.
 3. Paste into whatever AI you're talking to today.
 4. After the session, update the relevant Library notes with what actually worked.
 
-This is how Obsidian becomes the real brain, and every other AI becomes a temporary, well-informed executor.
+This is how Obsidian (Laptop Sync vault) becomes the real brain, and every other AI becomes a temporary, well-informed executor.
 
 ## Future / Nice-to-Haves (if you want them)
 
@@ -95,6 +95,6 @@ This is how Obsidian becomes the real brain, and every other AI becomes a tempor
 - Obsidian Templater/QuickAdd commands that call these scripts or insert emitted blocks
 - A small web UI or Tauri app that sits on top of the Library for even lower friction
 
-For now, the current set of tools + the atomic Library structure + the Dictionary already gives you an extremely strong "source of truth + ubiquitous access" system.
+For now, the current set of tools + the atomic Library structure + the Dictionary already gives you an extremely strong "source of truth + ubiquitous access" system with this vault as the universal truth.
 
 Use the Library for truth. Use the tools for access. Keep the loop closed.

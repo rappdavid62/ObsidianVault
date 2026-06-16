@@ -40,7 +40,7 @@ Always separate:
 - **Bottom Line**: One sentence summary of today's job search focus and expected output volume.
 - **Leads / Targets** (3–8 items with source, why it fits, next action).
 - **Artifacts** (ready-to-use resume bullets, cover letter snippets, outreach messages).
-- **Tracker Update**: Suggested rows or status changes.
+- **Tracking Note**: Suggested rows or status changes.
 - **Floor Win**: The smallest thing that still counts as movement today.
 - **Risks / Friction**: What could stop execution and how to reduce it.
 
@@ -51,7 +51,7 @@ Always separate:
 - Priority role list
 
 ## Related Skills & Prompts
-- [[low-energy-execution]] (use this first on low/collapse days)
+- [[low-energy-execution]] (scale way down or skip entirely on true collapse days)
 - [[resume-tailoring]]
 - [[apply-today]]
 - [[council-strategy]] (for big decisions about which roles to chase hard)
@@ -61,3 +61,5 @@ Always separate:
 - Designed for the specific constraint set: money runway pressure, variable energy, PRS career path + trade skills as parallel tracks.
 - Prefers volume of low-friction actions over perfection on any single application.
 - Update this note after any session where the real workflow diverged significantly from the instructions.
+
+(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)

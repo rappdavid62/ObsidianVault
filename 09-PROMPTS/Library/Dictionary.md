@@ -3,13 +3,13 @@ type: meta
 name: dictionary
 domain: [meta, library]
 tags: [dictionary, vocabulary, standards, taxonomy]
-last_reviewed: 2026-06-13
+last_reviewed: 2026-06-08
 version: 2
 ---
 
 # Skill & Prompt Dictionary (Controlled Vocabulary)
 
-This is the **official dictionary** for the Library. All frontmatter values (especially `domain`, `energy`, `tags`, `type`, `compatible_with`) **must** come from this list for consistency.
+This is the **official dictionary** for the Library in the Laptop Sync vault (the universal truth). All frontmatter values (especially `domain`, `energy`, `tags`, `type`, `compatible_with`) **must** come from this list for consistency across all AI.
 
 Use this when:
 - Creating new skills/prompts (reference the allowed values)
@@ -37,26 +37,24 @@ Use arrays. Keep them specific but not too granular. New domains should be added
 |-------------------|--------------------------------------------------|--------------------------------------------------|------------------------------------|
 | meta              | Anything about the system itself                 | Library maintenance, tool decisions             | library-gardener, tool-mode-decider |
 | library           | Core Library operations and standards            | Schema, dictionary, hub                         | schema (in meta), dictionary       |
-| job               | Career, applications, tailoring, search          | PRS, HVAC, logistics, maintenance roles         | daily-job-search, apply-today, resume-tailoring |
+| job               | Career, applications, tailoring, search          | PRS, HVAC, logistics, maintenance roles         | daily-job-search, apply-today, resume-tailoring, cover-letter-followup |
 | execution         | Daily action, planning, follow-through           | Low energy days, routines, anchors              | low-energy-execution, weekly-review |
 | social            | Communication, relationships, calibration        | Texts, boundaries, professional interactions    | social-calibration                 |
-| research          | Deep dives, synthesis, option generation         | Understanding roles, industries, options        | deep-research                      |
+| research          | Deep dives, synthesis, option generation         | Understanding roles, industries, options        | deep-research, career-strategy     |
 | decision-making   | High-stakes choices, council processes           | Job offers, life changes, big moves             | council-strategy                   |
-| recovery          | Mental health, sobriety, self-management         | State Not Fate, PRS work, depression as state   | mvd-anchors, floor-wins, snf-hope-activation, snf-proof-registration, sobriety-anchors |
-| health            | Physical, biological, energy management          | MVD, light exposure, sleep, nutrition           | circadian-anchors, substrate-reminders |
+| recovery          | Mental health, sobriety, self-management         | State Not Fate, PRS work, depression as state   | mvd-anchors, floor-wins, prs-safety-check |
+| health            | Physical, biological, energy management          | MVD, light exposure, sleep, nutrition           | circadian-anchors                  |
 | creative          | Roleplay, writing, idea generation, BE mode      | BE_Roleplay, creative projects                  | (link to BE_Roleplay_Generator)    |
-| ai-setup          | Choosing tools, models, context management       | Tool Mode Decider, which LLM for what           | tool-mode-decider                  |
-| philosophy        | Core principles and frameworks                   | State Not Fate, anchors, proof-based hope       | (future notes on SNF principles)   |
-| finance           | Money, runway, budgeting decisions               | Runway tracking, job vs stability choices       | (to be added)                      |
-| prs               | Peer Recovery Supporter specific practices       | Clinical safety, intake, support work           | (to be added: prs-safety-check)    |
+| ai-setup          | Choosing tools, models, context management       | Tool Mode Decider, which LLM for what           | tool-mode-decider, ai-setup-audit  |
+| philosophy        | Core principles and frameworks                   | State Not Fate, anchors, proof-based hope       | snf-proof-registration, snf-hope-activation |
+| philosophy-snf    | State Not Fate specific principles and mechanics | Hope as prediction, anchors as substrate, visible proof, external memory, restart speed over streaks, ideal vs realistic, bottom-line-first, reading errors from inside the state, state-based scaling | snf-proof-registration, snf-hope-activation, systems-audit, substrate-reminders |
+| finance           | Money, runway, budgeting decisions               | Runway tracking, job vs stability choices       | financial-stability |
+| prs               | Peer Recovery Supporter specific practices       | Clinical safety, intake, support work           | prs-safety-check                   |
 | sobriety          | Sobriety maintenance, triggers, daily practices  | Sober since 2019-11-01, recovery as foundation  | sobriety-anchors                   |
-| career            | Long-term career pathing, trades + PRS balance   | 5-year vision, parallel tracks (PRS + HVAC)     | (future notes on career strategy)  |
-| systems           | Systems thinking, multi-factor models            | Depression as system failure, State Not Fate    | systems-audit, substrate-reminders |
-| philosophy-snf    | State Not Fate specific principles and mechanics | Hope as prediction, anchors as substrate, visible proof, external memory, restart speed over streaks, ideal vs realistic, bottom-line-first, reading errors from inside the state, state-based scaling | snf-hope-activation, snf-proof-registration, sobriety-anchors (core trio); see also systems-audit, substrate-reminders |
+| career            | Long-term career pathing, trades + PRS balance   | 5-year vision, parallel tracks (PRS + HVAC)     | career-strategy, 5-year-vision-alignment |
+| systems           | Systems thinking, multi-factor models            | Depression as system failure, State Not Fate    | systems-audit                      |
 
 **Adding new domains**: Only when a clear cluster of 3+ skills emerges. Update this dictionary and the Hub queries. Prefer broad but meaningful categories over one-off tags.
-
-This Dictionary is now the authoritative controlled vocabulary for the entire system. All atomic notes, the emitter tools, the Library Gardener, and any future sync/export logic should reference it.
 
 ## Energy Levels (`energy`)
 
@@ -78,7 +76,6 @@ Use specific, searchable tags. Prefer hyphenated. Group them in your mind as:
 **Core Execution Tags**
 - low-energy, mvd, floor, anchors, floor-wins, proof, restart, no-shame
 - daily, weekly, routine, low-friction
-- visible-proof, external-memory, hope-activation, reading-error, prediction-error, cognitive-offloading, substrate, restart-speed, resilience-rate, hope-meter, counter-script, trigger-scan, philosophy-snf, sobriety
 
 **Job / Career Tags**
 - job, prs, hvac, logistics, maintenance, driver, resume, application, cover-letter, prs-track, certification, career
@@ -95,7 +92,7 @@ Use specific, searchable tags. Prefer hyphenated. Group them in your mind as:
 - tools, ai-setup, model-selection, ubiquity, standards
 
 **Philosophy / State-Not-Fate**
-- state-not-fate, philosophy, sobriety, recovery, depression-as-state, anchors, proof-based-hope, ideal-vs-realistic, bottom-line-first, reading-error, visible-proof, external-memory, restart-speed, resilience-rate, hope-meter, state-based-scaling, systems-failure, load-bearing, substrate, startup-design-problem
+- state-not-fate, philosophy, sobriety, recovery, depression-as-state, anchors, proof-based-hope, ideal-vs-realistic, bottom-line-first, reading-error, visible-proof, external-memory, restart-speed, resilience-rate, hope-meter, state-based-scaling, systems-failure, load-bearing, substrate, startup-design-problem, systems-audit, career-strategy, 5-year-vision, neuroplasticity, cognitive-offloading, evidence-based, prediction-error, dopamine-reward
 
 **Clinical / Safety**
 - clinical-safety, prs, intake, mvd, floor, no-shame, energy-aware
@@ -105,9 +102,10 @@ Use specific, searchable tags. Prefer hyphenated. Group them in your mind as:
 - creative, be-mode, roleplay
 - finance, runway, budgeting
 - 5-year-vision, partnership, family, cincinnati, field-tech, hvac, logistics, maintenance, driver, certification
+- circadian, sobriety-practice, deep-dive, option-generation, systems-thinking, career-planning, rhythm, light-exposure, sleep-anchoring
 
 **SNF-Specific Proof & Activation**
-- visible-proof, external-memory, restart-speed, resilience-rate, hope-meter, floor-win, proof-registration, hope-activation, effort-reconnection, reading-error-interruption
+- visible-proof, external-memory, restart-speed, resilience-rate, hope-meter, floor-win, proof-registration, hope-activation, effort-reconnection, reading-error-interruption, substrate-reminder, neuroplasticity, prediction-error
 
 **Adding tags**: Add to this dictionary first. Keep the list under ~60 active tags. Use compound tags (e.g. prs-track, floor-wins, proof-based-hope) for precision. Avoid single-word generics like "work" or "plan" — qualify them (e.g. job-plan, daily-routine).
 
@@ -154,7 +152,8 @@ Use specific, searchable tags. Prefer hyphenated. Group them in your mind as:
 - Add "Audience" (self, therapist, employer, family)
 - Add "Output Style" (bottom-line-first, narrative, checklist, json)
 - Link each term to example notes that best exemplify it.
+- Expand with more 5-year vision milestones, specific PRS clinical tools, and trade apprenticeship realities as clusters grow.
 
 ---
 
-*Maintained by the Library Gardener skill. Last major expansion: 2026-06-08.*
+*Maintained by the Library Gardener skill. Last major expansion: 2026-06-08. This is the universal truth in the Laptop Sync vault.*

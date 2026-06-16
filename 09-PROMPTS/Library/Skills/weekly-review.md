@@ -10,7 +10,7 @@ energy: medium
 invocation: ["/weekly", "weekly review", "look back at the week"]
 compatible_with: [grok, claude, gpt, local]
 version: 1
-last_reviewed: 2026-06-08
+last_reviewed: 2026-06-12
 tags: [weekly, review, meta, job]
 ---
 
@@ -57,8 +57,12 @@ Be blunt but kind. Volume and consistency beat intensity.
 ## Related Skills & Prompts
 - All the David 12 (especially daily-job-search, low-energy-execution)
 - [[council-strategy]] (if big course corrections feel needed)
-- The Weekly Review template from AI Life Coach Friend
+- [[career-strategy]] and [[5-year-vision-alignment]] (vision and long-term direction layer)
+- [[systems-audit]] (big-picture system context for the review)
+- The Weekly Review template from AI Life Coach Friend system
 
 ## Notes & History
 - This is the meta-skill that makes the whole system compound instead of just daily firefighting.
 - Update this note when your trackers or review cadence change.
+
+(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)

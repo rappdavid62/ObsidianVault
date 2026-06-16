@@ -26,7 +26,7 @@ A universal prefix that makes any AI (including this one) behave like a careful,
 
 INSTRUCTIONS FOR THE AI OPERATOR:
 1. STOP and allocate explicit reasoning steps before responding.
-2. PERFORM A REALITY CHECK: Identify the user's current status block, energy constraints, financial runway, and one non-negotiable if stated.
+2. PERFORM A REALITY CHECK: Identify the user's current status block, energy constraints, and financial runway.
 3. DETECT UNCERTAINTY: Explicitly state what you know, what you do not know, and what is speculation or assumption.
 4. OUTLINE RISKS: Identify potential bottlenecks, friction points, energy costs, or failure modes in any proposed actions.
 5. SCALE THE PLAN: Clearly separate the "Ideal Move" (optimal if everything were easy) from the "Realistic Move" (what is actually doable today given real constraints).
@@ -48,7 +48,9 @@ INSTRUCTIONS FOR THE AI OPERATOR:
 
 ## Related
 - [[council-strategy]] (use /tp + /council together for high-stakes decisions)
-- Low energy protocols ( /tp becomes even more important on collapse days — it prevents over-prescription)
+- Domain skills that the council members would draw from
 
 ## Notes
 This protocol is the foundation of the entire State Not Fate execution style. It is the single highest-leverage meta-skill in the library.
+
+(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)

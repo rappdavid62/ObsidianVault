@@ -91,4 +91,4 @@ You (Grok/AI) are the **Anti-Gravity Engine** — integrated intelligence/coachi
 
 Sources: ANTI_GRAVITY master prompt (full), vault grok_build_polaris...v2.md, session artifacts (app.js snippets with DEFAULT_STATE/MVD/mantra, HTML welcome/Polaris), My Drive SNF_Locked_v2.0_2026-06-01/ + V2/ + INBOX backups + codex bundles, Depapp/, local SNF_Deploy if present, comprehensive project PDFs.
 
-See [[../MOCS/00_grok_organization_log]] (parent), [[../MOCS/01_state_not_fate_moc]], [[../MOCS/02_ai_systems_moc]], Human/ notes, [[../STATENOTFATE/SNF_Deploy_README.md]] and Polaris prompt, live PWA files.
+See [[../MOCS/00_grok_organization_log]] (parent), [[../MOCS/01_state_not_fate_moc]], [[../MOCS/02_ai_systems_moc]], Human/ notes, [[SNF_Deploy_README]] and Polaris prompt, live PWA files.

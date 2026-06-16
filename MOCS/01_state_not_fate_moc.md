@@ -43,7 +43,7 @@ This MOC ties together the canonical project documents (already distilled in the
 - 5-year architecture and vision live across program docs + ANTI-GRAVITY context + personal profile.
 
 ## Next Actions / Gaps (from source maps + missing high-impact notes)
-See [[../STATENOTFATE/04_missing_high_impact_information]] and the comprehensive bundles for gaps (e.g., stronger front-end for distrustful users, fuller intake mapping friction/capacity/trust, explicit decision engine, evidence pressure-test).
+See [[04_missing_high_impact_information]] and the comprehensive bundles for gaps (e.g., stronger front-end for distrustful users, fuller intake mapping friction/capacity/trust, explicit decision engine, evidence pressure-test).
 - Update trackers/status in AI_Life_Coach_Friend daily.
 - Use Polaris in the live PWA (or SNF_Deploy) for proof points.
 - Re-ingest updated canonicals + new notes into AI tools as needed.

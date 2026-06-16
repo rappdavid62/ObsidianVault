@@ -4,12 +4,12 @@ name: master-bio
 aliases: [david-bio, core-context, who-i-am]
 description: >
   Core persistent facts about you: bio, constraints, job targets, work history, recovery timeline, and key principles. Inject this into most serious conversations.
-domain: [meta]
+domain: [context, meta]
 energy: any
 invocation: ["use my master bio", "who I am context"]
 compatible_with: [grok, claude, gpt, local]
-version: 2
-last_reviewed: 2026-06-13
+version: 1
+last_reviewed: 2026-06-08
 tags: [context, bio, constraints]
 ---
 
@@ -53,5 +53,4 @@ tags: [context, bio, constraints]
 
 Use this as the persistent "who I am and what matters" layer in any coaching, planning, or decision conversation.
 
-## Notes & History (Library Gardener)
-- Library Gardener pass 2026-06-13: Fixed frontmatter domain compliance ('context' is a type per Dictionary/SCHEMA, not domain; changed to [meta] only). Version bumped to 2. Validated clean in full sweep. Emitted in all major packs (Favorites, Daily, Full-Review). No other changes. Source of truth maintained.
+(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)

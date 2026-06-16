@@ -5,9 +5,9 @@
 > The living, atomic, rigorously maintained version of the skill & prompt system now lives at:
 > `09-PROMPTS/Library/`
 >
-> - [[../09-PROMPTS/Library/Hubs/00-Hub]] — main dashboard
-> - [[../09-PROMPTS/Library/SCHEMA]] — the schema every note must follow
-> - [[../09-PROMPTS/Library/How-to-Use-Ubiquitously]] — how to use the library from any device or model
+> - [[09-PROMPTS/Library/Hubs/00-Hub]] — main dashboard
+> - [[09-PROMPTS/Library/SCHEMA]] — the schema every note must follow
+> - [[09-PROMPTS/Library/How-to-Use-Ubiquitously]] — how to use the library from any device or model
 > - `Library/Tools/` — emit scripts, search, future sync tools
 >
 > This note is kept for historical context and the original protocol definitions. For day-to-day use and editing, go to the Library.

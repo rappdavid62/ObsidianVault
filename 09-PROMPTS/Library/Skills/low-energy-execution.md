@@ -5,12 +5,12 @@ aliases: [low-energy, collapse-plan, /low]
 description: >
   Generate a realistic, shame-free execution plan when energy is low or collapsed.
   Use whenever the user reports low/collapse energy, brain fog, or "I can't do normal things today."
-domain: [execution]
+domain: [execution, low-energy, daily]
 energy: low
 invocation: ["/low", "low energy plan", "I'm in collapse", "brain fog today"]
 compatible_with: [grok, claude, gpt, local]
-version: 2
-last_reviewed: 2026-06-13
+version: 1
+last_reviewed: 2026-06-12
 tags: [low-energy, mvd, floor, no-shame]
 ---
 
@@ -30,7 +30,7 @@ Protect the floor. Turn a day that would otherwise be lost to paralysis or shame
 3. Focus on biological basics first (wake/meds/water, light, hygiene, food, movement that doesn't require motivation).
 4. One non-negotiable floor win that is small enough to be almost certain.
 5. Explicitly give permission to drop everything else.
-6. End with a tiny proof element (even just "I chose the floor plan and executed one thing").
+6. End with a tiny proof element (even just "I chose not to punish myself for a missed day" or "I drank water when I woke up").
 
 Never:
 - Add ambitious items
@@ -53,11 +53,13 @@ Never:
 ## Related Skills & Prompts
 - [[daily-job-search]] (scale way down or skip entirely on true collapse days)
 - [[thoroughness-protocol]] (use lightly — collapse days are not the time for heavy /tp)
-- Low energy templates from the AI Life Coach Friend system
+- [[floor-wins]] (the logging and proof side)
+- [[weekly-review]] — review MVD effectiveness weekly.
 - The original "09_Low_Energy_Execution_Command.md" from David library
 
 ## Notes & History
 - Core State Not Fate principle: protect self-trust through consistent small wins rather than heroic efforts followed by shame.
 - The plan must be so small that "failure" is almost impossible on a collapse day.
-- Update MVD references in this note when the user's actual Minimum Viable Day changes.
-- Library Gardener pass 2026-06-13: Fixed domain compliance (removed invalid 'low-energy' and 'daily' from domain array; now strictly [execution] per Dictionary, low-energy specificity via tags + energy field). Re-validated clean. Emitted in Daily, Favorites, Full-Review, and cluster packs. Emitter functionality (validate/list/search/custom) passed all tests. Re-synced to .grok/skills/, GitHub push. Links to mvd-anchors, floor-wins, thoroughness-protocol, daily-job-search intact. No body changes.
+- Update this note whenever your actual biological or identity floor changes (new meds, new living situation, new non-negotiables).
+
+(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)

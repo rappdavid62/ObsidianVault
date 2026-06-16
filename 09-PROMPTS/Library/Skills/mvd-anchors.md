@@ -1,17 +1,16 @@
 ---
 type: skill
 name: mvd-anchors
-aliases: [mvd, minimum-viable-day, floor-anchors]
+aliases: [mvd, anchors, /mvd]
 description: >
-  Define and protect your Minimum Viable Day (MVD) anchors — the smallest set of biological and identity actions that must happen even on collapse days to preserve self-trust and restart speed.
-  Use daily when building or reviewing your floor, or when energy is low/collapse and you need to strip everything else away.
-domain: [recovery, execution]
+  Define and protect the Minimum Viable Day (MVD) floor with tiny, non-negotiable biological and identity anchors on low/collapse energy days. Generate proof, preserve self-trust, and enable fast restart speed. Use every morning or whenever energy is near zero.
+domain: [recovery, execution, low-energy]
 energy: low
-invocation: ["/mvd", "set my anchors", "minimum viable day", "floor plan"]
-compatible_with: [grok, claude, gpt, local]
-version: 2
-last_reviewed: 2026-06-13
-tags: [recovery, mvd, anchors, floor, low-energy, prs, sobriety, state-not-fate, no-shame]
+invocation: ["/mvd", "mvd anchors", "floor anchors today", "set my mvd"]
+compatible_with: [grok, claude, gpt, local, all]
+version: 1
+last_reviewed: 2026-06-12
+tags: [recovery, mvd, anchors, floor, low-energy, state-not-fate, prs, no-shame]
 ---
 
 # MVD Anchors
@@ -58,7 +57,7 @@ Always separate the Ideal MVD (what a high-energy version would look like) from 
 ## Related Skills & Prompts
 - [[low-energy-execution]] — use this first on collapse days; MVD anchors are the core of it.
 - [[thoroughness-protocol]] — run /tp lightly when setting MVD so you don't over-ambition.
-- [[floor-wins]] — the logging and proof side (pairs with snf-proof-registration for registration).
+- [[floor-wins]] — the logging and proof side.
 - [[weekly-review]] — review MVD effectiveness weekly.
 - [[library-gardener]] — audit that your anchors are still tiny and aligned.
 
@@ -67,6 +66,20 @@ Always separate the Ideal MVD (what a high-energy version would look like) from 
 - The goal is never "more anchors" — it is "anchors small enough that you can still do them when everything else collapses."
 - Update this note whenever your actual biological or identity floor changes (new meds, new living situation, new non-negotiables).
 - This skill is foundational. Almost every other skill assumes the floor is protected.
-- Library Gardener pass 2026-06-13: Fixed domain compliance (removed non-Dictionary 'low-energy' from domain array; retained in tags + energy:low; now strictly [recovery, execution]). Validated clean post-fix. Included in full Library-Gardener-Full-Review-Pack + Daily/Favorites/custom low-energy emits. Emitter tests (--validate, --list, --search, --daily, --favorites) passed. Re-synced to .grok/skills/, pushed to GitHub. Links to low-energy-execution, floor-wins, snf-* intact. No content changes beyond frontmatter + history.
 
-Starter note created from Dictionary placeholders. Expand with personal MVD details and examples from your trackers.
+**Scientific Basis (substrate reminders)**
+- Neuroplasticity through repetition: Doidge (2007, *The Brain That Changes Itself*); small consistent cues (light exposure, water + meds, counter-script) drive BDNF release and strengthen neural pathways for energy regulation and identity.
+- Behavioral activation basics: Lewinsohn (1970s origins) + modern meta-analyses — scheduling minimal biological/identity actions on low days breaks the inactivity-depression cycle and creates upward spirals.
+- Implementation intentions for low motivation: Gollwitzer (1999+) — pre-deciding "if collapse, then do the 2-minute light anchor" bypasses decision fatigue.
+- Recovery & routine stability: Studies on circadian and sobriety anchors show they improve sleep architecture, reduce craving, and support cognitive function needed for job search/trades learning.
+
+**Practical Examples from Your Life**
+- True collapse morning: Wake + water/meds + 5 min light (even if sitting). "I protected the biological floor" as the win.
+- Post-lapse restart: Add one identity anchor (speak "sober since 2019-11-01, this is temporary") to the MVD.
+- High-stakes day prep (PRS interview or HVAC ride-along): Use realistic MVD so you don't burn out before the event.
+- Weekly review input: Track which anchors are still "failure-proof" and adjust (e.g., new transport constraints in Cincinnati).
+
+**DOV Integration Note**
+Keep the MVD list visible in your DOV daily notes or a dedicated tracker. The project 2026 daily ritual starts with these anchors. Emit the skill and log the win so the external memory is consistent across your synced devices.
+
+(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)

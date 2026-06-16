@@ -10,7 +10,7 @@ energy: low
 invocation: ["/toolmode", "what tool for this", "best way to do this task"]
 compatible_with: [grok, claude, gpt, local]
 version: 1
-last_reviewed: 2026-06-08
+last_reviewed: 2026-06-12
 tags: [meta, tools, ai-setup]
 ---
 
@@ -54,10 +54,12 @@ Stop wasting cognitive energy and tokens by defaulting to "just paste everything
 - Recent status
 
 ## Related
-- [[ai-setup-audit]] (the bigger audit skill)
+- [[ai-setup-audit]] (the bigger periodic full ecosystem reinforcement audit skill)
 - All the skills (this one decides which to load)
 - The original "08_Tool_Mode_Decider.md"
 
 ## Notes & History
 - This is a meta-skill that protects your attention and the quality of every other skill.
 - Update as your tool landscape changes (new local models, new Obsidian plugins, new Grok features, etc.).
+
+(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)

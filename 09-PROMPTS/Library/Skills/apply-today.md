@@ -10,7 +10,7 @@ energy: low
 invocation: ["/apply", "help me apply to this", "submit this job"]
 compatible_with: [grok, claude, gpt, local]
 version: 1
-last_reviewed: 2026-06-08
+last_reviewed: 2026-06-12
 tags: [job, application, low-friction]
 ---
 
@@ -39,12 +39,12 @@ Keep it extremely practical. No long motivational text.
 ## Output Format (Bottom Line First)
 - **Bottom Line**: Go / No-Go + one-sentence rationale.
 - **Fit Analysis**: How this matches your targets, what you bring, what might be a gap.
-- **Artifacts**:
-  - Resume adjustments (bullets to swap or add)
-  - Cover letter / outreach message (full draft or key paragraphs)
-  - Other required text
-- **Tracking Note**: What to log in job_search_tracker (company, role, date, source, next action).
-- **Exact Next Action**: The literal copy-paste + click/submit step.
+- **Specific Changes**:
+  - Bullets to add / reword / move up
+  - Summary paragraph (full draft)
+  - Section reordering suggestions
+- **What to Keep**: Things that are already strong or don't need changing for this target.
+- **Honesty Check**: Any areas where you're stretching and how to frame them safely.
 
 ## Context to Inject
 - The full job posting or lead details
@@ -60,4 +60,6 @@ Keep it extremely practical. No long motivational text.
 ## Notes & History
 - Designed for the user's specific mix of PRS certification + trade experience.
 - Emphasizes speed and volume on decent fits over perfection on "dream" roles.
-- Update when the user develops new materials (new resume versions, certifications, etc.).
+- Update this skill when you create new base materials or certifications.
+
+(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)

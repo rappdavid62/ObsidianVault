@@ -4,11 +4,12 @@ name: skill-prompt-schema
 domain: [meta, library]
 tags: [schema, standards]
 last_reviewed: 2026-06-08
+version: 2
 ---
 
 # Universal Skill & Prompt Schema (Obsidian + Ubiquitous)
 
-This is the single source of truth for how every skill and prompt in this library is structured. The goal is **rigor + portability**.
+This is the single source of truth for how every skill and prompt in this library (Laptop Sync vault - the universal truth) is structured. The goal is **rigor + portability**.
 
 Everything must be plain Markdown + YAML frontmatter so it works in:
 - Obsidian (with Dataview, Templater, etc.)
@@ -16,6 +17,8 @@ Everything must be plain Markdown + YAML frontmatter so it works in:
 - Any LLM (by pasting the file or folder)
 - This Grok environment (via file reads or export to `.grok/skills`)
 - Claude Projects, Cursor, local models, phone notes, etc.
+
+See [[../Dictionary]] for the full controlled vocabulary of allowed values.
 
 ## Two Main Types
 
@@ -37,13 +40,13 @@ aliases: [short, /invocations]        # optional, for human convenience
 description: >
   One or two sentences that tell an AI *exactly when and why* to use this.
   This field is critical for auto-invocation (matches .grok SKILL.md style).
-domain: [job, execution, social, research, meta, low-energy, ...]
-energy: low | medium | high | any
+domain: [job, execution, social, research, meta, low-energy, ...]  # from Dictionary
+energy: low | medium | high | any     # from Dictionary
 invocation: ["/jobsearch", "daily job hunt"]   # natural language + slash forms
-compatible_with: [grok, claude, gpt-4o, local, all]
+compatible_with: [grok, claude, gpt-4o, local, all]  # from Dictionary
 version: 2
 last_reviewed: 2026-06-08
-tags: [job, daily, low-friction]
+tags: [job, daily, low-friction]      # from Dictionary
 ---
 ```
 
@@ -123,7 +126,7 @@ In addition to the required frontmatter, add these when useful:
 ## Relationship to .grok/skills
 
 - The `description` field is deliberately compatible with the `description` in `.grok/skills/*/SKILL.md`.
-- We will keep a generator (or manual curated list) that turns selected Obsidian skills into real `.grok/skills` directories so they are live in this environment.
+- We will keep a generator (or manual curated list) that turns selected Obsidian skills into real `.grok/skills/` directories so they are live in this environment.
 - Conversely, valuable skills discovered while using Grok should be back-ported into this Obsidian library as the source of truth.
 
 ## File Naming & Location
@@ -134,3 +137,9 @@ In addition to the required frontmatter, add these when useful:
 - Keep the old big compiled files in `Prompt-Library/` as "full bundle" references if you ever want to upload an entire OS at once, but **do not edit them as the live version**.
 
 This schema is designed to be both **human-editable in Obsidian** and **machine-injectable everywhere**.
+
+See [[../Dictionary]] for the authoritative list of allowed values for domains, energies, tags, etc.
+
+---
+
+*This is the universal truth in the Laptop Sync vault. All AI should reference this structure.*

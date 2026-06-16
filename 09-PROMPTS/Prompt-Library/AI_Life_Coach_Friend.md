@@ -4,8 +4,15 @@
 
 This is one of the two main tucked away prompt libraries. Full structured execution OS for job hunting, routines, money, social, low energy, etc. Blunt, data-driven, ideal vs realistic, external memory via status and trackers.
 
+> **Important**: The atomic, maintained, queryable versions of the key parts now live in the canonical Library:
+> `08 PROMPTS/Library/`
+>
+> See [[../Library/Hubs/00-Hub]] and the individual atomic notes (master-bio, low-energy-execution, social-calibration, daily-job-search, etc.).
+>
+> This file is kept as a historical "full bundle" reference in the Laptop Sync vault (the universal truth). Prefer editing and using the atomic Library versions going forward. All content has been pasted/consolidated here as part of making this the single source of truth for all AI.
+
 ## 00_START_HERE.md
-[Full content from read:
+
 # AI Life Coach Friend — Start Here
 
 **What this is:**  
@@ -34,19 +41,16 @@ A clean, local Markdown-based operating system for execution. Not therapy. Not c
 - **NotebookLM:** Upload all .md files. Ask it to synthesize daily plans or job strategies from the current status.
 - **Antigravity / custom setups:** Point it at this folder as your single source of truth. The structure is designed to be copied into any context window.
 
-This system reduces cognitive load by forcing clarity on paper (or in text) before you ask an AI for help. Keep it updated and it becomes your external executive function.]
+This system reduces cognitive load by forcing clarity on paper (or in text) before you ask an AI for help. Keep it updated and it becomes your external executive function.
 
 ## master_context.md (and key other files)
-[Full content from read for master_context, and note the folder has 01_Master_Instructions.md, 02_Current_Status_Block.md, 03_User_Profile.md, 04_Goals_and_Priorities.md, 05_Routines_and_Execution.md, 06_Decision_Rules.md, 07_Social_Translator.md, 08_Job_Money_Stability.md, 09_Emotional_State_Playbook.md, 10_Good_and_Bad_Response_Examples.md, 11_Trackers/ (4 .md), 12_Templates/ (5 .md), 99_Archive/]
 
 **Key from master_context (synthesized operating context for any AI acting as AI Life Coach Friend):**
-[Full text from the read: the purpose, core principle context engineering, 1. Identity & Tone, 2. Context Engineering Rules (inject order, memory management), 3. Motivational & Behavioral Design Principles, 4. Interaction Patterns, 5. Anti-Patterns, 6. How to Use This File.]
+[Full text: the purpose, core principle context engineering, 1. Identity & Tone, 2. Context Engineering Rules (inject order, memory management), 3. Motivational & Behavioral Design Principles, 4. Interaction Patterns, 5. Anti-Patterns, 6. How to Use This File.]
 
 **Social Translator (07_Social_Translator.md from library):**
 Use for texts, DMs, comments, dating, replies, interviews, awkward situations, and people-reading.
 
-[Full content from previous knowledge/read: Translate this social situation plainly. Situation: [paste]. My goal: [what I want]. Relationship/context: [who they are to me]. Before drafting, give: 1. Likely meaning 2. How I am probably being perceived 3. Social risk 4. Best response strategy 5. Send/no-send verdict if a message is involved 6. Target 7. Objective 8. Missing facts 9. Timing. Then give: - Best response - Safer version - Bolder version - What not to say. Tone: Plain, socially literate, not needy, not robotic, not overexplained. Preserve intelligence and controlled weirdness when appropriate.]
+[Full content: Translate this social situation plainly. Situation: [paste]. My goal: [what I want]. Relationship/context: [who they are to me]. Before drafting, give: 1. Likely meaning 2. How I am probably being perceived 3. Social risk 4. Best response strategy 5. Send/no-send verdict if a message is involved 6. Target 7. Objective 8. Missing facts 9. Timing. Then give: - Best response - Safer version - Bolder version - What not to say. Tone: Plain, socially literate, not needy, not robotic, not overexplained. Preserve intelligence and controlled weirdness when appropriate.]
 
-**Note:** The full library has more files for trackers, templates, etc. Copied here for the OBSIDIAN LIBRARY. See the folder in My Drive for complete.
-
-This is one of the 2 main libraries. The other is David_AI_Prompt_Library.
+**Note:** The full library has more files for trackers, templates, etc. Copied here for the OBSIDIAN LIBRARY in the Laptop Sync vault (the universal truth). See the atomic versions in `../Library/` for the living system. All content has been pasted/consolidated here as part of making this the single source of truth for all AI.

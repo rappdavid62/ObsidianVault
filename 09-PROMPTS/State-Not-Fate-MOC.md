@@ -7,12 +7,12 @@ See [[Grok-Organization-Log]] for the session that found the sources, extracted 
 This MOC ties together the canonical project documents (already distilled in [[../STATENOTFATE/]]), the lived philosophy, the PWA implementation, the AI coaching layer, personal context, and evidence base. It was built by sorting high-signal material from Google Drive (My Drive/CHATGPT_MASTER_context bundles, AI_Life_Coach_Friend), OneDrive (depression project docs, transcripts, plans), local hard drive (AI_Work prompts, ANTI_GRAVITY master prompt, Depapp overview, .grok sessions), and prior Grok/ChatGPT project conversations (explicitly referenced as source streams in the comprehensive bundles).
 
 ## Quick Navigation (Piles)
-- **Philosophy & Design Core**: [[../STATENOTFATE/00_README]] • [[../STATENOTFATE/01_SOURCE_MAP]] • [[../STATENOTFATE/01_canonical_project_system]] • [[../STATENOTFATE/02_canonical_intake_and_personalization]] • [[../STATENOTFATE/03_canonical_five_year_model]] • [[../STATENOTFATE/04_missing_high_impact_information]] • [[Human/SNF-Core-Philosophy]]
-- **Front-End / Hope / Intake**: [[../STATENOTFATE/01_Front_End_Preamble-2]] • [[../STATENOTFATE/02_Front_End_Questionnaire-1]] • [[../STATENOTFATE/03_Front_End_Intake_Guide-1]] • [[../STATENOTFATE/04_Hope_System_Front_End-1]] • [[../STATENOTFATE/04_Hope_and_Activation_Start-2]]
-- **Long Horizon**: [[../STATENOTFATE/five_year_depression_years_and_worksheets_2026_v2]] • [[../STATENOTFATE/5-year-architecture-one-pager]] • [[Human/Personal-Profile-5Year-Vision]]
-- **Implementation / PWA + AI Engine**: [[Tech/SNF-PWA-AntiGravity-Engine]] (Update 3 architecture, Polaris, energy tiers, proof/anchors/Floor Wins, PHQ-9 exact clinical, protocols) • [[../STATENOTFATE/grok_build_polaris_master_prompt_v2]] • [[../STATENOTFATE/SNF_Deploy_README]]
+- **Philosophy & Design Core**: [[00_README]] • [[01_SOURCE_MAP]] • [[01_canonical_project_system]] • [[02_canonical_intake_and_personalization]] • [[03_canonical_five_year_model]] • [[04_missing_high_impact_information]] • [[Human/SNF-Core-Philosophy]]
+- **Front-End / Hope / Intake**: [[01_Front_End_Preamble-2]] • [[02_Front_End_Questionnaire-1]] • [[03_Front_End_Intake_Guide-1]] • [[04_Hope_System_Front_End-1]] • [[04_Hope_and_Activation_Start-2]]
+- **Long Horizon**: [[five_year_depression_years_and_worksheets_2026_v2]] • [[5-year-architecture-one-pager]] • [[Human/Personal-Profile-5Year-Vision]]
+- **Implementation / PWA + AI Engine**: [[Tech/SNF-PWA-AntiGravity-Engine]] (Update 3 architecture, Polaris, energy tiers, proof/anchors/Floor Wins, PHQ-9 exact clinical, protocols) • [[grok_build_polaris_master_prompt_v2]] • [[SNF_Deploy_README]]
 - **AI Execution Layer (shared philosophy)**: [[Tech/AI-Life-Coach-and-Prompt-Library]] • [[Tech/AI-Execution-Systems]] (Life Coach Friend folder OS + David prompt commands for job/routines/low-energy/social)
-- **Evidence & Rationale**: [[../STATENOTFATE/depression_project_missing_high_impact_info]] • [[Human/SNF-Core-Philosophy]] (clinical overview from Depapp, behavioral activation, light therapy, mantras as counter-scripts, restartability)
+- **Evidence & Rationale**: [[depression_project_missing_high_impact_info]] • [[Human/SNF-Core-Philosophy]] (clinical overview from Depapp, behavioral activation, light therapy, mantras as counter-scripts, restartability)
 - **Source Bundles & Maps** (orientation): My Drive/CHATGPT_MASTER_context/00_READ_THIS_FIRST_COMPREHENSIVE.pdf • 00_Project_File_Map_Comprehensive.pdf • 01_Current_Main_Elements_Expanded.pdf (and local Downloads/OneDrive copies)
 - **Conversations & Synthesis**: .grok/sessions/* (chat_history, updates, system_prompts from Grok Build sessions on PWA, prompts, bundles); bundles explicitly "fold together ... recurring themes from the ChatGPT and Grok project chats" + user testimonial.
 
@@ -43,7 +43,7 @@ This MOC ties together the canonical project documents (already distilled in [[.
 - 5-year architecture and vision live across program docs + ANTI-GRAVITY context + personal profile.
 
 ## Next Actions / Gaps (from source maps + missing high-impact notes)
-See [[../STATENOTFATE/04_missing_high_impact_information]] and the comprehensive bundles for gaps (e.g., stronger front-end for distrustful users, fuller intake mapping friction/capacity/trust, explicit decision engine, evidence pressure-test).
+See [[04_missing_high_impact_information]] and the comprehensive bundles for gaps (e.g., stronger front-end for distrustful users, fuller intake mapping friction/capacity/trust, explicit decision engine, evidence pressure-test).
 - Update trackers/status in AI_Life_Coach_Friend daily.
 - Use Polaris in the live PWA (or SNF_Deploy) for proof points.
 - Re-ingest updated canonicals + new notes into AI tools as needed.

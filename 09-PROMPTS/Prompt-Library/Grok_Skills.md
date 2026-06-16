@@ -4,6 +4,13 @@
 
 This consolidates the skills from the Grok Build system, including the create-skill, best-of-n, check-work, docx, help, imagine, pptx, xlsx, and bundled ones. These are the "skills from all the AI" in the .grok setup. Copy of SKILL.md content for the OBSIDIAN LIBRARY.
 
+> **Important**: The atomic, maintained, queryable versions now live in the canonical Library:
+> `08 PROMPTS/Library/Skills/`
+>
+> See [[../Library/Hubs/00-Hub]] and the individual atomic notes (library-gardener, etc.).
+>
+> This file is kept as a historical "full bundle" reference in the Laptop Sync vault (the universal truth). Prefer editing and using the atomic Library versions going forward. All content has been pasted/consolidated here as part of making this the single source of truth for all AI.
+
 ## create-skill/SKILL.md
 [Full content from read:
 ---
@@ -65,9 +72,9 @@ The file MUST follow this exact format:
 name: <skill-name>
 description: <the description from Step 2>
 ---
+```
 
 <markdown body with instructions, steps, code blocks>
-```
 
 Also write any supporting files (scripts, references) using the same create method.
 
@@ -155,7 +162,7 @@ Evaluate each candidate on these axes, in order of importance:
    avoid unnecessary complexity?
 
 3. **Safety** -- Does the candidate avoid introducing bugs, security issues, or
-   breaking changes to existing functionality?
+   breaking changes to existing functionality.
 
 ## How to Decide
 
@@ -194,4 +201,4 @@ State which candidate you chose and why.
 - xlsx/scripts/: office/helpers/, pack.py, recalc.py
 - Other skills have references like editing.md, pptxgenjs.md.
 
-These are the little tiny tools. Copied locations and key content for the OBSIDIAN LIBRARY.
+These are the little tiny tools. Copied locations and key content for the OBSIDIAN LIBRARY in the Laptop Sync vault (the universal truth). All content has been pasted/consolidated here as part of making this the single source of truth for all AI. See the atomic versions in `../Library/Skills/` for the living system.

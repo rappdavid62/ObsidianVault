@@ -10,7 +10,7 @@ energy: low
 invocation: ["/resume", "tailor my resume for this", "help with resume"]
 compatible_with: [grok, claude, gpt, local]
 version: 1
-last_reviewed: 2026-06-08
+last_reviewed: 2026-06-12
 tags: [job, resume, low-friction]
 ---
 
@@ -59,3 +59,5 @@ Always separate honest strengths from stretch areas.
 - Tailoring is most powerful when it highlights transferable skills from recovery work (reliability, de-escalation, following procedures) into trades/PRS roles.
 - Keep a "master resume" and generate tailored versions rather than editing the master.
 - Update this skill when you create new base materials or certifications.
+
+(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
