@@ -1,0 +1,1 @@
+Something I just think about you may ever talk about the hammer that made the hammer of Thor cause I know where the anvil is, what's that hammer doing? 

@@ -1,0 +1,10 @@
+{
+  "strictLineBreaks": true,
+  "showLineNumber": true,
+  "mobilePullAction": "editor:save-file",
+  "newFileLocation": "current",
+  "attachmentFolderPath": "./",
+  "alwaysUpdateLinks": true,
+  "showUnsupportedFiles": true,
+  "uriCallbacks": true
+}
