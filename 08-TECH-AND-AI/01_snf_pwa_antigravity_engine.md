@@ -82,7 +82,7 @@ You (Grok/AI) are the **Anti-Gravity Engine** — integrated intelligence/coachi
 
 ## How It Connects to the Rest
 - **Philosophy** ([[01_snf_core_philosophy]], [[../STATENOTFATE/]] canonicals): Energy-adaptive anchors, proof, restart no-shame, stabilization before expansion, front-end trust, matched moves — all implemented in UI + AI layer.
-- **AI Execution** ([[../MOCS/02_ai_systems_moc]], [[../Tech/02_ai_life_coach_and_prompt_library]]): Shared blunt operator rules, status blocks, ideal/realistic, trackers, low-energy plans, context engineering. AI Life Coach Friend for broader life/job; Anti-Gravity specific to PWA/Polaris.
+- **AI Execution** ([[02_ai_systems_moc]], [[../Tech/02_ai_life_coach_and_prompt_library]]): Shared blunt operator rules, status blocks, ideal/realistic, trackers, low-energy plans, context engineering. AI Life Coach Friend for broader life/job; Anti-Gravity specific to PWA/Polaris.
 - **Human context** ([[02_personal_profile_5year_vision]]): 5yr vision, PRS cert, sober date, constraints, history → shape adaptive rules + realistic moves.
 - **Past conversations** (.grok/sessions chat_history/updates, bundles): Used to build/debug PWA (HTML/JS edits, Polaris, media), refine these exact prompts, explore sources, create bundles that fed back into the system.
 - **Knowledge**: Obsidian (this vault + MOCS + STATENOTFATE + Human/ + Tech/) + GitHub (code) + Drive (bundles, backups, locked v2) as external memory.
@@ -91,4 +91,4 @@ You (Grok/AI) are the **Anti-Gravity Engine** — integrated intelligence/coachi
 
 Sources: ANTI_GRAVITY master prompt (full), vault grok_build_polaris...v2.md, session artifacts (app.js snippets with DEFAULT_STATE/MVD/mantra, HTML welcome/Polaris), My Drive SNF_Locked_v2.0_2026-06-01/ + V2/ + INBOX backups + codex bundles, Depapp/, local SNF_Deploy if present, comprehensive project PDFs.
 
-See [[../MOCS/00_grok_organization_log]] (parent), [[../MOCS/01_state_not_fate_moc]], [[../MOCS/02_ai_systems_moc]], Human/ notes, [[SNF_Deploy_README]] and Polaris prompt, live PWA files.
+See [[00_grok_organization_log]] (parent), [[01_state_not_fate_moc]], [[02_ai_systems_moc]], Human/ notes, [[SNF_Deploy_README]] and Polaris prompt, live PWA files.

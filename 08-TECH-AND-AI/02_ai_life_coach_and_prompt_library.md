@@ -65,4 +65,4 @@ Action-oriented, not hobby collection. Store in Documents/AI Command Center/Prom
 
 **These systems turn the philosophy into daily executable infrastructure. Keep the status block and trackers current — they are the single source of truth the AI (and you) re-inject.**
 
-Links: [[../MOCS/00_grok_organization_log]], [[../MOCS/01_state_not_fate_moc]], [[../MOCS/02_ai_systems_moc]], [[grok_build_polaris_master_prompt_v2]] and ANTI_GRAVITY root file, .grok/sessions (build history).
+Links: [[00_grok_organization_log]], [[01_state_not_fate_moc]], [[02_ai_systems_moc]], [[grok_build_polaris_master_prompt_v2]] and ANTI_GRAVITY root file, .grok/sessions (build history).

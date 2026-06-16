@@ -11,10 +11,14 @@
             "id": "01912961735efaf1",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "08-TECH-AND-AI/SNF-Main-Frame-Link-2026-06-13.md.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "SNF-Main-Frame-Link-2026-06-13.md"
             }
           }
         ]
@@ -180,8 +184,14 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "fff8ad58c0c04868",
+  "active": "01912961735efaf1",
   "lastOpenFiles": [
+    "08-TECH-AND-AI/SKILL.md",
+    "08-TECH-AND-AI/AI SYSTEM SYSTEM GOVERNANCE.md",
+    "08-TECH-AND-AI/AI_SYSTEM/MASTER_CONTEXT.md",
+    "08-TECH-AND-AI/AI_SYSTEM/CURRENT_STATUS.md",
+    "README.md",
+    "08 PROMPTS/Library/Contexts/master-bio 1.md",
     "00-INBOX/depress q.md",
     "00-INBOX/clone.md",
     "00-INBOX/Untitled 2",
@@ -208,13 +218,7 @@
     "08-TECH-AND-AI/00_START_HERE.md",
     "08-TECH-AND-AI/CAPTURE/RAW_INBOX.md",
     "08-TECH-AND-AI/CAPTURE",
-    "08-TECH-AND-AI/AI_SYSTEM/MASTER_CONTEXT.md",
-    "08-TECH-AND-AI/AI_SYSTEM/CURRENT_STATUS.md",
     "08-TECH-AND-AI/AI_SYSTEM",
-    "08-TECH-AND-AI/SNF-Main-Frame-Link-2026-06-13.md.md",
-    "08-TECH-AND-AI/SKILL.md",
-    "08-TECH-AND-AI/AI SYSTEM SYSTEM GOVERNANCE.md",
-    "08-TECH-AND-AI/DAILY-SYSTEM-CHANGELOG.md",
     "08-TECH-AND-AI",
     "07-HUMAN-HEALTH/Human",
     "07-HUMAN-HEALTH"
