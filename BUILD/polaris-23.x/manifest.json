@@ -1,0 +1,16 @@
+{
+  "name": "State Not Fate — Polaris 23.x",
+  "short_name": "Polaris 23.x",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0a0a0c",
+  "theme_color": "#6b8e6b",
+  "description": "State Not Fate — static PWA 23.x with PHQ-9 exact engine, library-gardener self-audit, adaptive quests. Source of truth: 09-PROMPTS/Library (full gardener 2026-06-13).",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%236b8e6b'/%3E%3Ctext x='50' y='62' font-size='42' fill='%230a0a0c' text-anchor='middle' font-family='sans-serif'%3E23%3C/text%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    }
+  ]
+}

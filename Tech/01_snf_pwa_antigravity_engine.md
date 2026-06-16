@@ -81,9 +81,9 @@ You (Grok/AI) are the **Anti-Gravity Engine** — integrated intelligence/coachi
 - Also governed by Grok Build v2 prompt for implementation work (repo-aware, preflight, bug triage, manual artifacts if needed, no overbuilding).
 
 ## How It Connects to the Rest
-- **Philosophy** ([[../Human/01_snf_core_philosophy]], [[../STATENOTFATE/]] canonicals): Energy-adaptive anchors, proof, restart no-shame, stabilization before expansion, front-end trust, matched moves — all implemented in UI + AI layer.
+- **Philosophy** ([[01_snf_core_philosophy]], [[../STATENOTFATE/]] canonicals): Energy-adaptive anchors, proof, restart no-shame, stabilization before expansion, front-end trust, matched moves — all implemented in UI + AI layer.
 - **AI Execution** ([[../MOCS/02_ai_systems_moc]], [[../Tech/02_ai_life_coach_and_prompt_library]]): Shared blunt operator rules, status blocks, ideal/realistic, trackers, low-energy plans, context engineering. AI Life Coach Friend for broader life/job; Anti-Gravity specific to PWA/Polaris.
-- **Human context** ([[../Human/02_personal_profile_5year_vision]]): 5yr vision, PRS cert, sober date, constraints, history → shape adaptive rules + realistic moves.
+- **Human context** ([[02_personal_profile_5year_vision]]): 5yr vision, PRS cert, sober date, constraints, history → shape adaptive rules + realistic moves.
 - **Past conversations** (.grok/sessions chat_history/updates, bundles): Used to build/debug PWA (HTML/JS edits, Polaris, media), refine these exact prompts, explore sources, create bundles that fed back into the system.
 - **Knowledge**: Obsidian (this vault + MOCS + STATENOTFATE + Human/ + Tech/) + GitHub (code) + Drive (bundles, backups, locked v2) as external memory.
 

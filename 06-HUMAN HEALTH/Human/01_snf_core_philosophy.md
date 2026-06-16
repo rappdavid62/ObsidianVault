@@ -77,12 +77,12 @@ Anti: moral lectures, vague encouragement, therapy language ("healing journey"),
 Long-term instability/isolation → fragile trust. Low money → no high-maintenance core. Brain fog → instructions must survive it. Years of breakdown/homelessness/social difficulty → generic encouragement sounds false. Past failures at ambitious systems → must respect that. PRS credential + sober milestone + running + voice acting + social reintegration goals + 5-year vision (stable partnership + family in Cincinnati) give the "expansion" target after floor.
 
 ## How This Lives in the Rest of the System
-- **PWA / Polaris** (see [[../Tech/01_snf_pwa_antigravity_engine]]): Energy tiers, adaptive anchors/checklist/proof ledger/streaks/Floor Win button, exact PHQ-9 interp, restart language, no shame copy.
+- **PWA / Polaris** (see [[01_snf_pwa_antigravity_engine]]): Energy tiers, adaptive anchors/checklist/proof ledger/streaks/Floor Win button, exact PHQ-9 interp, restart language, no shame copy.
 - **AI Coach / Anti-Gravity Engine + Life Coach Friend + Prompt Library** (see MOCS/): Same principles encoded in instructions, status blocks, ideal/realistic splits, low-energy templates, trackers as memory, context engineering. Used for job search (field tech/PRS priority for stability) as stabilization move.
 - **Front-end**: Preamble + Hope System + Questionnaire + Intake Guide (trust + matched start before full program).
-- **5-year + Worksheets**: Long-horizon sequencing after floor (see [[../STATENOTFATE/]] and [[../Human/02_personal_profile_5year_vision]]).
+- **5-year + Worksheets**: Long-horizon sequencing after floor (see [[../STATENOTFATE/]] and [[02_personal_profile_5year_vision]]).
 - **Bundles & Chats**: The comprehensive PDFs explicitly fold project docs + Grok/ChatGPT chat themes + testimonial + evidence.
 
 **Bottom line from the sources**: Reduce startup burden, reduce friction, match the first move, make proof visible, repeat enough to rebuild trust, design every layer so the person can come back after they fail. "Build the infrastructure. Celebrate the floor wins. Protect the state from becoming fate."
 
-See also: [[../MOCS/00_grok_organization_log]], [[../MOCS/01_state_not_fate_moc]], [[../STATENOTFATE/]] canonicals (esp. 01_canonical_project_system, 04_missing_high_impact_information), source PDFs in My Drive/OneDrive/Downloads, Depapp overview, ANTI_GRAVITY prompt.
+See also: [[00_grok_organization_log]], [[01_state_not_fate_moc]], [[../STATENOTFATE/]] canonicals (esp. 01_canonical_project_system, 04_missing_high_impact_information), source PDFs in My Drive/OneDrive/Downloads, Depapp overview, ANTI_GRAVITY prompt.

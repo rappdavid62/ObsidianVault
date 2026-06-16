@@ -84,4 +84,4 @@ Five-year model context from session (user 5-year vision, profile, bundles):
 - Re-sweep confirmed sources (five_year_worksheets_2026_v2 and 01_2026 All Documents project bundle in multiple locations: My Drive/CHATGPT_MASTER_context, OneDrive/depression project master, Downloads, .gemini, Depapp); no new clinical/worksheet content beyond prior (insurance policy was search name collision).
 - Content from session files (philosophy, profile, AI layer) moved to pertinent numbered files; non-fitting lowercase/CamelCase files cleaned (data consolidated here and in numbered MOCS/Tech/Human).
 
-See [[../MOCS/00_grok_organization_log]], [[../Human/02_personal_profile_5year_vision]], [[../MOCS/01_state_not_fate_moc]] for full.
+See [[../MOCS/00_grok_organization_log]], [[02_personal_profile_5year_vision]], [[../MOCS/01_state_not_fate_moc]] for full.

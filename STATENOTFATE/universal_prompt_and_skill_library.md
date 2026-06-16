@@ -1,6 +1,17 @@
 # Universal Prompt, Skill, & Command Center OS
 ## A Unified Interface for State Not Fate, AI Life Coach, and the Strategic Council
 
+> **Canonical home has moved.**  
+> The living, atomic, rigorously maintained version of the skill & prompt system now lives at:
+> `09-PROMPTS/Library/`
+>
+> - [[../09-PROMPTS/Library/Hubs/00-Hub]] — main dashboard
+> - [[../09-PROMPTS/Library/SCHEMA]] — the schema every note must follow
+> - [[../09-PROMPTS/Library/How-to-Use-Ubiquitously]] — how to use the library from any device or model
+> - `Library/Tools/` — emit scripts, search, future sync tools
+>
+> This note is kept for historical context and the original protocol definitions. For day-to-day use and editing, go to the Library.
+
 This document is your **Universal Command Center**. It unifies your prompt library, custom instructions, and the `/council` decision-making protocol. It defines the universal **`/tp` (Thoroughness Protocol)**, sets up smart **Expert Lanes**, and aligns **Keyboard Shortcuts** across your programs.
 
 ---
@@ -217,6 +228,6 @@ This fulfills the request: scoured, found the 2 + handfuls + tiny, put in Obsidi
   - Testing protocol: check-work/SKILL.md exact (read verified), followed here; prompt-surgeon SKILL workflow matched.
 - All carried requests (scour, verbatim consol to vault+universal+graph, 5yr org, .git/OneDrive notes, everything consolidated) complete per direct evidence. No unattempted items, no FAIL issues (minor notes on ephemeral outputs / no literal CPU strings in jsonl but process capture sufficient).
 
-**Next / ongoing**: Poll monitors (get_command_or_subagent_output on the task_ids) for completions. On subagent/VERDICT appear, auto-spawn additional check-work verifiers. Re-invoke prompt-surgeon or monitors as needed. User: active inference loop (32+) is current drain source � new session or interrupt to pause if wanted. Monitors will keep eye.
+**Next / ongoing**: Poll monitors (get_command_or_subagent_output on the task_ids) for completions. On subagent/VERDICT appear, auto-spawn additional check-work verifiers. Re-invoke prompt-surgeon or monitors as needed. User: active inference loop (32+) is current drain source � new session or interrupt to pause if wanted. Monitors will keep eye.
 
 State is information. Fate is a story we stop telling.

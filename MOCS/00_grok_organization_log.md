@@ -31,8 +31,8 @@ Go there to review the presentations (export them if you want permanent copies),
 - [[../Tech/02_ai_life_coach_and_prompt_library]] — The execution OS + 12 command prompts, shared blunt principles.
 
 ### Human (personal & philosophy)
-- [[../Human/01_snf_core_philosophy]] — "State, not fate", anchors, mantras, restartability, clinical framing, your testimonial shaping the design.
-- [[../Human/02_personal_profile_5year_vision]] — Bio (PRS cert, sober date, Cincinnati, job targets), constraints, 90-day pictures, 5-year partnership + family vision.
+- [[01_snf_core_philosophy]] — "State, not fate", anchors, mantras, restartability, clinical framing, your testimonial shaping the design.
+- [[02_personal_profile_5year_vision]] — Bio (PRS cert, sober date, Cincinnati, job targets), constraints, 90-day pictures, 5-year partnership + family vision.
 
 ### Existing STATENOTFATE/ (your prior canonical pack — now cross-linked)
 - [[../STATENOTFATE/00_README]]
@@ -98,6 +98,6 @@ If you want me to:
   - Testing protocol: check-work/SKILL.md exact (read verified), followed here; prompt-surgeon SKILL workflow matched.
 - All carried requests (scour, verbatim consol to vault+universal+graph, 5yr org, .git/OneDrive notes, everything consolidated) complete per direct evidence. No unattempted items, no FAIL issues (minor notes on ephemeral outputs / no literal CPU strings in jsonl but process capture sufficient).
 
-**Next / ongoing**: Poll monitors (get_command_or_subagent_output on the task_ids) for completions. On subagent/VERDICT appear, auto-spawn additional check-work verifiers. Re-invoke prompt-surgeon or monitors as needed. User: active inference loop (32+) is current drain source � new session or interrupt to pause if wanted. Monitors will keep eye.
+**Next / ongoing**: Poll monitors (get_command_or_subagent_output on the task_ids) for completions. On subagent/VERDICT appear, auto-spawn additional check-work verifiers. Re-invoke prompt-surgeon or monitors as needed. User: active inference loop (32+) is current drain source � new session or interrupt to pause if wanted. Monitors will keep eye.
 
 State is information. Fate is a story we stop telling.

@@ -37,8 +37,8 @@ These systems share DNA with the SNF project: blunt execution operator, bottom-l
 ## Links
 - [[00_grok_organization_log]] (parent philosophy + PWA)
 - [[../STATENOTFATE/]] (canonicals, Polaris prompt v2, SNF Deploy)
-- [[../Human/02_personal_profile_5year_vision]] (the 90-day/5yr pictures and constraints that feed the AI rules)
-- [[../Human/01_snf_core_philosophy]] (the "why" these AI systems exist)
+- [[02_personal_profile_5year_vision]] (the 90-day/5yr pictures and constraints that feed the AI rules)
+- [[01_snf_core_philosophy]] (the "why" these AI systems exist)
 - [[../Tech/01_snf_pwa_antigravity_engine]] (the PWA the Anti-Gravity prompt governs)
 - Source folders: My Drive/AI_Life_Coach_Friend/ , AI_Work/David_AI_Prompt_Library/ , root ANTI_GRAVITY file, .grok/sessions (the actual chat records of building this)
 

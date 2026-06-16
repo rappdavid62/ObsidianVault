@@ -68,4 +68,4 @@
 
 **This profile + constraints + vision is the "user" the entire State Not Fate system (PWA, prompts, philosophy, intake, 5-year model) is built around. It makes the design specific, believable, and usable instead of generic.**
 
-See: [[../MOCS/00_grok_organization_log]], [[../MOCS/01_state_not_fate_moc]], [[../MOCS/02_ai_systems_moc]], [[../Tech/01_snf_pwa_antigravity_engine]], [[../Tech/02_ai_life_coach_and_prompt_library]], AI_Life_Coach_Friend/ folder (full source), David_AI_Prompt_Library/ (master context), ANTI_GRAVITY prompt (5yr + personal facts), [[../STATENOTFATE/]] (five_year... worksheets, intake guides), source bundles in My Drive/CHATGPT_MASTER_context (testimonial & design rationale files).
+See: [[00_grok_organization_log]], [[01_state_not_fate_moc]], [[02_ai_systems_moc]], [[01_snf_pwa_antigravity_engine]], [[02_ai_life_coach_and_prompt_library]], AI_Life_Coach_Friend/ folder (full source), David_AI_Prompt_Library/ (master context), ANTI_GRAVITY prompt (5yr + personal facts), [[../STATENOTFATE/]] (five_year... worksheets, intake guides), source bundles in My Drive/CHATGPT_MASTER_context (testimonial & design rationale files).

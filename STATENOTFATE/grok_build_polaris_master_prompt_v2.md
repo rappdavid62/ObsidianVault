@@ -1,5 +1,12 @@
 # Grok Build Master Prompt v2 — StateNotFateBeta Polaris / Smart Welcome / Adaptive Profile
 
+## Library Gardener Pass 2026-06-13 (Whole Project)
+**DO NOT DELETE ANYTHING** – this prompt (and related artifacts) preserved. Part of full SNF project review.
+
+**Premise sharpened** (consistent across vault): "State is information. Depression is a temporary multi-system state, not identity or fate. Proof (visible evidence that effort still shapes the substrate) is the corrective. Small actions + registration = progress. Restart without punishment. Energy sovereignty."
+
+See BUILD/README.md and polaris-24.x/BUILD_24X_NOTES.md for complete gardener report (no deletions, premise updates, Dictionary audit, cross-refs to 09-PROMPTS/Library and STATENOTFATE/). Vault is single source of truth.
+
 Paste the prompt below into Grok Build.
 
 ---
