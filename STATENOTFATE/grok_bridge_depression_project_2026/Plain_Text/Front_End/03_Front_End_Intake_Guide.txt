@@ -1,0 +1,44 @@
+Front-End Intake Guide
+How to use questionnaire answers | April 2026
+1. Read for the real bottleneck
+Do not get distracted by eloquence. Look for what is actually breaking function.
+If the person names several problems, prioritize the one that causes the most repeated damage.
+Look especially for hopelessness, exhaustion, severe drift, self-attack, social disappearance, or chaos-heavy environment.
+2. Decide what the introduction has to accomplish first
+3. Match the tone
+Clinical - use structure, clarity, and mechanism language.
+Practical - emphasize small steps, logistics, and friction reduction.
+Blunt - cut sentimentality and name predictable traps directly.
+Emotionally real - name suffering, shame, disappointment, and misunderstanding without melodrama.
+Hopeful without fake optimism - stress that change is difficult but not impossible, and explain why.
+4. Size the first plan correctly
+Use the stated capacity, not the helper’s wishful estimate. If the person says they have very little time or energy, build a survival-floor plan first. Oversized early plans destroy credibility.
+5. Use hope as a checkpoint
+Ask one quiet question: does this person still believe effort can change anything? If the answer is no or barely, the first task is not education overload. The first task is hope repair through believable outcomes.
+6. Watch for complexity flags
+Possible bipolar history, psychotic features, major substance destabilization, severe self-neglect, collapse of basic intake, or rapid deterioration should not be treated as a simple self-management case.
+The project can still provide structure, but the helper should not confuse structure with full clinical coverage.
+
+[Table]
+Internal helper guide for interpreting intake data and choosing the first move.
+
+[Table]
+Purpose / Use this file after the questionnaire. It translates answers into tone, first focus, and first usable plan.
+
+[Table]
+Answer pattern | What the intro should do first
+Hopeless / effort feels pointless | Restore credibility that action can still matter
+Exhausted / overwhelmed | Reduce load and explain minimum viable action
+Shame / self-attack | Separate state from identity and lower moral pressure
+Confused / overthinking | Clarify the model and reduce fog
+Emotionally flat / disconnected | Name the syndrome without demanding performance
+
+[Table]
+Capacity signal | First plan size
+Very low | Only survival anchors and one visible win
+Low to moderate | Core anchors plus one practical task block
+Moderate | Core anchors, one task block, one reset, one social/admin step
+Strong | Reinforce the base first; do not spend the day proving worth
+
+[Table]
+Intake-to-action rule / Pick the smallest plan that the person can still believe in. The first plan should feel modest, maybe even annoyingly modest. That is often a sign it is correctly sized.

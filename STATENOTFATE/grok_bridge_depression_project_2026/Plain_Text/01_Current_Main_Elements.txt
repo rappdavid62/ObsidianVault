@@ -1,0 +1,52 @@
+Current Main Elements
+Depression Project | April 2026
+Core framing
+Depression is broader than sadness. It can look like fatigue, fog, withdrawal, drift, irritability, shame, reward collapse, and shrinking life.
+Function matters as much as mood. A person can report mood that sounds moderate while their real life is structurally collapsing.
+Motivation is unreliable. The system has to work on weak days, not just strong ones.
+Repetition outranks intensity. The project favors boring repeated corrective inputs over emotional heroics.
+Hope as first operating layer
+The current front-end direction defines hope as the brain’s prediction of whether effort will lead to improvement. In this build, hope is not treated as a soft emotion. It is treated as a usable system signal. When hope is low, effort feels pointless, plans feel fake, and the person stops investing in action.
+Hope is rebuilt by restoring action -> outcome credibility.
+The first job is not to demand high motivation. It is to create small believable wins that the nervous system can register.
+If hope remains too low, the later modules become intellectually correct but behaviorally unusable.
+Anchor logic
+Anchors are simple repeated behaviors that reduce chaos even when mood is unstable.
+The usual load-bearing anchors are wake time, light exposure, hydration, food timing, medication consistency when prescribed, movement, hygiene minimums, and an environment reset.
+Anchors should be stacked so one action helps the next one rather than existing as isolated wellness tasks.
+Energy-based execution
+The project does not use one standard for every day. It uses tiered execution.
+Current major modules
+Front end / preamble - explains why the person feels stuck and why effort currently feels pointless.
+Hope system - restores action-to-improvement prediction and determines whether the rest of the plan is usable.
+Daily anchors - sleep timing, light, movement, food, hydration, meds if prescribed, hygiene, environment.
+Behavior and execution - minimum viable day, rescue protocol, friction reduction, visible planning.
+Cognitive and emotional regulation - rumination interruption, self-attack disruption, perspective correction, repetition of stabilizing messages.
+Environment and social structure - reduce friction, stop isolation from becoming total, create response paths that survive low energy.
+Substance and coping reality - account for numbing, avoidance, and other behaviors that change recovery cost.
+Long-range sequencing - launch, Years 1 to 5, then maintenance.
+Long-range structure
+Launch - build rules, minimums, baseline tracking, and visible anchors.
+Year 1 - stabilization and de-chaos.
+Year 2 - capacity building.
+Year 3 - reintegration.
+Year 4 - expansion without self-sabotage.
+Year 5 - consolidation and selective ambition.
+Maintenance - relapse prevention and correction speed.
+Personalization layer
+The front-end questionnaire is not there for decoration. It is how the project avoids talking past the person. It captures symptom burden, constraints, tone, priorities, realistic capacity, and what kind of opening message the person can actually hear.
+
+[Table]
+Compressed statement of the project’s live architecture.
+
+[Table]
+Bottom line / This project treats depression as a systems problem that damages energy, reward prediction, behavior, self-trust, timing, and daily function. / It is not built around motivation, inspiration, or generic positivity. It is built around leverage: the smallest repeatable changes that make the next useful action easier.
+
+[Table]
+Day type | What the day is for | What counts
+Low / survival | Prevent further collapse | Keep contact with minimum anchors
+Medium / stabilization | Protect continuity and add one useful task | Run core anchors plus one practical block
+Strong / expansion | Build future stability without overshooting | Use extra capacity to reinforce the system, not binge productivity
+
+[Table]
+Non-negotiable design standard / The project should always be usable under low energy, inconsistent execution, emotional volatility, avoidance, and bad weeks. If a version of the system only works when someone already feels capable, it is structurally wrong.

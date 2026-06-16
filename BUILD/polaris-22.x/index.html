@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>State Not Fate • Polaris 22.x</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0a0a0c">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+    
+    :root {
+      --bg: #0a0a0c;
+      --surface: #121214;
+      --surface-2: #1a1a1e;
+      --text: #e8e8ea;
+      --text-dim: #a0a0a6;
+      --accent: #6b8e6b;
+      --accent-weak: #4a664a;
+      --danger: #c25c5c;
+      --warning: #d4a017;
+      --success: #5a9a5a;
+      --glass: rgba(255,255,255,0.04);
+    }
+    
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', system_ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-display { font-family: 'Space Grotesk', 'Inter', sans-serif; }
+    
+    .container { max-width: 820px; margin: 0 auto; padding: 16px; }
+    
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--surface-2);
+      margin-bottom: 24px;
+    }
+    .logo { font-size: 21px; font-weight: 600; letter-spacing: -0.02em; }
+    .version { font-size: 12px; color: var(--text-dim); background: var(--surface); padding: 2px 8px; border-radius: 999px; }
+    
+    .tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--surface-2);
+      padding-bottom: 8px;
+    }
+    .tab {
+      padding: 8px 16px;
+      background: transparent;
+      border: none;
+      color: var(--text-dim);
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: all 0.1s ease;
+    }
+    .tab.active {
+      background: var(--surface-2);
+      color: var(--text);
+    }
+    .tab:hover:not(.active) { color: var(--text); background: var(--glass); }
+    
+    .card {
+      background: var(--surface);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 16px;
+      border: 1px solid var(--surface-2);
+    }
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+    .card-title { font-weight: 600; font-size: 15px; }
+    
+    .energy-bar {
+      display: flex;
+      gap: 4px;
+      margin: 12px 0;
+    }
+    .energy-option {
+      flex: 1;
+      padding: 10px;
+      text-align: center;
+      background: var(--surface-2);
+      border-radius: 10px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all .1s;
+      border: 2px solid transparent;
+    }
+    .energy-option.active { border-color: var(--accent); background: var(--accent-weak); }
+    .energy-high { color: #7ed07e; }
+    .energy-medium { color: #d4c76e; }
+    .energy-low { color: #d4a017; }
+    .energy-collapse { color: #c25c5c; }
+    
+    button {
+      background: var(--surface-2);
+      color: var(--text);
+      border: none;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all .1s;
+    }
+    button:hover { background: var(--surface); }
+    button.primary {
+      background: var(--accent);
+      color: white;
+    }
+    button.primary:hover { background: #5a7a5a; }
+    button.floor {
+      background: #3a3a3e;
+      border: 1px solid #5a5a5e;
+    }
+    button.floor:hover { background: #4a4a4e; }
+    
+    .anchor {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px;
+      background: var(--surface-2);
+      border-radius: 12px;
+      margin-bottom: 8px;
+    }
+    .anchor input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--accent);
+    }
+    .anchor.done { opacity: .6; text-decoration: line-through; }
+    
+    .proof { font-size: 13px; color: var(--text-dim); }
+    .proof strong { color: var(--accent); }
+    
+    .toast {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      background: var(--surface);
+      border: 1px solid var(--surface-2);
+      padding: 12px 18px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.3);
+      z-index: 9999;
+      font-size: 14px;
+      max-width: 280px;
+    }
+    .toast.success { border-left: 4px solid var(--success); }
+    .toast.floor { border-left: 4px solid #6b8e6b; }
+    
+    .section-title { font-size: 13px; text-transform: uppercase; letter-spacing: .5px; color: var(--text-dim); margin: 16px 0 8px; }
+    
+    .skill-chip {
+      display: inline-block;
+      background: var(--surface-2);
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      margin: 4px 4px 4px 0;
+      cursor: pointer;
+    }
+    .skill-chip:hover { background: var(--accent-weak); }
+    
+    .welcome-options { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .welcome-btn {
+      padding: 18px 14px;
+      text-align: left;
+      background: var(--surface-2);
+      border-radius: 14px;
+      border: 1px solid var(--surface-2);
+    }
+    .welcome-btn:hover { border-color: var(--accent); }
+    
+    .small { font-size: 12px; color: var(--text-dim); }
+    
+    .floor-banner {
+      background: #2a1f1f;
+      border: 1px solid #5a3a3a;
+      color: #e8b8b8;
+      padding: 12px;
+      border-radius: 12px;
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <div class="logo">State Not Fate <span style="font-size:18px">•</span> <span class="font-display">Polaris</span></div>
+        <div class="version">v22.x • 2026-06-13</div>
+      </div>
+      <div>
+        <button onclick="showTab('safebox')" style="font-size:12px;padding:6px 12px">Safe Box</button>
+      </div>
+    </header>
+
+    <!-- TABS -->
+    <div class="tabs">
+      <button class="tab active" onclick="showTab('welcome')" id="tab-welcome">Welcome</button>
+      <button class="tab" onclick="showTab('polaris')" id="tab-polaris">Polaris</button>
+      <button class="tab" onclick="showTab('skills')" id="tab-skills">Skills</button>
+      <button class="tab" onclick="showTab('dashboard')" id="tab-dashboard">Dashboard</button>
+    </div>
+
+    <!-- WELCOME / SMART RE-ENTRY -->
+    <div id="welcome" class="view">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">You're here.</div>
+        </div>
+        <p class="small" style="margin-bottom:16px">State, not fate. Pick the smallest useful thing.</p>
+        
+        <div class="welcome-options">
+          <div class="welcome-btn" onclick="startSmall()">
+            <strong>Start Small</strong><br>
+            <span class="small">One floor move right now</span>
+          </div>
+          <div class="welcome-btn" onclick="exploreFull()">
+            <strong>Explore Full Program</strong><br>
+            <span class="small">See everything without intake</span>
+          </div>
+          <div class="welcome-btn" onclick="personalizeMore()">
+            <strong>Personalize More</strong><br>
+            <span class="small">Adaptive Recovery Profile</span>
+          </div>
+          <div class="welcome-btn" onclick="emergencyFloor()" style="border-color:#5a3a3a">
+            <strong style="color:#c25c5c">Emergency Floor</strong><br>
+            <span class="small">Safe Box + minimal anchors</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="small">Last active: <span id="last-active">moments ago</span></div>
+        <div style="margin-top:8px">
+          <button onclick="quickRestart()">Quick restart (no questions)</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- POLARIS -->
+    <div id="polaris" class="view" style="display:none">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Polaris • Today</div>
+          <label style="font-size:12px;display:flex;align-items:center;gap:6px">
+            <input type="checkbox" id="polaris-toggle" onchange="togglePolaris()"> 
+            <span class="small">Enabled</span>
+          </label>
+        </div>
+
+        <!-- Energy -->
+        <div>
+          <div class="small" style="margin-bottom:6px">Current energy</div>
+          <div class="energy-bar">
+            <div class="energy-option energy-high" onclick="setEnergy('high')">High</div>
+            <div class="energy-option energy-medium" onclick="setEnergy('medium')">Medium</div>
+            <div class="energy-option energy-low" onclick="setEnergy('low')">Low</div>
+            <div class="energy-option energy-collapse" onclick="setEnergy('collapse')">Collapse</div>
+          </div>
+        </div>
+
+        <div id="polaris-plan" class="small" style="margin:12px 0;padding:12px;background:var(--surface-2);border-radius:10px">
+          <!-- JS populated -->
+        </div>
+
+        <div class="section-title">Anchors (energy-aware)</div>
+        <div id="polaris-anchors"></div>
+
+        <div style="display:flex;gap:8px;margin-top:16px;flex-wrap:wrap">
+          <button class="floor" onclick="logFloorWin()">🔥 Log Floor Win</button>
+          <button onclick="restartToday()">Restart today only</button>
+          <button onclick="showTab('skills')">Use a skill from library</button>
+        </div>
+
+        <div style="margin-top:16px" class="proof">
+          Proof today: <strong id="proof-today">0</strong> • Total: <strong id="proof-total">0</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- SKILLS (from 09-PROMPTS/Library) -->
+    <div id="skills" class="view" style="display:none">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">SNF Core Skills (from Library)</div>
+        </div>
+        <p class="small">Source of truth: 09-PROMPTS/Library. Tap to copy for any AI.</p>
+        
+        <div onclick="copySkill('sobriety-anchors')" class="skill-chip">sobriety-anchors</div>
+        <div onclick="copySkill('snf-hope-activation')" class="skill-chip">snf-hope-activation</div>
+        <div onclick="copySkill('snf-proof-registration')" class="skill-chip">snf-proof-registration</div>
+        <div onclick="copySkill('mvd-anchors')" class="skill-chip">mvd-anchors</div>
+        <div onclick="copySkill('floor-wins')" class="skill-chip">floor-wins</div>
+        <div onclick="copySkill('library-gardener')" class="skill-chip">library-gardener (self-audit)</div>
+        
+        <div style="margin-top:16px">
+          <button onclick="emitDailyPack()">Emit full daily pack (copy)</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div id="dashboard" class="view" style="display:none">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Dashboard</div>
+        </div>
+        <div id="dashboard-content">
+          <!-- populated by JS -->
+        </div>
+        <button onclick="showTab('polaris')" style="width:100%;margin-top:12px">Back to Polaris</button>
+      </div>
+    </div>
+
+    <!-- SAFE BOX -->
+    <div id="safebox" class="view" style="display:none">
+      <div class="card" style="border-color:#5a3a3a">
+        <div class="card-title" style="color:#c25c5c">Safe Box — Floor Only</div>
+        <p class="small">988 (call/text). No judgment. You are already doing the work by being here.</p>
+        
+        <div style="margin:12px 0">
+          <strong>Minimal anchors right now:</strong>
+          <ul style="margin:8px 0;padding-left:18px;font-size:14px">
+            <li>Feet on floor + stand once</li>
+            <li>Water or meds if due</li>
+            <li>One line: “This is a state, not a fate”</li>
+            <li>Log it as a Floor Win</li>
+          </ul>
+        </div>
+        
+        <button onclick="logFloorWin(); showTab('polaris')">Log one Floor Win now</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

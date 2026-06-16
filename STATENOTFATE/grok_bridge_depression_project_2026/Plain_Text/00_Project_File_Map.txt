@@ -1,0 +1,38 @@
+Depression Project
+Current Core File Set
+Clean rebuild of the active project structure | April 2026
+Recommended reading order
+00_Project_File_Map - use this first so the stack makes sense.
+01_Current_Main_Elements - the sharp summary of what the project actually is now.
+02_Depression_Project_Program - the operating version of the project.
+03_Depression_Project_Outline - the architecture in nested outline form.
+Front_End/01_Front_End_Preamble - the user-facing entry layer.
+Front_End/02_Front_End_Questionnaire - intake questions for personalization.
+Front_End/03_Front_End_Intake_Guide - how to interpret answers and decide the first moves.
+Front_End/04_Hope_System_Front_End - the hope-first gatekeeper module.
+Folder structure
+What changed in this rebuild
+The front end is now treated as a separate operating layer rather than something buried inside the long manual.
+The project logic is written around systems failure, function loss, anchor stacking, and low-energy usability.
+The newer direction that treats hope as a measurable prediction signal is given its own dedicated front-end file.
+The bundle is built to be portable: easy to move, easy to skim, and easier to edit later.
+
+[Table]
+What this bundle does: separates the project into usable documents instead of one long manual.
+
+[Table]
+Included in this bundle / This package separates the current project into core architecture, operating program, outline, and a dedicated front-end folder. / It is designed so you can hand the set to another person, move it into a research app, or keep building without losing the hierarchy.
+
+[Table]
+File | Purpose
+00_Project_File_Map.docx | Bundle index and use order
+01_Current_Main_Elements.docx | Compressed statement of the project’s current logic
+02_Depression_Project_Program.docx | Main operating document
+03_Depression_Project_Outline.docx | Master outline of the whole program
+Front_End/01_Front_End_Preamble.docx | Opening explanation for participants
+Front_End/02_Front_End_Questionnaire.docx | Front-end intake form
+Front_End/03_Front_End_Intake_Guide.docx | How to use questionnaire data
+Front_End/04_Hope_System_Front_End.docx | Hope as first operating layer
+
+[Table]
+One practical rule / Do not let the front end get swallowed by the five-year material. The front end exists to make the rest of the system usable. If the person cannot understand the front end, trust the front end is still wrong.

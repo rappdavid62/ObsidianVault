@@ -1,0 +1,16 @@
+Depression Project Export Bundle - Quick Start
+
+Read in this order:
+1) 01_project_synthesis/01_master_project_synthesis.md
+2) 02_manifests/01_reconstructed_core_file_manifest.md
+3) 03_context_notes/01_shared_project_context_notes.md
+4) 04_current_uploads_available_here/
+
+This export is meant to preserve:
+- project logic
+- structure
+- portability
+- shareability
+
+It does NOT contain every original file-library binary.
+It DOES contain a reconstruction of the main file set and operating logic.

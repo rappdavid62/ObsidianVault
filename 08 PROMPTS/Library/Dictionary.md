@@ -105,7 +105,7 @@ Use specific, searchable tags. Prefer hyphenated. Group them in your mind as:
 - circadian, sobriety-practice, deep-dive, option-generation, systems-thinking, career-planning, rhythm, light-exposure, sleep-anchoring
 
 **SNF-Specific Proof & Activation**
-- visible-proof, external-memory, restart-speed, resilience-rate, hope-meter, floor-win, proof-registration, hope-activation, effort-reconnection, reading-error-interruption, substrate-reminder, neuroplasticity, prediction-error, habit-formation, mastery-experience, implementation-intention, relapse-prevention, cue-response, reward-normalization
+- visible-proof, external-memory, restart-speed, resilience-rate, hope-meter, floor-win, proof-registration, hope-activation, effort-reconnection, reading-error-interruption, substrate-reminder, neuroplasticity, prediction-error
 
 **Adding tags**: Add to this dictionary first. Keep the list under ~60 active tags. Use compound tags (e.g. prs-track, floor-wins, proof-based-hope) for precision. Avoid single-word generics like "work" or "plan" — qualify them (e.g. job-plan, daily-routine).
 
@@ -152,6 +152,7 @@ Use specific, searchable tags. Prefer hyphenated. Group them in your mind as:
 - Add "Audience" (self, therapist, employer, family)
 - Add "Output Style" (bottom-line-first, narrative, checklist, json)
 - Link each term to example notes that best exemplify it.
+- Expand with more 5-year vision milestones, specific PRS clinical tools, and trade apprenticeship realities as clusters grow.
 
 ---
 

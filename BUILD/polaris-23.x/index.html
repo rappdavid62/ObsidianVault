@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>State Not Fate • Polaris 23.x</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0a0a0c">
+  <link rel="stylesheet" href="index.css">
+  <style>
+    /* Additional 23.x styles for new sections (PHQ-9, Audit, Quests) */
+    .phq9-modal {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.85);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+    }
+    .phq9-content {
+      background: var(--surface);
+      padding: 24px;
+      border-radius: 16px;
+      max-width: 620px;
+      width: 92%;
+      max-height: 85vh;
+      overflow: auto;
+    }
+    .phq9-question { margin-bottom: 14px; }
+    .phq9-result {
+      padding: 16px;
+      border-radius: 12px;
+      margin-top: 16px;
+    }
+    .audit-panel {
+      background: var(--surface-2);
+      padding: 16px;
+      border-radius: 12px;
+      margin-top: 12px;
+    }
+    .quest {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px;
+      background: var(--surface-2);
+      border-radius: 10px;
+      margin-bottom: 6px;
+    }
+    .version { font-size: 12px; color: var(--text-dim); background: var(--surface); padding: 2px 8px; border-radius: 999px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <div class="logo">State Not Fate <span style="font-size:18px">•</span> <span class="font-display">Polaris</span></div>
+        <div class="version">v23.x • 2026-06-13 (from 09-PROMPTS/Library full gardener)</div>
+      </div>
+      <div>
+        <button onclick="showTab('safebox')" style="font-size:12px;padding:6px 12px">Safe Box</button>
+      </div>
+    </header>
+
+    <!-- TABS -->
+    <div class="tabs">
+      <button class="tab active" onclick="showTab('welcome')" id="tab-welcome">Welcome</button>
+      <button class="tab" onclick="showTab('polaris')" id="tab-polaris">Polaris</button>
+      <button class="tab" onclick="showTab('skills')" id="tab-skills">Skills</button>
+      <button class="tab" onclick="showTab('dashboard')" id="tab-dashboard">Dashboard</button>
+    </div>
+
+    <!-- WELCOME (same as 22.x + 23.x label) -->
+    <div id="welcome" class="view">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">You're here. (23.x)</div>
+        </div>
+        <p class="small" style="margin-bottom:16px">State, not fate. Pick the smallest useful thing. New in 23.x: PHQ-9 engine + deeper gardener self-audit + adaptive quests.</p>
+        
+        <div class="welcome-options">
+          <div class="welcome-btn" onclick="startSmall()">
+            <strong>Start Small</strong><br>
+            <span class="small">One floor move right now</span>
+          </div>
+          <div class="welcome-btn" onclick="exploreFull()">
+            <strong>Explore Full Program</strong><br>
+            <span class="small">See everything without intake</span>
+          </div>
+          <div class="welcome-btn" onclick="personalizeMore()">
+            <strong>Personalize More</strong><br>
+            <span class="small">Adaptive Recovery Profile</span>
+          </div>
+          <div class="welcome-btn" onclick="emergencyFloor()" style="border-color:#5a3a3a">
+            <strong style="color:#c25c5c">Emergency Floor</strong><br>
+            <span class="small">Safe Box + minimal anchors</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="small">Last active: <span id="last-active">moments ago</span></div>
+        <div style="margin-top:8px">
+          <button onclick="quickRestart()">Quick restart (no questions)</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- POLARIS 23.x -->
+    <div id="polaris" class="view" style="display:none">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Polaris • Today (23.x)</div>
+          <label style="font-size:12px;display:flex;align-items:center;gap:6px">
+            <input type="checkbox" id="polaris-toggle" onchange="togglePolaris()"> 
+            <span class="small">Enabled</span>
+          </label>
+        </div>
+
+        <!-- Energy -->
+        <div>
+          <div class="small" style="margin-bottom:6px">Current energy</div>
+          <div class="energy-bar">
+            <div class="energy-option energy-high" onclick="setEnergy('high')">High</div>
+            <div class="energy-option energy-medium" onclick="setEnergy('medium')">Medium</div>
+            <div class="energy-option energy-low" onclick="setEnergy('low')">Low</div>
+            <div class="energy-option energy-collapse" onclick="setEnergy('collapse')">Collapse</div>
+          </div>
+        </div>
+
+        <div id="polaris-plan" class="small" style="margin:12px 0;padding:12px;background:var(--surface-2);border-radius:10px">
+          <!-- JS populated -->
+        </div>
+
+        <div class="section-title">Anchors (energy-aware)</div>
+        <div id="polaris-anchors"></div>
+
+        <!-- NEW 23.x: Adaptive Quests -->
+        <div class="section-title">Adaptive Quests (23.x — more quests)</div>
+        <div id="polaris-quests"></div>
+
+        <div style="display:flex;gap:8px;margin-top:16px;flex-wrap:wrap">
+          <button class="floor" onclick="logFloorWin()">🔥 Log Floor Win</button>
+          <button onclick="restartToday()">Restart today only</button>
+          <button onclick="showTab('skills')">Use a skill from library</button>
+          <!-- NEW 23.x buttons -->
+          <button onclick="openPHQ9()">Run PHQ-9 (exact clinical)</button>
+          <button onclick="openGardenerAudit()">Library Gardener Self-Audit</button>
+        </div>
+
+        <div style="margin-top:16px" class="proof">
+          Proof today: <strong id="proof-today">0</strong> • Total: <strong id="proof-total">0</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- SKILLS (from 09-PROMPTS/Library) + 23.x audit -->
+    <div id="skills" class="view" style="display:none">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">SNF Core Skills (from Library) — 23.x</div>
+        </div>
+        <p class="small">Source of truth: 09-PROMPTS/Library. Tap to copy for any AI.</p>
+        
+        <div onclick="copySkill('sobriety-anchors')" class="skill-chip">sobriety-anchors</div>
+        <div onclick="copySkill('snf-hope-activation')" class="skill-chip">snf-hope-activation</div>
+        <div onclick="copySkill('snf-proof-registration')" class="skill-chip">snf-proof-registration</div>
+        <div onclick="copySkill('mvd-anchors')" class="skill-chip">mvd-anchors</div>
+        <div onclick="copySkill('floor-wins')" class="skill-chip">floor-wins</div>
+        <div onclick="copySkill('library-gardener')" class="skill-chip">library-gardener (self-audit)</div>
+        
+        <div style="margin-top:16px">
+          <button onclick="emitDailyPack()">Emit full daily pack (copy)</button>
+          <!-- NEW 23.x -->
+          <button onclick="openGardenerAudit()" style="margin-left:8px">Open deeper gardener self-audit</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- DASHBOARD 23.x (now includes PHQ-9 history + gardener audit summary) -->
+    <div id="dashboard" class="view" style="display:none">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Dashboard (23.x)</div>
+        </div>
+        <div id="dashboard-content">
+          <!-- populated by JS -->
+        </div>
+        <button onclick="showTab('polaris')" style="width:100%;margin-top:12px">Back to Polaris</button>
+      </div>
+    </div>
+
+    <!-- SAFE BOX -->
+    <div id="safebox" class="view" style="display:none">
+      <div class="card" style="border-color:#5a3a3a">
+        <div class="card-title" style="color:#c25c5c">Safe Box — Floor Only</div>
+        <p class="small">988 (call/text). No judgment. You are already doing the work by being here.</p>
+        
+        <div style="margin:12px 0">
+          <strong>Minimal anchors right now:</strong>
+          <ul style="margin:8px 0;padding-left:18px;font-size:14px">
+            <li>Feet on floor + stand once</li>
+            <li>Water or meds if due</li>
+            <li>One line: “This is a state, not a fate”</li>
+            <li>Log it as a Floor Win</li>
+          </ul>
+        </div>
+        
+        <button onclick="logFloorWin(); showTab('polaris')">Log one Floor Win now</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHQ-9 Modal (NEW 23.x) -->
+  <div id="phq9-modal" class="phq9-modal" onclick="if (event.target.id === 'phq9-modal') closePHQ9()">
+    <div class="phq9-content" onclick="event.stopImmediatePropagation()">
+      <h3>PHQ-9 Assessment (Exact Clinical — 23.x)</h3>
+      <p class="small">Over the last 2 weeks, how often have you been bothered by any of the following problems?</p>
+      <div id="phq9-questions"></div>
+      <div style="margin-top:16px;display:flex;gap:8px">
+        <button onclick="submitPHQ9()">Submit &amp; Get Exact Interpretation</button>
+        <button onclick="closePHQ9()">Cancel</button>
+      </div>
+      <div id="phq9-result" style="display:none"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

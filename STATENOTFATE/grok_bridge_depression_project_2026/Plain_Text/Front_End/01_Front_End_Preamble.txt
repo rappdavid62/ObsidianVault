@@ -1,0 +1,32 @@
+Front-End Preamble
+Depression Project front-end | April 2026
+Start here
+If you have been depressed for a while, one of the hardest parts is that effort starts to feel pointless. That is not just laziness or weakness. Depression can change energy, reward expectation, focus, self-story, and the felt cost of action. It can make useful things look too small to matter and hard things look permanent.
+That matters because many people judge themselves from inside the illness. They assume the hopeless interpretation is the accurate one. They assume the failure to feel motivated means nothing can work. They assume a rough week proves the whole plan is fake. That is exactly the kind of reading error this project is trying to interrupt.
+What this project assumes
+Depression is not only sadness. It can show up as exhaustion, fog, loss of pleasure, irritability, shame, withdrawal, delay, sleep damage, or a shrinking life.
+Motivation is not a stable engine. You cannot build a serious plan on a signal that disappears when things get hard.
+Function matters as much as mood. If daily life is collapsing, that matters even when feelings are hard to describe.
+Small repeated corrections matter more than rare emotional surges.
+Why you may feel stuck
+Depression tends to create a loop. Things feel harder, so you do less. Because you do less, life gets smaller and more chaotic. Because life gets smaller and more chaotic, your mind starts reading the future as darker and shorter. Then even useful actions start to look fake, trivial, or too expensive. After a while, you are not only depressed. You are also trained to expect that effort will not pay off.
+Why this project starts with hope
+Here, hope does not mean forced positivity. It means something more practical: your brain’s prediction of whether effort can still lead to improvement. When that prediction gets damaged, you stop investing in action. The point of the front end is to repair that prediction enough that the next steps no longer feel absurd.
+That repair does not happen by pretending everything is fine. It happens by creating a few small, believable pieces of evidence that the system can still change.
+What happens next
+First, the questionnaire identifies what depression looks like for you, what is getting hit hardest, and what kind of message you can actually hear.
+Then the opening plan is scaled to your real battery, not an imaginary ideal version of you.
+The early goal is not to fix your whole life at once. The early goal is to stop the floor from moving.
+What success looks like at first
+At first, success often looks dull: slightly better mornings, fewer fully lost days, less drift, faster correction after bad hits, and a little more trust that tomorrow can still be shaped. That may not feel dramatic. It is still real progress.
+One boundary
+This material is for orientation and self-management structure. It is not a diagnosis, and it is not a replacement for urgent or formal care when someone is in acute danger, severely deteriorating, or dealing with a more complicated presentation.
+
+[Table]
+User-facing entry layer before the questionnaire or program.
+
+[Table]
+What this preamble is for / This preamble is not meant to explain every detail of depression. Its job is to explain the minimum necessary facts that change how a person understands their situation and make the rest of the system usable. / The target is clarity, not inspiration.
+
+[Table]
+The practical rule / Do not ask early recovery to produce late recovery results. If the system is weak, the first win is continuity, not transformation.

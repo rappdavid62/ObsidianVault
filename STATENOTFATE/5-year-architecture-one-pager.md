@@ -1,0 +1,1 @@
+Clear long-haul commitment language without overwhelm

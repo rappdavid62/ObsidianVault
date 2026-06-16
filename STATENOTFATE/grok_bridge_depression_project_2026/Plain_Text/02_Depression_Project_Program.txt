@@ -1,0 +1,107 @@
+Depression Project Program
+Operating build | April 2026
+1. Executive summary
+The current program treats depression as an interaction between biology, psychology, behavior, environment, and repeated learning. The person does not just feel bad; they start to expect less reward, trust themselves less, avoid more, drift more, and read temporary states as permanent truth. That is why purely intellectual insight often fails to fix the problem.
+The corrective strategy is practical. Reduce chaos. Restore load-bearing anchors. Build visible routines. Lower friction. Recreate believable evidence that effort can still matter. Sequence the work so early-stage systems are not asked to carry late-stage ambitions.
+2. Design principles
+Start with function. Measure what the illness is doing to sleep, work, hygiene, focus, follow-through, environment, social life, and ordinary life range.
+Treat motivation as unstable. Use structure, cues, checklists, and tiers instead of waiting to feel ready.
+Use leverage, not volume. Choose the few inputs that improve several other inputs at once.
+Prefer repetition over drama. Repeated small signals retrain the system more reliably than temporary bursts of force.
+Scale the plan to the actual battery. Do not use one standard for collapse days and strong days.
+Separate state from identity. A depressive state can feel permanent while still being changeable.
+3. Front-end sequence
+This order matters. When a person feels that effort is pointless, giving them the right tools in the wrong order still fails. The front end has to restore usability before asking for larger execution.
+4. Hope as the gatekeeper
+In the current design, hope is not sentimental language. It is the working prediction that effort can still produce improvement. When that prediction collapses, the person may still understand the plan intellectually while refusing it behaviorally.
+Low hope produces phrases like: what is the point, I already know this, nothing sticks, I cannot keep doing this, or small steps are fake.
+The repair method is not arguing with the person. The repair method is generating credible, small, repeatable evidence.
+The first operating wins should therefore be modest, visible, and hard to misread.
+5. Core operating modules
+A. Daily anchors
+Daily anchors are the load-bearing substrate. They are boring on purpose because they have to survive weak days.
+Wake time regularity
+Morning light exposure
+Hydration and simple meal timing
+Medication consistency when prescribed
+Minimum viable movement
+Hygiene continuity
+Brief environment reset
+B. Behavior and execution
+Minimum viable day
+Low / medium / strong day rules
+Visible planning
+Friction reduction
+Rescue protocol for collapse days
+C. Cognitive and emotional regulation
+Rumination interruption
+Anti-self-attack counter-messaging
+Thoughts treated as data, not verdicts
+Short reflection instead of endless self-analysis
+D. Environment and social structure
+Reduce the hidden cost of action
+Keep the room from becoming an accomplice to collapse
+Preserve one or two reliable forms of contact
+Prevent total social disappearance
+E. Substance and coping reality
+The program should not pretend numbing, avoidance, impulsive coping, or substance use are side notes. They change energy, judgment, routine stability, and follow-through cost. The system has to account for them honestly or the plan becomes fantasy.
+F. Therapy, medication, and formal treatment
+The project is not anti-treatment. Current formal guidance still supports psychological treatments, medication when indicated, shared decision-making, and regular review. The project treats those lanes as tools that should make the rest of the plan more usable, not as identity positions.
+6. Daily execution architecture
+The hierarchy prevents the all-or-nothing collapse. If Level 3 fails, the person still has Level 2. If Level 2 fails, Level 1 still protects tomorrow.
+7. Launch rules
+Pick a wake time you can actually defend.
+Decide where morning light will happen.
+Pick a movement floor small enough to survive weak days.
+Write the minimum viable day and the rescue sequence.
+Put basic supplies where action becomes easier: water, food, hygiene items, checklist, meds if prescribed.
+Track one baseline week before overinterpreting the result.
+8. Five-year sequence
+9. Personalization logic
+The questionnaire answers should shape the first message and first plan. Someone whose main issue is exhaustion needs a different opening than someone whose main issue is shame, self-attack, or hopelessness. Tone also matters. A useful message must be hearable, not merely correct.
+Symptom tells you what is hitting function hardest.
+Constraint tells you what makes execution expensive in real life.
+Tone tells you how the person can still receive language.
+Priority tells you what the intro needs to accomplish first.
+Capacity tells you how large the first plan is allowed to be.
+10. Failure logic
+Most plans fail for predictable reasons: they are too large, too abstract, too mood-dependent, too optimized for strong days, too disconnected from the person’s constraints, or too ashamed to admit what the person is actually doing when they disappear.
+11. Practical standard for success
+Early success does not look cinematic. It looks like lower chaos, better mornings, fewer completely lost days, less interpretive whiplash, faster correction after bad hits, and a growing sense that tomorrow can still be shaped.
+12. Evidence note
+This build stays aligned with current formal depression guidance that supports psychological treatment, medication when indicated, shared decision-making, and ongoing reassessment. NICE’s adult depression guideline remains current and was last reviewed in January 2026, the VA/DoD major depressive disorder guideline remains the active 2022 framework on the VA site, NIMH continues to frame depression as a disorder affecting mood, body, and cognition, and WHO states that effective treatments include psychological treatments and medications, with antidepressants not needed for mild depression.
+
+[Table]
+Main program document combining the current architecture, front-end logic, and five-year sequencing.
+
+[Table]
+Program objective / Build a recovery system that still functions when motivation is low, energy is inconsistent, perception is distorted, and life conditions are imperfect. / The project is not trying to create a motivational high. It is trying to create a structure that becomes harder to knock over.
+
+[Table]
+Order | Front-end piece | Job
+1 | Preamble | Explain why the person feels stuck and why effort feels pointless
+2 | Hope system | Check whether effort still feels capable of changing anything
+3 | Questionnaire | Capture symptom burden, constraints, tone, and realistic capacity
+4 | First operating plan | Choose the smallest believable next system
+
+[Table]
+Examples of hope-restoring wins / Three mornings in one week where wake time and light happen on purpose. / A low day where the person still runs the minimum viable day instead of disappearing. / A written review that shows a weak day no longer destroys the whole week. / A correction where a messy room becomes slightly less hostile in ten minutes rather than remaining symbolic of total failure.
+
+[Table]
+Layer | Required behavior | Purpose
+Level 1 - survival | Wake, water, meds if prescribed, food, light, hygiene minimums | Keep the floor from dropping out
+Level 2 - stabilization | Movement, one task block, one reset, one non-passive act | Preserve continuity and reduce drift
+Level 3 - expansion | Longer work, deliberate exercise, richer contact, chosen leisure | Use extra capacity without destabilizing the base
+
+[Table]
+Stage | Primary job | What improves first | Main danger
+Launch | Rules, minimums, baseline, friction reduction | The plan becomes visible | Overbuilding too early
+Year 1 | Stabilization and de-chaos | Less catastrophic drift | Overshooting after good days
+Year 2 | Capacity building | More usable energy and follow-through | Asking for too much too fast
+Year 3 | Reintegration | Identity, relationship, and life range widen | Interpreting setbacks as total regression
+Year 4 | Expansion | More ambition without losing anchors | Dropping the boring basics
+Year 5 | Consolidation | Selective durable life fit | Confusing better with invulnerable
+Maintenance | Early correction and relapse prevention | Faster recovery from hits | Identity collapse during setbacks
+
+[Table]
+Correction rule / When the system keeps breaking, simplify before you intensify. More guilt is usually not the fix. Lowering friction, clarifying the hierarchy, and reducing startup cost usually matter more.

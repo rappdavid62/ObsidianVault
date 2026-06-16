@@ -15,7 +15,7 @@ tags: [project, systems, philosophy-snf, substrate, evidence-based, neuroplastic
 
 # 2026 SNF Substrate Systems Project
 
-**Status**: Active - Started 2026-06-12 using the Laptop Sync AI Library as operating system.
+**Status**: Active - Started 2026-06-12 using the Laptop Sync AI Library as operating system. (DOV at OneDrive/Desktop/ObsidianVault is the device-synced clone of GitHub remote.)
 
 ## Purpose
 The "substrate" (brain reward prediction systems, external memory structures, behavioral activation circuits, life load-bearing systems) has been damaged by years of depression and is currently in a fragile state. This project turns the recent Library expansion (substrate-reminders skill + scientific citations in SNF notes) into lived daily practice. 
@@ -75,6 +75,6 @@ This is not motivation. It is systems engineering using the canonical Library as
 - Job activity in main job_search_tracker.
 - Reference the full Laptop Sync 08 PROMPTS/Library as source of truth for every decision.
 
-**This project is run from the Obsidian Laptop Sync vault using the AI Prompt & Skill Library as the single source of truth. All plans, execution, and reviews will be emitted from or folded back into the Library.**
+**This project is run from the Obsidian Laptop Sync vault using the AI Prompt & Skill Library as the single source of truth. All plans, execution, and reviews will be emitted from or folded back into the Library. DOV (OneDrive/Desktop/ObsidianVault) pulls from the GitHub remote for device sync.**
 
-(Started via "start new project" directive on 2026-06-12. Everything is derivative of the canonical Library.)
+(Started via "start new project" directive on 2026-06-12. Everything is derivative of the canonical Library. Task 3 executed for user '3'.)

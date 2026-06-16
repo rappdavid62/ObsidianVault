@@ -1,0 +1,79 @@
+Depression Project Outline
+Master outline | April 2026
+I. Project thesis
+Depression is treated as a systems failure affecting energy, perception, reward prediction, behavior, and function.
+The project aims to restore usable function through repeated structural corrections rather than motivational pressure.
+II. Design principles
+Function over appearance
+Repetition over intensity
+Anchors over inspiration
+Low-friction execution over ideal execution
+State-based planning over one universal standard
+III. Front-end architecture
+A. Preamble
+B. Hope system
+C. Questionnaire
+D. Personalization logic
+E. First operating plan
+IV. Core front-end ideas
+A. Why the person feels stuck
+B. Why effort currently feels pointless
+C. Why motivation is unreliable
+D. Why small believable wins matter
+E. Why function matters as much as mood
+V. Daily operating system
+A. Survival anchors
+B. Stabilization anchors
+C. Expansion anchors
+D. Minimum viable day
+E. Rescue protocol
+F. Daily review / weekly review
+VI. Core modules
+A. Sleep, circadian regularity, and light
+B. Movement and behavioral activation
+C. Food, hydration, medication consistency
+D. Hygiene and environment
+E. Rumination / shame / self-attack interruption
+F. Social reintegration and contact protection
+G. Substance and coping reality
+H. Therapy / medication / formal treatment integration
+VII. Personalization inputs
+A. Symptom causing most damage
+B. Practical constraints
+C. What others misunderstand
+D. Tone that can still be heard
+E. What the intro needs to do first
+F. Realistic capacity for change
+VIII. Launch sequence
+A. Baseline week
+B. Friction reduction
+C. Minimum viable setup
+D. Written checklist placement
+E. Review and simplification
+IX. Long-horizon sequence
+A. Launch
+B. Year 1 - stabilization and de-chaos
+C. Year 2 - capacity building
+D. Year 3 - reintegration
+E. Year 4 - expansion without self-sabotage
+F. Year 5 - consolidation and selective ambition
+G. Maintenance - relapse prevention and fast correction
+X. Measurement and review
+A. Daily continuity
+B. Weekly drift check
+C. Function indicators
+D. Hope signal
+E. Trigger / relapse map
+XI. Failure and correction logic
+A. Plan too large
+B. Plan too abstract
+C. Plan depends on strong mood
+D. Plan ignores real constraints
+E. Plan lacks rescue mode
+F. Correction = simplify, restack, re-measure
+
+[Table]
+Nested architecture of the current build.
+
+[Table]
+Use of this file / This is the skeleton. Use it when you want to restructure, hand off the project, or check whether a new document fits the hierarchy.

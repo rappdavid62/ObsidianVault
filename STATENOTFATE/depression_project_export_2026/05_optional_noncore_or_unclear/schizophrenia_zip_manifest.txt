@@ -1,0 +1,4 @@
+codex_bundle/
+codex_bundle/WHO_guidelines_physical_health_SMD_2018.pdf
+codex_bundle/Indian_Psychiatric_Society_Schizophrenia_Guidelines_2017.pdf
+codex_bundle/APA_Schizophrenia_Practice_Guideline_2021.pdf

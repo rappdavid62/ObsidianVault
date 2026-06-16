@@ -1,0 +1,39 @@
+/* Polaris 23.x — Clean, calm, offline-first (preserves 22.x base + 23.x additions) */
+:root {
+  --bg: #0a0a0c;
+  --surface: #121214;
+  --surface-2: #1a1a1e;
+  --text: #e8e8ea;
+  --text-dim: #a0a0a6;
+  --accent: #6b8e6b;
+  --accent-weak: #4a664a;
+}
+
+body { background: var(--bg); color: var(--text); }
+.container { max-width: 820px; margin: 0 auto; padding: 16px; }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--surface-2);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+button, .energy-option, .anchor, .quest {
+  transition: all .1s ease;
+}
+
+.toast {
+  font-family: system_ui, sans-serif;
+  box-shadow: 0 10px 30px rgba(0,0,0,.4);
+}
+
+@media (max-width: 640px) {
+  .welcome-options { grid-template-columns: 1fr !important; }
+  .container { padding: 12px; }
+}
+
+/* 23.x specific polish */
+.phq9-content { border: 1px solid var(--surface-2); }
+.audit-panel { border-left: 4px solid var(--accent); }

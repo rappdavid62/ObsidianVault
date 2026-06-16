@@ -21,3 +21,5 @@
 **Always use the full Library as source of truth. Emit custom packs when stuck (e.g. substrate-reminders + systems-audit + 5-year-vision-alignment).**
 
 **No day with effort is unregistered. Small consistent proof reshapes the substrate.**
+
+**Task 3 executed for '3'**: Job actions logged in the dedicated tracker (with substrate proof, Library integration, and synced skills). Emit job-focused packs before sessions.
