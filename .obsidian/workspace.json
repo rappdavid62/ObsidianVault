@@ -171,22 +171,26 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "omnisearch:Omnisearch": false,
-      "obsidian-git:Open Git source control": false,
-      "templater-obsidian:Templater": false,
-      "obsidian-excalidraw-plugin:New drawing": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "omnisearch:Omnisearch": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "01912961735efaf1",
+  "active": "fff8ad58c0c04868",
   "lastOpenFiles": [
+    "DAILY-NOTES",
+    "08-USER DATA-FEEDBACK/12-",
+    "08-USER DATA-FEEDBACK/11-MEN",
+    "08-USER DATA-FEEDBACK",
+    "07-TECH-AND-AI",
     "Untitled 1.md",
     "06-DAILY-NOTES/2026-06-05.md",
     "08 PROMPTS/Library/Contexts/master-bio 1.md",
@@ -213,15 +217,10 @@
     "03-RESOURCES/copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
     "03-RESOURCES/copilot/copilot-custom-prompts/Emojify.md",
     "03-RESOURCES/copilot/copilot-custom-prompts/Explain like I am 5.md",
-    "03-RESOURCES/copilot/copilot-custom-prompts/Make longer.md",
     "03-RESOURCES/copilot/copilot-custom-prompts",
     "03-RESOURCES/copilot",
     "04-ARCHIVES/TEMPLATES",
     "01-PROJECTS/STATENOTFATE",
-    "04-ARCHIVES/40-BREAST EXPANSION",
-    "01-PROJECTS/2026-SNF-Substrate-Systems-Project/03-Execution",
-    "01-PROJECTS/2026-SNF-Substrate-Systems-Project/04-Tracking",
-    "01-PROJECTS/2026-SNF-Substrate-Systems-Project/02-Planning",
-    "01-PROJECTS/2026-SNF-Substrate-Systems-Project/01-Context"
+    "04-ARCHIVES/40-BREAST EXPANSION"
   ]
 }
