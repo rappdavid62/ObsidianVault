@@ -20,8 +20,37 @@
               "icon": "lucide-file",
               "title": "SNF-Main-Frame-Link-2026-06-13.md"
             }
+          },
+          {
+            "id": "588b0b603a5545b0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00-INBOX/App Captures/Clippings/TMWLBB.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "TMWLBB"
+            }
+          },
+          {
+            "id": "7ad826471ed80a3e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "05-WRITING/FAVORITE WORDS.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "FAVORITE WORDS"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -184,43 +213,43 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "01912961735efaf1",
+  "active": "fff8ad58c0c04868",
   "lastOpenFiles": [
-    "08-TECH-AND-AI/SKILL.md",
-    "08-TECH-AND-AI/AI SYSTEM SYSTEM GOVERNANCE.md",
-    "08-TECH-AND-AI/AI_SYSTEM/MASTER_CONTEXT.md",
-    "08-TECH-AND-AI/AI_SYSTEM/CURRENT_STATUS.md",
-    "README.md",
-    "08 PROMPTS/Library/Contexts/master-bio 1.md",
-    "00-INBOX/depress q.md",
-    "00-INBOX/clone.md",
-    "00-INBOX/Untitled 2",
-    "00-INBOX/Untitled 1.md",
-    "00-INBOX/Untitled.md",
-    "10-USER-DATA-FEEDBACK/12-",
-    "10-USER-DATA-FEEDBACK/11-MEN",
-    "10-USER-DATA-FEEDBACK",
-    "09-PROMPTS/Library/TEMPLATES/New-Skill.md",
-    "09-PROMPTS/Library/TEMPLATES",
-    "09-PROMPTS/Library/Skills/thoroughness-protocol.md",
-    "09-PROMPTS/Library/Skills/systems-audit.md",
-    "09-PROMPTS/Library/Skills/substrate-reminders.md",
-    "09-PROMPTS/Library/Skills/career-strategy.md",
-    "09-PROMPTS/Library/Skills/ai-setup-audit.md",
-    "09-PROMPTS/Library/Skills/5-year-vision-alignment.md",
-    "09-PROMPTS/Library/Contexts/master-bio 1.md",
-    "09-PROMPTS/Library/Untitled.md",
-    "09-PROMPTS/Library/Untitled 1.md",
-    "09-PROMPTS/Library/Gemini-System-Prompt.md",
-    "09-PROMPTS/Library/Claude-Project-Instructions.md",
-    "08-TECH-AND-AI/02_ai_life_coach_and_prompt_library.md",
-    "08-TECH-AND-AI/01_snf_pwa_antigravity_engine.md",
-    "08-TECH-AND-AI/00_START_HERE.md",
-    "08-TECH-AND-AI/CAPTURE/RAW_INBOX.md",
-    "08-TECH-AND-AI/CAPTURE",
-    "08-TECH-AND-AI/AI_SYSTEM",
-    "08-TECH-AND-AI",
-    "07-HUMAN-HEALTH/Human",
-    "07-HUMAN-HEALTH"
+    "LOSV/08 PROMPTS/Prompt-Library/BE PROMPT.md",
+    "LOSV/BE PROMPT.md",
+    "LOSV/Untitled 2.md",
+    "LOSV/Untitled 1.md",
+    "LOSV/08 PROMPTS/Library/Contexts/master-bio 1.md",
+    "LOSV/04-ARCHIVES/Voice 2 text notes",
+    "LOSV/clone.md",
+    "LOSV/05-WRITING/Voice/Voice.md",
+    "LOSV/Untitled.md",
+    "LOSV/README.md",
+    "LOSV/03-RESOURCES/copilot/copilot-custom-prompts/Clip YouTube Transcript.md",
+    "LOSV/03-RESOURCES/copilot/copilot-custom-prompts/Clip Web Page.md",
+    "LOSV/03-RESOURCES/copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
+    "LOSV/03-RESOURCES/copilot/copilot-custom-prompts/Emojify.md",
+    "LOSV/03-RESOURCES/copilot/copilot-custom-prompts/Explain like I am 5.md",
+    "LOSV/03-RESOURCES/copilot/copilot-custom-prompts/Make longer.md",
+    "LOSV/03-RESOURCES/copilot/copilot-custom-prompts/Rewrite as tweet.md",
+    "LOSV/03-RESOURCES/copilot/copilot-custom-prompts/Make shorter.md",
+    "LOSV/03-RESOURCES/copilot/copilot-custom-prompts/Simplify.md",
+    "LOSV/03-RESOURCES/copilot/copilot-custom-prompts/Translate to Chinese.md",
+    "LOSV/03-RESOURCES/copilot/copilot-custom-prompts/Generate table of contents.md",
+    "LOSV/03-RESOURCES/copilot/copilot-custom-prompts/Generate glossary.md",
+    "LOSV/03-RESOURCES/copilot/copilot-custom-prompts/Fix grammar and spelling.md",
+    "LOSV/03-RESOURCES/copilot/copilot-custom-prompts/Remove URLs.md",
+    "LOSV/03-RESOURCES/copilot/copilot-custom-prompts/Summarize.md",
+    "LOSV/03-RESOURCES/copilot/copilot-custom-prompts",
+    "LOSV/03-RESOURCES/copilot",
+    "LOSV/07-AI-SYSTEM/SNF-Main-Frame-Link-2026-06-13.md.md",
+    "LOSV/08 PROMPTS/Library/Untitled 1.md",
+    "LOSV/04-ARCHIVES/TEMPLATES",
+    "LOSV/01-PROJECTS/STATENOTFATE",
+    "LOSV/04-ARCHIVES/40-BREAST EXPANSION",
+    "LOSV/01-PROJECTS/2026-SNF-Substrate-Systems-Project/03-Execution",
+    "LOSV/01-PROJECTS/2026-SNF-Substrate-Systems-Project/04-Tracking",
+    "LOSV/01-PROJECTS/2026-SNF-Substrate-Systems-Project/05-Review",
+    "LOSV/01-PROJECTS/2026-SNF-Substrate-Systems-Project/02-Planning"
   ]
 }

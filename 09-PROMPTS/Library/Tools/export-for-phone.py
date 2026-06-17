@@ -19,6 +19,7 @@ import sys
 from pathlib import Path
 
 VAULT_PATHS = [
+    Path(r"C:\ROOT_OBSIDIAN\LOSV"),
     Path(r"C:\ROOT_OBSIDIAN\DOV"),
     Path(r"C:\Users\rappd\OneDrive\Desktop\ObsidianVault"),
 ]

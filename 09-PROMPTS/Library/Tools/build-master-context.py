@@ -21,7 +21,9 @@ import subprocess
 from pathlib import Path
 
 # Adjust if your vault location is different
-VAULT_PATH = Path(r"C:\ROOT_OBSIDIAN\DOV")
+VAULT_PATH = Path(r"C:\ROOT_OBSIDIAN\LOSV")
+if not VAULT_PATH.exists():
+    VAULT_PATH = Path(r"C:\ROOT_OBSIDIAN\DOV")
 if not VAULT_PATH.exists():
     VAULT_PATH = Path(r"C:\Users\rappd\OneDrive\Desktop\ObsidianVault")
 LIBRARY_ROOT = VAULT_PATH / "09-PROMPTS" / "Library"
