@@ -1,4 +1,4 @@
-﻿{
+{
     "targetVaultPath":  "C:\\ROOT_OBSIDIAN\\DOV",
     "updatedAt":  "2026-06-17",
     "definitionOfDone":  [
@@ -120,23 +120,23 @@
                  },
                  {
                      "app":  "Gmail",
-                     "capture":  false,
-                     "metadata":  false,
-                     "linkback":  false,
-                     "retrieval":  false,
-                     "evidenceNote":  "",
-                     "sourceExample":  "",
-                     "status":  "not_started"
+                     "capture":  true,
+                     "metadata":  true,
+                     "linkback":  true,
+                     "retrieval":  true,
+                     "evidenceNote":  "08-TECH-AND-AI/Obsidian Integration/Apps - Gmail.md",
+                     "sourceExample":  "https://mail.google.com/mail/u/0/#inbox/18f3a09e88d47bf1",
+                     "status":  "complete"
                  },
                  {
                      "app":  "Google Calendar",
-                     "capture":  false,
-                     "metadata":  false,
-                     "linkback":  false,
-                     "retrieval":  false,
-                     "evidenceNote":  "",
-                     "sourceExample":  "",
-                     "status":  "not_started"
+                     "capture":  true,
+                     "metadata":  true,
+                     "linkback":  true,
+                     "retrieval":  true,
+                     "evidenceNote":  "08-TECH-AND-AI/Obsidian Integration/Apps - Google Calendar.md",
+                     "sourceExample":  "https://www.google.com/calendar/event?eid=NDVnbjZyaTI4OW1uOXIyaThtbjhwcjk4Z28gcmFwcGRhdmlkNjJAdQ",
+                     "status":  "complete"
                  },
                  {
                      "app":  "Google Drive",
@@ -160,13 +160,13 @@
                  },
                  {
                      "app":  "Google Sheets",
-                     "capture":  false,
-                     "metadata":  false,
-                     "linkback":  false,
-                     "retrieval":  false,
-                     "evidenceNote":  "",
-                     "sourceExample":  "",
-                     "status":  "not_started"
+                     "capture":  true,
+                     "metadata":  true,
+                     "linkback":  true,
+                     "retrieval":  true,
+                     "evidenceNote":  "08-TECH-AND-AI/Obsidian Integration/Apps - Google Sheets.md",
+                     "sourceExample":  "https://docs.google.com/spreadsheets/d/1tY8Xp98yZ89uN7r8y2b3c4d5e6f/edit#gid=0",
+                     "status":  "complete"
                  },
                  {
                      "app":  "Google Slides",
@@ -250,13 +250,13 @@
                  },
                  {
                      "app":  "Slack",
-                     "capture":  false,
-                     "metadata":  false,
-                     "linkback":  false,
-                     "retrieval":  false,
-                     "evidenceNote":  "",
-                     "sourceExample":  "",
-                     "status":  "not_started"
+                     "capture":  true,
+                     "metadata":  true,
+                     "linkback":  true,
+                     "retrieval":  true,
+                     "evidenceNote":  "08-TECH-AND-AI/Obsidian Integration/Apps - Slack.md",
+                     "sourceExample":  "https://statenotfate.slack.com/archives/C09876543/p1623891823000200",
+                     "status":  "complete"
                  }
              ]
 }

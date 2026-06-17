@@ -21,7 +21,7 @@ import subprocess
 from pathlib import Path
 
 # Adjust if your vault location is different
-VAULT_PATH = Path(r"C:\ROOT_OBSIDIAN\LOSV")
+VAULT_PATH = Path(r"C:\ROOT_OBSIDIAN\master-laptop-vault")
 if not VAULT_PATH.exists():
     VAULT_PATH = Path(r"C:\ROOT_OBSIDIAN\DOV")
 if not VAULT_PATH.exists():
