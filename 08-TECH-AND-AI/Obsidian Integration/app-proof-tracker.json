@@ -1,6 +1,6 @@
-{
+﻿{
     "targetVaultPath":  "C:\\ROOT_OBSIDIAN\\DOV",
-    "updatedAt":  "2026-06-16",
+    "updatedAt":  "2026-06-17",
     "definitionOfDone":  [
                              "capture",
                              "metadata",
@@ -54,9 +54,9 @@
                      "metadata":  false,
                      "linkback":  false,
                      "retrieval":  false,
-                     "evidenceNote":  "",
+                     "evidenceNote":  "Deferred: not an everyday app proof target",
                      "sourceExample":  "",
-                     "status":  "not_started"
+                     "status":  "deferred_low_priority"
                  },
                  {
                      "app":  "Codex",
@@ -74,9 +74,9 @@
                      "metadata":  false,
                      "linkback":  false,
                      "retrieval":  false,
-                     "evidenceNote":  "",
+                     "evidenceNote":  "Deferred: not an everyday app proof target",
                      "sourceExample":  "",
-                     "status":  "not_started"
+                     "status":  "deferred_low_priority"
                  },
                  {
                      "app":  "Build Web Apps",
@@ -84,9 +84,9 @@
                      "metadata":  false,
                      "linkback":  false,
                      "retrieval":  false,
-                     "evidenceNote":  "",
+                     "evidenceNote":  "Deferred: not an everyday app proof target",
                      "sourceExample":  "",
-                     "status":  "not_started"
+                     "status":  "deferred_low_priority"
                  },
                  {
                      "app":  "Build Web Data Visualization",
@@ -94,9 +94,9 @@
                      "metadata":  false,
                      "linkback":  false,
                      "retrieval":  false,
-                     "evidenceNote":  "",
+                     "evidenceNote":  "Deferred: not an everyday app proof target",
                      "sourceExample":  "",
-                     "status":  "not_started"
+                     "status":  "deferred_low_priority"
                  },
                  {
                      "app":  "Figma",
@@ -184,9 +184,9 @@
                      "metadata":  false,
                      "linkback":  false,
                      "retrieval":  false,
-                     "evidenceNote":  "",
+                     "evidenceNote":  "Deferred: not an everyday app proof target",
                      "sourceExample":  "",
-                     "status":  "not_started"
+                     "status":  "deferred_low_priority"
                  },
                  {
                      "app":  "Life Science Research",
@@ -194,9 +194,9 @@
                      "metadata":  false,
                      "linkback":  false,
                      "retrieval":  false,
-                     "evidenceNote":  "",
+                     "evidenceNote":  "Deferred: not an everyday app proof target",
                      "sourceExample":  "",
-                     "status":  "not_started"
+                     "status":  "deferred_low_priority"
                  },
                  {
                      "app":  "Life Sciences NGS Analysis",
@@ -204,9 +204,9 @@
                      "metadata":  false,
                      "linkback":  false,
                      "retrieval":  false,
-                     "evidenceNote":  "",
+                     "evidenceNote":  "Deferred: not an everyday app proof target",
                      "sourceExample":  "",
-                     "status":  "not_started"
+                     "status":  "deferred_low_priority"
                  },
                  {
                      "app":  "Netlify",
@@ -220,13 +220,13 @@
                  },
                  {
                      "app":  "Obsidian Web Clipper",
-                     "capture":  false,
-                     "metadata":  false,
-                     "linkback":  false,
-                     "retrieval":  false,
-                     "evidenceNote":  "",
-                     "sourceExample":  "",
-                     "status":  "not_started"
+                     "capture":  true,
+                     "metadata":  true,
+                     "linkback":  true,
+                     "retrieval":  true,
+                     "evidenceNote":  "00-INBOX\\App Captures\\Clippings\\TMWLBB.md",
+                     "sourceExample":  "https://www.deviantart.com/willendork/art/The-Man-Who-Loved-Big-Breasts-by-Steve-Palmer-1061282945",
+                     "status":  "complete"
                  },
                  {
                      "app":  "OpenAI Developers",
