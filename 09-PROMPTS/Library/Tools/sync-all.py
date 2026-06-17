@@ -31,6 +31,7 @@ VAULT_PATHS = [
     Path(r"C:\ROOT_OBSIDIAN\master-laptop-vault"),
     Path(r"C:\ROOT_OBSIDIAN\DOV"),
     Path(r"C:\Users\rappd\OneDrive\Desktop\ObsidianVault"),
+    Path(r"C:\Users\rappd\My Drive\INBOX\AI Learning\sync-playground-laptop"),
 ]
 
 GEMINI_SKILLS_DIR = Path(r"C:\Users\rappd\.gemini\config\plugins\snf-library-plugin\skills")
@@ -56,9 +57,20 @@ PHONE_FAVORITES = [
 
 def find_all_vaults() -> list[Path]:
     vaults = []
+    # Prioritize the vault containing this running script dynamically
+    try:
+        own_vault = Path(__file__).resolve().parents[3]
+        if (own_vault / "09-PROMPTS").exists():
+            vaults.append(own_vault)
+    except Exception:
+        pass
+
     for p in VAULT_PATHS:
         if (p / "09-PROMPTS").exists():
-            vaults.append(p)
+            resolved_p = p.resolve()
+            if resolved_p not in [v.resolve() for v in vaults]:
+                vaults.append(resolved_p)
+                
     if not vaults:
         print("ERROR: No vault paths found. Please edit VAULT_PATHS in the script.")
         sys.exit(1)
