@@ -7,6 +7,9 @@ Takes an Obsidian Library skill and emits a .grok/skills compatible SKILL.md.
 This is the start of making the Obsidian Library the source of truth
 while still having live, auto-triggerable skills in this Grok environment.
 
+NOTE: For syncing the entire prompt library to both Gemini plugins and Grok,
+use the new unified synchronization script `sync-all.py` instead.
+
 Usage:
   python sync-to-grok.py daily-job-search
   python sync-to-grok.py daily-job-search --output-dir "C:/Users/rappd/.grok/skills"
