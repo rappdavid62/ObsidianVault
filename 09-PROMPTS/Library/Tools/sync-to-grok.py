@@ -20,6 +20,11 @@ import re
 from pathlib import Path
 from datetime import datetime
 
+# Ensure UTF-8 output on Windows
+if sys.platform == "win32":
+    import io
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+
 VAULT_PATHS = [
     Path(r"C:\ROOT_OBSIDIAN\master-laptop-vault"),
     Path(r"C:\ROOT_OBSIDIAN\DOV"),

@@ -20,6 +20,11 @@ import sys
 import subprocess
 from pathlib import Path
 
+# Ensure UTF-8 output on Windows
+if sys.platform == "win32":
+    import io
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+
 # Adjust if your vault location is different
 VAULT_PATH = Path(r"C:\ROOT_OBSIDIAN\master-laptop-vault")
 if not VAULT_PATH.exists():
