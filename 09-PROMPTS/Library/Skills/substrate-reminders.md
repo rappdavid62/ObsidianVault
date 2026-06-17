@@ -72,7 +72,14 @@ Depression convinces the brain that the "substrate" — the changeable biologica
   - Cognitive offloading / external memory: Risko & Gilbert (2016), "Cognitive offloading," *Trends in Cognitive Sciences* — writing things down frees working memory and improves performance, especially under cognitive load/depression.
   - Reward prediction error & visible proof: Schultz's foundational dopamine work; in humans, visible progress on small goals reduces anhedonia and updates striatal prediction signals (reviews in *Nature Reviews Neuroscience* on anhedonia in depression).
   - Reading errors & attribution: Abramson, Seligman & Teasdale (1978) learned helplessness / depressive attributional style — externalizing small proofs interrupts internal "I am broken" narratives.
+  - Additional: Habit stacking (Clear, *Atomic Habits* grounded in Wood & Neal 2007); mastery experiences (Bandura 1997); implementation intentions doubling follow-through (Gollwitzer & Sheeran 2006).
 - This skill was created during the "expand substrate reminders and link to scientific data" pass to make the core metaphor a first-class, daily-usable tool rather than background philosophy.
 - Update whenever you encounter stronger papers or when personal experience shows which reminder phrases land best on your particular substrate state.
+
+**Enhanced Practical Ties to Your 2026 Project & DOV**
+- Collapse day in the project: Use one phrase + log the win in the project's Proof-Log.md.
+- Job search in DOV: "External memory (this tracker in the synced vault) offloads the load" before opening leads.
+- 5-year vision check: Review which phrases are actually shaping the substrate (career, recovery, energy) during weekly systems-audit.
+- Device sync: Emit from Library; the reminders travel with you in the DOV because GitHub keeps the source current.
 
 (This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
