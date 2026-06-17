@@ -21,6 +21,7 @@ from pathlib import Path
 from datetime import datetime
 
 VAULT_PATHS = [
+    Path(r"C:\ROOT_OBSIDIAN\DOV"),
     Path(r"C:\Users\rappd\OneDrive\Desktop\ObsidianVault"),
 ]
 
