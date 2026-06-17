@@ -1,0 +1,262 @@
+{
+    "targetVaultPath":  "C:\\ROOT_OBSIDIAN\\DOV",
+    "updatedAt":  "2026-06-16",
+    "definitionOfDone":  [
+                             "capture",
+                             "metadata",
+                             "linkback",
+                             "retrieval"
+                         ],
+    "apps":  [
+                 {
+                     "app":  "Airtable",
+                     "capture":  false,
+                     "metadata":  false,
+                     "linkback":  false,
+                     "retrieval":  false,
+                     "evidenceNote":  "",
+                     "sourceExample":  "",
+                     "status":  "not_started"
+                 },
+                 {
+                     "app":  "Box",
+                     "capture":  false,
+                     "metadata":  false,
+                     "linkback":  false,
+                     "retrieval":  false,
+                     "evidenceNote":  "",
+                     "sourceExample":  "",
+                     "status":  "not_started"
+                 },
+                 {
+                     "app":  "Browser",
+                     "capture":  true,
+                     "metadata":  true,
+                     "linkback":  true,
+                     "retrieval":  true,
+                     "evidenceNote":  "00-INBOX\\App Captures\\Clippings\\TMWLBB.md",
+                     "sourceExample":  "https://www.deviantart.com/willendork/art/The-Man-Who-Loved-Big-Breasts-by-Steve-Palmer-1061282945",
+                     "status":  "complete"
+                 },
+                 {
+                     "app":  "Chrome",
+                     "capture":  true,
+                     "metadata":  true,
+                     "linkback":  true,
+                     "retrieval":  true,
+                     "evidenceNote":  "00-INBOX\\App Captures\\Clippings\\TMWLBB.md",
+                     "sourceExample":  "https://www.deviantart.com/willendork/art/The-Man-Who-Loved-Big-Breasts-by-Steve-Palmer-1061282945",
+                     "status":  "complete"
+                 },
+                 {
+                     "app":  "CircleCI",
+                     "capture":  false,
+                     "metadata":  false,
+                     "linkback":  false,
+                     "retrieval":  false,
+                     "evidenceNote":  "",
+                     "sourceExample":  "",
+                     "status":  "not_started"
+                 },
+                 {
+                     "app":  "Codex",
+                     "capture":  true,
+                     "metadata":  true,
+                     "linkback":  true,
+                     "retrieval":  true,
+                     "evidenceNote":  "00-INBOX\\App Captures\\Codex Integration Proof.md",
+                     "sourceExample":  "C:\\Users\\rappd\\Documents\\Codex\\2026-06-16\\goal-get-obsidian-fully-integrated-into\\outputs",
+                     "status":  "complete"
+                 },
+                 {
+                     "app":  "Computer Use",
+                     "capture":  false,
+                     "metadata":  false,
+                     "linkback":  false,
+                     "retrieval":  false,
+                     "evidenceNote":  "",
+                     "sourceExample":  "",
+                     "status":  "not_started"
+                 },
+                 {
+                     "app":  "Build Web Apps",
+                     "capture":  false,
+                     "metadata":  false,
+                     "linkback":  false,
+                     "retrieval":  false,
+                     "evidenceNote":  "",
+                     "sourceExample":  "",
+                     "status":  "not_started"
+                 },
+                 {
+                     "app":  "Build Web Data Visualization",
+                     "capture":  false,
+                     "metadata":  false,
+                     "linkback":  false,
+                     "retrieval":  false,
+                     "evidenceNote":  "",
+                     "sourceExample":  "",
+                     "status":  "not_started"
+                 },
+                 {
+                     "app":  "Figma",
+                     "capture":  false,
+                     "metadata":  false,
+                     "linkback":  false,
+                     "retrieval":  false,
+                     "evidenceNote":  "",
+                     "sourceExample":  "",
+                     "status":  "not_started"
+                 },
+                 {
+                     "app":  "GitHub",
+                     "capture":  true,
+                     "metadata":  true,
+                     "linkback":  true,
+                     "retrieval":  true,
+                     "evidenceNote":  "08-TECH-AND-AI/Obsidian Integration/Apps - GitHub.md",
+                     "sourceExample":  "https://github.com/rappdavid62/ObsidianVault",
+                     "status":  "complete"
+                 },
+                 {
+                     "app":  "Gmail",
+                     "capture":  false,
+                     "metadata":  false,
+                     "linkback":  false,
+                     "retrieval":  false,
+                     "evidenceNote":  "",
+                     "sourceExample":  "",
+                     "status":  "not_started"
+                 },
+                 {
+                     "app":  "Google Calendar",
+                     "capture":  false,
+                     "metadata":  false,
+                     "linkback":  false,
+                     "retrieval":  false,
+                     "evidenceNote":  "",
+                     "sourceExample":  "",
+                     "status":  "not_started"
+                 },
+                 {
+                     "app":  "Google Drive",
+                     "capture":  false,
+                     "metadata":  false,
+                     "linkback":  false,
+                     "retrieval":  false,
+                     "evidenceNote":  "",
+                     "sourceExample":  "",
+                     "status":  "not_started"
+                 },
+                 {
+                     "app":  "Google Docs",
+                     "capture":  false,
+                     "metadata":  false,
+                     "linkback":  false,
+                     "retrieval":  false,
+                     "evidenceNote":  "",
+                     "sourceExample":  "",
+                     "status":  "not_started"
+                 },
+                 {
+                     "app":  "Google Sheets",
+                     "capture":  false,
+                     "metadata":  false,
+                     "linkback":  false,
+                     "retrieval":  false,
+                     "evidenceNote":  "",
+                     "sourceExample":  "",
+                     "status":  "not_started"
+                 },
+                 {
+                     "app":  "Google Slides",
+                     "capture":  false,
+                     "metadata":  false,
+                     "linkback":  false,
+                     "retrieval":  false,
+                     "evidenceNote":  "",
+                     "sourceExample":  "",
+                     "status":  "not_started"
+                 },
+                 {
+                     "app":  "HyperFrames",
+                     "capture":  false,
+                     "metadata":  false,
+                     "linkback":  false,
+                     "retrieval":  false,
+                     "evidenceNote":  "",
+                     "sourceExample":  "",
+                     "status":  "not_started"
+                 },
+                 {
+                     "app":  "Life Science Research",
+                     "capture":  false,
+                     "metadata":  false,
+                     "linkback":  false,
+                     "retrieval":  false,
+                     "evidenceNote":  "",
+                     "sourceExample":  "",
+                     "status":  "not_started"
+                 },
+                 {
+                     "app":  "Life Sciences NGS Analysis",
+                     "capture":  false,
+                     "metadata":  false,
+                     "linkback":  false,
+                     "retrieval":  false,
+                     "evidenceNote":  "",
+                     "sourceExample":  "",
+                     "status":  "not_started"
+                 },
+                 {
+                     "app":  "Netlify",
+                     "capture":  false,
+                     "metadata":  false,
+                     "linkback":  false,
+                     "retrieval":  false,
+                     "evidenceNote":  "",
+                     "sourceExample":  "",
+                     "status":  "not_started"
+                 },
+                 {
+                     "app":  "Obsidian Web Clipper",
+                     "capture":  false,
+                     "metadata":  false,
+                     "linkback":  false,
+                     "retrieval":  false,
+                     "evidenceNote":  "",
+                     "sourceExample":  "",
+                     "status":  "not_started"
+                 },
+                 {
+                     "app":  "OpenAI Developers",
+                     "capture":  false,
+                     "metadata":  false,
+                     "linkback":  false,
+                     "retrieval":  false,
+                     "evidenceNote":  "",
+                     "sourceExample":  "",
+                     "status":  "not_started"
+                 },
+                 {
+                     "app":  "Product Design",
+                     "capture":  false,
+                     "metadata":  false,
+                     "linkback":  false,
+                     "retrieval":  false,
+                     "evidenceNote":  "",
+                     "sourceExample":  "",
+                     "status":  "not_started"
+                 },
+                 {
+                     "app":  "Slack",
+                     "capture":  false,
+                     "metadata":  false,
+                     "linkback":  false,
+                     "retrieval":  false,
+                     "evidenceNote":  "",
+                     "sourceExample":  "",
+                     "status":  "not_started"
+                 }
+             ]
+}
