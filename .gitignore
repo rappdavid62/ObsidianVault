@@ -21,3 +21,6 @@ desktop.ini
 # Local IDE setup files
 .codex/
 
+# Automated local backups
+.backups/
+
