@@ -14,3 +14,7 @@ desktop.ini
 # OneDrive temp folders
 .tmp.driveupload/
 .tmp.drivedownload/
+
+# Local IDE setup files
+.codex/
+
