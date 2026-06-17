@@ -15,6 +15,9 @@ desktop.ini
 .tmp.driveupload/
 .tmp.drivedownload/
 
+# Obsidian plugins to ignore (manage locally)
+.obsidian/plugins/obsidian-clipper/
+
 # Local IDE setup files
 .codex/
 
