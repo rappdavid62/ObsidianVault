@@ -9,7 +9,7 @@ energy: low
 invocation: ["/circadian", "light anchor", "fix my rhythm", "energy biology today"]
 compatible_with: [grok, claude, gpt, local, all]
 version: 1
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-17
 tags: [health, circadian, light-exposure, anchors, low-energy, mvd, recovery, rhythm]
 ---
 

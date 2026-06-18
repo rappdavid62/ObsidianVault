@@ -1,6 +1,6 @@
 ﻿{
     "targetVaultPath":  "C:\\ROOT_OBSIDIAN\\DOV",
-    "updatedAt":  "2026-06-17",
+    "updatedAt":  "2026-06-18",
     "definitionOfDone":  [
                              "capture",
                              "metadata",
@@ -14,9 +14,9 @@
                      "metadata":  false,
                      "linkback":  false,
                      "retrieval":  false,
-                     "evidenceNote":  "",
+                     "evidenceNote":  "Deferred: optional app proof, complete when actively needed",
                      "sourceExample":  "",
-                     "status":  "not_started"
+                     "status":  "deferred_on_demand"
                  },
                  {
                      "app":  "Box",
@@ -24,9 +24,9 @@
                      "metadata":  false,
                      "linkback":  false,
                      "retrieval":  false,
-                     "evidenceNote":  "",
+                     "evidenceNote":  "Deferred: optional app proof, complete when actively needed",
                      "sourceExample":  "",
-                     "status":  "not_started"
+                     "status":  "deferred_on_demand"
                  },
                  {
                      "app":  "Browser",
@@ -104,9 +104,9 @@
                      "metadata":  false,
                      "linkback":  false,
                      "retrieval":  false,
-                     "evidenceNote":  "",
+                     "evidenceNote":  "Deferred: optional app proof, complete when actively needed",
                      "sourceExample":  "",
-                     "status":  "not_started"
+                     "status":  "deferred_on_demand"
                  },
                  {
                      "app":  "GitHub",
@@ -140,13 +140,13 @@
                  },
                  {
                      "app":  "Google Drive",
-                     "capture":  false,
-                     "metadata":  false,
-                     "linkback":  false,
-                     "retrieval":  false,
-                     "evidenceNote":  "",
-                     "sourceExample":  "",
-                     "status":  "not_started"
+                     "capture":  true,
+                     "metadata":  true,
+                     "linkback":  true,
+                     "retrieval":  true,
+                     "evidenceNote":  "00-INBOX\\App Captures\\Google Drive - SNF Locked Proof.md",
+                     "sourceExample":  "C:\\Users\\rappd\\My Drive\\SNF_Locked_v2.0_2026-06-01",
+                     "status":  "complete"
                  },
                  {
                      "app":  "Google Docs",
@@ -154,9 +154,9 @@
                      "metadata":  false,
                      "linkback":  false,
                      "retrieval":  false,
-                     "evidenceNote":  "",
+                     "evidenceNote":  "Deferred: optional app proof, complete when actively needed",
                      "sourceExample":  "",
-                     "status":  "not_started"
+                     "status":  "deferred_on_demand"
                  },
                  {
                      "app":  "Google Sheets",
@@ -174,9 +174,9 @@
                      "metadata":  false,
                      "linkback":  false,
                      "retrieval":  false,
-                     "evidenceNote":  "",
+                     "evidenceNote":  "Deferred: optional app proof, complete when actively needed",
                      "sourceExample":  "",
-                     "status":  "not_started"
+                     "status":  "deferred_on_demand"
                  },
                  {
                      "app":  "HyperFrames",
@@ -210,13 +210,13 @@
                  },
                  {
                      "app":  "Netlify",
-                     "capture":  false,
-                     "metadata":  false,
-                     "linkback":  false,
-                     "retrieval":  false,
-                     "evidenceNote":  "",
-                     "sourceExample":  "",
-                     "status":  "not_started"
+                     "capture":  true,
+                     "metadata":  true,
+                     "linkback":  true,
+                     "retrieval":  true,
+                     "evidenceNote":  "00-INBOX\\App Captures\\Netlify - State Not Fate Proof.md",
+                     "sourceExample":  "https://app.netlify.com/projects/statenotfate",
+                     "status":  "complete"
                  },
                  {
                      "app":  "Obsidian Web Clipper",
@@ -234,9 +234,9 @@
                      "metadata":  false,
                      "linkback":  false,
                      "retrieval":  false,
-                     "evidenceNote":  "",
+                     "evidenceNote":  "Deferred: optional app proof, complete when actively needed",
                      "sourceExample":  "",
-                     "status":  "not_started"
+                     "status":  "deferred_on_demand"
                  },
                  {
                      "app":  "Product Design",
@@ -244,9 +244,9 @@
                      "metadata":  false,
                      "linkback":  false,
                      "retrieval":  false,
-                     "evidenceNote":  "",
+                     "evidenceNote":  "Deferred: optional app proof, complete when actively needed",
                      "sourceExample":  "",
-                     "status":  "not_started"
+                     "status":  "deferred_on_demand"
                  },
                  {
                      "app":  "Slack",

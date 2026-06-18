@@ -22,6 +22,11 @@ import subprocess
 from pathlib import Path
 from datetime import datetime
 
+_TOOLS_DIR = Path(__file__).resolve().parent
+if str(_TOOLS_DIR) not in sys.path:
+    sys.path.insert(0, str(_TOOLS_DIR))
+from library_filter import is_project_specific
+
 # Ensure UTF-8 output on Windows
 if sys.platform == "win32":
     import io
@@ -34,7 +39,7 @@ VAULT_PATHS = [
     Path(r"C:\Users\rappd\My Drive\INBOX\AI Learning\sync-playground-laptop"),
 ]
 
-GEMINI_SKILLS_DIR = Path(r"C:\Users\rappd\.gemini\config\plugins\snf-library-plugin\skills")
+GEMINI_SKILLS_DIR = None
 GROK_SKILLS_DIR = Path(r"C:\Users\rappd\.grok\skills")
 
 # Playground vault — safe scratchpad that mirrors the core library (read-only zone)
@@ -55,26 +60,6 @@ PHONE_FAVORITES = [
     "tool-mode-decider",
     "library-gardener",
 ]
-
-# No project-specific filtering — all skills in Library/Skills/ and Library/Protocols/
-# are universal personal library skills and should sync everywhere.
-PROJECT_SPECIFIC_TERMS = tuple(
-    "".join(parts)
-    for parts in (
-        ("de", "press"),
-        ("sui", "cid"),
-        ("p", "hq"),
-        ("state ", "not ", "fate"),
-        ("state", "not", "fate"),
-        ("s", "nf"),
-        ("so", "briety"),
-        ("ho", "pe system"),
-        ("ho", "pe-activation"),
-        ("pr", "oof-registration"),
-        ("philosophy-", "s", "nf"),
-    )
-)
-
 
 def find_all_vaults() -> list[Path]:
     vaults = []
@@ -142,10 +127,6 @@ def clean_body(body: str) -> str:
     body = re.sub(r'!\[\[[^\]]+\]\]', '', body)
     return body.strip()
 
-def is_project_specific(name: str, *texts: str) -> bool:
-    haystack = "\n".join([name, *texts]).lower()
-    return any(term in haystack for term in PROJECT_SPECIFIC_TERMS)
-
 def safe_write_text(path: Path, content: str, label: str) -> bool:
     try:
         path.parent.mkdir(parents=True, exist_ok=True)
@@ -194,19 +175,26 @@ def load_dictionary(vault: Path) -> dict:
         return result
 
     text = dict_path.read_text(encoding="utf-8", errors="ignore")
-    
-    # Simple harvesting
+
     for e in ["collapse", "low", "medium", "high", "any", "variable"]:
         if e in text.lower():
             result["energies"].add(e)
-            
-    known_domains = ["meta", "library", "job", "execution", "social", "research", "decision-making", "health", "creative", "ai-setup", "philosophy", "finance", "career", "systems"]
-    for d in known_domains:
-        if d in text:
-            result["domains"].add(d)
+
+    in_domains = False
+    for line in text.splitlines():
+        if re.match(r"^##\s+Domains\b", line, re.I):
+            in_domains = True
+            continue
+        if in_domains and re.match(r"^##\s+", line):
+            break
+        if in_domains:
+            m = re.match(r"^\|\s*([a-z0-9-]+)\s*\|", line)
+            if m:
+                domain = m.group(1).lower()
+                if domain not in ("domain", "---"):
+                    result["domains"].add(domain)
 
     result["types"].update({"skill", "prompt", "protocol", "context", "guide", "hub", "meta"})
-    result["domains"].update({"execution", "systems", "research"})
     return result
 
 def validate_skill(path: Path, allowed: dict) -> list[str]:
@@ -422,7 +410,7 @@ def main():
         content = to_grok_skill(name, fm_parsed, body_cleaned)
 
         # Write to Gemini plugins
-        if GEMINI_SKILLS_DIR.exists():
+        if GEMINI_SKILLS_DIR and GEMINI_SKILLS_DIR.exists():
             target_gemini = GEMINI_SKILLS_DIR / name / "SKILL.md"
             if safe_write_text(target_gemini, content, "Gemini skill"):
                 gemini_count += 1
@@ -433,7 +421,7 @@ def main():
             if safe_write_text(target_grok, content, "Grok skill"):
                 grok_count += 1
 
-    print(f"  [Sync] Synced {gemini_count} skills to Gemini plugins directory ({GEMINI_SKILLS_DIR})")
+    print(f"  [Sync] Synced {gemini_count} skills to Gemini plugins directory")
     print(f"  [Sync] Synced {grok_count} skills to Grok skills directory ({GROK_SKILLS_DIR})")
 
     # 2. Build and export files for each detected vault

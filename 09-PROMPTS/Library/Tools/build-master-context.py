@@ -8,7 +8,7 @@ core protocols, selected skills, and a status block template into one coherent i
 
 Usage:
   python build-master-context.py
-  python build-master-context.py --skills mvd-anchors,floor-wins,prs-safety-check
+  python build-master-context.py --skills tool-mode-decider,library-gardener
   python build-master-context.py --daily          # uses a sensible low-energy daily set
   python build-master-context.py --clip           # copy to clipboard (Windows)
 
@@ -19,6 +19,11 @@ into Claude, ChatGPT, Cursor, local models, or even start a new Grok conversatio
 import sys
 import subprocess
 from pathlib import Path
+
+_TOOLS_DIR = Path(__file__).resolve().parent
+if str(_TOOLS_DIR) not in sys.path:
+    sys.path.insert(0, str(_TOOLS_DIR))
+from library_filter import is_project_specific
 
 # Ensure UTF-8 output on Windows
 if sys.platform == "win32":
@@ -33,14 +38,11 @@ if not VAULT_PATH.exists():
     VAULT_PATH = Path(r"C:\Users\rappd\OneDrive\Desktop\ObsidianVault")
 LIBRARY_ROOT = VAULT_PATH / "09-PROMPTS" / "Library"
 
-# Default "daily" skills when --daily is used (low-energy first, then practical)
+# Default "daily" skills when --daily is used.
 DEFAULT_DAILY_SKILLS = [
     "thoroughness-protocol",
-    "low-energy-execution",
-    "mvd-anchors",
-    "floor-wins",
-    "social-calibration",
-    "daily-job-search",
+    "tool-mode-decider",
+    "library-gardener",
 ]
 
 def load_note(path: Path) -> str:
@@ -54,8 +56,54 @@ def load_note(path: Path) -> str:
             return parts[2].strip()
     return text.strip()
 
+def load_note_fm(path: Path) -> tuple[str, str]:
+    if not path.exists():
+        return "", f"[MISSING: {path.name}]"
+    text = path.read_text(encoding="utf-8", errors="ignore")
+    if text.startswith("---"):
+        parts = text.split("---", 2)
+        if len(parts) >= 3:
+            return parts[1].strip(), parts[2].strip()
+    return "", text.strip()
+
 def build_context(skill_names: list[str], include_status_placeholder: bool = True) -> str:
     parts = []
+
+    parts.append("# MASTER CONTEXT - Source of Truth: Obsidian 09-PROMPTS/Library/")
+    parts.append("Use the DOV vault as the source of truth for reusable AI skills, prompts, source-code indexes, and integration notes.")
+    parts.append("Do not inject private project or health material unless the user explicitly asks for that exact context.\n")
+
+    parts.append("## Relevant Non-Project Skills From The Library")
+    for name in skill_names:
+        for sub in ["Skills", "Protocols", "Prompts"]:
+            p = LIBRARY_ROOT / sub / f"{name}.md"
+            if p.exists():
+                fm, content = load_note_fm(p)
+                if is_project_specific(name, fm, content):
+                    parts.append(f"### {name} (skipped: project-specific content)")
+                else:
+                    parts.append(f"### {name}")
+                    parts.append(content)
+                parts.append("")
+                break
+        else:
+            parts.append(f"### {name} (not found in Library)")
+            parts.append("")
+
+    if include_status_placeholder:
+        parts.append("## Current Status (UPDATE THIS BEFORE EVERY SESSION)")
+        parts.append("```")
+        parts.append("Goal:")
+        parts.append("Workspace:")
+        parts.append("Constraints:")
+        parts.append("Files or apps involved:")
+        parts.append("Definition of done:")
+        parts.append("```")
+        parts.append("")
+
+    parts.append("---")
+    parts.append("Instructions: Stay scoped, use local source-of-truth files, preserve privacy boundaries, and avoid project-specific assumptions.")
+    return "\n".join(parts)
 
     # 1. Master Bio (always first — core identity + constraints)
     master = load_note(LIBRARY_ROOT / "Contexts" / "master-bio.md")

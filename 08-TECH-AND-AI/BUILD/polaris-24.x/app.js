@@ -520,6 +520,24 @@ function personalizeMore() { showTab('polaris'); showToast("Personalization is o
 function emergencyFloor() { showTab('safebox'); setEnergy('collapse'); }
 function quickRestart() { showTab('polaris'); setEnergy(state.energy || 'medium'); showToast("No questions. Just the floor. Restarts without punishment."); }
 
+function restartToday() {
+  if (!confirm("Restart only today's progress? Streaks and total proof stay.")) return;
+  state.polaris.proof.today = 0;
+  if (state.polaris.anchors?.active) {
+    state.polaris.anchors.active.forEach(anchor => anchor.done = false);
+  }
+  if (state.polaris.quests?.active) {
+    state.polaris.quests.active.forEach(quest => quest.done = false);
+  }
+  state.polaris.lastReset = Date.now();
+  saveState();
+  renderAnchors();
+  renderQuests();
+  renderResilienceMeter();
+  updateProofDisplay();
+  showToast("Today reset. Nothing erased. Start with the floor.");
+}
+
 function copySkill(skillKey) {
   const skill = SNF_SKILLS[skillKey];
   if (!skill) return;

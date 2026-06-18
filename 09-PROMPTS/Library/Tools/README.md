@@ -1,6 +1,6 @@
-# Library Tools — The Ubiquity Layer (Laptop Sync Vault - Universal Truth)
+# Library Tools - The Ubiquity Layer (DOV Vault - Universal Truth)
 
-These scripts make the Obsidian Library (the single source of truth in this Laptop Sync vault) usable from *anywhere* and *any* AI.
+These scripts make the Obsidian Library (the single source of truth in this DOV vault) usable from *anywhere* and *any* AI.
 
 The philosophy is simple:
 - Obsidian Library = canonical, versioned, queryable, atomic source of truth for all AI.
@@ -29,7 +29,7 @@ It supports:
 
 **Recommended alias** (add to PowerShell profile):
 ```powershell
-function skill { & "C:\Users\rappd\My Drive\INBOX\AI Learning\Laptop Sync\08 PROMPTS\Library\Tools\emit-skill.ps1" @args }
+function skill { & "C:\ROOT_OBSIDIAN\DOV\09-PROMPTS\Library\Tools\emit-skill.ps1" @args }
 ```
 
 Then from any terminal: `skill --daily --clip`
@@ -86,7 +86,7 @@ Run this (or a wrapper) after you improve or create important skills.
 3. Paste into whatever AI you're talking to today.
 4. After the session, update the relevant Library notes with what actually worked.
 
-This is how Obsidian (Laptop Sync vault) becomes the real brain, and every other AI becomes a temporary, well-informed executor.
+This is how Obsidian (DOV vault) becomes the real brain, and every other AI becomes a temporary, well-informed executor.
 
 ## Future / Nice-to-Haves (if you want them)
 

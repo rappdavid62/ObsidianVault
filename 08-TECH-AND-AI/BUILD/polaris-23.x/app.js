@@ -464,6 +464,23 @@ function togglePolaris() { /* same as 22.x */
   if (polarisView) polarisView.style.opacity = enabled ? '1' : '0.5';
 }
 
+function restartToday() {
+  if (!confirm("Restart only today's progress? Streaks and total proof stay.")) return;
+  state.polaris.proof.today = 0;
+  if (state.polaris.anchors?.active) {
+    state.polaris.anchors.active.forEach(anchor => anchor.done = false);
+  }
+  if (state.polaris.quests?.active) {
+    state.polaris.quests.active.forEach(quest => quest.done = false);
+  }
+  state.polaris.lastReset = Date.now();
+  saveState();
+  renderAnchors();
+  renderQuests();
+  updateProofDisplay();
+  showToast("Today reset. Nothing erased. Start with the floor.");
+}
+
 function showTab(tab) {
   document.querySelectorAll('.view').forEach(v => v.style.display = 'none');
   const target = document.getElementById(tab);
