@@ -39,7 +39,7 @@ VAULT_PATHS = [
     Path(r"C:\Users\rappd\My Drive\INBOX\AI Learning\sync-playground-laptop"),
 ]
 
-GEMINI_SKILLS_DIR = None
+GEMINI_SKILLS_DIR = Path(r"C:\Users\rappd\.gemini\config\plugins\snf-library-plugin\skills")
 GROK_SKILLS_DIR = Path(r"C:\Users\rappd\.grok\skills")
 
 # Playground vault — safe scratchpad that mirrors the core library (read-only zone)

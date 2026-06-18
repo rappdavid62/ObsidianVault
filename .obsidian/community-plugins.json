@@ -5,5 +5,7 @@
   "obsidian-excalidraw-plugin",
   "dataview",
   "obsidian-clipper",
-  "obsidian-git"
+  "obsidian-git",
+  "obsidian-tasks-plugin",
+  "obsidian-local-rest-api"
 ]

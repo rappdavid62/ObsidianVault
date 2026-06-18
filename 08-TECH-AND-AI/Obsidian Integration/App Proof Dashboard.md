@@ -1,4 +1,4 @@
-﻿---
+---
 type: dashboard
 status: active
 tags:

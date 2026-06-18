@@ -1,4 +1,4 @@
-﻿---
+---
 type: meeting
 source_app: calendar
 source_url:
