@@ -1,10 +1,16 @@
 # Obsidian system and workspace files
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
+.obsidian/cache/
 .obsidian/plugins/obsidian-git/data.json
 
 # Trash folder
 .trash/
+
+# Duplicate or alternate vault folders - review before syncing
+LOSV/
+LAPTOP_SYNC_VAULT/
+master-laptop-vault/
 
 # OS system files
 .DS_Store
@@ -23,4 +29,12 @@ desktop.ini
 
 # Automated local backups
 .backups/
+
+# Python generated cache files
+__pycache__/
+*.pyc
+
+# Temporary and log files
+*.tmp
+*.log
 

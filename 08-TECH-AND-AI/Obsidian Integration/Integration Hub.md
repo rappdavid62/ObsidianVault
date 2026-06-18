@@ -16,6 +16,8 @@ tags:
 
 ## App Coverage
 
+- [[Universal AI Integration Blueprint]]
+- [[Source Code Registry]]
 - [[App Coverage Checklist]]
 - [[All Apps Coverage Index]]
 - [[Connector Capture Recipes]]

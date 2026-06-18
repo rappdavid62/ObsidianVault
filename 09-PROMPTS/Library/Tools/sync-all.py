@@ -5,7 +5,7 @@ sync-all.py
 Unified sync script that:
 1. Scans Obsidian Library Skills and Protocols (09-PROMPTS/Library/).
 2. Validates each note's frontmatter against the Dictionary.md standards.
-3. Formats and writes them as native skills for Grok (~/.grok/skills/) and Gemini (~/.gemini/config/plugins/snf-library-plugin/skills/).
+a3. Formats and writes them as native skills for Grok (~/.grok/skills/) and Gemini (~/.gemini/config/plugins/snf-library-plugin/skills/).
 4. Re-runs phone favorites export to Library/Mobile-Favorites.md.
 5. Builds a consolidated master context and writes it to:
    - Library/Tools/master_context_latest.txt

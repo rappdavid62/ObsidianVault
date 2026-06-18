@@ -30,7 +30,7 @@ New in this version (focus on ubiquity):
 Requirements: Python 3. Python is usually available or easy to install on Windows.
 
 Tip: Add an alias in your PowerShell profile:
-  function skill { python "C:\Users\rappd\OneDrive\Desktop\ObsidianVault\09-PROMPTS\Library\Tools\emit-skill.py" @args }
+  function skill { & "C:\ROOT_OBSIDIAN\DOV\09-PROMPTS\Library\Tools\emit-skill.ps1" @args }
 Then just type: skill --daily
 """
 
@@ -40,8 +40,14 @@ import subprocess
 from pathlib import Path
 from typing import Optional, List, Dict
 
+_TOOLS_DIR = Path(__file__).resolve().parent
+if str(_TOOLS_DIR) not in sys.path:
+    sys.path.insert(0, str(_TOOLS_DIR))
+from library_filter import is_project_specific
+
 # === CONFIGURATION - tweak for your machine ===
 VAULT_PATHS = [
+    Path(r"C:\ROOT_OBSIDIAN\DOV"),
     Path(r"C:\Users\rappd\OneDrive\Desktop\ObsidianVault"),
     Path.home() / "OneDrive" / "Desktop" / "ObsidianVault",
     Path(r"C:\Users\rappd\My Drive\INBOX\AI Learning\Laptop Sync"),
@@ -52,9 +58,8 @@ LIBRARY_ROOT = "09-PROMPTS/Library"
 # Skills that are almost always useful in a daily pack (low energy / high frequency)
 DAILY_DEFAULT_SKILLS = [
     "thoroughness-protocol",
-    "low-energy-execution",
-    "daily-job-search",
-    "social-calibration",
+    "tool-mode-decider",
+    "library-gardener",
 ]
 
 # Favorites for quick access (used by --favorites). Energy-balanced collection.
@@ -65,16 +70,10 @@ FAVORITES = DAILY_DEFAULT_SKILLS + [
     "tool-mode-decider",
     "weekly-review",
     "library-gardener",
-    "mvd-anchors",
-    "floor-wins",
-    "prs-safety-check",
-    "snf-proof-registration",
-    "snf-hope-activation",
-    "sobriety-anchors",
 ]
 
 # Simple energy-based packs (can be extended)
-LOW_ENERGY_PACK = ["thoroughness-protocol", "low-energy-execution", "social-calibration", "mvd-anchors", "floor-wins"]
+LOW_ENERGY_PACK = ["tool-mode-decider", "library-gardener"]
 MEDIUM_ENERGY_PACK = DAILY_DEFAULT_SKILLS + ["apply-today", "resume-tailoring"]
 HIGH_ENERGY_PACK = ["daily-job-search", "deep-research", "tool-mode-decider", "weekly-review", "library-gardener"]
 
@@ -103,12 +102,31 @@ def load_note(path: Path) -> tuple[str, str]:
 def parse_frontmatter(fm_text: str) -> Dict[str, str]:
     """Very lightweight YAML frontmatter parser for our schema."""
     data: Dict[str, str] = {}
-    for line in fm_text.splitlines():
+    lines = fm_text.splitlines()
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        if not line.strip() or line.lstrip().startswith("#"):
+            i += 1
+            continue
         if ":" in line:
             key, val = line.split(":", 1)
             key = key.strip()
             val = val.strip().strip('"').strip("'")
+            if val in {">", "|"}:
+                block = []
+                i += 1
+                while i < len(lines):
+                    next_line = lines[i]
+                    if next_line.startswith((" ", "\t")) or not next_line.strip():
+                        block.append(next_line.strip())
+                        i += 1
+                        continue
+                    break
+                data[key] = " ".join(part for part in block if part).strip()
+                continue
             data[key] = val
+        i += 1
     return data
 
 
@@ -156,18 +174,21 @@ def build_emission(paths: List[Path], include_master: bool = False, vault: Optio
         master_path = find_skill("master-bio", vault)
         if master_path:
             fm, body = load_note(master_path)
-            lines.append("## Master Context (inject this in most conversations)")
-            lines.append("```markdown")
-            if fm:
-                lines.append("---")
-                lines.append(fm)
-                lines.append("---")
-            lines.append(clean_body(body))
-            lines.append("```")
-            lines.append("")
+            if not is_project_specific(master_path.stem, fm, body):
+                lines.append("## Master Context (inject this in most conversations)")
+                lines.append("```markdown")
+                if fm:
+                    lines.append("---")
+                    lines.append(fm)
+                    lines.append("---")
+                lines.append(clean_body(body))
+                lines.append("```")
+                lines.append("")
 
     for p in paths:
         fm_text, body = load_note(p)
+        if is_project_specific(p.stem, fm_text, body):
+            continue
         data = parse_frontmatter(fm_text)
         name = data.get("name", p.stem)
         desc = data.get("description", "")
@@ -247,11 +268,11 @@ def load_dictionary(vault: Path) -> dict:
     }
     dict_path = vault / LIBRARY_ROOT / "Dictionary.md"
     if not dict_path.exists():
-        # Fallback: minimal known good for SNF work
+        # Fallback: minimal known good values for generic library work.
         result["types"] = {"skill", "prompt", "protocol", "context", "guide", "hub", "meta"}
         result["energies"] = {"collapse", "low", "medium", "high", "any", "variable"}
-        result["domains"] = {"meta", "library", "job", "execution", "social", "research", "decision-making", "recovery", "health", "creative", "ai-setup", "philosophy", "finance", "prs", "sobriety", "career", "systems", "philosophy-snf"}
-        result["tags"] = {"low-energy", "mvd", "floor", "anchors", "floor-wins", "proof", "restart", "no-shame", "daily", "weekly", "visible-proof", "external-memory", "hope-activation", "reading-error", "prediction-error", "cognitive-offloading", "substrate", "restart-speed", "resilience-rate", "hope-meter", "counter-script", "trigger-scan", "state-not-fate", "philosophy-snf", "sobriety"}
+        result["domains"] = {"meta", "library", "job", "execution", "social", "research", "decision-making", "health", "creative", "ai-setup", "philosophy", "finance", "career", "systems"}
+        result["tags"] = {"low-energy", "routine", "low-friction", "daily", "weekly", "external-memory", "cognitive-offloading", "systems", "research", "career"}
         return result
 
     text = dict_path.read_text(encoding="utf-8", errors="ignore")
@@ -272,20 +293,19 @@ def load_dictionary(vault: Path) -> dict:
             result["energies"].add(e)
 
     # Domains (from the domain table)
-    known_domains = ["meta", "library", "job", "execution", "social", "research", "decision-making", "recovery", "health", "creative", "ai-setup", "philosophy", "finance", "prs", "sobriety", "career", "systems", "philosophy-snf"]
+    known_domains = ["meta", "library", "job", "execution", "social", "research", "decision-making", "health", "creative", "ai-setup", "philosophy", "finance", "career", "systems"]
     for d in known_domains:
         if d in text:
             result["domains"].add(d)
 
-    # Tags: harvest from the core tags lists and our SNF usage
-    tag_candidates = ["low-energy", "mvd", "floor", "anchors", "floor-wins", "proof", "restart", "no-shame", "daily", "weekly", "routine", "low-friction", "visible-proof", "external-memory", "hope-activation", "reading-error", "prediction-error", "cognitive-offloading", "substrate", "restart-speed", "resilience-rate", "hope-meter", "counter-script", "trigger-scan", "state-not-fate", "philosophy-snf", "sobriety"]
+    # Tags: harvest from the core tags lists and generic usage.
+    tag_candidates = ["low-energy", "routine", "low-friction", "daily", "weekly", "external-memory", "cognitive-offloading", "systems", "research", "career"]
     for t in tag_candidates:
         if t in text or t.replace("-", "") in text.replace(" ", "").lower():
             result["tags"].add(t)
 
-    # Ensure SNF core ones are present even if parsing is minimal
-    result["domains"].update({"philosophy-snf", "sobriety", "recovery", "execution"})
-    result["tags"].update({"philosophy-snf", "sobriety", "snf-hope-activation", "snf-proof-registration", "sobriety-anchors", "visible-proof", "external-memory"})
+    result["domains"].update({"execution", "systems", "research"})
+    result["tags"].update({"external-memory", "low-friction", "systems"})
     result["energies"].update({"low", "collapse", "medium"})
     result["types"].update({"skill"})
 
@@ -321,7 +341,7 @@ def validate_against_dictionary(path: Path, vault: Path, allowed: dict) -> list:
         tg = tpart.strip("[]'\" ").lower()
         if tg and tg not in allowed.get("tags", set()) and len(tg) > 2:
             # Only warn on very core expected ones; others are allowed to be project-specific
-            if tg in {"philosophy-snf", "sobriety", "visible-proof", "external-memory", "hope-activation", "snf-hope-activation", "snf-proof-registration", "sobriety-anchors"}:
+            if tg in {"visible-proof", "external-memory"}:
                 issues.append(f"core tag '{tg}' not recognized (consider adding to Dictionary)")
 
     return issues

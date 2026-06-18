@@ -57,10 +57,31 @@ def parse_frontmatter(text: str):
     if len(parts) < 3:
         return {}, text
     fm = {}
-    for line in parts[1].strip().splitlines():
+    lines = parts[1].strip().splitlines()
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        if not line.strip() or line.lstrip().startswith("#"):
+            i += 1
+            continue
         if ":" in line:
             k, v = line.split(":", 1)
-            fm[k.strip()] = v.strip()
+            key = k.strip()
+            val = v.strip().strip('"').strip("'")
+            if val in {">", "|"}:
+                block = []
+                i += 1
+                while i < len(lines):
+                    next_line = lines[i]
+                    if next_line.startswith((" ", "\t")) or not next_line.strip():
+                        block.append(next_line.strip())
+                        i += 1
+                        continue
+                    break
+                fm[key] = " ".join(part for part in block if part).strip()
+                continue
+            fm[key] = val
+        i += 1
     return fm, parts[2].strip()
 
 def to_grok_skill(name: str, fm: dict, body: str) -> str:
