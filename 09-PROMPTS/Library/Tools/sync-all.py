@@ -5,7 +5,7 @@ sync-all.py
 Unified sync script that:
 1. Scans Obsidian Library Skills and Protocols (09-PROMPTS/Library/).
 2. Validates each note's frontmatter against the Dictionary.md standards.
-3. Formats and writes non-project-specific skills for Grok (~/.grok/skills/) and Gemini (~/.gemini/config/plugins/dov-library-plugin/skills/).
+a3. Formats and writes them as native skills for Grok (~/.grok/skills/) and Gemini (~/.gemini/config/plugins/snf-library-plugin/skills/).
 4. Re-runs phone favorites export to Library/Mobile-Favorites.md.
 5. Builds a consolidated master context and writes it to:
    - Library/Tools/master_context_latest.txt
@@ -22,11 +22,6 @@ import subprocess
 from pathlib import Path
 from datetime import datetime
 
-_TOOLS_DIR = Path(__file__).resolve().parent
-if str(_TOOLS_DIR) not in sys.path:
-    sys.path.insert(0, str(_TOOLS_DIR))
-from library_filter import is_project_specific
-
 # Ensure UTF-8 output on Windows
 if sys.platform == "win32":
     import io
@@ -42,23 +37,22 @@ VAULT_PATHS = [
 GEMINI_SKILLS_DIR = Path(r"C:\Users\rappd\.gemini\config\plugins\snf-library-plugin\skills")
 GROK_SKILLS_DIR = Path(r"C:\Users\rappd\.grok\skills")
 
-# Playground vault — safe scratchpad that mirrors the core library (read-only zone)
-# Personal note folders here are NEVER touched by this script.
-PLAYGROUND_VAULT = Path(r"C:\Users\rappd\My Drive\INBOX\AI Learning\sync-playground-laptop")
-
-# Subfolders inside the playground that are CORE (will be overwritten each sync)
-# Everything else in the playground is personal / safe to edit freely.
-PLAYGROUND_CORE_SUBDIRS = ["09-PROMPTS"]
-
 DAILY_DEFAULT_SKILLS = [
     "thoroughness-protocol",
-    "tool-mode-decider",
-    "library-gardener",
+    "low-energy-execution",
+    "mvd-anchors",
+    "floor-wins",
+    "social-calibration",
+    "daily-job-search",
 ]
 
 PHONE_FAVORITES = [
-    "tool-mode-decider",
-    "library-gardener",
+    "thoroughness-protocol",
+    "low-energy-execution",
+    "daily-job-search",
+    "social-calibration",
+    "apply-today",
+    "council-strategy",
 ]
 
 def find_all_vaults() -> list[Path]:
@@ -92,31 +86,12 @@ def load_note(path: Path) -> tuple[str, str]:
 
 def parse_frontmatter(fm_text: str) -> dict:
     data = {}
-    lines = fm_text.splitlines()
-    i = 0
-    while i < len(lines):
-        line = lines[i]
-        if not line.strip() or line.lstrip().startswith("#"):
-            i += 1
-            continue
+    for line in fm_text.splitlines():
         if ":" in line:
             key, val = line.split(":", 1)
             key = key.strip()
             val = val.strip().strip('"').strip("'")
-            if val in {">", "|"}:
-                block = []
-                i += 1
-                while i < len(lines):
-                    next_line = lines[i]
-                    if next_line.startswith((" ", "\t")) or not next_line.strip():
-                        block.append(next_line.strip())
-                        i += 1
-                        continue
-                    break
-                data[key] = " ".join(part for part in block if part).strip()
-                continue
             data[key] = val
-        i += 1
     return data
 
 def clean_body(body: str) -> str:
@@ -126,15 +101,6 @@ def clean_body(body: str) -> str:
     # Remove embedded images
     body = re.sub(r'!\[\[[^\]]+\]\]', '', body)
     return body.strip()
-
-def safe_write_text(path: Path, content: str, label: str) -> bool:
-    try:
-        path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(content, encoding="utf-8")
-        return True
-    except PermissionError as exc:
-        print(f"  [Skip] No permission to write {label}: {path} ({exc})")
-        return False
 
 def to_grok_skill(name: str, fm: dict, body: str) -> str:
     desc = fm.get("description", "A useful skill from the Obsidian Prompt Library.")
@@ -170,31 +136,24 @@ def load_dictionary(vault: Path) -> dict:
     if not dict_path.exists():
         result["types"] = {"skill", "prompt", "protocol", "context", "guide", "hub", "meta"}
         result["energies"] = {"collapse", "low", "medium", "high", "any", "variable"}
-        result["domains"] = {"meta", "library", "job", "execution", "social", "research", "decision-making", "health", "creative", "ai-setup", "philosophy", "finance", "career", "systems"}
-        result["tags"] = {"low-energy", "routine", "low-friction", "daily", "weekly", "external-memory", "cognitive-offloading", "systems", "research", "career"}
+        result["domains"] = {"meta", "library", "job", "execution", "social", "research", "decision-making", "recovery", "health", "creative", "ai-setup", "philosophy", "finance", "prs", "sobriety", "career", "systems", "philosophy-snf"}
+        result["tags"] = {"low-energy", "mvd", "floor", "anchors", "floor-wins", "proof", "restart", "no-shame", "daily", "weekly", "visible-proof", "external-memory", "hope-activation", "reading-error", "prediction-error", "cognitive-offloading", "substrate", "restart-speed", "resilience-rate", "hope-meter", "counter-script", "trigger-scan", "state-not-fate", "philosophy-snf", "sobriety"}
         return result
 
     text = dict_path.read_text(encoding="utf-8", errors="ignore")
-
+    
+    # Simple harvesting
     for e in ["collapse", "low", "medium", "high", "any", "variable"]:
         if e in text.lower():
             result["energies"].add(e)
-
-    in_domains = False
-    for line in text.splitlines():
-        if re.match(r"^##\s+Domains\b", line, re.I):
-            in_domains = True
-            continue
-        if in_domains and re.match(r"^##\s+", line):
-            break
-        if in_domains:
-            m = re.match(r"^\|\s*([a-z0-9-]+)\s*\|", line)
-            if m:
-                domain = m.group(1).lower()
-                if domain not in ("domain", "---"):
-                    result["domains"].add(domain)
+            
+    known_domains = ["meta", "library", "job", "execution", "social", "research", "decision-making", "recovery", "health", "creative", "ai-setup", "philosophy", "finance", "prs", "sobriety", "career", "systems", "philosophy-snf"]
+    for d in known_domains:
+        if d in text:
+            result["domains"].add(d)
 
     result["types"].update({"skill", "prompt", "protocol", "context", "guide", "hub", "meta"})
+    result["domains"].update({"philosophy-snf", "sobriety", "recovery", "execution"})
     return result
 
 def validate_skill(path: Path, allowed: dict) -> list[str]:
@@ -221,41 +180,6 @@ def validate_skill(path: Path, allowed: dict) -> list[str]:
 def build_master_context(vault: Path, skill_names: list[str]) -> str:
     lib_root = vault / "09-PROMPTS" / "Library"
     parts = []
-
-    parts.append("# MASTER CONTEXT - Source of Truth: Obsidian 09-PROMPTS/Library/")
-    parts.append("Use the DOV vault as the source of truth for reusable AI skills, prompts, source-code indexes, and integration notes.")
-    parts.append("Do not inject private project or health material unless the user explicitly asks for that exact context.\n")
-    parts.append("## Relevant Non-Project Skills From The Library")
-
-    for name in skill_names:
-        found = False
-        for sub in ["Skills", "Protocols"]:
-            p = lib_root / sub / f"{name}.md"
-            if p.exists():
-                fm, body = load_note(p)
-                if is_project_specific(name, fm, body):
-                    parts.append(f"### {name} (skipped: project-specific content)")
-                else:
-                    parts.append(f"### {name}")
-                    parts.append(clean_body(body))
-                parts.append("")
-                found = True
-                break
-        if not found:
-            parts.append(f"### {name} (not found in Library)\n")
-
-    parts.append("## Current Status (UPDATE THIS BEFORE EVERY SESSION)")
-    parts.append("```")
-    parts.append("Goal:")
-    parts.append("Workspace:")
-    parts.append("Constraints:")
-    parts.append("Files or apps involved:")
-    parts.append("Definition of done:")
-    parts.append("```")
-    parts.append("")
-    parts.append("---")
-    parts.append("Instructions: Stay scoped, use local source-of-truth files, preserve privacy boundaries, and avoid project-specific assumptions.")
-    return "\n".join(parts)
 
     # 1. Header
     parts.append("# MASTER CONTEXT — Source of Truth: Obsidian 09-PROMPTS/Library/")
@@ -338,8 +262,6 @@ def export_mobile_favorites(vault: Path):
             p = lib / sub / f"{name}.md"
             if p.exists():
                 fm, body = load_note(p)
-                if is_project_specific(name, fm, body):
-                    continue
                 output_lines.append(f"\n## {name}")
                 if fm:
                     output_lines.append("```")
@@ -376,8 +298,8 @@ def main():
         folder = lib / subdir
         if folder.exists():
             for f in folder.glob("*.md"):
-                # Skip Obsidian auto-duplicate files like "skill 1.md", "skill 2.md"
-                if re.search(r' \d+\.md$', f.name) or f.stem.endswith(" copy"):
+                # Avoid master-bio 1.md or duplicate notes
+                if "1" in f.stem or f.stem.endswith("copy"):
                     continue
                 notes_to_sync.append(f)
 
@@ -390,60 +312,57 @@ def main():
 
     for path in notes_to_sync:
         name = path.stem
+        # Validate
+        issues = validate_skill(path, allowed)
+        if issues:
+            validation_issues[name] = issues
+
         # Load content
         fm, body = load_note(path)
+        body_cleaned = clean_body(body)
         fm_parsed = parse_frontmatter(fm)
 
         # Skip contexts/hubs that aren't intended to be active skills
         if fm_parsed.get("type") in ("hub", "meta") or name in ("master-bio", "README", "Dictionary", "SCHEMA", "Mobile-Favorites"):
             continue
-        if is_project_specific(name, fm, body):
-            continue
-
-        # Validate only notes eligible for export.
-        issues = validate_skill(path, allowed)
-        if issues:
-            validation_issues[name] = issues
-
-        body_cleaned = clean_body(body)
 
         content = to_grok_skill(name, fm_parsed, body_cleaned)
 
         # Write to Gemini plugins
-        if GEMINI_SKILLS_DIR and GEMINI_SKILLS_DIR.exists():
+        if GEMINI_SKILLS_DIR.exists():
             target_gemini = GEMINI_SKILLS_DIR / name / "SKILL.md"
-            if safe_write_text(target_gemini, content, "Gemini skill"):
-                gemini_count += 1
+            target_gemini.parent.mkdir(parents=True, exist_ok=True)
+            target_gemini.write_text(content, encoding="utf-8")
+            gemini_count += 1
 
         # Write to Grok skills
         if GROK_SKILLS_DIR.exists():
             target_grok = GROK_SKILLS_DIR / name / "SKILL.md"
-            if safe_write_text(target_grok, content, "Grok skill"):
-                grok_count += 1
+            target_grok.parent.mkdir(parents=True, exist_ok=True)
+            target_grok.write_text(content, encoding="utf-8")
+            grok_count += 1
 
-    print(f"  [Sync] Synced {gemini_count} skills to Gemini plugins directory")
+    print(f"  [Sync] Synced {gemini_count} skills to Gemini plugins directory ({GEMINI_SKILLS_DIR})")
     print(f"  [Sync] Synced {grok_count} skills to Grok skills directory ({GROK_SKILLS_DIR})")
 
     # 2. Build and export files for each detected vault
     for vault in existing_vaults:
         # A. Build Mobile Favorites
-        try:
-            export_mobile_favorites(vault)
-        except PermissionError as exc:
-            print(f"  [Skip] No permission to export Mobile-Favorites.md for {vault}: {exc}")
+        export_mobile_favorites(vault)
 
         # B. Build master context
         master_context_str = build_master_context(vault, DAILY_DEFAULT_SKILLS)
         
         # Save context snapshot
         context_file = vault / "09-PROMPTS" / "Library" / "Tools" / "master_context_latest.txt"
-        if safe_write_text(context_file, master_context_str, "master context"):
-            print(f"  [Context] Wrote master_context_latest.txt to {vault.name}/Tools/")
+        context_file.parent.mkdir(parents=True, exist_ok=True)
+        context_file.write_text(master_context_str, encoding="utf-8")
+        print(f"  [Context] Wrote master_context_latest.txt to {vault.name}/Tools/")
 
         # Write .cursorrules to the vault root
         cursor_rules_file = vault / ".cursorrules"
-        if safe_write_text(cursor_rules_file, master_context_str, ".cursorrules"):
-            print(f"  [Cursor] Wrote .cursorrules to vault root: {vault.name}/.cursorrules")
+        cursor_rules_file.write_text(master_context_str, encoding="utf-8")
+        print(f"  [Cursor] Wrote .cursorrules to vault root: {vault.name}/.cursorrules")
 
     # Display validation report
     if validation_issues:
@@ -455,98 +374,7 @@ def main():
     else:
         print("\nAll skills compliant with Dictionary standards!")
 
-    # 3. Mirror core library files into the playground vault
-    try:
-        mirror_library_to_playground(source_vault)
-    except PermissionError as exc:
-        print(f"  [Playground] Skipped - no permission to mirror playground vault: {exc}")
-
     print("\nIntegration Complete! The Obsidian vaults are now the active source of truth.")
-
-def mirror_library_to_playground(source_vault: Path):
-    """
-    One-way mirror: DOV/09-PROMPTS/Library → playground/09-PROMPTS/Library
-
-    SAFE ZONES (never touched by this function):
-      - 00-INBOX, 01-PLAYGROUND, 02-AREAS, 02-DRAFTS, 03-RESOURCES
-      - 04-ARCHIVES, 05-WRITING, 06-DAILY-NOTES, 07-HUMAN-HEALTH
-      - 08-TECH-AND-AI (your personal notes there)
-      - Any file you create outside of 09-PROMPTS/Library/
-
-    CORE ZONE (overwritten each sync — do NOT edit in playground):
-      - 09-PROMPTS/Library/Skills/
-      - 09-PROMPTS/Library/Protocols/
-      - 09-PROMPTS/Library/Contexts/
-      - 09-PROMPTS/Library/Tools/  (scripts only)
-    """
-    if not PLAYGROUND_VAULT.exists():
-        print(f"  [Playground] Skipped — playground vault not found at {PLAYGROUND_VAULT}")
-        return
-
-    READONLY_BANNER = (
-        "<!-- ⚠️  CORE LIBRARY FILE — DO NOT EDIT HERE.\n"
-        "     Edit the master in: c:\\ROOT_OBSIDIAN\\DOV\\09-PROMPTS\\Library\\\n"
-        "     then run sync-all.py to push changes everywhere.\n"
-        "     Changes you make here WILL BE OVERWRITTEN on next sync. -->\n\n"
-    )
-
-    src_lib = source_vault / "09-PROMPTS" / "Library"
-    dst_lib = PLAYGROUND_VAULT / "09-PROMPTS" / "Library"
-
-    # Subdirs to mirror (core library content only)
-    mirror_subdirs = ["Skills", "Protocols", "Contexts"]
-
-    total_copied = 0
-    for subdir in mirror_subdirs:
-        src_dir = src_lib / subdir
-        dst_dir = dst_lib / subdir
-        if not src_dir.exists():
-            continue
-        dst_dir.mkdir(parents=True, exist_ok=True)
-
-        for src_file in src_dir.glob("*.md"):
-            # Skip known duplicates
-            if "1" in src_file.stem and src_file.stem != "1":
-                continue
-            raw = src_file.read_text(encoding="utf-8", errors="ignore")
-            dst_file = dst_dir / src_file.name
-
-            # Inject read-only banner after frontmatter (or at top if no frontmatter)
-            if raw.startswith("---"):
-                parts = raw.split("---", 2)
-                if len(parts) >= 3:
-                    new_content = "---" + parts[1] + "---\n\n" + READONLY_BANNER + parts[2].lstrip()
-                else:
-                    new_content = READONLY_BANNER + raw
-            else:
-                new_content = READONLY_BANNER + raw
-
-            dst_file.write_text(new_content, encoding="utf-8")
-            total_copied += 1
-
-    # Also copy Tools scripts (without banner — they're code)
-    src_tools = src_lib / "Tools"
-    dst_tools = dst_lib / "Tools"
-    if src_tools.exists():
-        dst_tools.mkdir(parents=True, exist_ok=True)
-        for src_file in src_tools.glob("*.py"):
-            import shutil as _shutil
-            _shutil.copy2(src_file, dst_tools / src_file.name)
-            total_copied += 1
-        # Copy key reference .md files
-        for ref_file in ["README.md", "Dictionary.md", "SCHEMA.md"]:
-            src_ref = src_lib / ref_file
-            if src_ref.exists():
-                dst_ref = dst_lib / ref_file
-                dst_ref.write_text(
-                    READONLY_BANNER + src_ref.read_text(encoding="utf-8", errors="ignore"),
-                    encoding="utf-8"
-                )
-                total_copied += 1
-
-    print(f"  [Playground] Mirrored {total_copied} core files → {PLAYGROUND_VAULT.name}/09-PROMPTS/Library/")
-    print(f"  [Playground] Your personal notes (inbox, daily notes, drafts, etc.) were NOT touched.")
-
 
 if __name__ == "__main__":
     main()
