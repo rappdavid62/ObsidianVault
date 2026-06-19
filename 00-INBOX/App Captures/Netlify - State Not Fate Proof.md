@@ -1,4 +1,4 @@
-﻿---
+---
 type: app-log
 source_app: Netlify
 source_url: https://app.netlify.com/projects/statenotfate

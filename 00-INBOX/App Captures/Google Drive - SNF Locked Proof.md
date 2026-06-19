@@ -1,4 +1,4 @@
-﻿---
+---
 type: source
 source_app: Google Drive
 source_url:
