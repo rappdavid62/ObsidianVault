@@ -74,13 +74,13 @@ aliases: [low-energy, collapse-plan, /low]
 description: >
   Generate a realistic, shame-free execution plan when energy is low or collapsed.
   Use whenever the user reports low/collapse energy, brain fog, or "I can't do normal things today."
-domain: [execution, low-energy, daily]
+domain: [execution]
 energy: low
 invocation: ["/low", "low energy plan", "I'm in collapse", "brain fog today"]
 compatible_with: [grok, claude, gpt, local]
 version: 1
-last_reviewed: 2026-06-12
-tags: [low-energy, mvd, floor, no-shame]
+last_reviewed: 2026-06-17
+tags: [low-energy, mvd, floor, no-shame, daily]
 ---
 ```
 
