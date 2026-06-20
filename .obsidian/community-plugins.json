@@ -1,11 +1,8 @@
 [
-  "table-editor-obsidian",
-  "omnisearch",
-  "templater-obsidian",
   "obsidian-excalidraw-plugin",
+  "templater-obsidian",
   "dataview",
-  "obsidian-clipper",
-  "obsidian-git",
   "obsidian-tasks-plugin",
-  "obsidian-local-rest-api"
+  "table-editor-obsidian",
+  "calendar"
 ]
