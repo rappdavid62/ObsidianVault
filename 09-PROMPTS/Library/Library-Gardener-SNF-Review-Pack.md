@@ -1,4 +1,4 @@
-﻿# Emitted from Obsidian Skill & Prompt Library
+# Emitted from Obsidian Skill & Prompt Library
 # Source of truth: 09-PROMPTS/Library (Obsidian)
 # Usage: Prefix with /tp or /council when appropriate.
 
