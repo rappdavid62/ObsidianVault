@@ -18,7 +18,11 @@ let state = {
     lastReset: null,
     lastActive: Date.now(),
     phq9History: [],
-    systemsAudit: {}
+    systemsAudit: {},
+    growth: {
+      dimensions: { stability: 0, restart: 0, awareness: 0, anchoring: 0, continuity: 0 },
+      chronicle: []
+    }
   },
   lastEnergy: "medium",
   profile: {}
@@ -80,6 +84,12 @@ function loadState() {
       if (!state.polaris.streaks) state.polaris.streaks = { current: 0, longest: 0, missed: 0 };
       if (!state.polaris.phq9History) state.polaris.phq9History = [];
       if (!state.polaris.systemsAudit) state.polaris.systemsAudit = {};
+      if (!state.polaris.growth) {
+        state.polaris.growth = {
+          dimensions: { stability: 0, restart: 0, awareness: 0, anchoring: 0, continuity: 0 },
+          chronicle: []
+        };
+      }
     }
   } catch (e) {}
   updateLastActiveDisplay();
@@ -351,6 +361,7 @@ function saveSystemsAudit() {
     }
   });
   state.polaris.proof.today = (state.polaris.proof.today || 0) + 1;
+  state.polaris.proof.total = (state.polaris.proof.total || 0) + 1;
   updateProofDisplay();
   renderResilienceMeter();
   saveState();
@@ -410,6 +421,7 @@ function submitPHQ9() {
   const selects = document.querySelectorAll('#phq9-questions select');
   let score = 0;
   selects.forEach(s => score += parseInt(s.value));
+  const q9Score = parseInt(selects[8].value);
 
   const interp = PHQ9_INTERPS[Math.min(27, Math.max(0, score))];
   const resultDiv = document.getElementById('phq9-result');
@@ -419,16 +431,17 @@ function submitPHQ9() {
     <strong>Score: ${score} — ${interp.label}</strong><br>
     <p style="margin:8px 0">${interp.text}</p>
     <p style="margin:8px 0"><strong>Recommendation:</strong> ${interp.rec}</p>
-    <button onclick="savePHQ9(${score})">Save to history & close</button>
+    <button onclick="savePHQ9(${score}, ${q9Score})">Save to history & close</button>
   `;
 }
 
-function savePHQ9(score) {
+function savePHQ9(score, q9Score = 0) {
   const interp = PHQ9_INTERPS[Math.min(27, Math.max(0, score))];
   state.polaris.phq9History = state.polaris.phq9History || [];
   state.polaris.phq9History.unshift({
     date: new Date().toISOString().split('T')[0],
     score,
+    q9Score,
     label: interp.label,
     text: interp.text,
     rec: interp.rec
@@ -484,6 +497,369 @@ function renderDashboard() {
   `;
 }
 
+// ==========================================
+// Polaris Growth System Constants & Logic
+// ==========================================
+
+const GROWTH_STAGES = [
+  {
+    name: "Grounding",
+    minProof: 0,
+    maxProof: 49,
+    narrative: "Defining the MVD floor and beginning to collect proof that effort shapes the substrate.",
+    science: "At this stage, recovery is focused on rebuilding raw predictivity. The brain's predictive coding model is severely depressed—meaning it projects that action will yield no reward or change. Executing and registering minimal viable actions (MVDs) directly corrects this predictivity error at the neurobiological level."
+  },
+  {
+    name: "Stabilizing",
+    minProof: 50,
+    maxProof: 199,
+    narrative: "Consistent baseline anchor execution. MVD routines are reliable under pressure.",
+    science: "Neurobiologically, neural pathways associated with core daily anchors are beginning to myelinate. The nervous system transitions from a state of constant autonomic threat/collapse to a more regulated, baseline safety state. Energy reserves stabilize, making restarts faster and less cognitively draining."
+  },
+  {
+    name: "Resilient Adaptation",
+    minProof: 200,
+    maxProof: 499,
+    narrative: "High restart speed. Low/collapse days are successfully treated as rest/data gathering rather than failure.",
+    science: "The prefrontal cortex and autonomic nervous system demonstrate improved heart rate variability (HRV) and cognitive flexibility. Disruption is no longer perceived as a personal failure or identity threat, but as a neutral data point. The 'restart reflex' has become semi-automatic."
+  },
+  {
+    name: "System Integration",
+    minProof: 500,
+    maxProof: Infinity,
+    narrative: "Recovery routines are fully externalized, self-correcting, and durable.",
+    science: "The recovery protocol has transitioned from active cognitive work to consolidated habits (stored in the basal ganglia). The user has developed systemic energy sovereignty: the ability to read body state information accurately and dynamically shift gears without shame, maintaining long-term continuity."
+  }
+];
+
+function getGrowthStage(totalProofs) {
+  return GROWTH_STAGES.find(stage => totalProofs >= stage.minProof && totalProofs <= stage.maxProof) || GROWTH_STAGES[0];
+}
+
+function calculateGrowthMetrics() {
+  const p = state.polaris;
+  const ledger = p.proof.ledger || [];
+  const phq = p.phq9History || [];
+
+  // 1. Stability (Baseline Floor)
+  const stabilitySkills = ["mvd-anchors", "sobriety-anchors", "floor-wins"];
+  const stabilityCount = ledger.filter(entry => stabilitySkills.includes(entry.skill)).length;
+  const stability = Math.min(100, Math.round(stabilityCount * 4));
+
+  // 2. Restart Capacity (Resilience Velocity)
+  const entryDates = ledger.map(entry => {
+    const d = new Date(entry.ts);
+    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+  });
+  const uniqueDates = [...new Set(entryDates)].sort();
+
+  let restartsCount = 0;
+  if (uniqueDates.length > 1) {
+    for (let i = 1; i < uniqueDates.length; i++) {
+      const prevDate = new Date(uniqueDates[i - 1]);
+      const currDate = new Date(uniqueDates[i]);
+      const diffTime = Math.abs(currDate - prevDate);
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      // Gap must be > 1 day
+      if (diffDays > 1) {
+        restartsCount++;
+      }
+    }
+  }
+  const restart = Math.min(100, Math.round(restartsCount * 15));
+
+  // 3. Self-Knowledge (System Awareness)
+  const auditCount = ledger.filter(entry => entry.skill === "systems-audit").length;
+  const cleanPhqCount = phq.filter(item => item.q9Score === 0 || item.q9Score === undefined).length;
+  const awareness = Math.min(100, Math.round((auditCount + cleanPhqCount) * 10));
+
+  // 4. Daily Anchoring (Consistent Presence)
+  const activeDaysCount = uniqueDates.length;
+  const anchoring = Math.min(100, Math.round(activeDaysCount * 5));
+
+  // 5. Continuity (Accumulated Labor)
+  const totalProofs = p.proof.total || 0;
+  const continuity = Math.min(100, Math.round(totalProofs * 1.5));
+
+  return {
+    stability,
+    restart,
+    awareness,
+    anchoring,
+    continuity
+  };
+}
+
+function renderProgression() {
+  const metrics = calculateGrowthMetrics();
+  const totalProofs = state.polaris.proof.total || 0;
+  const stage = getGrowthStage(totalProofs);
+
+  const stageBadge = document.getElementById('growth-stage-badge');
+  if (stageBadge) {
+    stageBadge.textContent = stage.name;
+  }
+
+  renderConstellation(metrics);
+  renderDimensionsStatus(metrics);
+  renderChronicle();
+  renderResilienceAtlas();
+  renderCodex(stage);
+}
+
+function renderConstellation(metrics) {
+  const linksContainer = document.getElementById('constellation-links');
+  const nodesContainer = document.getElementById('constellation-nodes');
+  if (!linksContainer || !nodesContainer) return;
+
+  linksContainer.innerHTML = '';
+  nodesContainer.innerHTML = '';
+
+  const stars = {
+    stability: { label: "Stability", x: 200, y: 35, val: metrics.stability },
+    restart: { label: "Restart", x: 70, y: 110, val: metrics.restart },
+    awareness: { label: "Awareness", x: 330, y: 110, val: metrics.awareness },
+    anchoring: { label: "Anchoring", x: 130, y: 200, val: metrics.anchoring },
+    continuity: { label: "Continuity", x: 270, y: 200, val: metrics.continuity }
+  };
+
+  const connections = [
+    ["stability", "restart"],
+    ["stability", "awareness"],
+    ["restart", "anchoring"],
+    ["awareness", "continuity"],
+    ["anchoring", "continuity"],
+    ["restart", "awareness"],
+    ["anchoring", "stability"],
+    ["continuity", "stability"]
+  ];
+
+  connections.forEach(([n1, n2]) => {
+    const s1 = stars[n1];
+    const s2 = stars[n2];
+    const avgVal = (s1.val + s2.val) / 2;
+    const opacity = 0.08 + (avgVal / 100) * 0.72;
+    const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    line.setAttribute("x1", s1.x);
+    line.setAttribute("y1", s1.y);
+    line.setAttribute("x2", s2.x);
+    line.setAttribute("y2", s2.y);
+    line.setAttribute("class", "constellation-line");
+    line.setAttribute("style", `stroke: var(--accent); opacity: ${opacity}; stroke-dasharray: ${100 - avgVal > 0 ? '4 4' : 'none'};`);
+    linksContainer.appendChild(line);
+  });
+
+  Object.entries(stars).forEach(([key, star]) => {
+    const r = 4 + (star.val / 20);
+    const glow = star.val / 10;
+
+    const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
+
+    const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    circle.setAttribute("cx", star.x);
+    circle.setAttribute("cy", star.y);
+    circle.setAttribute("r", r);
+    circle.setAttribute("class", `constellation-star ${star.val > 0 ? 'constellation-star-active' : ''}`);
+    if (star.val > 0) {
+      circle.setAttribute("style", `filter: drop-shadow(0 0 ${glow}px var(--accent)); fill: var(--accent);`);
+    } else {
+      circle.setAttribute("style", `fill: var(--bg); stroke: var(--surface-2);`);
+    }
+    
+    circle.addEventListener('click', () => {
+      showToast(`${star.label} dimension: ${star.val}% strength. Register more proof signals to strengthen.`, "info");
+    });
+
+    const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    text.setAttribute("x", star.x);
+    text.setAttribute("y", star.y + (star.y > 150 ? 20 : -14));
+    text.setAttribute("class", "constellation-label");
+    text.textContent = `${star.label} (${star.val}%)`;
+
+    g.appendChild(circle);
+    g.appendChild(text);
+    nodesContainer.appendChild(g);
+  });
+}
+
+function renderDimensionsStatus(metrics) {
+  const statusContainer = document.getElementById('growth-dimensions-status');
+  if (!statusContainer) return;
+
+  const labels = {
+    stability: { title: "Stability", desc: "MVD & baseline floor anchors" },
+    restart: { title: "Restart Capacity", desc: "Recovery resume velocity" },
+    awareness: { title: "Self-Knowledge", desc: "Audits & PHQ checks" },
+    anchoring: { title: "Daily Anchoring", desc: "Active proof days" },
+    continuity: { title: "Continuity", desc: "Cumulative raw proof" }
+  };
+
+  statusContainer.innerHTML = Object.entries(metrics).map(([key, val]) => `
+    <div style="background: var(--surface); border: 1px solid var(--surface-2); padding: 10px; border-radius: 8px; text-align: center;">
+      <div style="font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.5px;">${labels[key].title}</div>
+      <div style="font-size: 20px; font-weight: bold; margin: 4px 0; color: ${val > 0 ? 'var(--accent)' : 'var(--text-dim)'};">${val}%</div>
+      <div style="font-size: 10px; color: var(--text-dim);">${labels[key].desc}</div>
+    </div>
+  `).join('');
+}
+
+function renderChronicle() {
+  const listContainer = document.getElementById('proof-chronicle-list');
+  if (!listContainer) return;
+
+  const ledger = state.polaris.proof.ledger || [];
+  const phq = state.polaris.phq9History || [];
+  const events = [];
+
+  if (ledger.length > 0) {
+    const oldest = ledger[0];
+    events.push({
+      ts: oldest.ts,
+      text: "First proof signal registered: " + oldest.text.substring(0, 40) + "..."
+    });
+  }
+
+  const floorWins = ledger.filter(e => e.skill === "floor-wins");
+  if (floorWins.length > 0) {
+    events.push({
+      ts: floorWins[0].ts,
+      text: "Initial MVD floor win logged: " + floorWins[0].text.replace("FLOOR WIN: ", "")
+    });
+    if (floorWins.length > 1) {
+      events.push({
+        ts: floorWins[floorWins.length - 1].ts,
+        text: `Consolidated ${floorWins.length} floor wins to protect the baseline.`
+      });
+    }
+  }
+
+  const audits = ledger.filter(e => e.skill === "systems-audit");
+  audits.forEach(a => {
+    events.push({
+      ts: a.ts,
+      text: "Completed Substrate Systems Check."
+    });
+  });
+
+  phq.forEach(item => {
+    const ts = new Date(item.date).getTime();
+    events.push({
+      ts: ts,
+      text: `Clinical PHQ-9 recorded (Score: ${item.score}).`
+    });
+  });
+
+  const entryDates = ledger.map(entry => {
+    const d = new Date(entry.ts);
+    return { ts: entry.ts, dateStr: `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}` };
+  });
+  const uniqueDateObjs = [];
+  const seenDates = new Set();
+  entryDates.forEach(item => {
+    if (!seenDates.has(item.dateStr)) {
+      seenDates.add(item.dateStr);
+      uniqueDateObjs.push(item);
+    }
+  });
+  uniqueDateObjs.sort((a, b) => a.ts - b.ts);
+
+  if (uniqueDateObjs.length > 1) {
+    for (let i = 1; i < uniqueDateObjs.length; i++) {
+      const prev = new Date(uniqueDateObjs[i - 1].dateStr);
+      const curr = new Date(uniqueDateObjs[i].dateStr);
+      const diffTime = Math.abs(curr - prev);
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      if (diffDays > 1) {
+        events.push({
+          ts: uniqueDateObjs[i].ts,
+          text: `Resumed active status after a ${diffDays - 1}-day Rest & Gather gap.`
+        });
+      }
+    }
+  }
+
+  events.sort((a, b) => b.ts - a.ts);
+  const displayEvents = events.slice(0, 8);
+
+  if (displayEvents.length === 0) {
+    listContainer.innerHTML = `<div style="text-align:center; padding: 20px; color: var(--text-dim);">No recovery milestones logged yet. Go to Polaris tab to start logging proof.</div>`;
+  } else {
+    listContainer.innerHTML = displayEvents.map(e => {
+      const dateStr = new Date(e.ts).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+      return `
+        <div class="chronicle-item">
+          <div style="font-size: 11px; color: var(--text-dim); margin-bottom: 2px;">${dateStr}</div>
+          <div>${e.text}</div>
+        </div>
+      `;
+    }).join('');
+  }
+}
+
+function renderResilienceAtlas() {
+  const gridContainer = document.getElementById('resilience-atlas-grid');
+  if (!gridContainer) return;
+
+  gridContainer.innerHTML = '';
+  const ledger = state.polaris.proof.ledger || [];
+  
+  const activeDays = new Set(ledger.map(entry => {
+    const d = new Date(entry.ts);
+    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+  }));
+
+  const today = new Date();
+  const days = [];
+
+  for (let i = 27; i >= 0; i--) {
+    const targetDate = new Date();
+    targetDate.setDate(today.getDate() - i);
+    const dateStr = `${targetDate.getFullYear()}-${String(targetDate.getMonth() + 1).padStart(2, '0')}-${String(targetDate.getDate()).padStart(2, '0')}`;
+    const isActive = activeDays.has(dateStr);
+    days.push({
+      dateStr,
+      label: targetDate.getDate(),
+      isActive
+    });
+  }
+
+  gridContainer.innerHTML = days.map(d => {
+    const title = `${d.dateStr}: ${d.isActive ? 'Active proof registered' : 'Rest & Data Gather state'}`;
+    return `
+      <div class="atlas-day ${d.isActive ? 'active' : 'rest'}" title="${title}">
+        ${d.label}
+      </div>
+    `;
+  }).join('');
+}
+
+function renderCodex(stage) {
+  const content = document.getElementById('growth-codex-content');
+  if (!content) return;
+
+  content.innerHTML = `
+    <div style="margin-bottom:12px;">
+      <span style="font-weight:bold; color:var(--accent); font-size:15px;">Stage Description (${stage.name}):</span>
+      <p style="margin-top:6px; color:var(--text);">${stage.narrative}</p>
+    </div>
+    <div style="border-top: 1px solid var(--surface-2); padding-top:12px; margin-top:12px;">
+      <span style="font-weight:bold; color:var(--text-dim); font-size:12px; text-transform:uppercase; letter-spacing:0.5px;">Clinical & Neuropsychological Rationale:</span>
+      <p style="margin-top:6px; color:var(--text-dim); line-height:1.6;">${stage.science}</p>
+    </div>
+    <div style="border-top: 1px solid var(--surface-2); padding-top:12px; margin-top:12px; display:flex; flex-direction:column; gap:6px;">
+      <span style="font-weight:bold; color:var(--text-dim); font-size:12px; text-transform:uppercase; letter-spacing:0.5px;">Growth Stage Thresholds (Based on Proof Signals):</span>
+      <div style="font-size:11px; display:flex; flex-direction:column; gap:4px; margin-top:4px;">
+        ${GROWTH_STAGES.map(s => `
+          <div style="display:flex; justify-content:space-between; padding:4px; border-radius:4px; ${s.name === stage.name ? 'background:var(--accent-weak); color:var(--text); font-weight:bold;' : 'color:var(--text-dim);'}">
+            <span>Stage: ${s.name}</span>
+            <span>${s.minProof === 500 ? '500+' : s.minProof + '-' + s.maxProof} Proofs</span>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}
+
 function showTab(tab) {
   document.querySelectorAll('.view').forEach(v => v.style.display = 'none');
   const target = document.getElementById(tab);
@@ -492,6 +868,10 @@ function showTab(tab) {
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
   const activeTab = document.getElementById('tab-' + tab);
   if (activeTab) activeTab.classList.add('active');
+
+  if (tab === 'progression') {
+    renderProgression();
+  }
 
   if (tab === 'polaris') {
     renderPolarisPlan();
@@ -633,4 +1013,4 @@ function init() {
 
 init();
 
-window.POLARIS_24 = { state, setEnergy, logFloorWin, copySkill, showTab, openPHQ9, openGardenerAudit, openSystemsAudit, syncToVaultTrackers, emitCustomPack };
+window.POLARIS_24 = { state, setEnergy, logFloorWin, copySkill, showTab, openPHQ9, openGardenerAudit, openSystemsAudit, syncToVaultTrackers, emitCustomPack, calculateGrowthMetrics, renderProgression };

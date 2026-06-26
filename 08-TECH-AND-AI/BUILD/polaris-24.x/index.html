@@ -15,6 +15,58 @@
     .systems-audit { margin-top: 12px; }
     .audit-item { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid var(--surface-2); }
     .vault-sync-btn { background: #4a664a; }
+
+    /* Progression specific styling */
+    @media (max-width: 640px) {
+      .progression-split { grid-template-columns: 1fr !important; }
+    }
+    .constellation-star {
+      fill: var(--bg);
+      stroke: var(--accent);
+      stroke-width: 2px;
+      transition: all 0.5s ease;
+      cursor: pointer;
+    }
+    .constellation-star-active {
+      fill: var(--accent);
+      filter: drop-shadow(0 0 6px var(--accent));
+    }
+    .constellation-label {
+      fill: var(--text);
+      font-size: 11px;
+      font-family: system-ui, sans-serif;
+      text-anchor: middle;
+      pointer-events: none;
+    }
+    .constellation-line {
+      stroke: var(--accent);
+      stroke-width: 1.5px;
+      transition: all 0.5s ease;
+    }
+    .atlas-day {
+      aspect-ratio: 1;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9px;
+      color: var(--text-dim);
+      font-weight: bold;
+    }
+    .atlas-day.active {
+      background: var(--accent);
+      color: var(--bg);
+    }
+    .atlas-day.rest {
+      background: var(--surface-2);
+      border: 1px solid #333;
+    }
+    .chronicle-item {
+      padding: 6px 8px;
+      background: var(--surface-2);
+      border-radius: 6px;
+      border-left: 3px solid var(--accent);
+    }
   </style>
 </head>
 <body>
@@ -34,6 +86,7 @@
       <button class="tab active" onclick="showTab('welcome')" id="tab-welcome">Welcome</button>
       <button class="tab" onclick="showTab('polaris')" id="tab-polaris">Polaris</button>
       <button class="tab" onclick="showTab('skills')" id="tab-skills">Skills</button>
+      <button class="tab" onclick="showTab('progression')" id="tab-progression">Progression</button>
       <button class="tab" onclick="showTab('dashboard')" id="tab-dashboard">Dashboard</button>
     </div>
 
@@ -172,6 +225,70 @@
           <!-- populated by JS (includes resilience, PHQ history, quests, sync) -->
         </div>
         <button onclick="showTab('polaris')" style="width:100%;margin-top:12px">Back to Polaris</button>
+      </div>
+    </div>
+
+    <!-- PROGRESSION tab (Polaris Growth System) -->
+    <div id="progression" class="view" style="display:none">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Polaris Growth Constellation</div>
+          <div id="growth-stage-badge" style="font-size:12px; background:var(--accent-weak); color:var(--text); padding:4px 8px; border-radius:4px; font-weight:bold;">Grounding</div>
+        </div>
+        <p class="small" style="margin-bottom:16px;">This dashboard visualizes your recovery labor through proof signals. There is no shame, no performance pressure, and gaps represent necessary rest.</p>
+        
+        <!-- SVG Constellation Map -->
+        <div style="display:flex; justify-content:center; background:#0a0a0c; padding:16px; border-radius:12px; margin-bottom:16px; border: 1px solid var(--surface-2);">
+          <svg id="constellation-svg" width="100%" height="240" viewBox="0 0 400 240" style="max-width: 400px; overflow: visible;">
+            <!-- Connection Lines (Will be generated dynamically) -->
+            <g id="constellation-links"></g>
+            <!-- Stars/Nodes (Will be generated dynamically) -->
+            <g id="constellation-nodes"></g>
+          </svg>
+        </div>
+
+        <!-- Growth Dimensions Legend / Status -->
+        <div id="growth-dimensions-status" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; margin-bottom: 16px;">
+          <!-- Populated dynamically: Stability, Restart, Awareness, Anchoring, Continuity -->
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px; margin-bottom:16px;" class="progression-split">
+        <!-- Proof Chronicle -->
+        <div class="card" style="margin-bottom:0;">
+          <div class="card-title" style="font-size:16px; margin-bottom:12px;">Proof Chronicle</div>
+          <p class="small" style="margin-bottom:12px; color:var(--text-dim);">Timeline of registered recovery milestones.</p>
+          <div id="proof-chronicle-list" style="max-height: 250px; overflow-y: auto; font-size:13px; display:flex; flex-direction:column; gap:8px;">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+
+        <!-- Resilience Atlas (Calendar) -->
+        <div class="card" style="margin-bottom:0;">
+          <div class="card-title" style="font-size:16px; margin-bottom:12px;">Resilience Atlas</div>
+          <p class="small" style="margin-bottom:12px; color:var(--text-dim);">Last 28 days of activity. Calm squares show active days vs. Rest & Data Gather days.</p>
+          <div id="resilience-atlas-grid" style="display:grid; grid-template-columns: repeat(7, 1fr); gap: 6px; max-width: 220px; margin: 0 auto;">
+            <!-- Populated dynamically -->
+          </div>
+          <div style="display:flex; justify-content:center; gap:12px; margin-top:12px; font-size:11px;">
+            <div style="display:flex; align-items:center; gap:4px;">
+              <div style="width:10px; height:10px; background:var(--accent); border-radius:2px;"></div>
+              <span>Active</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:4px;">
+              <div style="width:10px; height:10px; background:var(--surface-2); border-radius:2px; border:1px solid #333;"></div>
+              <span>Rest & Gather</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Growth Codex (Stage narratives) -->
+      <div class="card">
+        <div class="card-title">Growth Codex</div>
+        <div id="growth-codex-content" style="font-size:13px; line-height:1.5;">
+          <!-- Populated dynamically -->
+        </div>
       </div>
     </div>
 
