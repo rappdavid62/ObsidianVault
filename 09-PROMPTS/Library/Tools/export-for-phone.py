@@ -19,7 +19,7 @@ import sys
 from pathlib import Path
 
 VAULT_PATHS = [
-    Path(r"C:\ROOT_OBSIDIAN\master-laptop-vault"),
+    Path(__file__).resolve().parents[3],
     Path(r"C:\ROOT_OBSIDIAN\DOV"),
     Path(r"C:\Users\rappd\OneDrive\Desktop\ObsidianVault"),
 ]
@@ -33,6 +33,7 @@ PHONE_FAVORITES = [
     "social-calibration",
     "apply-today",
     "council-strategy",
+    "tech-council",
 ]
 
 def find_vault():
