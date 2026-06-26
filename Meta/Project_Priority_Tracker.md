@@ -19,7 +19,7 @@ Last Reviewed: 2026-06-25
 ### 1. Job Search & Financial Stabilization
 * **Primary Target**: Job Search System
 * **Context**: Getting employable and financially stable.
-* **Next Action**: Create or update the dedicated job search tracking system under `02-PROJECTS/2026-SNF-Substrate-Systems-Project/04-Tracking/job_search_tracker.md`.
+* **Next Action**: Create or update the dedicated job search tracking system under `01-PROJECTS/2026-SNF-Substrate-Systems-Project/04-Tracking/job_search_tracker.md`.
 
 ### 2. AI Workflow Setup & Durable Second Brain Maintenance
 * **Primary Target**: AI Infrastructure

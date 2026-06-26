@@ -22,4 +22,4 @@ This document governs safe synchronization of David's second brain vault across 
 2. **Never Force Push**: Never use `git push --force` or `--force-with-lease` unless resolving a specific detached head or history rewrite requested by David.
 3. **Verify Gitignore Before Sync**: Ensure sensitive/private content (e.g., `_PRIVATE/`, `99-PRIVATE/`, `40-BREAST EXPANSION/`) is ignored and not tracked.
 4. **Use Local Backups**: Keep automated local zip snapshots under `.backups/` as a safety net in case of sync failures.
-5. **Reorg Alignment**: Maintain folders like `00-CAPTURE/`, `02-PROJECTS/`, `99-PRIVATE/` across all instances instead of recreating deprecated `00-INBOX/` or `01-PROJECTS/` paths.
+5. **Reorg Alignment**: Maintain folders like `00-CAPTURE/`, `01-PROJECTS/`, `02-AREAS/`, `99-PRIVATE/` across all instances instead of recreating deprecated `00-INBOX/` or `90-PRIVATE/` paths.
