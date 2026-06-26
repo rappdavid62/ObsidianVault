@@ -53,6 +53,7 @@ PHONE_FAVORITES = [
     "social-calibration",
     "apply-today",
     "council-strategy",
+    "tech-council",
 ]
 
 def find_all_vaults() -> list[Path]:
