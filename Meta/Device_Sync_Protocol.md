@@ -15,9 +15,11 @@ Last Reviewed: 2026-06-25
 # Device Sync Protocol
 
 ## Purpose
+
 This document governs safe synchronization of David's second brain vault across different devices (laptop, desktop, phone) using Git.
 
 ## Core Sync Rules
+
 1. **Always Pull Before Committing**: To prevent merge conflicts, always pull remote changes before staging and committing local updates.
 2. **Never Force Push**: Never use `git push --force` or `--force-with-lease` unless resolving a specific detached head or history rewrite requested by David.
 3. **Verify Gitignore Before Sync**: Ensure sensitive/private content (e.g., `_PRIVATE/`, `99-PRIVATE/`, `40-BREAST EXPANSION/`) is ignored and not tracked.
