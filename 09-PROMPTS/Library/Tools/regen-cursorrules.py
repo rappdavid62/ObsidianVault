@@ -10,10 +10,7 @@ spec.loader.exec_module(sync_all)
 
 vault = Path(r"C:\ROOT_OBSIDIAN\DOV")
 ctx = sync_all.build_master_context(vault, sync_all.DAILY_DEFAULT_SKILLS)
-sync_all.safe_write_text(
-    vault / "09-PROMPTS" / "Library" / "Tools" / "master_context_latest.txt",
-    ctx,
-    "master context",
-)
-sync_all.safe_write_text(vault / ".cursorrules", ctx, ".cursorrules")
+(vault / "09-PROMPTS" / "Library" / "Tools" / "master_context_latest.txt").write_text(ctx, encoding="utf-8")
+(vault / ".cursorrules").write_text(ctx, encoding="utf-8")
 print("Regenerated DOV .cursorrules and master_context_latest.txt")
+
