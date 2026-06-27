@@ -30,8 +30,14 @@ if sys.platform == "win32":
     import io
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
-# Adjust if your vault location is different
-VAULT_PATH = Path(r"C:\ROOT_OBSIDIAN\master-laptop-vault")
+# Adjust dynamically to use the vault containing this script first
+try:
+    VAULT_PATH = Path(__file__).resolve().parents[3]
+except Exception:
+    VAULT_PATH = Path(r"C:\ROOT_OBSIDIAN\DOV")
+
+if not (VAULT_PATH / "09-PROMPTS").exists():
+    VAULT_PATH = Path(r"C:\ROOT_OBSIDIAN\master-laptop-vault")
 if not VAULT_PATH.exists():
     VAULT_PATH = Path(r"C:\ROOT_OBSIDIAN\DOV")
 if not VAULT_PATH.exists():
@@ -69,47 +75,11 @@ def load_note_fm(path: Path) -> tuple[str, str]:
 def build_context(skill_names: list[str], include_status_placeholder: bool = True) -> str:
     parts = []
 
-    parts.append("# MASTER CONTEXT - Source of Truth: Obsidian 09-PROMPTS/Library/")
-    parts.append("Use the DOV vault as the source of truth for reusable AI skills, prompts, source-code indexes, and integration notes.")
-    parts.append("Do not inject private project or health material unless the user explicitly asks for that exact context.\n")
-
-    parts.append("## Relevant Non-Project Skills From The Library")
-    for name in skill_names:
-        for sub in ["Skills", "Protocols", "Prompts"]:
-            p = LIBRARY_ROOT / sub / f"{name}.md"
-            if p.exists():
-                fm, content = load_note_fm(p)
-                if is_project_specific(name, fm, content):
-                    parts.append(f"### {name} (skipped: project-specific content)")
-                else:
-                    parts.append(f"### {name}")
-                    parts.append(content)
-                parts.append("")
-                break
-        else:
-            parts.append(f"### {name} (not found in Library)")
-            parts.append("")
-
-    if include_status_placeholder:
-        parts.append("## Current Status (UPDATE THIS BEFORE EVERY SESSION)")
-        parts.append("```")
-        parts.append("Goal:")
-        parts.append("Workspace:")
-        parts.append("Constraints:")
-        parts.append("Files or apps involved:")
-        parts.append("Definition of done:")
-        parts.append("```")
-        parts.append("")
-
-    parts.append("---")
-    parts.append("Instructions: Stay scoped, use local source-of-truth files, preserve privacy boundaries, and avoid project-specific assumptions.")
-    return "\n".join(parts)
-
     # 1. Master Bio (always first — core identity + constraints)
     master = load_note(LIBRARY_ROOT / "Contexts" / "master-bio.md")
     parts.append("# MASTER CONTEXT — Source of Truth: Obsidian 09-PROMPTS/Library/")
     parts.append("You are operating from my personal, canonical skill & prompt library.")
-    parts.append("The single source of truth lives in my Obsidian vault (synced via OneDrive).")
+    parts.append("The single source of truth lives in my Obsidian vault (synced via OneDrive/Google Drive).")
     parts.append("All skills below come from there. Use them exactly as written.\n")
     parts.append("## Core Identity & Constraints (master-bio)")
     parts.append(master)
@@ -130,9 +100,12 @@ def build_context(skill_names: list[str], include_status_placeholder: bool = Tru
         for sub in ["Skills", "Protocols", "Prompts"]:
             p = LIBRARY_ROOT / sub / f"{name}.md"
             if p.exists():
-                content = load_note(p)
-                parts.append(f"### {name}")
-                parts.append(content)
+                fm, content = load_note_fm(p)
+                if is_project_specific(name, fm, content):
+                    parts.append(f"### {name} (skipped: project-specific content)")
+                else:
+                    parts.append(f"### {name}")
+                    parts.append(content)
                 parts.append("")
                 break
         else:
@@ -153,6 +126,7 @@ def build_context(skill_names: list[str], include_status_placeholder: bool = Tru
 
     parts.append("---")
     parts.append("Instructions: Follow the skill instructions precisely. Bottom line first. Be realistic about my current energy and constraints. Use the language and scaling from the skills above. Treat the Master Bio as always-true background.")
+
 
     return "\n".join(parts)
 
