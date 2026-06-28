@@ -1,4 +1,4 @@
----
+﻿---
 type: skill
 name: snf-proof-registration
 aliases: [proof, register-proof, visible-proof, /proof]
@@ -76,4 +76,4 @@ Use the exact phrasing "This shows effort can still shape the substrate" as a de
 - Weekly review input: Aggregate registrations show restart speed; feed into systems-audit.
 - DOV sync: The external memory (trackers in the synced vault) survives device changes because GitHub keeps the source (Library) and project structure current.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)

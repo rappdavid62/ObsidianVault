@@ -1,9 +1,9 @@
----
+﻿---
 type: skill
 name: ai-setup-audit
 aliases: [setup-audit, tool-audit, ai-inventory, /setup-audit]
 description: >
-  Perform a periodic full audit of your AI/tool ecosystem and context injection setup (Grok CLI + .grok/skills, Claude Projects, Gemini long-context, phone/Mobile-Favorites, Cursor rules, local models, NotebookLM, this Library). Identify drift, gaps in reinforcement, and produce a concrete plan to re-sync everything to the Obsidian 08 PROMPTS/Library/ source of truth.
+  Perform a periodic full audit of your AI/tool ecosystem and context injection setup (Grok CLI + .grok/skills, Claude Projects, Gemini long-context, phone/Mobile-Favorites, Cursor rules, local models, NotebookLM, this Library). Identify drift, gaps in reinforcement, and produce a concrete plan to re-sync everything to the Obsidian 09-PROMPTS/Library/ source of truth.
 domain: [ai-setup, meta, library]
 energy: medium
 invocation: ["/setup-audit", "audit my ai setup", "tool inventory", "reinforce across platforms"]
@@ -16,7 +16,7 @@ tags: [ai-setup, meta, library, maintenance, ubiquity, standards, reinforcement]
 # AI Setup Audit
 
 ## Purpose
-Your intelligence is distributed: Obsidian Library (truth) → emitters → .grok/skills, Claude Projects, Gemini chats, phone files, GitHub, Depapp/PWA, etc. Over time things drift (stale skills in one place, missing cross-links, outdated instruction files). This skill forces a systematic inventory and reinforcement pass so every platform stays synchronized to the single source of truth in `08 PROMPTS/Library/`.
+Your intelligence is distributed: Obsidian Library (truth) → emitters → .grok/skills, Claude Projects, Gemini chats, phone files, GitHub, Depapp/PWA, etc. Over time things drift (stale skills in one place, missing cross-links, outdated instruction files). This skill forces a systematic inventory and reinforcement pass so every platform stays synchronized to the single source of truth in `09-PROMPTS/Library/`.
 
 ## When to Use
 - After any major expansion or reinforcement session (like adding new atomics).
@@ -70,4 +70,4 @@ Your intelligence is distributed: Obsidian Library (truth) → emitters → .gro
 - Run this after any numeric directive (1, 2, 1 2, 145, etc.) that adds or changes skills.
 - Update whenever new platforms are added (e.g. new local model, new MCP server) or injection methods improve.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)

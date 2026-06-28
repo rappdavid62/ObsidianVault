@@ -8,13 +8,13 @@ last_reviewed: 2026-06-08
 
 # How to Use This Skill & Prompt Library Ubiquitously
 
-**Obsidian (this Library in the Laptop Sync vault) is the single source of truth for all AI.**
+**The DOV Obsidian Library at `C:\ROOT_OBSIDIAN\DOV\09-PROMPTS\Library` is the single source of truth for all AI.**
 
 The goal: Your best thinking, protocols, and execution patterns are available **from any device, to any model, at any time** — with almost zero friction.
 
 ## Core Principle
 
-The Library lives in this Obsidian vault as the single source of truth (atomic notes + frontmatter + Dataview + Dictionary for controlled vocab).
+The Library lives in this DOV vault as the single source of truth (atomic notes + frontmatter + Dataview + Dictionary for controlled vocab).
 
 Everything else is **derivative**:
 - Big compiled files in `Prompt-Library/` (legacy full-bundle snapshots)
@@ -38,7 +38,7 @@ Use the tools in `Library/Tools/`:
 
 ```powershell
 # Recommended: add to PowerShell profile
-function skill { & "C:\Users\rappd\My Drive\INBOX\AI Learning\Laptop Sync\08 PROMPTS\Library\Tools\emit-skill.ps1" @args }
+function skill { & "C:\ROOT_OBSIDIAN\DOV\09-PROMPTS\Library\Tools\emit-skill.ps1" @args }
 
 skill --daily --clip          # full daily execution pack + status placeholder
 skill --favorites             # broader high-value collection
@@ -56,7 +56,7 @@ In any new chat:
 ```
 You are operating from my personal skill & prompt library.
 The canonical versions live in my Obsidian vault at:
-08 PROMPTS/Library/ (Laptop Sync vault, synced via Google Drive).
+C:\ROOT_OBSIDIAN\DOV\09-PROMPTS\Library.
 
 Relevant skill(s) for this conversation:
 [paste one or more emitted skills here]
@@ -97,6 +97,8 @@ Keep a small "Daily Use" section at the top with your current top 5–7 skills.
 
 - **Morning (on desktop)**: Update status block → `skill --daily --clip` → paste into main AI for the day.
 - **When stuck or on phone**: Open Mobile-Favorites.md → grab the relevant skill (usually low-energy-execution + mvd-anchors + thoroughness-protocol + one domain skill).
+- **When the vault itself needs attention**: Use `/brain` (`second-brain-control-loop`) to coordinate Library gardening, vault cleanup, app-proof review, export refreshes, and learning promotion.
+- **When files or paths are messy**: Use `/vault-cleaner` before moving, archiving, deleting, or renaming anything.
 - **Big decisions**: `/tp` + `/council` + the relevant expert lanes from the Library.
 - **Library maintenance**: Run the `library-gardener` skill (weekly or after big sessions). It now explicitly audits against the Dictionary.
 
@@ -108,7 +110,7 @@ Keep a small "Daily Use" section at the top with your current top 5–7 skills.
 
 The system is only as good as your willingness to keep the canonical atomic notes in this vault accurate and actually use the emit/injection patterns.
 
-**This Library in the Laptop Sync vault is the universal truth for all AI.** 
+**This DOV Library is the universal truth for all AI.** 
 
 ---
 

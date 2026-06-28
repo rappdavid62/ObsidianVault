@@ -59,7 +59,7 @@ tags:
 Destination:
 
 ```text
-00-INBOX/App Captures/{{title}}
+00-CAPTURE/App Captures/{{title}}
 ```
 
 ```markdown

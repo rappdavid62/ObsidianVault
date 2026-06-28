@@ -1,4 +1,4 @@
----
+﻿---
 type: skill
 name: social-calibration
 aliases: [social, message-drafting, /social, social-translator]
@@ -59,4 +59,4 @@ Tone rules: Polite, direct, clear. Not needy. Not robotic. Not over-explained. P
 - Directly descended from the Social_Calibration and Social_Translator pieces in the two main tucked libraries.
 - One of the highest daily-use skills for preserving energy and self-trust in a world full of ambiguous social input.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)

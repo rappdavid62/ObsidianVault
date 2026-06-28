@@ -40,6 +40,11 @@ import subprocess
 from pathlib import Path
 from typing import Optional, List, Dict
 
+# Ensure UTF-8 output on Windows terminals and redirected output.
+if sys.platform == "win32":
+    import io
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+
 _TOOLS_DIR = Path(__file__).resolve().parent
 if str(_TOOLS_DIR) not in sys.path:
     sys.path.insert(0, str(_TOOLS_DIR))
@@ -50,32 +55,38 @@ VAULT_PATHS = [
     Path(r"C:\ROOT_OBSIDIAN\DOV"),
     Path(r"C:\Users\rappd\OneDrive\Desktop\ObsidianVault"),
     Path.home() / "OneDrive" / "Desktop" / "ObsidianVault",
-    Path(r"C:\Users\rappd\My Drive\INBOX\AI Learning\Laptop Sync"),
 ]
 
 LIBRARY_ROOT = "09-PROMPTS/Library"
 
 # Skills that are almost always useful in a daily pack (low energy / high frequency)
 DAILY_DEFAULT_SKILLS = [
+    "bootstrap-session",
+    "daily-execution",
     "thoroughness-protocol",
+    "low-energy-execution",
     "tool-mode-decider",
-    "library-gardener",
+    "daily-job-search",
+    "social-calibration",
 ]
 
 # Favorites for quick access (used by --favorites). Energy-balanced collection.
 FAVORITES = DAILY_DEFAULT_SKILLS + [
+    "second-brain-control-loop",
+    "vault-cleaner",
+    "priority-audit",
+    "council-decision",
     "apply-today",
     "resume-tailoring",
     "deep-research",
-    "tool-mode-decider",
     "weekly-review",
     "library-gardener",
 ]
 
 # Simple energy-based packs (can be extended)
-LOW_ENERGY_PACK = ["tool-mode-decider", "library-gardener"]
-MEDIUM_ENERGY_PACK = DAILY_DEFAULT_SKILLS + ["apply-today", "resume-tailoring"]
-HIGH_ENERGY_PACK = ["daily-job-search", "deep-research", "tool-mode-decider", "weekly-review", "library-gardener"]
+LOW_ENERGY_PACK = ["bootstrap-session", "daily-execution", "low-energy-execution", "social-calibration"]
+MEDIUM_ENERGY_PACK = DAILY_DEFAULT_SKILLS + ["apply-today", "resume-tailoring", "priority-audit"]
+HIGH_ENERGY_PACK = ["second-brain-control-loop", "vault-cleaner", "daily-job-search", "deep-research", "tool-mode-decider", "weekly-review", "library-gardener", "council-decision"]
 
 # === END CONFIG ===
 
@@ -167,7 +178,7 @@ def build_emission(paths: List[Path], include_master: bool = False, vault: Optio
     lines = []
     lines.append("# Emitted from Obsidian Skill & Prompt Library")
     lines.append("# Source of truth: 09-PROMPTS/Library (Obsidian)")
-    lines.append("# Usage: Prefix with /tp or /council when appropriate.")
+    lines.append("# Usage: Start with /bootstrap, then add /tp, /daily-execution, /low, or /council as needed.")
     lines.append("")
 
     if include_master and vault:
@@ -271,7 +282,7 @@ def load_dictionary(vault: Path) -> dict:
         # Fallback: minimal known good values for generic library work.
         result["types"] = {"skill", "prompt", "protocol", "context", "guide", "hub", "meta"}
         result["energies"] = {"collapse", "low", "medium", "high", "any", "variable"}
-        result["domains"] = {"meta", "library", "job", "execution", "social", "research", "decision-making", "health", "creative", "ai-setup", "philosophy", "finance", "career", "systems"}
+        result["domains"] = {"meta", "library", "context", "job", "execution", "social", "research", "decision-making", "recovery", "health", "creative", "ai-setup", "philosophy", "philosophy-snf", "finance", "prs", "sobriety", "career", "systems"}
         result["tags"] = {"low-energy", "routine", "low-friction", "daily", "weekly", "external-memory", "cognitive-offloading", "systems", "research", "career"}
         return result
 
@@ -293,7 +304,7 @@ def load_dictionary(vault: Path) -> dict:
             result["energies"].add(e)
 
     # Domains (from the domain table)
-    known_domains = ["meta", "library", "job", "execution", "social", "research", "decision-making", "health", "creative", "ai-setup", "philosophy", "finance", "career", "systems"]
+    known_domains = ["meta", "library", "context", "job", "execution", "social", "research", "decision-making", "recovery", "health", "creative", "ai-setup", "philosophy", "philosophy-snf", "finance", "prs", "sobriety", "career", "systems"]
     for d in known_domains:
         if d in text:
             result["domains"].add(d)
@@ -304,7 +315,7 @@ def load_dictionary(vault: Path) -> dict:
         if t in text or t.replace("-", "") in text.replace(" ", "").lower():
             result["tags"].add(t)
 
-    result["domains"].update({"execution", "systems", "research"})
+    result["domains"].update({"context", "execution", "systems", "research"})
     result["tags"].update({"external-memory", "low-friction", "systems"})
     result["energies"].update({"low", "collapse", "medium"})
     result["types"].update({"skill"})

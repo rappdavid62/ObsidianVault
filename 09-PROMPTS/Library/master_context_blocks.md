@@ -1,4 +1,4 @@
-# Master Context Blocks for AI Tools
+﻿# Master Context Blocks for AI Tools
 
 This document provides the specialized instructions, system prompts, and configuration templates to boot up any AI tool with your second brain ([DOV](file:///c:/ROOT_OBSIDIAN/DOV)) rules and skills.
 
@@ -54,7 +54,7 @@ Use this setup inside a Claude.ai Project.
 Copy the contents of [Claude-Project-Instructions.md](file:///c:/ROOT_OBSIDIAN/DOV/09-PROMPTS/Library/Claude-Project-Instructions.md) directly into the Project Instructions box:
 
 ```markdown
-You are operating from my personal skill & prompt library. The single source of truth lives in my Obsidian vault at '08 PROMPTS/Library/' (synced via Google Drive).
+You are operating from my personal skill & prompt library. The single source of truth lives at C:\ROOT_OBSIDIAN\DOV\09-PROMPTS\Library.
 
 CORE RULES FOR CLAUDE:
 - Treat the uploaded Library files (master-bio.md, Dictionary.md, SCHEMA.md, Skills/, Protocols/) as the single source of truth.
@@ -95,7 +95,7 @@ Use this system prompt for long-context sessions in AI Studio or the Gemini web 
 Copy the instructions from [Gemini-System-Prompt.md](file:///c:/ROOT_OBSIDIAN/DOV/09-PROMPTS/Library/Gemini-System-Prompt.md):
 
 ```markdown
-You are operating from my personal, canonical skill & prompt library. The single source of truth lives in my Obsidian vault at '09-PROMPTS/Library/'.
+You are operating from my personal, canonical skill & prompt library. The single source of truth lives at C:\ROOT_OBSIDIAN\DOV\09-PROMPTS\Library.
 
 CORE RULES FOR GEMINI:
 - Reference uploaded/pasted files (master-bio.md, Dictionary.md, core Skills, Protocols).
@@ -129,3 +129,4 @@ As an Antigravity agent, I have direct local access to your active workspace. Yo
 * *"Run the thoroughness-protocol (/tp) on this script."*
 * *"Optimize this code using the standards in my library."*
 * *"Read `Meta/Master Context.md` and check if this change aligns with it."*
+

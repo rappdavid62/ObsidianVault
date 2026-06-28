@@ -9,9 +9,11 @@ Canonical Home: Meta/Vault Master Index.md
 Related Files:
   - Meta/Master Context.md
   - Meta/AI Command Layer.md
+  - Meta/Second Brain Operations Dashboard.md
+  - Meta/Legacy Bundle Migration Inventory.md
   - Meta/Active Projects Map.md
   - Meta/Vault Cleanup Queue.md
-Last Reviewed: 2026-06-22
+Last Reviewed: 2026-06-28
 ---
 
 # Vault Master Index
@@ -32,13 +34,15 @@ Do not assume access to this path unless the current tool/environment can actual
 
 ## Top-Level Structure
 
-### `00-INBOX/`
+### `00-CAPTURE/`
 
-Purpose: raw capture, unprocessed app captures, pasted fragments, rough voice/text dumps.
+Purpose: raw capture, app captures, pasted fragments, rough voice/text dumps.
 
 Status: Active, but needs regular triage.
 
-Known issue: contains adult/private candidates and duplicate loose notes. Review before committing or pushing.
+Key path: `00-CAPTURE/App Captures/`
+
+Known issue: some captures may be private/adult candidates. Review before committing or pushing.
 
 ### `01-PROJECTS/`
 
@@ -52,6 +56,12 @@ Key areas:
 
 Status: Active but contains duplicates and older exports.
 
+### `02-AREAS/`
+
+Purpose: ongoing areas of responsibility that are not single projects.
+
+Status: Active reference area.
+
 ### `03-RESOURCES/`
 
 Purpose: resource library and Copilot custom prompts.
@@ -62,7 +72,7 @@ Status: Reference library.
 
 Purpose: archived material.
 
-Known issue: contains `40-BREAST EXPANSION/`, which should be reviewed for `_PRIVATE/SMUT/` relocation if this repo may be pushed.
+Current evidence: `04-ARCHIVES/40-BREAST EXPANSION/` is absent in the current root; superseded AI-system files live under `04-ARCHIVES/Superseded-AI-System/`.
 
 ### `05-WRITING/`
 
@@ -90,13 +100,12 @@ Purpose: AI setup, build notes, app integration notes, connector coverage, and A
 
 Key areas:
 
-- `AI_SYSTEM/` — older canonical AI system files; now superseded by `Meta/` canonical files.
 - `BUILD/` — Polaris / State Not Fate build folders and notes.
 - `CAPTURE/RAW_INBOX.md` — AI/tech capture stream.
 - `MOCS/` — AI systems and State Not Fate MOCs.
 - `Obsidian Integration/` — app connector playbooks and coverage maps.
 
-Status: Active, but needs source-truth cleanup.
+Status: Active. Old `AI_SYSTEM/` copies are already archived under `04-ARCHIVES/Superseded-AI-System/`.
 
 ### `09-PROMPTS/`
 
@@ -119,6 +128,30 @@ Important files:
 
 Status: Active and already substantial. Do not create a second prompt library unless intentionally migrating.
 
+### `10-USER-DATA-FEEDBACK/`
+
+Purpose: user data, feedback, and possible evidence inputs.
+
+Status: Active, review privacy before sharing externally.
+
+### `99-PRIVATE/`
+
+Purpose: private local-only material.
+
+Status: Exists locally and is ignored by Git.
+
+### `Clippings/`
+
+Purpose: imported or clipped web/reference material.
+
+Status: Triage when used; promote durable items into project/resource notes.
+
+### `Meta/`
+
+Purpose: current governance, context, operations, and source-truth maps.
+
+Status: Active AI infrastructure.
+
 ### `TEMPLATES/`
 
 Purpose: integration and source note templates.
@@ -129,7 +162,7 @@ Status: Active reference.
 
 Purpose: local-only private material.
 
-Status: Should exist locally and be ignored by Git.
+Status: Exists locally and is ignored by Git.
 
 Required child folder:
 
@@ -145,7 +178,7 @@ Canonical AI infrastructure files should now live in:
 Meta/
 ```
 
-The older `08-TECH-AND-AI/AI_SYSTEM/` files should be treated as superseded or archived once `Meta/` files are installed.
+The older `08-TECH-AND-AI/AI_SYSTEM/` files are not present in the current `08-TECH-AND-AI/` root. Superseded copies are registered in `Meta/Legacy Bundle Migration Inventory.md`.
 
 The prompt/skill source truth remains:
 
@@ -153,18 +186,35 @@ The prompt/skill source truth remains:
 09-PROMPTS/Library/
 ```
 
+Canonical second-brain operations dashboard:
+
+```text
+Meta/Second Brain Operations Dashboard.md
+```
+
+Legacy bundle/archive register:
+
+```text
+Meta/Legacy Bundle Migration Inventory.md
+```
+
+Top-level operator skills:
+
+```text
+09-PROMPTS/Library/Skills/second-brain-control-loop.md
+09-PROMPTS/Library/Skills/vault-cleaner.md
+```
+
 ## Immediate Risks
 
-1. `.gitignore` must protect `_PRIVATE/`, `99_PRIVATE/`, and smut/adult folders.
-2. Adult/private review candidates must be moved before pushing.
+1. Adult/private review candidates must be moved before pushing.
+2. Legacy `09-PROMPTS/Prompt-Library/` material needs selective migration/archive review through `Meta/Legacy Bundle Migration Inventory.md`.
 3. State Not Fate zips are archive/export material, not automatically live source.
 4. `.cursorrules` is derivative and may contain older/conflicting facts. Do not treat it as canonical.
 
 ## Next Actions
 
-1. Install the `Meta/` command-layer files.
-2. Update `.gitignore`.
-3. Create `_PRIVATE/SMUT/`.
-4. Move adult/private candidates.
-5. Archive or supersede old `08-TECH-AND-AI/AI_SYSTEM/` duplicates.
-6. Run `git status` before any push.
+1. Move or archive adult/private candidates with explicit approval.
+2. Selectively migrate only missing durable behavior from `09-PROMPTS/Prompt-Library/`.
+3. Use the State Not Fate source-truth note before any live app work.
+4. Run `git status` before any push.

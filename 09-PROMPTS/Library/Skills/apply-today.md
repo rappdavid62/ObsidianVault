@@ -1,4 +1,4 @@
----
+﻿---
 type: skill
 name: apply-today
 aliases: [apply, submit-application, /apply]
@@ -62,4 +62,4 @@ Keep it extremely practical. No long motivational text.
 - Emphasizes speed and volume on decent fits over perfection on "dream" roles.
 - Update this skill when you create new base materials or certifications.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)

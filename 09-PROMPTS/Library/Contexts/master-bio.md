@@ -1,4 +1,4 @@
----
+﻿---
 type: context
 name: master-bio
 aliases: [david-bio, core-context, who-i-am]
@@ -53,4 +53,4 @@ tags: [context, bio, constraints]
 
 Use this as the persistent "who I am and what matters" layer in any coaching, planning, or decision conversation.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)

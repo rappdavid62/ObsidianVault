@@ -1,4 +1,4 @@
----
+﻿---
 type: skill
 name: deep-research
 aliases: [research, deep-dive, role-research, /research]
@@ -65,4 +65,4 @@ Always separate Ideal Research (deep + multiple sources) from Realistic Research
 - Update whenever your market changes (new local employers, certification updates, personal constraints like transport) or after real interviews reveal new realities.
 - This note was created/expanded as part of reinforcing the full research-to-execution chain in the Library.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)

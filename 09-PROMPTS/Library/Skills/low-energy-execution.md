@@ -1,4 +1,4 @@
----
+﻿---
 type: skill
 name: low-energy-execution
 aliases: [low-energy, collapse-plan, /low]
@@ -62,4 +62,4 @@ Never:
 - The plan must be so small that "failure" is almost impossible on a collapse day.
 - Update this note whenever your actual biological or identity floor changes (new meds, new living situation, new non-negotiables).
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)

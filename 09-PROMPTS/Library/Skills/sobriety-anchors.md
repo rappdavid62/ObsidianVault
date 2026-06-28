@@ -1,4 +1,4 @@
----
+﻿---
 type: skill
 name: sobriety-anchors
 aliases: [sobriety, sober-anchors, daily-sobriety, /sobriety]
@@ -83,4 +83,4 @@ Sobriety (since 2019-11-01) is the load-bearing foundation for everything else: 
 **DOV Integration Note**
 Since the DOV (OneDrive/Desktop/ObsidianVault) is your device-synced vault across machines, keep these anchors as part of your daily ritual there too. The Library (pushed to GitHub) provides the source; emit packs in DOV and log proofs so they survive device switches. Pull updates regularly so the scientific language and project ties stay current.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)

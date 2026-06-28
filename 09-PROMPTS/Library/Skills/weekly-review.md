@@ -1,4 +1,4 @@
----
+﻿---
 type: skill
 name: weekly-review
 aliases: [weekly, review-week, /weekly]
@@ -65,4 +65,4 @@ Be blunt but kind. Volume and consistency beat intensity.
 - This is the meta-skill that makes the whole system compound instead of just daily firefighting.
 - Update this note when your trackers or review cadence change.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)

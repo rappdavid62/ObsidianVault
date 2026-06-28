@@ -1,4 +1,4 @@
----
+﻿---
 type: skill
 name: resume-tailoring
 aliases: [tailor-resume, customize-resume, /resume]
@@ -60,4 +60,4 @@ Always separate honest strengths from stretch areas.
 - Keep a "master resume" and generate tailored versions rather than editing the master.
 - Update this skill when you create new base materials or certifications.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)

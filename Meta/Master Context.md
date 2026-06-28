@@ -129,10 +129,10 @@ Check related files for details when needed, especially:
 - `Meta/Active Projects Map.md`
 - `Meta/Vault Cleanup Queue.md`
 - `09-PROMPTS/Library/Hubs/00-Hub.md`
-- `CURRENT_STATUS.md`
-- `JOB_SEARCH_STRATEGY.md`
-- `State_Not_Fate/PROJECT_BRIEF.md`
-- `CAPTURE/RAW_INBOX.md`
+- `01-PROJECTS/2026-SNF-Substrate-Systems-Project/01-Context/Current-Status.md`
+- `01-PROJECTS/2026-SNF-Substrate-Systems-Project/04-Tracking/job_search_tracker.md`
+- `01-PROJECTS/STATENOTFATE/00_README.md`
+- `08-TECH-AND-AI/CAPTURE/RAW_INBOX.md`
 
 When in doubt, prioritize low-friction execution over perfect planning.
 

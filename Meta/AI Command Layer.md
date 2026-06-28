@@ -44,6 +44,24 @@ Read these first when available:
 5. `Meta/Vault Cleanup Queue.md`
 6. `09-PROMPTS/Library/Hubs/00-Hub.md`
 
+## Canonical Skill Layer
+
+The reusable skill layer is:
+
+```text
+C:\ROOT_OBSIDIAN\DOV\09-PROMPTS\Library
+```
+
+Use it for ChatGPT, Claude, Gemini, Grok, Codex, Cursor, local models, phone copy/paste, and any future AI program.
+
+Treat `09-PROMPTS/Prompt-Library/` and generated packs as historical or derivative unless a note explicitly says otherwise.
+
+When a session discovers a better reusable behavior, fold the durable part back into `09-PROMPTS/Library/Skills`, `09-PROMPTS/Library/Prompts`, or `09-PROMPTS/Library/Contexts`, then regenerate exports.
+
+For broad vault monitoring, run `09-PROMPTS/Library/Skills/second-brain-control-loop.md`.
+
+For file cleanup, source-truth drift, private-boundary checks, and cleanup queue work, run `09-PROMPTS/Library/Skills/vault-cleaner.md`.
+
 ## Project Classification
 
 Classify every request before acting:

@@ -9,7 +9,7 @@ version: 2
 
 # Skill & Prompt Dictionary (Controlled Vocabulary)
 
-This is the **official dictionary** for the Library in the Laptop Sync vault (the universal truth). All frontmatter values (especially `domain`, `energy`, `tags`, `type`, `compatible_with`) **must** come from this list for consistency across all AI.
+This is the **official dictionary** for the Library at `C:\ROOT_OBSIDIAN\DOV\09-PROMPTS\Library`. All frontmatter values (especially `domain`, `energy`, `tags`, `type`, `compatible_with`) **must** come from this list for consistency across all AI.
 
 Use this when:
 - Creating new skills/prompts (reference the allowed values)
@@ -37,6 +37,7 @@ Use arrays. Keep them specific but not too granular. New domains should be added
 |-------------------|--------------------------------------------------|--------------------------------------------------|------------------------------------|
 | meta              | Anything about the system itself                 | Library maintenance, tool decisions             | library-gardener, tool-mode-decider |
 | library           | Core Library operations and standards            | Schema, dictionary, hub                         | schema (in meta), dictionary       |
+| context           | Reusable background context                      | Master bio, status blocks, durable constraints  | master-bio                         |
 | job               | Career, applications, tailoring, search          | PRS, HVAC, logistics, maintenance roles         | daily-job-search, apply-today, resume-tailoring, cover-letter-followup |
 | execution         | Daily action, planning, follow-through           | Low energy days, routines, anchors              | low-energy-execution, weekly-review |
 | social            | Communication, relationships, calibration        | Texts, boundaries, professional interactions    | social-calibration                 |
@@ -156,4 +157,4 @@ Use specific, searchable tags. Prefer hyphenated. Group them in your mind as:
 
 ---
 
-*Maintained by the Library Gardener skill. Last major expansion: 2026-06-08. This is the universal truth in the Laptop Sync vault.*
+*Maintained by the Library Gardener skill. Last major expansion: 2026-06-08. Current DOV normalization pass: 2026-06-28.*

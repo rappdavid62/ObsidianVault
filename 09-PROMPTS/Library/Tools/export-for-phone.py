@@ -12,7 +12,7 @@ Usage:
   python export-for-phone.py --output "Mobile-Favorites.md"
 
 It creates a single compact file with the highest-utility skills (low-energy, job, social, protocols).
-You can sync this file to your phone via OneDrive and have instant access.
+You can sync this file to your phone and have instant access.
 """
 
 import sys
@@ -27,11 +27,17 @@ LIBRARY_ROOT = "09-PROMPTS/Library"
 
 # Skills that are most useful on a phone (quick copy when you're out and about)
 PHONE_FAVORITES = [
+    "second-brain-control-loop",
+    "vault-cleaner",
+    "bootstrap-session",
+    "daily-execution",
     "thoroughness-protocol",
     "low-energy-execution",
     "daily-job-search",
     "social-calibration",
     "apply-today",
+    "priority-audit",
+    "council-decision",
     "council-strategy",
     "tech-council",
 ]
@@ -61,10 +67,10 @@ def main():
     lib = vault / LIBRARY_ROOT
 
     output_lines = []
-    output_lines.append("# Mobile Favorites – Obsidian Skill & Prompt Library")
+    output_lines.append("# Mobile Favorites - Obsidian Skill & Prompt Library")
     output_lines.append("# Generated for quick copy-paste on phone")
-    output_lines.append("# Source: 09-PROMPTS/Library (syncs via OneDrive)")
-    output_lines.append("# Tip: Prefix with /tp or /council when needed.")
+    output_lines.append("# Source: C:\\ROOT_OBSIDIAN\\DOV\\09-PROMPTS\\Library")
+    output_lines.append("# Tip: Start with /bootstrap, then add /daily-execution, /tp, /low, or /council when needed.")
     output_lines.append("")
 
     for name in PHONE_FAVORITES:
@@ -96,7 +102,7 @@ def main():
 
     out_path.write_text(output, encoding="utf-8")
     print(f"Phone-friendly favorites exported to:\n{out_path}")
-    print("\nSync this file to your phone via OneDrive for always-available skills.")
+    print("\nSync this file to your phone for always-available skills.")
 
 if __name__ == "__main__":
     main()

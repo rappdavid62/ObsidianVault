@@ -29,8 +29,8 @@ if sys.platform == "win32":
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
 VAULT_PATHS = [
-    Path(r"C:\ROOT_OBSIDIAN\master-laptop-vault"),
     Path(r"C:\ROOT_OBSIDIAN\DOV"),
+    Path(r"C:\ROOT_OBSIDIAN\master-laptop-vault"),
     Path(r"C:\Users\rappd\OneDrive\Desktop\ObsidianVault"),
 ]
 
@@ -98,7 +98,7 @@ def to_grok_skill(name: str, fm: dict, body: str) -> str:
     out.append("")
     out.append(f"# {name.replace('-', ' ').title()}")
     out.append("")
-    out.append("**Source:** Obsidian Library (09-PROMPTS/Library)")
+    out.append("**Source:** DOV Obsidian Library (C:\\ROOT_OBSIDIAN\\DOV\\09-PROMPTS\\Library)")
     out.append(f"**Last synced:** {datetime.now().strftime('%Y-%m-%d')}")
     out.append("")
     out.append(body)

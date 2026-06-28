@@ -1,4 +1,4 @@
----
+﻿---
 type: protocol
 name: tech-council
 aliases: [TCOUNCIL, /tcouncil, tech-council, tech-team-council]
@@ -132,4 +132,4 @@ INSTRUCTIONS FOR THE AI OPERATOR:
 - Revised on 2026-06-18 to require local installed-program inventory and usage-context gathering before ranking.
 - This is a specialized council for tools and tech-stack decisions, not a replacement for the general `/council` protocol.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)

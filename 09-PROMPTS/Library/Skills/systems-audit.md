@@ -1,4 +1,4 @@
----
+﻿---
 type: skill
 name: systems-audit
 aliases: [systems, audit, snf-audit, /systems]
@@ -77,4 +77,4 @@ Systems are the "substrate" in aggregate. Depression is best modeled as multi-sy
 - Low-energy day: Identify the one system still reachable (e.g., one sobriety anchor) and register it to prevent cascade failure.
 - DOV sync: Keep your status blocks, Proof-Log, and job_search_tracker in the synced vault. Emit the audit skill from the Library (GitHub-sourced) so the map language and scientific basis stay current across devices.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)

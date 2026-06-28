@@ -154,7 +154,7 @@ First check:
 5. Is this useful enough to save?
 6. Can it be linked instead of duplicated?
 
-If unsure, put it in `Meta/Vault Cleanup Queue.md` or `00-INBOX/`.
+If unsure, put it in `Meta/Vault Cleanup Queue.md` or `00-CAPTURE/`.
 
 ## Current Status
 

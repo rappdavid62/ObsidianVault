@@ -1,4 +1,4 @@
-# GLOBAL AI HANDOFF — David / State Not Fate
+﻿# GLOBAL AI HANDOFF — David / State Not Fate
 *Generated: 2026-06-18 | Source: Obsidian DOV Vault via REST API*
 *Paste this entire document as the first message or system prompt in any AI tool (ChatGPT, Claude, Gemini, Grok, local models).*
 *Update the STATUS BLOCK section before each session.*
@@ -91,7 +91,7 @@ Other context:
 
 Use this as the persistent "who I am and what matters" layer in any coaching, planning, or decision conversation.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
 
 ---
 
@@ -237,7 +237,7 @@ INSTRUCTIONS FOR THE AI OPERATOR:
 ## Notes
 This protocol is the foundation of the entire State Not Fate execution style. It is the single highest-leverage meta-skill in the library.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
 
 ---
 
@@ -291,7 +291,7 @@ Never:
 - The plan must be so small that "failure" is almost impossible on a collapse day.
 - Update this note whenever your actual biological or identity floor changes (new meds, new living situation, new non-negotiables).
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
 
 ---
 
@@ -366,7 +366,7 @@ Always separate the Ideal MVD (what a high-energy version would look like) from 
 **DOV Integration Note**
 Keep the MVD list visible in your DOV daily notes or a dedicated tracker. The project 2026 daily ritual starts with these anchors. Emit the skill and log the win so the external memory is consistent across your synced devices.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
 
 ---
 
@@ -437,7 +437,7 @@ Never let the day end with zero recorded proof on low-energy days.
 **DOV Integration Note**
 The DOV is your primary device-synced vault. These proof practices should live in your daily trackers and status blocks there. Emit the skill from the Library (synced via GitHub) and register wins so the external memory survives across devices. The 2026 project proof log is designed to be usable in the DOV.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
 
 ---
 
@@ -506,7 +506,7 @@ Use the exact phrasing "This shows effort can still shape the substrate" as a de
 - Weekly review input: Aggregate registrations show restart speed; feed into systems-audit.
 - DOV sync: The external memory (trackers in the synced vault) survives device changes because GitHub keeps the source (Library) and project structure current.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
 
 ---
 
@@ -576,7 +576,7 @@ Hope here is explicitly Snyder's (2002) "hope theory" — agency ("I can") + pat
 - Post-lapse: Use the "survival anchors + visible win" scale and register in both project log and main status.
 - Weekly systems-audit input: Track whether the "one visible win" is actually repairing the prediction (resilience-rate, hope metrics).
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
 
 ---
 
@@ -645,7 +645,7 @@ Tone must be calm, grounded, non-judgmental, direct — exactly the PRS voice yo
 - Update whenever your personal safety contacts, local resources, or medication regimen change.
 - This is a "use before you use other skills" gate on difficult days.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
 
 ---
 
@@ -721,7 +721,7 @@ Sobriety (since 2019-11-01) is the load-bearing foundation for everything else: 
 **DOV Integration Note**
 Since the DOV (OneDrive/Desktop/ObsidianVault) is your device-synced vault across machines, keep these anchors as part of your daily ritual there too. The Library (pushed to GitHub) provides the source; emit packs in DOV and log proofs so they survive device switches. Pull updates regularly so the scientific language and project ties stay current.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
 
 ---
 
@@ -781,7 +781,7 @@ Energy, motivation, and emotional regulation are heavily downstream of basic bio
 - Update whenever living situation, meds, or season changes the practical levers (new apartment light access, shift work considerations, etc.).
 - Created during the reinforce-and-expand pass to make the health/energy biology layer first-class and explicitly linked to the rest of the Library.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
 
 ---
 
@@ -851,7 +851,7 @@ Systems are the "substrate" in aggregate. Depression is best modeled as multi-sy
 - Low-energy day: Identify the one system still reachable (e.g., one sobriety anchor) and register it to prevent cascade failure.
 - DOV sync: Keep your status blocks, Proof-Log, and job_search_tracker in the synced vault. Emit the audit skill from the Library (GitHub-sourced) so the map language and scientific basis stay current across devices.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
 
 ---
 
@@ -898,7 +898,7 @@ INSTRUCTIONS FOR THE AI OPERATOR:
 ## Notes
 This is one of the highest-leverage meta-protocols. It directly encodes the "State Not Fate" approach to difficult decisions: multiple grounded perspectives + brutal realism about constraints + one clear next action.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
 
 ---
 
@@ -952,7 +952,7 @@ Stop wasting cognitive energy and tokens by defaulting to "just paste everything
 - This is a meta-skill that protects your attention and the quality of every other skill.
 - Update as your tool landscape changes (new local models, new Obsidian plugins, new Grok features, etc.).
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
 
 ---
 
@@ -1006,7 +1006,7 @@ Always separate:
 - Prefers volume of low-friction actions over perfection on any single application.
 - Update this note after any session where the real workflow diverged significantly from the instructions.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
 
 ---
 
@@ -1060,7 +1060,7 @@ Keep it extremely practical. No long motivational text.
 - Emphasizes speed and volume on decent fits over perfection on "dream" roles.
 - Update this skill when you create new base materials or certifications.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
 
 ---
 
@@ -1123,7 +1123,7 @@ Always surface Ideal (full speed on both tracks) vs. Realistic (floor + 1-2 stra
 - Update when certifications change, new local opportunities appear, personal constraints shift (e.g. transport, meds), or after real interviews/feedback.
 - Created/expanded during the reinforce-and-expand pass to close the gap between daily execution and long-term direction.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
 
 ---
 
@@ -1174,7 +1174,7 @@ Tone rules: Polite, direct, clear. Not needy. Not robotic. Not over-explained. P
 - Directly descended from the Social_Calibration and Social_Translator pieces in the two main tucked libraries.
 - One of the highest daily-use skills for preserving energy and self-trust in a world full of ambiguous social input.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
 
 ---
 
@@ -1231,7 +1231,7 @@ Be blunt but kind. Volume and consistency beat intensity.
 - This is the meta-skill that makes the whole system compound instead of just daily firefighting.
 - Update this note when your trackers or review cadence change.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
 
 ---
 
@@ -1288,7 +1288,7 @@ The 5-year vision (building stable function, contribution, and independence whil
 - Update whenever life realities change the feasible vision (new certs, changed constraints, clearer values) or after major proof accumulates that shifts what "stable function" looks like.
 - Added during the reinforce-and-expand pass to close the gap between daily execution skills and the long-term direction they serve.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
 
 ---
 
@@ -1363,7 +1363,7 @@ Depression convinces the brain that the "substrate" — the changeable biologica
 - 5-year vision check: Review which phrases are actually shaping the substrate (career, recovery, energy) during weekly systems-audit.
 - Device sync: Emit from Library; the reminders travel with you in the DOV because GitHub keeps the source current.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
 
 ---
 
@@ -1451,7 +1451,7 @@ The library is only valuable if it stays accurate, non-redundant, well-linked, a
 - The goal is not to collect more prompts. It is to keep the ones that actually move the needle sharp, atomic, and easy to reach from anywhere.
 - Treat this skill like any other: run it, capture the useful output in the relevant notes, take the real-world maintenance actions.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
 
 ---
 

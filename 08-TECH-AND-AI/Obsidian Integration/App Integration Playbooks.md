@@ -17,7 +17,7 @@ An app is integrated only when all four checks are proven with a real sample:
 ## Browser / Web Clipper
 
 - Capture web pages into `03-RESOURCES/Sources`.
-- Capture unprocessed app pages into `00-INBOX/App Captures`.
+- Capture unprocessed app pages into `00-CAPTURE/App Captures`.
 - Verify title, URL, selected text, and notes are preserved.
 
 ## Codex

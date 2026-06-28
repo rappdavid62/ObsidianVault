@@ -1,4 +1,4 @@
----
+﻿---
 type: skill
 name: library-gardener
 aliases: [prompt-surgeon, maintain-library, library-maintenance]
@@ -83,6 +83,8 @@ The library is only valuable if it stays accurate, non-redundant, well-linked, a
 - **System Improvement**: One change to the Library structure, schema, or tools.
 
 ## Related
+- [[second-brain-control-loop]] (top-level monitor/learn/improve loop)
+- [[vault-cleaner]] (file organization and cleanup queue loop)
 - [[SCHEMA]] (re-read this every time)
 - [[../Dictionary]] (the controlled vocabulary — audit against it in every pass)
 - The Hub (your main working view)
@@ -96,4 +98,4 @@ The library is only valuable if it stays accurate, non-redundant, well-linked, a
 - The goal is not to collect more prompts. It is to keep the ones that actually move the needle sharp, atomic, and easy to reach from anywhere.
 - Treat this skill like any other: run it, capture the useful output in the relevant notes, take the real-world maintenance actions.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)

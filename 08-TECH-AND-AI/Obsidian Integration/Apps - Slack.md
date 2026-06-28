@@ -11,7 +11,7 @@ tags:
 ## Capture Path
 
 Key decisions, project briefs, and task details shared in Slack channels are captured and saved to:
-`00-INBOX/App Captures/` or mapped directly into project logs.
+`00-CAPTURE/App Captures/` or mapped directly into project logs.
 
 ## Metadata
 
@@ -50,7 +50,7 @@ Reopen the original Slack message thread using the Slack web/client permalink st
 ## Test Capture Sample
 
 **Title**: `Slack - PWA Database Choice Consensus`
-**Path**: `00-INBOX/App Captures/Slack - PWA Database Choice Consensus.md`
+**Path**: `00-CAPTURE/App Captures/Slack - PWA Database Choice Consensus.md`
 
 ```markdown
 ---

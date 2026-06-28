@@ -1,4 +1,4 @@
----
+﻿---
 type: skill
 name: floor-wins
 aliases: [floorwin, proof-log, /floorwin]
@@ -78,4 +78,4 @@ Never let the day end with zero recorded proof on low-energy days.
 **DOV Integration Note**
 The DOV is your primary device-synced vault. These proof practices should live in your daily trackers and status blocks there. Emit the skill from the Library (synced via GitHub) and register wins so the external memory survives across devices. The 2026 project proof log is designed to be usable in the DOV.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)

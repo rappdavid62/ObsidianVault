@@ -37,18 +37,22 @@ except Exception:
     VAULT_PATH = Path(r"C:\ROOT_OBSIDIAN\DOV")
 
 if not (VAULT_PATH / "09-PROMPTS").exists():
-    VAULT_PATH = Path(r"C:\ROOT_OBSIDIAN\master-laptop-vault")
-if not VAULT_PATH.exists():
     VAULT_PATH = Path(r"C:\ROOT_OBSIDIAN\DOV")
+if not VAULT_PATH.exists():
+    VAULT_PATH = Path(r"C:\ROOT_OBSIDIAN\master-laptop-vault")
 if not VAULT_PATH.exists():
     VAULT_PATH = Path(r"C:\Users\rappd\OneDrive\Desktop\ObsidianVault")
 LIBRARY_ROOT = VAULT_PATH / "09-PROMPTS" / "Library"
 
 # Default "daily" skills when --daily is used.
 DEFAULT_DAILY_SKILLS = [
+    "bootstrap-session",
+    "daily-execution",
     "thoroughness-protocol",
+    "low-energy-execution",
     "tool-mode-decider",
-    "library-gardener",
+    "daily-job-search",
+    "social-calibration",
 ]
 
 def load_note(path: Path) -> str:
@@ -79,7 +83,7 @@ def build_context(skill_names: list[str], include_status_placeholder: bool = Tru
     master = load_note(LIBRARY_ROOT / "Contexts" / "master-bio.md")
     parts.append("# MASTER CONTEXT — Source of Truth: Obsidian 09-PROMPTS/Library/")
     parts.append("You are operating from my personal, canonical skill & prompt library.")
-    parts.append("The single source of truth lives in my Obsidian vault (synced via OneDrive/Google Drive).")
+    parts.append("The single source of truth lives at C:\\ROOT_OBSIDIAN\\DOV\\09-PROMPTS\\Library.")
     parts.append("All skills below come from there. Use them exactly as written.\n")
     parts.append("## Core Identity & Constraints (master-bio)")
     parts.append(master)

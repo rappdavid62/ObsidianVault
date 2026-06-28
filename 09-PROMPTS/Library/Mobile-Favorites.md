@@ -1,12 +1,468 @@
-# Mobile Favorites – Obsidian Skill & Prompt Library
+# Mobile Favorites - Obsidian Skill & Prompt Library
 # Generated for quick copy-paste on phone
-# Source: 09-PROMPTS/Library (syncs via OneDrive)
-# Tip: Prefix with /tp or /council when needed.
+# Source: C:\ROOT_OBSIDIAN\DOV\09-PROMPTS\Library
+# Tip: Start with /bootstrap, then add /daily-execution, /tp, /low, or /council when needed.
+
+
+## second-brain-control-loop
+```
+---
+type: skill
+name: second-brain-control-loop
+aliases: [/brain, second-brain-operator, vault-operator, learning-loop]
+description: >
+  Operate the DOV vault as a living second brain: monitor the core surfaces, run the Library Gardener and Vault Cleaner loops, surface problems, and fold useful discoveries back into the canonical skill layer.
+domain: [meta, systems, library, ai-setup]
+energy: medium
+invocation: ["/brain", "run second brain control loop", "monitor and improve the vault", "make the vault smarter"]
+compatible_with: [all, obsidian, gpt, claude, local, phone]
+version: 1
+last_reviewed: 2026-06-28
+tags: [meta, maintenance, systems, external-memory, standards]
+---
+```
+
+# Second Brain Control Loop
+
+## Purpose
+
+Turn DOV from a folder of notes into a learning operating system. This skill tells any AI program how to monitor the vault, run the maintenance routines, report problems, and promote durable learning back into the one canonical Library.
+
+## When to Use
+
+- Weekly or after any major vault, project, or AI-session change.
+- When the vault feels scattered or stale.
+- Before trusting exported packs, custom instructions, phone prompts, or external AI project instructions.
+- When a session finds a better prompt, habit, workflow, tracker, app proof, or cleanup rule.
+- When preparing a handoff to ChatGPT, Claude, Gemini, Grok, Codex, Cursor, or a phone chat.
+
+## Core Rule
+
+The canonical skill layer is:
+
+```text
+C:\ROOT_OBSIDIAN\DOV\09-PROMPTS\Library
+```
+
+Everything else is a derivative, snapshot, app-specific surface, or project artifact unless it is explicitly named as canonical.
+
+## Core Process
+
+1. **Bootstrap the current state**
+   - Read `Meta/Master Context.md`.
+   - Read `Meta/AI Command Layer.md`.
+   - Read `09-PROMPTS/Library/Hubs/00-Hub.md`.
+   - Read `08-TECH-AND-AI/Obsidian Integration/Integration Hub.md`.
+   - Read `Meta/Vault Cleanup Queue.md`.
+   - Check current worktree/file state before relying on prior memory.
+
+2. **Classify the run**
+   - Library maintenance.
+   - Vault cleanup.
+   - App integration proof.
+   - Project priority audit.
+   - Export/sync refresh.
+   - Handoff/context update.
+   - Problem report only.
+
+3. **Run the right loops**
+   - Use `library-gardener` for skill/prompt quality, Dictionary compliance, duplicates, and emit testing.
+   - Use `vault-cleaner` for file organization, source-truth drift, old inbox paths, private/local-only boundaries, and cleanup queue updates.
+   - Use `ai-setup-audit` when external AI tools or app-specific instructions have drifted.
+   - Use `priority-audit` when projects compete for attention.
+
+4. **Monitor for drift**
+   - Old source roots such as `08 PROMPTS/Library`, old Laptop Sync language, or stale external paths.
+   - Capture paths that do not match `00-CAPTURE/App Captures`.
+   - Generated packs that disagree with atomic notes.
+   - App proof notes that disagree with `app-proof-tracker.json`.
+   - Private/adult/sensitive material outside local-only areas.
+   - Duplicate source-of-truth claims across `Meta/`, `09-PROMPTS/`, and project folders.
+
+5. **Promote learning**
+   - If a session produces a better reusable instruction, add it to the relevant atomic skill/prompt/context note.
+   - If the learning is a one-off fact, put it in the relevant project or context note.
+   - If the learning is unresolved, add it to `Meta/Vault Cleanup Queue.md` or the relevant tracker.
+   - Bump `version` and `last_reviewed` only on notes actually reviewed or changed.
+
+6. **Regenerate derivatives**
+   - Run `Tools/export-for-phone.py` after mobile-relevant Library changes.
+   - Run `Tools/emit-skill.py --validate <name>` on changed skills/prompts.
+   - Run `Tools/build-master-context.py --daily` after changing core daily context.
+   - Treat `sync-all.py` as a broader external-sync operation; run only when writing to external skill/plugin destinations is intended and allowed.
+
+7. **Report honestly**
+   - Separate what was changed, what was verified, what remains unresolved, and what was not accessible.
+   - Never claim Gmail, Drive, browser, GitHub, phone, or external apps were checked unless the current session actually checked them.
+   - Prefer one concrete next action over a giant backlog.
+
+## Output Format
+
+- **Bottom Line**: One sentence on vault health and the main improvement made.
+- **Control Surfaces Checked**: Files or tools inspected.
+- **Changes Made**: Notes/tools/trackers updated.
+- **Learning Promoted**: New reusable insight added to the Library or project notes.
+- **Problems Found**: Ranked by risk.
+- **Verification**: Commands run and what they proved.
+- **Next Loop**: The next smallest useful maintenance action.
+
+## Related
+
+- `library-gardener`
+- `vault-cleaner`
+- `ai-setup-audit`
+- `priority-audit`
+- `tool-mode-decider`
+- `09-PROMPTS/Library/Hubs/00-Hub.md`
+- `Meta/Vault Cleanup Queue.md`
+- `08-TECH-AND-AI/Obsidian Integration/App Proof Dashboard.md`
+
+## Notes & History
+
+- Created on 2026-06-28 to make the second-brain layer explicit instead of implied across scattered governance notes.
+- This is the top-level operator skill. It coordinates other skills; it does not replace them.
+- Default stance is non-destructive: report, link, archive, or queue before deleting/moving unless David explicitly approves a specific cleanup action.
+
+
+## vault-cleaner
+```
+---
+type: skill
+name: vault-cleaner
+aliases: [/vault-cleaner, vault-cleanup, file-gardener, cleanup-queue]
+description: >
+  Clean and organize the DOV vault without destructive surprises: identify misplaced files, stale paths, duplicate source-truth claims, private-boundary risks, and cleanup queue updates.
+domain: [meta, systems, library]
+energy: medium
+invocation: ["/vault-cleaner", "run vault cleaner", "clean up the vault", "file gardener"]
+compatible_with: [all, obsidian, gpt, claude, local]
+version: 1
+last_reviewed: 2026-06-28
+tags: [meta, maintenance, systems, external-memory, standards]
+---
+```
+
+# Vault Cleaner
+
+## Purpose
+
+Keep DOV organized without turning cleanup into chaos. This skill audits file placement, source-truth drift, privacy boundaries, stale paths, and unresolved cleanup tasks, then makes the smallest safe improvements.
+
+## When to Use
+
+- Weekly or before syncing/pushing the vault.
+- After large imports, zips, app captures, generated packs, or AI-assisted reorgs.
+- When old folder names, duplicate notes, or stale paths make the vault hard to trust.
+- Before moving, archiving, deleting, or renaming anything.
+- When `Meta/Vault Cleanup Queue.md` needs review.
+
+## Safety Rules
+
+- Do not permanently delete files unless David explicitly confirms deletion in that environment.
+- Prefer queueing, marking, or archiving over destructive cleanup.
+- Do not open or quote private/adult/sensitive content unless David explicitly asks.
+- Before any commit/push, inspect `.gitignore` and `git status`.
+- Treat `09-PROMPTS/Library` as canonical for reusable skills and prompts.
+- Treat generated packs, old bundles, zips, and build artifacts as derivatives or archives unless a file explicitly says it is canonical.
+
+## Core Process
+
+1. **Read governance**
+   - `Meta/System Governance.md`
+   - `Meta/AI Command Layer.md`
+   - `Meta/Vault Cleanup Queue.md`
+   - `09-PROMPTS/Library/Hubs/00-Hub.md`
+
+2. **Inspect current state**
+   - File tree for new, duplicate, misplaced, or untracked files.
+   - `.gitignore` for private/local-only protection.
+   - `git status --short` if this is a Git worktree.
+   - Known capture and integration paths.
+
+3. **Classify cleanup items**
+   - Privacy/sensitive risk.
+   - Source-of-truth conflict.
+   - Stale path/reference.
+   - Duplicate or derivative file.
+   - Inbox/capture item needing routing.
+   - Generated output needing regeneration.
+   - Safe archive candidate.
+
+4. **Act conservatively**
+   - Fix small path/reference drift when the correct current path is proven.
+   - Add unresolved work to `Meta/Vault Cleanup Queue.md`.
+   - Regenerate derivative files only through existing tools.
+   - Move files only when the destination and safety rule are clear.
+   - Do not mass rename, delete, or flatten folders without explicit approval.
+
+5. **Report**
+   - What was checked.
+   - What changed.
+   - What was queued.
+   - What needs David approval.
+   - The next smallest cleanup action.
+
+## Output Format
+
+- **Bottom Line**: Current cleanup health in one sentence.
+- **Checked**: Files, folders, trackers, and commands inspected.
+- **Fixed Now**: Small safe corrections made.
+- **Queued**: Cleanup items added or left in `Meta/Vault Cleanup Queue.md`.
+- **Risks**: Privacy, source-truth, or sync risks.
+- **Needs Approval**: Any move/delete/archive action that should not be automatic.
+- **Next Small Action**: One concrete cleanup step.
+
+## Related
+
+- `second-brain-control-loop`
+- `library-gardener`
+- `ai-setup-audit`
+- `Meta/Vault Cleanup Queue.md`
+- `Meta/System Governance.md`
+- `09-PROMPTS/Library/README.md`
+
+## Notes & History
+
+- Created on 2026-06-28 to turn the existing cleanup queue into a reusable, cross-program skill.
+- This skill is intentionally conservative. A trusted second brain should make cleanup safer, not more dramatic.
+
+
+## bootstrap-session
+```
+---
+type: prompt
+name: bootstrap-session
+aliases: [/bootstrap, current-status-bootstrap]
+description: >
+  Start a new AI session by loading David's operating context, current constraints, active priorities, and preferred response style.
+domain: [meta, execution, ai-setup]
+energy: low
+invocation: ["/bootstrap", "bootstrap session", "start with my current status"]
+compatible_with: [gpt, claude, local, all, phone]
+version: 1
+last_reviewed: 2026-06-28
+tags: [onboarding, context, external-memory, bottom-line-first]
+---
+```
+
+# Bootstrap Session With Current Status
+
+## Purpose
+
+Use this at the start of a new AI session so the model or agent orients around practical execution instead of generic advice.
+
+## Paste This Prompt
+
+You are helping David Rapp in Cincinnati, Ohio. Start by orienting yourself around practical execution, not generic advice.
+
+David is currently unemployed and rebuilding around job search, AI workflow setup, Obsidian second brain, State Not Fate, money/benefits, routines, and staying functional under stress.
+
+Use this operating style:
+
+- Bottom line first.
+- Be blunt, precise, and practical.
+- Separate ideal move from realistic move.
+- Prefer low-friction execution.
+- Do not moralize.
+- Do not pretend to access files, apps, accounts, tools, or memory unless you actually can.
+- When dealing with social, job, benefits, money, HR, legal-ish, medical, or high-consequence topics, do a brief pre-answer review before giving the final plan.
+- When drafting messages to people, include send/no-send verdict, target, objective, social risk, missing facts, timing, then draft.
+- Keep me oriented. Tell me what matters, what to ignore, and the next action.
+
+## Current Status Block
+
+Fill this in before asking for help:
+
+```text
+CURRENT STATUS
+
+Date:
+Location: Cincinnati, Ohio
+Energy: [collapse / low / medium / high]
+Brain fog: [none / mild / heavy]
+Money runway:
+Job status:
+Main job target today:
+Top active project:
+Biggest constraint:
+One non-negotiable today:
+What I need from this AI right now:
+What should be ignored for now:
+```
+
+## Default Priorities
+
+Use these as default assumptions unless I override them:
+
+1. Job search and income stabilization.
+2. Security / low-voltage / field tech roles first.
+3. PRS / behavioral health roles second.
+4. Warehouse / logistics / inventory fallback.
+5. State Not Fate app/project.
+6. Obsidian / AI prompt library / universal AI handoff system.
+7. Routines, health, sleep, and basic functioning.
+
+## Required First Response
+
+Before giving advice, respond in this format:
+
+```text
+BOTTOM LINE:
+[What matters most right now.]
+
+WHAT YOU ARE ASKING FOR:
+[Interpret the actual request.]
+
+TYPE OF REQUEST:
+[Interpretation / strategy / challenge / draft / decision / action.]
+
+MISSING FACTS / RISKY ASSUMPTIONS:
+[Only the facts that matter.]
+
+ANSWER NOW OR VERIFY FIRST:
+[Answer now / ask one question / search / inspect files / draft.]
+
+NEXT BEST MOVE:
+[One concrete action.]
+```
+
+Then proceed.
+
+
+## daily-execution
+```
+---
+type: prompt
+name: daily-execution
+aliases: [/daily-execution, daily-pack, three-task-day]
+description: >
+  Convert the day into a small set of realistic, high-leverage tasks with fallback options and one floor win.
+domain: [execution, job]
+energy: low
+invocation: ["/daily-execution", "load daily execution pack", "plan today"]
+compatible_with: [gpt, claude, local, all, phone]
+version: 1
+last_reviewed: 2026-06-28
+tags: [daily, low-energy, job-search, low-friction]
+---
+```
+
+# Daily Execution Pack
+
+## Purpose
+
+Use this when the day feels scattered and needs to become a small, realistic plan.
+
+## Paste This Prompt
+
+Load my daily execution pack.
+
+Your job is to turn today into a small number of realistic actions. Do not give me a motivational speech. Do not give me a giant productivity system. Build the day around leverage, low friction, and damage control.
+
+Start with this review:
+
+```text
+WHAT I AM ASKING FOR:
+TYPE OF REQUEST:
+MISSING FACTS / RISKY ASSUMPTIONS:
+ANSWER NOW OR ASK/VERIFY:
+```
+
+Then produce this:
+
+## 1. Bottom Line
+
+Tell me the main thing today depends on.
+
+## 2. Current Status
+
+Use or ask for this only if missing:
+
+```text
+Energy:
+Sleep:
+Money pressure:
+Job-search urgency:
+Appointments / deadlines:
+Main project:
+Physical state:
+Mood risk:
+```
+
+## 3. Today's Priority Stack
+
+Rank these:
+
+1. Income / job search
+2. Money / benefits / admin
+3. State Not Fate
+4. Obsidian / AI system
+5. Health / sleep / body maintenance
+6. Social / messages
+7. Cleaning / environment
+
+For each, mark:
+
+```text
+Do today / Park / Ignore
+```
+
+## 4. The 3-Task Day
+
+Give me only three main tasks:
+
+```text
+TASK 1 - Highest leverage:
+Why it matters:
+Minimum version:
+Full version:
+Time box:
+
+TASK 2 - Stabilizer:
+Why it matters:
+Minimum version:
+Full version:
+Time box:
+
+TASK 3 - Cleanup / setup:
+Why it matters:
+Minimum version:
+Full version:
+Time box:
+```
+
+## 5. Floor Win
+
+Give me one action so small I can do it even with low energy.
+
+```text
+FLOOR WIN:
+[One action, under 5 minutes.]
+```
+
+## 6. Anti-Spiral Rule
+
+```text
+DO NOT:
+[Specific trap.]
+
+WHEN I NOTICE IT:
+[Interrupt action.]
+```
+
+## 7. Immediate Next Action
+
+End with one command:
+
+```text
+DO THIS NOW:
+[One physical or digital action.]
+```
 
 
 ## thoroughness-protocol
-```
----
+
+﻿---
 type: protocol
 name: thoroughness-protocol
 aliases: [/tp, thoroughness]
@@ -21,7 +477,6 @@ version: 1
 last_reviewed: 2026-06-08
 tags: [meta, protocol, bottom-line]
 ---
-```
 
 # Thoroughness Protocol (/tp)
 
@@ -62,12 +517,12 @@ INSTRUCTIONS FOR THE AI OPERATOR:
 ## Notes
 This protocol is the foundation of the entire State Not Fate execution style. It is the single highest-leverage meta-skill in the library.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
 
 
 ## low-energy-execution
-```
----
+
+﻿---
 type: skill
 name: low-energy-execution
 aliases: [low-energy, collapse-plan, /low]
@@ -82,7 +537,6 @@ version: 1
 last_reviewed: 2026-06-17
 tags: [low-energy, mvd, floor, no-shame, daily]
 ---
-```
 
 # Low Energy Execution
 
@@ -132,12 +586,12 @@ Never:
 - The plan must be so small that "failure" is almost impossible on a collapse day.
 - Update this note whenever your actual biological or identity floor changes (new meds, new living situation, new non-negotiables).
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
 
 
 ## daily-job-search
-```
----
+
+﻿---
 type: skill
 name: daily-job-search
 aliases: [jobsearch, hunt-jobs, /jobsearch]
@@ -152,7 +606,6 @@ version: 1
 last_reviewed: 2026-06-08
 tags: [job, daily, low-energy, prs-track]
 ---
-```
 
 # Daily Job Search
 
@@ -202,12 +655,12 @@ Always separate:
 - Prefers volume of low-friction actions over perfection on any single application.
 - Update this note after any session where the real workflow diverged significantly from the instructions.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
 
 
 ## social-calibration
-```
----
+
+﻿---
 type: skill
 name: social-calibration
 aliases: [social, message-drafting, /social, social-translator]
@@ -222,7 +675,6 @@ version: 1
 last_reviewed: 2026-06-08
 tags: [social, low-energy, communication, prs]
 ---
-```
 
 # Social Calibration & Drafting
 
@@ -269,12 +721,12 @@ Tone rules: Polite, direct, clear. Not needy. Not robotic. Not over-explained. P
 - Directly descended from the Social_Calibration and Social_Translator pieces in the two main tucked libraries.
 - One of the highest daily-use skills for preserving energy and self-trust in a world full of ambiguous social input.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
 
 
 ## apply-today
-```
----
+
+﻿---
 type: skill
 name: apply-today
 aliases: [apply, submit-application, /apply]
@@ -289,7 +741,6 @@ version: 1
 last_reviewed: 2026-06-12
 tags: [job, application, low-friction]
 ---
-```
 
 # Apply Today
 
@@ -339,12 +790,286 @@ Keep it extremely practical. No long motivational text.
 - Emphasizes speed and volume on decent fits over perfection on "dream" roles.
 - Update this skill when you create new base materials or certifications.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
+
+
+## priority-audit
+```
+---
+type: prompt
+name: priority-audit
+aliases: [/priority-audit, project-priority-audit]
+description: >
+  Review active projects, rank them by real-world leverage, identify bloat, and produce a realistic priority order.
+domain: [execution, systems, decision-making]
+energy: medium
+invocation: ["/priority-audit", "audit my current project priorities", "rank my active threads"]
+compatible_with: [gpt, claude, local, all]
+version: 1
+last_reviewed: 2026-06-28
+tags: [systems, analysis, decision, low-friction]
+---
+```
+
+# Priority Audit
+
+## Purpose
+
+Use this when there are too many active threads and you need a hard ranking.
+
+## Paste This Prompt
+
+Audit my current project priorities.
+
+Do not flatter the projects. Do not assume everything deserves attention. Identify what actually moves my life forward, what is maintenance, what is procrastination disguised as system-building, and what should be parked.
+
+Known active areas:
+
+- Job search and income stabilization
+- Security / low-voltage / field tech path
+- PRS / behavioral health path
+- Warehouse / logistics fallback
+- State Not Fate
+- Obsidian second brain
+- AI prompt library / universal handoff system
+- Benefits / unemployment / money runway
+- Resume / LinkedIn / applications
+- Social reintegration / dating / messages
+- Health / sleep / daily functioning
+
+Start with:
+
+```text
+WHAT I AM ASKING FOR:
+TYPE OF REQUEST:
+MISSING FACTS / RISKY ASSUMPTIONS:
+ANSWER NOW OR VERIFY FIRST:
+```
+
+## 1. Bottom Line
+
+Name the top priority and why.
+
+## 2. Project Inventory
+
+Create a table:
+
+```text
+Project | Purpose | Current Value | Risk If Ignored | Effort | Status | Verdict
+```
+
+Use these verdicts only:
+
+- Push now
+- Maintain
+- Park
+- Kill
+- Needs decision
+
+## 3. Leverage Ranking
+
+Rank all projects by real-world payoff over the next 30 days.
+
+For each project:
+
+```text
+Rank:
+Project:
+Why it ranks here:
+Best next action:
+Minimum viable action:
+What to ignore:
+```
+
+## 4. Bloat / False Productivity Audit
+
+Identify:
+
+```text
+Systems that are becoming hobbies:
+Tasks that feel productive but do not move outcomes:
+Projects being used to avoid job/money pressure:
+Projects with unclear next actions:
+```
+
+## 5. Seven-Day Operating Plan
+
+Give me:
+
+```text
+Primary objective this week:
+Secondary objective:
+Parked until next week:
+Daily minimum:
+One review checkpoint:
+```
+
+## 6. Decision Queue
+
+List unresolved decisions that block progress.
+
+For each:
+
+```text
+Decision:
+Why it matters:
+Default answer if no more data appears:
+Deadline:
+```
+
+## 7. Immediate Next Action
+
+End with:
+
+```text
+DO THIS NOW:
+[One concrete action that takes 5-20 minutes.]
+```
+
+
+## council-decision
+```
+---
+type: prompt
+name: council-decision
+aliases: [/council, council-prompt, complex-decision-council]
+description: >
+  Use a small expert panel to stress-test a difficult decision, expose blind spots, and converge on a practical recommendation.
+domain: [decision-making]
+energy: medium
+invocation: ["/council", "run council strategy", "complex decision council"]
+compatible_with: [gpt, claude, local, all]
+version: 1
+last_reviewed: 2026-06-28
+tags: [council, decision, high-stakes, analysis]
+---
+```
+
+# Council Decision Prompt
+
+## Purpose
+
+Use this when a decision is messy, high-stakes, or has real tradeoffs.
+
+## Paste This Prompt
+
+Run council strategy on this complex decision:
+
+```text
+DECISION:
+[Write the decision.]
+
+OPTIONS:
+A.
+B.
+C.
+
+CONSTRAINTS:
+[Money, time, energy, tools, deadlines, people, risks.]
+
+WHAT I WANT:
+[Outcome.]
+
+WHAT I FEAR:
+[Downside.]
+
+WHAT I AM PROBABLY AVOIDING:
+[Optional but useful.]
+
+DEADLINE:
+[When this needs to be decided.]
+```
+
+Use a 3-4 person expert council. The experts should debate first, then converge. Do not let them all agree too quickly.
+
+Required council roles:
+
+1. Practical Operator - focuses on what can actually be done now.
+2. Risk Analyst - identifies downside, fragility, second-order consequences.
+3. Strategist - looks at leverage, sequencing, opportunity cost.
+4. Human Factors / Social Reality Analyst - looks at perception, behavior, motivation, relationships, and execution failure.
+
+Start with:
+
+```text
+WHAT I AM ASKING FOR:
+TYPE OF REQUEST:
+MISSING FACTS / RISKY ASSUMPTIONS:
+ANSWER NOW OR VERIFY FIRST:
+```
+
+## 1. Bottom Line
+
+Give the likely best decision in plain English.
+
+## 2. Expert Panel
+
+For each expert:
+
+```text
+Expert:
+Main argument:
+What they think I am missing:
+What they would do:
+```
+
+## 3. Debate
+
+Show the real disagreement.
+
+```text
+Point of conflict:
+Who disagrees:
+Why:
+What changes the answer:
+```
+
+## 4. Blind Spots
+
+List the top blind spots.
+
+```text
+Blind spot:
+Why it matters:
+How to protect against it:
+```
+
+## 5. Recommendation
+
+Give:
+
+```text
+Recommended option:
+Why:
+Conditions:
+What not to do:
+```
+
+## 6. Risks
+
+```text
+Main risk:
+Likelihood:
+Severity:
+Mitigation:
+```
+
+## 7. Next Action
+
+End with:
+
+```text
+DO THIS NOW:
+[One concrete action.]
+
+CONFIDENCE:
+[Low / medium / high] - [why]
+```
 
 
 ## council-strategy
-```
----
+
+﻿---
 type: protocol
 name: council-strategy
 aliases: [/council, strategic-council]
@@ -359,7 +1084,6 @@ version: 1
 last_reviewed: 2026-06-08
 tags: [meta, council, decision, high-stakes]
 ---
-```
 
 # Council Strategy Protocol (/council)
 
@@ -402,12 +1126,12 @@ INSTRUCTIONS FOR THE AI OPERATOR:
 ## Notes
 This is one of the highest-leverage meta-protocols. It directly encodes the "State Not Fate" approach to difficult decisions: multiple grounded perspectives + brutal realism about constraints + one clear next action.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
 
 
 ## tech-council
-```
----
+
+﻿---
 type: protocol
 name: tech-council
 aliases: [TCOUNCIL, /tcouncil, tech-council, tech-team-council]
@@ -422,7 +1146,6 @@ version: 2
 last_reviewed: 2026-06-18
 tags: [meta, council, tools, ai-setup, model-selection, high-stakes, research]
 ---
-```
 
 # Tech Council Protocol (TCOUNCIL / /tcouncil)
 
@@ -542,4 +1265,4 @@ INSTRUCTIONS FOR THE AI OPERATOR:
 - Revised on 2026-06-18 to require local installed-program inventory and usage-context gathering before ranking.
 - This is a specialized council for tools and tech-stack decisions, not a replacement for the general `/council` protocol.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)

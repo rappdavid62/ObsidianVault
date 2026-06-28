@@ -1,4 +1,4 @@
----
+﻿---
 type: skill
 name: circadian-anchors
 aliases: [circadian, light, rhythm, sleep-anchors, /circadian]
@@ -67,4 +67,4 @@ Energy, motivation, and emotional regulation are heavily downstream of basic bio
 - Update whenever living situation, meds, or season changes the practical levers (new apartment light access, shift work considerations, etc.).
 - Created during the reinforce-and-expand pass to make the health/energy biology layer first-class and explicitly linked to the rest of the Library.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)

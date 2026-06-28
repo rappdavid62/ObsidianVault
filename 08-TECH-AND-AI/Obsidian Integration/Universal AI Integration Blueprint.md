@@ -34,7 +34,7 @@ Use this vault as the command center, not as a junk drawer. Important code stays
 
 1. Skills and prompts are canonical only in `09-PROMPTS/Library`.
 2. Source code is canonical in its owning repo or build folder; this vault should store index notes, proof notes, runbooks, decisions, and links.
-3. External app content enters through capture notes in `00-INBOX/App Captures` or source notes in `03-RESOURCES/Sources`.
+3. External app content enters through capture notes in `00-CAPTURE/App Captures` or source notes in `03-RESOURCES/Sources`.
 4. Generated exports are disposable. If an AI improves a skill, the improvement must come back to the atomic note.
 5. Public output must stay explicitly gated. Missing `publish: true` means private by default.
 6. Secrets, API keys, private medical details, and credentials do not belong in emitted skill packs or public output.
@@ -43,7 +43,7 @@ Use this vault as the command center, not as a junk drawer. Important code stays
 
 | Layer | Purpose | Home |
 |---|---|---|
-| Capture | Bring useful external material into the vault | `00-INBOX/App Captures`, `03-RESOURCES/Sources` |
+| Capture | Bring useful external material into the vault | `00-CAPTURE/App Captures`, `03-RESOURCES/Sources` |
 | Canonicalize | Turn captures into durable skills, prompts, decisions, source notes, or project hubs | `09-PROMPTS/Library`, `01-PROJECTS`, `08-TECH-AND-AI` |
 | Emit | Send the right subset to an AI, device, or program | `09-PROMPTS/Library/Tools` |
 | Prove | Verify that capture, metadata, linkback, and retrieval work | `App Proof Dashboard.md`, `App Coverage Checklist.md` |

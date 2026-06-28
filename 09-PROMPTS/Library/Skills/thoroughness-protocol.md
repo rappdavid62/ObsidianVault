@@ -1,4 +1,4 @@
----
+﻿---
 type: protocol
 name: thoroughness-protocol
 aliases: [/tp, thoroughness]
@@ -53,4 +53,4 @@ INSTRUCTIONS FOR THE AI OPERATOR:
 ## Notes
 This protocol is the foundation of the entire State Not Fate execution style. It is the single highest-leverage meta-skill in the library.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)

@@ -1,6 +1,6 @@
-# MASTER CONTEXT — Source of Truth: Obsidian 09-PROMPTS/Library/
+﻿# MASTER CONTEXT — Source of Truth: Obsidian 09-PROMPTS/Library/
 You are operating from my personal, canonical skill & prompt library.
-The single source of truth lives in my Obsidian vault (synced via OneDrive/Google Drive).
+The single source of truth lives at C:\ROOT_OBSIDIAN\DOV\09-PROMPTS\Library.
 All skills below come from there. Use them exactly as written.
 
 ## Core Identity & Constraints (master-bio)
@@ -44,7 +44,7 @@ All skills below come from there. Use them exactly as written.
 
 Use this as the persistent "who I am and what matters" layer in any coaching, planning, or decision conversation.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
 
 ## Core Protocols (always apply these patterns)
 ### thoroughness-protocol
@@ -87,7 +87,7 @@ INSTRUCTIONS FOR THE AI OPERATOR:
 ## Notes
 This protocol is the foundation of the entire State Not Fate execution style. It is the single highest-leverage meta-skill in the library.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
 
 ### council-strategy
 # Council Strategy Protocol (/council)
@@ -131,7 +131,7 @@ INSTRUCTIONS FOR THE AI OPERATOR:
 ## Notes
 This is one of the highest-leverage meta-protocols. It directly encodes the "State Not Fate" approach to difficult decisions: multiple grounded perspectives + brutal realism about constraints + one clear next action.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
 
 ## Relevant Skills from the Library
 ### thoroughness-protocol
@@ -174,7 +174,7 @@ INSTRUCTIONS FOR THE AI OPERATOR:
 ## Notes
 This protocol is the foundation of the entire State Not Fate execution style. It is the single highest-leverage meta-skill in the library.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
 
 ### low-energy-execution
 # Low Energy Execution
@@ -225,7 +225,7 @@ Never:
 - The plan must be so small that "failure" is almost impossible on a collapse day.
 - Update this note whenever your actual biological or identity floor changes (new meds, new living situation, new non-negotiables).
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
 
 ### mvd-anchors
 # MVD Anchors
@@ -297,7 +297,7 @@ Always separate the Ideal MVD (what a high-energy version would look like) from 
 **DOV Integration Note**
 Keep the MVD list visible in your DOV daily notes or a dedicated tracker. The project 2026 daily ritual starts with these anchors. Emit the skill and log the win so the external memory is consistent across your synced devices.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
 
 ### floor-wins
 # Floor Wins
@@ -365,7 +365,7 @@ Never let the day end with zero recorded proof on low-energy days.
 **DOV Integration Note**
 The DOV is your primary device-synced vault. These proof practices should live in your daily trackers and status blocks there. Emit the skill from the Library (synced via GitHub) and register wins so the external memory survives across devices. The 2026 project proof log is designed to be usable in the DOV.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
 
 ### social-calibration
 # Social Calibration & Drafting
@@ -413,7 +413,7 @@ Tone rules: Polite, direct, clear. Not needy. Not robotic. Not over-explained. P
 - Directly descended from the Social_Calibration and Social_Translator pieces in the two main tucked libraries.
 - One of the highest daily-use skills for preserving energy and self-trust in a world full of ambiguous social input.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
 
 ### daily-job-search
 # Daily Job Search
@@ -464,7 +464,7 @@ Always separate:
 - Prefers volume of low-friction actions over perfection on any single application.
 - Update this note after any session where the real workflow diverged significantly from the instructions.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
 
 ## Current Status (UPDATE THIS BEFORE EVERY SESSION)
 ```

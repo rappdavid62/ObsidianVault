@@ -9,7 +9,9 @@ Canonical Home: Meta/Project_Priority_Tracker.md
 Related Files:
   - Meta/Master Context.md
   - Meta/Active Projects Map.md
-Last Reviewed: 2026-06-25
+  - Meta/Second Brain Operations Dashboard.md
+  - Meta/Legacy Bundle Migration Inventory.md
+Last Reviewed: 2026-06-28
 ---
 
 # Project Priority Tracker
@@ -25,17 +27,17 @@ Last Reviewed: 2026-06-25
 ### 2. AI Workflow Setup & Durable Second Brain Maintenance
 
 * **Primary Target**: AI Infrastructure
-* **Context**: Establishing a durable Obsidian/GitHub workflow.
-* **Next Action**: Align playground vaults (`sync-playground-laptop`), ensure proper `.gitignore` patterns are deployed everywhere, and run `sync-all.py` to sync active skills.
+* **Context**: Maintaining DOV as the single skill layer and second-brain control system.
+* **Next Action**: Run `/brain` from `09-PROMPTS/Library/Skills/second-brain-control-loop.md`, then use `/vault-cleaner` for any file/path/privacy cleanup surfaced by the dashboard.
 
 ### 3. State Not Fate / Polaris Development
 
 * **Primary Target**: State Not Fate / Polaris
 * **Context**: Development and deployment of State Not Fate.
-* **Next Action**: Verify production source against `SNF_DEPLOY` folder and write-protect live builds.
+* **Next Action**: Read `01-PROJECTS/STATENOTFATE/Source Truth - Live Deploy vs Vault Artifacts.md`, then verify the external live deploy repo/folder before any production work.
 
 ### 4. Practical Life Stabilization
 
 * **Primary Target**: Personal Operating Manual
 * **Context**: Reducing chaos, triaging rough capture files, and sorting inbox contents.
-* **Next Action**: Review and clean up files under `00-CAPTURE/` and move private clippings into `99-PRIVATE/`.
+* **Next Action**: Review existing private candidates named in `Meta/Vault Cleanup Queue.md`; move only with explicit approval.

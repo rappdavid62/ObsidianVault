@@ -1,4 +1,4 @@
----
+﻿---
 type: skill
 name: career-strategy
 aliases: [career, 5-year, parallel-tracks, /career]
@@ -70,4 +70,4 @@ Always surface Ideal (full speed on both tracks) vs. Realistic (floor + 1-2 stra
 - Update when certifications change, new local opportunities appear, personal constraints shift (e.g. transport, meds), or after real interviews/feedback.
 - Created/expanded during the reinforce-and-expand pass to close the gap between daily execution and long-term direction.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)

@@ -1,4 +1,4 @@
----
+﻿---
 type: skill
 name: substrate-reminders
 aliases: [substrate, reminder, brain-substrate, /substrate]
@@ -82,4 +82,4 @@ Depression convinces the brain that the "substrate" — the changeable biologica
 - 5-year vision check: Review which phrases are actually shaping the substrate (career, recovery, energy) during weekly systems-audit.
 - Device sync: Emit from Library; the reminders travel with you in the DOV because GitHub keeps the source current.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)

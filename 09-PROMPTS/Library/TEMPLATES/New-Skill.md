@@ -1,4 +1,4 @@
----
+﻿---
 type: skill
 name: new-skill-name-kebab-case
 aliases: [short-name, /invocation]
@@ -49,6 +49,6 @@ One-sentence "what this does for me".
 ## Notes & History
 - What worked / didn't on which models.
 - Changes in this version.
-- Created/updated as part of expansion of the Laptop Sync Library (universal truth).
+- Created/updated as part of expansion of the DOV Library (universal truth).
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)

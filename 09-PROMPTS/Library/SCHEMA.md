@@ -9,7 +9,7 @@ version: 2
 
 # Universal Skill & Prompt Schema (Obsidian + Ubiquitous)
 
-This is the single source of truth for how every skill and prompt in this library (Laptop Sync vault - the universal truth) is structured. The goal is **rigor + portability**.
+This is the single source of truth for how every skill and prompt in `C:\ROOT_OBSIDIAN\DOV\09-PROMPTS\Library` is structured. The goal is **rigor + portability**.
 
 Everything must be plain Markdown + YAML frontmatter so it works in:
 - Obsidian (with Dataview, Templater, etc.)
@@ -18,7 +18,7 @@ Everything must be plain Markdown + YAML frontmatter so it works in:
 - This Grok environment (via file reads or export to `.grok/skills`)
 - Claude Projects, Cursor, local models, phone notes, etc.
 
-See [[../Dictionary]] for the full controlled vocabulary of allowed values.
+See [[Dictionary]] for the full controlled vocabulary of allowed values.
 
 ## Two Main Types
 
@@ -142,4 +142,4 @@ See [[../Dictionary]] for the authoritative list of allowed values for domains, 
 
 ---
 
-*This is the universal truth in the Laptop Sync vault. All AI should reference this structure.*
+*This is the universal truth in the DOV vault. All AI should reference this structure.*

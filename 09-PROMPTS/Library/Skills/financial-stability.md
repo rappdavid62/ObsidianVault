@@ -1,4 +1,4 @@
----
+﻿---
 type: skill
 name: financial-stability
 aliases: [runway, money, budget, financial-floor, /money]
@@ -64,6 +64,6 @@ Always separate Ideal (full budget overhaul + aggressive applications) from Real
 - Addresses the "Financial runway pressure (need income stability soon)" core constraint in master-bio.
 - State Not Fate framing: Money runway is external reality, not a judgment of character. Small consistent actions + proof registration repair the anxiety system the same way MVD anchors repair energy.
 - Update whenever major expense changes, new income appears, or you refine your personal "floor" budget numbers.
-- Created during expansion to give the finance domain (previously "to be added") its first proper atomic skill in the Laptop Sync Library.
+- Created during expansion to give the finance domain (previously "to be added") its first proper atomic skill in the DOV Library.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)

@@ -2,125 +2,97 @@
 type: hub
 name: skill-prompt-hub
 domain: [meta, library]
-tags: [hub, dataview, entry-point, source-of-truth]
-last_reviewed: 2026-06-08
+energy: any
+compatible_with: [all, obsidian, phone, gpt, claude, local]
+version: 3
+last_reviewed: 2026-06-28
+tags: [hub, onboarding, library, external-memory, standards]
 ---
 
-# Skill & Prompt Hub — Source of Truth
+# Skill & Prompt Hub
 
-**This Library (in the Laptop Sync vault) is the single source of truth for all AI.**
+## Bottom Line
 
-Obsidian `08 PROMPTS/Library/` (this folder and its atomic notes) is the canonical home for every skill, prompt, protocol, and context you use with Grok, Claude, ChatGPT, local models, Cursor, phone, etc.
+The single reusable skill layer lives at `C:\ROOT_OBSIDIAN\DOV\09-PROMPTS\Library`.
 
-Everything else is derivative. Start here for discovery and maintenance.
+Use this hub to find the canonical note, then emit or paste that note into whatever program you are using.
 
-## Quick Start — Ubiquitous Usage
+## Fast Start
 
-**On desktop (CLI emitter — recommended daily):**
-```powershell
-# Add once to PowerShell profile for one-word access from anywhere
-function skill { & "C:\Users\rappd\My Drive\INBOX\AI Learning\Laptop Sync\08 PROMPTS\Library\Tools\emit-skill.ps1" @args }
+- Daily execution: `Tools/emit-skill.ps1 --daily --clip`
+- Full context block: `python Tools/build-master-context.py --daily --clip`
+- Phone surface: `python Tools/export-for-phone.py`
+- External program wiring: `External Program Skill Wiring Matrix.md`
+- Second brain loop: `Skills/second-brain-control-loop.md`
+- Vault cleanup loop: `Skills/vault-cleaner.md`
+- Maintenance pass: `Skills/library-gardener.md`
+- Current app integration map: `08-TECH-AND-AI/Obsidian Integration/Integration Hub.md`
 
-skill --daily --clip          # core low-energy daily execution pack + status placeholder
-skill --favorites             # broader high-value collection (energy-balanced)
-skill --validate mvd-anchors  # check against Dictionary
-```
+## Core Command Layer
 
-**On phone:**
-Run `python export-for-phone.py` from the Tools folder periodically. Open the generated `Mobile-Favorites.md` (synced via Google Drive) and copy blocks directly.
+| Command | Canonical note | Use when |
+|---|---|---|
+| `/brain` | `Skills/second-brain-control-loop.md` | Monitor, improve, and learn from the vault |
+| `/vault-cleaner` | `Skills/vault-cleaner.md` | Safe file cleanup and cleanup queue work |
+| `/bootstrap` | `Prompts/bootstrap-session.md` | Starting a new AI session |
+| `/daily-execution` | `Prompts/daily-execution.md` | Turning today into a small plan |
+| `/priority-audit` | `Prompts/priority-audit.md` | Too many active threads |
+| `/council` | `Prompts/council-decision.md` and `Skills/council-strategy.md` | Complex decisions |
+| `/tp` | `Skills/thoroughness-protocol.md` | Any non-trivial request |
+| `/low` | `Skills/low-energy-execution.md` | Collapse, fog, low energy |
+| `/jobsearch` | `Skills/daily-job-search.md` | Job-search execution |
+| `/apply` | `Skills/apply-today.md` | Specific job application |
+| `/social` | `Skills/social-calibration.md` | Replies, boundaries, social reading |
+| `/tcouncil` | `Skills/tech-council.md` | Tool/app/platform decisions |
 
-**Into any AI (Grok, Claude, GPT, Cursor, local, phone chat...):**
-Use the pattern in `How-to-Use-Ubiquitously.md` or the powerful output of `build-master-context.py --daily`.
+## What Counts As Canonical
 
-**In this Grok CLI environment:**
-Many skills are synced to `~/.grok/skills/` and are natively available (description-driven). You can also say "use the library version of daily-job-search with my current status" — the agent can read the vault directly.
+- Edit active skills in `Skills/`.
+- Edit portable command prompts in `Prompts/`.
+- Edit durable context in `Contexts/`.
+- Treat `Prompt-Library/` and generated packs as snapshots unless a note says otherwise.
+- Bring improvements from ChatGPT, Claude, Gemini, Grok, Codex, Cursor, phone, and local models back into this folder.
+- Use `External Program Skill Wiring Matrix.md` to keep all external instructions pointed at this one Library.
+- Use `second-brain-control-loop` to coordinate vault monitoring, Library gardening, cleanup, export refreshes, and learning promotion.
 
-**Claude (Anthropic):**
-- Best: Create a Claude Project and upload key files from `08 PROMPTS/Library/` (master-bio, Dictionary, core Skills/Protocols, Hub, How-to-Use). Paste the Master Context (from build-master-context.py) into Project instructions.
-- Or paste emitted blocks + status into chats.
+## Review Checklist
 
-**Gemini (Google):**
-- Paste the Master Context or Favorites block (generated with --clip) at the start of conversations.
-- Upload Library files if the interface supports.
-- Use phone export for Gemini mobile chats.
+- [ ] New skills follow `SCHEMA.md`.
+- [ ] Frontmatter values are allowed by `Dictionary.md`.
+- [ ] Related skills are linked.
+- [ ] Mobile favorites still reflect the highest-use commands.
+- [ ] Tool defaults emit the same core pack this hub names.
+- [ ] External program instructions point to this vault path, not old Laptop Sync or `08 PROMPTS` paths.
+- [ ] Claude, Gemini, Grok, ChatGPT, Codex, Cursor, phone, local model, and Obsidian wiring matches `External Program Skill Wiring Matrix.md`.
+- [ ] `second-brain-control-loop` and `vault-cleaner` are used for monitoring and cleanup instead of ad hoc reorgs.
 
-## Core Views (Dataview)
+## Dataview Views
 
-### All Skills (by domain)
+### Active Skills
 
 ```dataview
 TABLE domain as Domain, energy as Energy, last_reviewed as "Last Reviewed", version
-FROM "08 PROMPTS/Library/Skills"
-SORT domain ASC, name ASC
+FROM "09-PROMPTS/Library/Skills"
+SORT domain ASC, file.name ASC
 ```
 
-### Low-Energy / Fog Day Skills (highest daily value)
+### Portable Prompts
 
 ```dataview
-TABLE name, domain, description
-FROM "08 PROMPTS/Library"
-WHERE energy = "low" OR energy = "any" OR energy = "collapse"
-SORT name ASC
+TABLE domain as Domain, energy as Energy, invocation, last_reviewed as "Last Reviewed"
+FROM "09-PROMPTS/Library/Prompts"
+SORT file.name ASC
 ```
 
-### Protocols & Core Meta
+### Low-Energy / Fog-Day Surface
 
 ```dataview
-TABLE name, domain, invocation
-FROM "08 PROMPTS/Library/Protocols"
+TABLE domain as Domain, invocation, description
+FROM "09-PROMPTS/Library"
+WHERE energy = "collapse" OR energy = "low" OR energy = "any"
+SORT file.name ASC
 ```
 
-### Dictionary Compliance & Health (run these in every Gardener / ai-setup-audit pass)
+## Gardener Rule
 
-**Notes using domains not in the Dictionary** (expand the list as Dictionary grows):
-```dataview
-TABLE file.name, domain, "Possible issue: domain not in Dictionary"
-FROM "08 PROMPTS/Library"
-WHERE !contains(domain, "meta") AND !contains(domain, "library") AND !contains(domain, "job") AND !contains(domain, "execution") AND !contains(domain, "social") AND !contains(domain, "research") AND !contains(domain, "decision-making") AND !contains(domain, "recovery") AND !contains(domain, "health") AND !contains(domain, "creative") AND !contains(domain, "ai-setup") AND !contains(domain, "philosophy") AND !contains(domain, "philosophy-snf") AND !contains(domain, "finance") AND !contains(domain, "prs") AND !contains(domain, "sobriety") AND !contains(domain, "career") AND !contains(domain, "systems")
-```
-
-**Notes using tags not in the Dictionary** (example; expand exclude list from Dictionary):
-```dataview
-TABLE file.name, tags, "Possible issue: tag not in Dictionary"
-FROM "08 PROMPTS/Library"
-WHERE !contains(tags, "low-energy") AND !contains(tags, "mvd") AND !contains(tags, "floor") AND !contains(tags, "anchors") AND !contains(tags, "floor-wins") AND !contains(tags, "proof") AND !contains(tags, "restart") AND !contains(tags, "no-shame") AND !contains(tags, "daily") AND !contains(tags, "weekly") AND !contains(tags, "routine") AND !contains(tags, "low-friction") AND !contains(tags, "job") AND !contains(tags, "prs") AND !contains(tags, "hvac") AND !contains(tags, "logistics") AND !contains(tags, "maintenance") AND !contains(tags, "driver") AND !contains(tags, "resume") AND !contains(tags, "application") AND !contains(tags, "cover-letter") AND !contains(tags, "prs-track") AND !contains(tags, "certification") AND !contains(tags, "career") AND !contains(tags, "job-search") AND !contains(tags, "tailoring") AND !contains(tags, "follow-up") AND !contains(tags, "social") AND !contains(tags, "communication") AND !contains(tags, "calibration") AND !contains(tags, "boundaries") AND !contains(tags, "professional") AND !contains(tags, "dating") AND !contains(tags, "relationships") AND !contains(tags, "research") AND !contains(tags, "deep-work") AND !contains(tags, "synthesis") AND !contains(tags, "options") AND !contains(tags, "analysis") AND !contains(tags, "meta") AND !contains(tags, "library") AND !contains(tags, "schema") AND !contains(tags, "maintenance") AND !contains(tags, "gardener") AND !contains(tags, "dictionary") AND !contains(tags, "tools") AND !contains(tags, "ai-setup") AND !contains(tags, "model-selection") AND !contains(tags, "ubiquity") AND !contains(tags, "standards") AND !contains(tags, "state-not-fate") AND !contains(tags, "philosophy") AND !contains(tags, "sobriety") AND !contains(tags, "recovery") AND !contains(tags, "depression-as-state") AND !contains(tags, "anchors") AND !contains(tags, "proof-based-hope") AND !contains(tags, "ideal-vs-realistic") AND !contains(tags, "bottom-line-first") AND !contains(tags, "reading-error") AND !contains(tags, "visible-proof") AND !contains(tags, "external-memory") AND !contains(tags, "restart-speed") AND !contains(tags, "resilience-rate") AND !contains(tags, "hope-meter") AND !contains(tags, "state-based-scaling") AND !contains(tags, "systems-failure") AND !contains(tags, "load-bearing") AND !contains(tags, "substrate") AND !contains(tags, "startup-design-problem") AND !contains(tags, "clinical-safety") AND !contains(tags, "intake") AND !contains(tags, "energy-aware") AND !contains(tags, "high-stakes") AND !contains(tags, "decision") AND !contains(tags, "council") AND !contains(tags, "protocol") AND !contains(tags, "context") AND !contains(tags, "bio") AND !contains(tags, "constraints") AND !contains(tags, "guide") AND !contains(tags, "onboarding") AND !contains(tags, "creative") AND !contains(tags, "be-mode") AND !contains(tags, "roleplay") AND !contains(tags, "finance") AND !contains(tags, "runway") AND !contains(tags, "budgeting") AND !contains(tags, "5-year-vision") AND !contains(tags, "partnership") AND !contains(tags, "family") AND !contains(tags, "cincinnati") AND !contains(tags, "field-tech") AND !contains(tags, "logistics") AND !contains(tags, "maintenance") AND !contains(tags, "driver") AND !contains(tags, "certification")
-```
-
-Use these (or improved versions) in every Library Gardener pass. They make "unknown value" auditing automatic and visible in the Hub.
-
-## Dictionary & Schema (the rules)
-
-- [[../Dictionary]] — The controlled vocabulary. All `domain`, `energy`, `tags`, `type`, etc. must come from here.
-- [[../SCHEMA]] — The structural contract. Every note must follow this.
-
-## How to Add New Skills
-
-1. Use the template in `TEMPLATES/New Skill.md` (or the one in the vault root TEMPLATES folder).
-2. Follow the SCHEMA and pick values only from the Dictionary.
-3. Place it in the correct subfolder (`Skills/`, `Prompts/`, or `Protocols/`).
-4. Link it from related notes and update the Hub if appropriate.
-5. Run the emitter tools to test it.
-6. (Optional but recommended) Run the `library-gardener` afterward.
-
-## Maintenance
-
-The **library-gardener** skill is the official process. It now includes an explicit Dictionary compliance audit step.
-
-Run it regularly. It will keep the Library as a healthy, consistent, and truly usable source of truth for all AI.
-
-## Current High-Value Packs (via emitter)
-
-- `--daily` → Core low-energy execution set (thoroughness-protocol + low-energy-execution + mvd-anchors + floor-wins + social-calibration + daily-job-search)
-- `--favorites` → Broader quick-access collection (adds apply-today, resume-tailoring, deep-research, career-strategy, tool-mode-decider, weekly-review, library-gardener, prs-safety-check, snf-proof-registration, snf-hope-activation, systems-audit, sobriety-anchors, circadian-anchors, 5-year-vision-alignment, cover-letter-followup, financial-stability, ai-setup-audit, substrate-reminders, etc.)
-
-**New**: Use `python emit-skill.py --validate <name>` for improved frontmatter + basic Dictionary presence checks.
-
-**Library expanded and improved** (26+ Skills + Protocols + Contexts + full Dictionary/SCHEMA). New: substrate-reminders (daily substrate reminders with scientific grounding for the core SNF metaphor "effort can still shape the substrate"). Enhanced snf-proof-registration, snf-hope-activation, and systems-audit with "Scientific Basis" sections (neuroplasticity, cognitive offloading, hope theory / prediction error, external memory research, etc.). Updated Dictionary tags and Hub. Use with existing SNF skills for stronger evidence-based reinforcement.
-
-**Example real-world use**: New project started 2026-06-12 in 01-PROJECTS/2026-SNF-Substrate-Systems-Project/ — using the Library (systems-audit, 5-year-vision-alignment, substrate-reminders, career-strategy + emitters) as the complete operating system. Tasks 3 (job search tracker) and 5 (main vault update + reinforcement) completed. See the project's own notes for how the atomic Library drives planning, execution, and tracking.
-
-This Hub + the atomic Library + the Tools = the complete ubiquitous system with Obsidian (Laptop Sync vault) as the single source of truth.
-
----
-
-*Everything starts and ends here. This is the universal truth.*
+The Library gets smarter by being used, corrected, and folded back into atomic notes. If an external chat produces a better instruction, do not leave it stranded in that chat. Promote the durable part here, validate it, and regenerate the outputs.

@@ -1,4 +1,4 @@
----
+﻿---
 type: protocol
 name: council-strategy
 aliases: [/council, strategic-council]
@@ -55,4 +55,4 @@ INSTRUCTIONS FOR THE AI OPERATOR:
 ## Notes
 This is one of the highest-leverage meta-protocols. It directly encodes the "State Not Fate" approach to difficult decisions: multiple grounded perspectives + brutal realism about constraints + one clear next action.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)

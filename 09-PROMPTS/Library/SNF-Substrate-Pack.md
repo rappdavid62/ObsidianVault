@@ -1,4 +1,4 @@
-Note: mvd-anchors has dictionary compliance issues (run with --validate mvd-anchors for details).
+﻿Note: mvd-anchors has dictionary compliance issues (run with --validate mvd-anchors for details).
 Note: floor-wins has dictionary compliance issues (run with --validate floor-wins for details).
 Note: low-energy-execution has dictionary compliance issues (run with --validate low-energy-execution for details).
 # Emitted from Obsidian Skill & Prompt Library
@@ -85,7 +85,7 @@ tags: [state-not-fate, philosophy-snf, recovery, hope, hope-activation, effort-r
 
 # SNF Hope Activation
 
-**Source:** Obsidian Library (09-PROMPTS/Library) - Laptop Sync vault / DOV (universal truth)
+**Source:** DOV Obsidian Library (C:\ROOT_OBSIDIAN\DOV\09-PROMPTS\Library)
 **Last synced / enhanced:** 2026-06-13
 
 ## Purpose
@@ -164,10 +164,10 @@ Use the exact phrasing "This shows effort can still shape the substrate" as a de
 - 5-year vision alignment (Cincinnati stable function ΓåÆ partnership/family): Every registered proof is literal building material for the "stable platform" layer. Low-hope days are data, not verdict. Use with 5-year-vision-alignment and career-strategy when the long view feels unreachable.
 - PRS / trades parallel tracks: Before high-stakes social or interview, quick hope-activation + one micro-proof (text to safe contact or one lead) to keep agency online. Pair with prs-safety-check and social-calibration.
 
-(This is the canonical version in the Laptop Sync / ObsidianVault 09-PROMPTS/Library ΓÇö the universal truth for all AI. All prompts consolidated here. Prefer editing source in vault and re-syncing/emitting to .grok and other models.)
+(This is the canonical version in the DOV 09-PROMPTS/Library ΓÇö the universal truth for all AI. All prompts consolidated here. Prefer editing source in vault and re-syncing/emitting to .grok and other models.)
 
 ---
-This skill was generated from the canonical Obsidian note in the Laptop Sync vault (the universal truth) and enhanced 2026-06-13 with full scientific basis, 2026 project integration, and Dictionary-aligned frontmatter.
+This skill was generated from the canonical Obsidian note in the DOV vault (the universal truth) and enhanced 2026-06-13 with full scientific basis, 2026 project integration, and Dictionary-aligned frontmatter.
 ```
 
 ## Skill / Protocol: snf-proof-registration
@@ -193,7 +193,7 @@ tags: [state-not-fate, philosophy-snf, recovery, visible-proof, external-memory,
 
 # SNF Proof Registration
 
-**Source:** Obsidian Library (09-PROMPTS/Library) - Laptop Sync vault / DOV (universal truth)
+**Source:** DOV Obsidian Library (C:\ROOT_OBSIDIAN\DOV\09-PROMPTS\Library)
 **Last synced / enhanced:** 2026-06-13
 
 ## Purpose
@@ -267,10 +267,10 @@ The "substrate" that proof registration targets is the brain's reward prediction
 - 5-year vision (Cincinnati stable function ΓåÆ partnership/family): Every registered proof is literal infrastructure. The "stable platform" layer is built from accumulated visible evidence that the systems (recovery, career, energy, social) are still responsive to effort. Use with 5-year-vision-alignment when the long horizon feels abstract or unreachable.
 - PRS work / trades interviews: Before or after, register the micro-action (one prep step, one safe contact text, one boundary held) as proof. Combines with prs-safety-check and social-calibration.
 
-(This is the canonical version in the Laptop Sync / ObsidianVault 09-PROMPTS/Library ΓÇö the universal truth for all AI. All prompts consolidated here. Prefer editing source in vault and re-syncing/emitting to .grok and other models.)
+(This is the canonical version in the DOV 09-PROMPTS/Library ΓÇö the universal truth for all AI. All prompts consolidated here. Prefer editing source in vault and re-syncing/emitting to .grok and other models.)
 
 ---
-This skill was generated from the canonical Obsidian note in the Laptop Sync vault (the universal truth) and enhanced 2026-06-13 with full scientific basis, 2026 project + tracker integration, sobriety co-anchor, and Dictionary-aligned frontmatter.
+This skill was generated from the canonical Obsidian note in the DOV vault (the universal truth) and enhanced 2026-06-13 with full scientific basis, 2026 project + tracker integration, sobriety co-anchor, and Dictionary-aligned frontmatter.
 ```
 
 ## Skill / Protocol: sobriety-anchors
@@ -295,7 +295,7 @@ tags: [sobriety, recovery, philosophy-snf, state-not-fate, anchors, floor, proof
 
 # Sobriety Anchors
 
-**Source:** Obsidian Library (09-PROMPTS/Library) - Laptop Sync vault / DOV (universal truth)
+**Source:** DOV Obsidian Library (C:\ROOT_OBSIDIAN\DOV\09-PROMPTS\Library)
 **Last synced / enhanced:** 2026-06-13
 
 ## Purpose
@@ -372,10 +372,10 @@ Recovery is not a side project; it is the substrate on which job, energy, social
 - DOV / OneDrive / GitHub sync: The anchors and their proofs live in the synced vault (status blocks, Proof-Log, Library source). Emit packs for any AI on any device. The fact "sober since 2019-11-01" is now external data that survives fog, travel, or device loss. Pull Library updates so the counter-scripts and trigger lists stay current.
 - PRS credential + trades expansion: Sobriety is the credibility foundation for the work you want to do (supporting others in recovery while building stable income in trades). Every registered anchor is evidence you can show up for clients and for yourself.
 
-(This is the canonical version in the Laptop Sync / ObsidianVault 09-PROMPTS/Library ΓÇö the universal truth for all AI. All prompts consolidated here. Prefer editing source in vault and re-syncing/emitting to .grok and other models.)
+(This is the canonical version in the DOV 09-PROMPTS/Library ΓÇö the universal truth for all AI. All prompts consolidated here. Prefer editing source in vault and re-syncing/emitting to .grok and other models.)
 
 ---
-This skill was generated from the canonical Obsidian note in the Laptop Sync vault (the universal truth), promoted to full 09 Library status, and enhanced 2026-06-13 with complete frontmatter, scientific basis, 2026 SNF project + PRS integration, and explicit ties to the other SNF skills as the recovery substrate trio.
+This skill was generated from the canonical Obsidian note in the DOV vault (the universal truth), promoted to full 09 Library status, and enhanced 2026-06-13 with complete frontmatter, scientific basis, 2026 SNF project + PRS integration, and explicit ties to the other SNF skills as the recovery substrate trio.
 ```
 
 ## Skill / Protocol: mvd-anchors
@@ -598,4 +598,5 @@ Never:
 - The plan must be so small that "failure" is almost impossible on a collapse day.
 - Update MVD references in this note when the user's actual Minimum Viable Day changes.
 ```
+
 

@@ -1,4 +1,4 @@
----
+﻿---
 type: skill
 name: snf-hope-activation
 aliases: [hope, hope-activation, /hope, snf-hope]
@@ -77,4 +77,4 @@ Hope here is explicitly Snyder's (2002) "hope theory" — agency ("I can") + pat
 - Post-lapse: Use the "survival anchors + visible win" scale and register in both project log and main status.
 - Weekly systems-audit input: Track whether the "one visible win" is actually repairing the prediction (resilience-rate, hope metrics).
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)

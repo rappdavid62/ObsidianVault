@@ -1,4 +1,4 @@
----
+﻿---
 type: skill
 name: prs-safety-check
 aliases: [safety, prs-check, /safety, /prscheck]
@@ -76,4 +76,4 @@ Tone must be calm, grounded, non-judgmental, direct — exactly the PRS voice yo
 - Update whenever your personal safety contacts, local resources, or medication regimen change.
 - This is a "use before you use other skills" gate on difficult days.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)

@@ -1,4 +1,4 @@
----
+﻿---
 type: skill
 name: daily-job-search
 aliases: [jobsearch, hunt-jobs, /jobsearch]
@@ -62,4 +62,4 @@ Always separate:
 - Prefers volume of low-friction actions over perfection on any single application.
 - Update this note after any session where the real workflow diverged significantly from the instructions.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)

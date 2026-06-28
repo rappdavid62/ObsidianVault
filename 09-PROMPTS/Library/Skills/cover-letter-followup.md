@@ -1,4 +1,4 @@
----
+﻿---
 type: skill
 name: cover-letter-followup
 aliases: [cover-letter, followup, message-draft, /followup]
@@ -62,6 +62,6 @@ Always separate Ideal (polished, customized letter) from Realistic (good-enough 
 - Completes the job-search execution chain from the original David AI Prompt Library's 05_Cover_Letter_Followup_Command.
 - Emphasizes "volume of low-friction actions" over perfection. A decent, honest follow-up that gets sent beats a perfect one that never leaves drafts.
 - Update when you have new specific stories, certifications, or when employer communication styles in your target fields (PRS, trades) evolve.
-- Part of the expansion to make every step of the job pipeline atomic and emit-table from the Laptop Sync Library (universal truth).
+- Part of the expansion to make every step of the job pipeline atomic and emit-table from the DOV Library (universal truth).
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)

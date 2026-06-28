@@ -11,7 +11,7 @@ tags:
 ## Capture Path
 
 Actionable emails (job leads, interview requests, or billing alerts) are captured and saved to:
-`00-INBOX/App Captures/` (for sorting) or directly inside relevant project/tracker folders.
+`00-CAPTURE/App Captures/` (for sorting) or directly inside relevant project/tracker folders.
 
 ## Metadata
 
@@ -42,14 +42,14 @@ Reopen the exact message or conversation thread in your browser using this forma
 
 Use these captured notes during your **Daily Status Update** or **Daily Job Search** sessions:
 * Check for unresolved email actions inside the inbox.
-* Extract contact info and next steps to log into [job_search_tracker.md](file:///C:/ROOT_OBSIDIAN/master-laptop-vault/01-PROJECTS/2026-SNF-Substrate-Systems-Project/04-Tracking/job_search_tracker.md).
+* Extract contact info and next steps to log into `C:\ROOT_OBSIDIAN\DOV\01-PROJECTS\2026-SNF-Substrate-Systems-Project\04-Tracking\job_search_tracker.md`.
 
 ---
 
 ## Test Capture Sample
 
 **Title**: `Gmail - Interview Request - Clark And Sons`
-**Path**: `00-INBOX/App Captures/Gmail - Interview Request - Clark And Sons.md`
+**Path**: `00-CAPTURE/App Captures/Gmail - Interview Request - Clark And Sons.md`
 
 ```markdown
 ---

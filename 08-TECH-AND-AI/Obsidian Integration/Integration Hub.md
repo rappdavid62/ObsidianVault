@@ -10,12 +10,14 @@ tags:
 ## Primary Vault
 
 - Path: `C:\ROOT_OBSIDIAN\DOV`
-- Inbox: [[00-INBOX/App Captures]]
+- Capture inbox: [[00-CAPTURE/App Captures]]
 - Resources: [[03-RESOURCES/Sources]]
 - Integration area: [[08-TECH-AND-AI/Obsidian Integration]]
+- Canonical skill layer: [[09-PROMPTS/Library/Hubs/00-Hub]]
 
 ## App Coverage
 
+- [[App Proof Dashboard]]
 - [[Universal AI Integration Blueprint]]
 - [[Source Code Registry]]
 - [[App Coverage Checklist]]
@@ -54,7 +56,9 @@ tags:
 
 ## Daily Review
 
-- [ ] Process new captures in `00-INBOX/App Captures`
+- [ ] Process new captures in `00-CAPTURE/App Captures`
 - [ ] Link captures to projects, people, decisions, or sources
 - [ ] Promote durable conclusions into project or decision notes
+- [ ] Promote reusable AI behavior into `09-PROMPTS/Library`
+- [ ] Regenerate `09-PROMPTS/Library/Mobile-Favorites.md` after Library changes
 - [ ] Archive stale captures

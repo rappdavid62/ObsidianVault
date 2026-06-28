@@ -1,4 +1,4 @@
----
+﻿---
 type: skill
 name: mvd-anchors
 aliases: [mvd, anchors, /mvd]
@@ -82,4 +82,4 @@ Always separate the Ideal MVD (what a high-energy version would look like) from 
 **DOV Integration Note**
 Keep the MVD list visible in your DOV daily notes or a dedicated tracker. The project 2026 daily ritual starts with these anchors. Emit the skill and log the win so the external memory is consistent across your synced devices.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)

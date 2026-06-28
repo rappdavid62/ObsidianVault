@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 r"""
 sync-all.py
 
@@ -28,30 +28,36 @@ if sys.platform == "win32":
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
 VAULT_PATHS = [
-    Path(r"C:\ROOT_OBSIDIAN\master-laptop-vault"),
     Path(r"C:\ROOT_OBSIDIAN\DOV"),
+    Path(r"C:\ROOT_OBSIDIAN\master-laptop-vault"),
     Path(r"C:\Users\rappd\OneDrive\Desktop\ObsidianVault"),
-    Path(r"C:\Users\rappd\My Drive\INBOX\AI Learning\sync-playground-laptop"),
 ]
 
 GEMINI_SKILLS_DIR = Path(r"C:\Users\rappd\.gemini\config\plugins\snf-library-plugin\skills")
 GROK_SKILLS_DIR = Path(r"C:\Users\rappd\.grok\skills")
 
 DAILY_DEFAULT_SKILLS = [
+    "bootstrap-session",
+    "daily-execution",
     "thoroughness-protocol",
     "low-energy-execution",
-    "mvd-anchors",
-    "floor-wins",
-    "social-calibration",
+    "tool-mode-decider",
     "daily-job-search",
+    "social-calibration",
 ]
 
 PHONE_FAVORITES = [
+    "second-brain-control-loop",
+    "vault-cleaner",
+    "bootstrap-session",
+    "daily-execution",
     "thoroughness-protocol",
     "low-energy-execution",
     "daily-job-search",
     "social-calibration",
     "apply-today",
+    "priority-audit",
+    "council-decision",
     "council-strategy",
     "tech-council",
 ]
@@ -116,7 +122,7 @@ def to_grok_skill(name: str, fm: dict, body: str) -> str:
     out.append("")
     out.append(f"# {name.replace('-', ' ').title()}")
     out.append("")
-    out.append("**Source:** Obsidian Library (09-PROMPTS/Library)")
+    out.append("**Source:** DOV Obsidian Library (C:\\ROOT_OBSIDIAN\\DOV\\09-PROMPTS\\Library)")
     out.append(f"**Last synced:** {datetime.now().strftime('%Y-%m-%d')}")
     out.append("")
     out.append(body)
@@ -137,7 +143,7 @@ def load_dictionary(vault: Path) -> dict:
     if not dict_path.exists():
         result["types"] = {"skill", "prompt", "protocol", "context", "guide", "hub", "meta"}
         result["energies"] = {"collapse", "low", "medium", "high", "any", "variable"}
-        result["domains"] = {"meta", "library", "job", "execution", "social", "research", "decision-making", "recovery", "health", "creative", "ai-setup", "philosophy", "finance", "prs", "sobriety", "career", "systems", "philosophy-snf"}
+        result["domains"] = {"meta", "library", "context", "job", "execution", "social", "research", "decision-making", "recovery", "health", "creative", "ai-setup", "philosophy", "finance", "prs", "sobriety", "career", "systems", "philosophy-snf"}
         result["tags"] = {"low-energy", "mvd", "floor", "anchors", "floor-wins", "proof", "restart", "no-shame", "daily", "weekly", "visible-proof", "external-memory", "hope-activation", "reading-error", "prediction-error", "cognitive-offloading", "substrate", "restart-speed", "resilience-rate", "hope-meter", "counter-script", "trigger-scan", "state-not-fate", "philosophy-snf", "sobriety"}
         return result
 
@@ -148,13 +154,13 @@ def load_dictionary(vault: Path) -> dict:
         if e in text.lower():
             result["energies"].add(e)
             
-    known_domains = ["meta", "library", "job", "execution", "social", "research", "decision-making", "recovery", "health", "creative", "ai-setup", "philosophy", "finance", "prs", "sobriety", "career", "systems", "philosophy-snf"]
+    known_domains = ["meta", "library", "context", "job", "execution", "social", "research", "decision-making", "recovery", "health", "creative", "ai-setup", "philosophy", "finance", "prs", "sobriety", "career", "systems", "philosophy-snf"]
     for d in known_domains:
         if d in text:
             result["domains"].add(d)
 
     result["types"].update({"skill", "prompt", "protocol", "context", "guide", "hub", "meta"})
-    result["domains"].update({"philosophy-snf", "sobriety", "recovery", "execution"})
+    result["domains"].update({"context", "philosophy-snf", "sobriety", "recovery", "execution"})
     return result
 
 def validate_skill(path: Path, allowed: dict) -> list[str]:
@@ -183,9 +189,9 @@ def build_master_context(vault: Path, skill_names: list[str]) -> str:
     parts = []
 
     # 1. Header
-    parts.append("# MASTER CONTEXT — Source of Truth: Obsidian 09-PROMPTS/Library/")
+    parts.append("# MASTER CONTEXT â€” Source of Truth: Obsidian 09-PROMPTS/Library/")
     parts.append("You are operating from my personal, canonical skill & prompt library.")
-    parts.append("The single source of truth lives in my Obsidian vault (synced via OneDrive/Google Drive).")
+    parts.append("The single source of truth lives at C:\\ROOT_OBSIDIAN\\DOV\\09-PROMPTS\\Library.")
     parts.append("All skills below come from there. Use them exactly as written.\n")
 
     # 2. Master Bio
@@ -221,7 +227,7 @@ def build_master_context(vault: Path, skill_names: list[str]) -> str:
     parts.append("## Relevant Skills from the Library")
     for name in skill_names:
         found = False
-        for sub in ["Skills", "Protocols"]:
+        for sub in ["Skills", "Protocols", "Prompts"]:
             p = lib_root / sub / f"{name}.md"
             if p.exists():
                 _, body = load_note(p)
@@ -251,15 +257,15 @@ def build_master_context(vault: Path, skill_names: list[str]) -> str:
 def export_mobile_favorites(vault: Path):
     lib = vault / "09-PROMPTS" / "Library"
     output_lines = []
-    output_lines.append("# Mobile Favorites – Obsidian Skill & Prompt Library")
+    output_lines.append("# Mobile Favorites â€“ Obsidian Skill & Prompt Library")
     output_lines.append("# Generated for quick copy-paste on phone")
-    output_lines.append("# Source: 09-PROMPTS/Library (syncs via OneDrive)")
-    output_lines.append("# Tip: Prefix with /tp or /council when needed.")
+    output_lines.append("# Source: C:\\ROOT_OBSIDIAN\\DOV\\09-PROMPTS\\Library")
+    output_lines.append("# Tip: Start with /bootstrap, then add /daily-execution, /tp, /low, or /council when needed.")
     output_lines.append("")
 
     for name in PHONE_FAVORITES:
         found = False
-        for sub in ["Skills", "Protocols", "Contexts"]:
+        for sub in ["Skills", "Protocols", "Prompts", "Contexts"]:
             p = lib / sub / f"{name}.md"
             if p.exists():
                 fm, body = load_note(p)
@@ -295,7 +301,7 @@ def main():
 
     # 1. Collect all skills and protocols
     notes_to_sync = []
-    for subdir in ["Skills", "Protocols"]:
+    for subdir in ["Skills", "Protocols", "Prompts"]:
         folder = lib / subdir
         if folder.exists():
             for f in folder.glob("*.md"):
@@ -379,3 +385,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

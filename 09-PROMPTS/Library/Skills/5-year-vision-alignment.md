@@ -1,4 +1,4 @@
----
+﻿---
 type: skill
 name: 5-year-vision-alignment
 aliases: [5-year, vision, long-term, /5year]
@@ -64,4 +64,4 @@ The 5-year vision (building stable function, contribution, and independence whil
 - Update whenever life realities change the feasible vision (new certs, changed constraints, clearer values) or after major proof accumulates that shifts what "stable function" looks like.
 - Added during the reinforce-and-expand pass to close the gap between daily execution skills and the long-term direction they serve.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)

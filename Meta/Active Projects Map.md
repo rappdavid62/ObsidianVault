@@ -9,8 +9,9 @@ Canonical Home: Meta/Active Projects Map.md
 Related Files:
   - Meta/Vault Master Index.md
   - Meta/Master Context.md
+  - Meta/Second Brain Operations Dashboard.md
   - Meta/Vault Cleanup Queue.md
-Last Reviewed: 2026-06-22
+Last Reviewed: 2026-06-28
 ---
 
 # Active Projects Map
@@ -31,12 +32,13 @@ Source Truth:
 - `Meta/Master Context.md`
 - `Meta/System Governance.md`
 - `Meta/AI Command Layer.md`
+- `Meta/Second Brain Operations Dashboard.md`
 - `Meta/Vault Master Index.md`
 - `09-PROMPTS/Library/Hubs/00-Hub.md`
 
-Current Blocker: fragmented canonical files and duplicate older AI_SYSTEM material.
+Current Blocker: remaining generated-surface drift; old AI_SYSTEM copies are already archived and registered.
 
-Next Action: install `Meta/` command layer and archive/supersede old AI_SYSTEM copies.
+Next Action: run `/brain` weekly and use `Meta/Legacy Bundle Migration Inventory.md` for archived AI_SYSTEM reference.
 
 ### 2. Prompt / Skill Library
 
@@ -48,12 +50,14 @@ Source Truth:
 - `09-PROMPTS/Library/Hubs/00-Hub.md`
 - `09-PROMPTS/Library/Dictionary.md`
 - `09-PROMPTS/Library/SCHEMA.md`
+- `09-PROMPTS/Library/Skills/second-brain-control-loop.md`
+- `09-PROMPTS/Library/Skills/vault-cleaner.md`
 - `09-PROMPTS/Library/Skills/`
 - `09-PROMPTS/Library/Protocols/`
 
-Current Blocker: duplicate older prompt files exist under `09-PROMPTS/Prompt-Library/`.
+Current Blocker: legacy prompt bundle files exist under `09-PROMPTS/Prompt-Library/`.
 
-Next Action: keep `09-PROMPTS/Library/` as source truth; review `Prompt-Library/` for migration/archive.
+Next Action: use `Meta/Legacy Bundle Migration Inventory.md`; migrate only missing durable behavior into atomic Library notes.
 
 ### 3. State Not Fate / Polaris
 
@@ -70,7 +74,9 @@ Live Deployment Rule: production source must be verified against `SNF_DEPLOY`; d
 
 Current Blocker: multiple project/export folders and app zips create source confusion.
 
-Next Action: add a clear source-truth note pointing live site work to `SNF_DEPLOY` and treat zips as archives unless explicitly restored.
+Source Boundary Note: `01-PROJECTS/STATENOTFATE/Source Truth - Live Deploy vs Vault Artifacts.md`
+
+Next Action: before live app work, verify the external live deploy repo/folder, branch, remote, and hosted state separately from DOV vault artifacts.
 
 ### 4. Job Search / Financial Stabilization
 
@@ -98,7 +104,7 @@ Next Action: triage writing folder for public voice corpus vs private material.
 - `State_Not_Fate_Core_Recovery_OS.zip`
 - `State_Not_Fate_Main_Frame_Beta (2).zip`
 - `.cursorrules` exports
-- old `08-TECH-AND-AI/AI_SYSTEM/` copies after `Meta/` install
+- archived old AI_SYSTEM copies registered in `Meta/Legacy Bundle Migration Inventory.md`
 
 ## Next Project Review
 

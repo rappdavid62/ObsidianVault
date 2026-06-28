@@ -1,4 +1,4 @@
----
+﻿---
 type: skill
 name: tool-mode-decider
 aliases: [tool-mode, which-tool, /toolmode, decide-tool]
@@ -62,4 +62,4 @@ Stop wasting cognitive energy and tokens by defaulting to "just paste everything
 - This is a meta-skill that protects your attention and the quality of every other skill.
 - Update as your tool landscape changes (new local models, new Obsidian plugins, new Grok features, etc.).
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)

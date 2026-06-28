@@ -1,4 +1,4 @@
----
+﻿---
 type: skill
 name: nightly-personal-systems-review
 aliases: [nightly-review, daily-9pm, /nightly]
@@ -120,8 +120,8 @@ Turn the end of the day into one reliable external-memory pass: gather what chan
 
 ## Notes & History
 - Created 2026-06-16 after searching local Obsidian vaults, Google Drive, and Codex memory.
-- Designed for the Laptop Sync / ObsidianVault system as the cross-device source of truth.
+- Designed for the DOV Obsidian vault as the active source of truth.
 - Daily automation target: 9 PM America/New_York.
 - Keep this skill compact enough to paste into any AI, but specific enough to preserve David's real operating rules.
 
-(This is the atomic version in the Laptop Sync vault - universal truth. All prompts consolidated here.)
+(This is the atomic version in the DOV vault - universal truth. All prompts consolidated here.)
