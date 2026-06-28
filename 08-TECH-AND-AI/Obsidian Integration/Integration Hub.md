@@ -52,6 +52,7 @@ tags:
 - [[Apps - Obsidian Web Clipper]]
 - [[Apps - OpenAI Developers]]
 - [[Apps - Product Design]]
+- [[Apps - Scite]]
 - [[Apps - Slack]]
 
 ## Daily Review

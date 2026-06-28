@@ -24,6 +24,8 @@ Use this hub to find the canonical note, then emit or paste that note into whate
 - Phone surface: `python Tools/export-for-phone.py`
 - External program wiring: `External Program Skill Wiring Matrix.md`
 - Second brain loop: `Skills/second-brain-control-loop.md`
+- Second brain runbook: `Meta/Second Brain Runbook.md`
+- Learning ledger: `Meta/Second Brain Learning Ledger.md`
 - Vault cleanup loop: `Skills/vault-cleaner.md`
 - Maintenance pass: `Skills/library-gardener.md`
 - Current app integration map: `08-TECH-AND-AI/Obsidian Integration/Integration Hub.md`
@@ -54,6 +56,8 @@ Use this hub to find the canonical note, then emit or paste that note into whate
 - Bring improvements from ChatGPT, Claude, Gemini, Grok, Codex, Cursor, phone, and local models back into this folder.
 - Use `External Program Skill Wiring Matrix.md` to keep all external instructions pointed at this one Library.
 - Use `second-brain-control-loop` to coordinate vault monitoring, Library gardening, cleanup, export refreshes, and learning promotion.
+- Use `Meta/Second Brain Runbook.md` to decide daily, weekly, and triggered maintenance cadence.
+- Use `Meta/Second Brain Learning Ledger.md` for lessons that are useful but not yet promoted.
 
 ## Review Checklist
 
@@ -64,6 +68,8 @@ Use this hub to find the canonical note, then emit or paste that note into whate
 - [ ] Tool defaults emit the same core pack this hub names.
 - [ ] External program instructions point to this vault path, not old Laptop Sync or `08 PROMPTS` paths.
 - [ ] Claude, Gemini, Grok, ChatGPT, Codex, Cursor, phone, local model, and Obsidian wiring matches `External Program Skill Wiring Matrix.md`.
+- [ ] Maintenance cadence matches `Meta/Second Brain Runbook.md`.
+- [ ] Durable lessons are either promoted or queued in `Meta/Second Brain Learning Ledger.md`.
 - [ ] `second-brain-control-loop` and `vault-cleaner` are used for monitoring and cleanup instead of ad hoc reorgs.
 
 ## Dataview Views

@@ -12,7 +12,7 @@ last_reviewed: 2026-06-28
 
 The detailed machine-readable truth lives in `app-proof-tracker.json`. This dashboard is the human scan view.
 
-As of the current tracker: 11 apps are complete, 7 are deferred on demand, and 7 are deferred low priority.
+As of the current tracker: 11 apps are complete, 8 are deferred on demand, and 7 are deferred low priority.
 
 ## Definition Of Done
 
@@ -50,6 +50,7 @@ Complete these only when the app becomes actively useful:
 - Google Slides
 - OpenAI Developers
 - Product Design
+- Scite
 
 ## Deferred Low Priority
 

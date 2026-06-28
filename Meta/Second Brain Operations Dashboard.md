@@ -11,6 +11,10 @@ Related Files:
   - Meta/AI Command Layer.md
   - Meta/Vault Master Index.md
   - Meta/Vault Cleanup Queue.md
+  - Meta/Second Brain Completion Audit.md
+  - Meta/Second Brain Runbook.md
+  - Meta/Second Brain Learning Ledger.md
+  - Meta/Second Brain Health Report.md
   - Meta/Legacy Bundle Migration Inventory.md
   - 09-PROMPTS/Library/Hubs/00-Hub.md
   - 09-PROMPTS/Library/External Program Skill Wiring Matrix.md
@@ -39,6 +43,10 @@ DOV is organized around one canonical skill layer and two maintenance loops:
 | Vault index | `Meta/Vault Master Index.md` | Folder map |
 | Active projects | `Meta/Active Projects Map.md` | Current project map |
 | Cleanup queue | `Meta/Vault Cleanup Queue.md` | Unresolved cleanup risks |
+| Completion audit | `Meta/Second Brain Completion Audit.md` | Requirement-by-requirement readiness and blocker audit |
+| Runbook | `Meta/Second Brain Runbook.md` | Daily, weekly, and triggered cadence for operating the vault |
+| Learning ledger | `Meta/Second Brain Learning Ledger.md` | Lessons waiting for promotion into durable notes |
+| Health report | `Meta/Second Brain Health Report.md` | Generated snapshot of required surfaces, drift, private boundaries, and Git state |
 | Legacy migration | `Meta/Legacy Bundle Migration Inventory.md` | Prompt bundle and superseded AI-system inventory |
 | Skill hub | `09-PROMPTS/Library/Hubs/00-Hub.md` | Canonical Library entry point |
 | External wiring | `09-PROMPTS/Library/External Program Skill Wiring Matrix.md` | Keeps external AI surfaces pointed at one Library |
@@ -52,6 +60,7 @@ python "09-PROMPTS\Library\Tools\emit-skill.py" second-brain-control-loop vault-
 python "09-PROMPTS\Library\Tools\emit-skill.py" --favorites
 python "09-PROMPTS\Library\Tools\export-for-phone.py"
 python "09-PROMPTS\Library\Tools\build-master-context.py" --daily
+python "09-PROMPTS\Library\Tools\vault-health-check.py" --write
 ```
 
 ## Monitoring Loop
@@ -59,12 +68,16 @@ python "09-PROMPTS\Library\Tools\build-master-context.py" --daily
 Run weekly or after major imports/AI sessions:
 
 1. Read this dashboard.
-2. Run `/brain` (`second-brain-control-loop`).
-3. Run `library-gardener` if the Library changed.
-4. Run `/vault-cleaner` if files, paths, privacy, or source truth changed.
-5. Regenerate `Mobile-Favorites.md` after mobile-relevant Library changes.
-6. Check `External Program Skill Wiring Matrix.md` when an external AI surface changes.
-7. Update `Meta/Vault Cleanup Queue.md` with unresolved items only.
+2. Follow `Meta/Second Brain Runbook.md` for daily, weekly, or triggered cadence.
+3. Check `Meta/Second Brain Completion Audit.md` before claiming the full goal is done.
+4. Run `Tools/vault-health-check.py --write`.
+5. Run `/brain` (`second-brain-control-loop`).
+6. Run `library-gardener` if the Library changed.
+7. Run `/vault-cleaner` if files, paths, privacy, or source truth changed.
+8. Review `Meta/Second Brain Learning Ledger.md` and promote durable lessons.
+9. Regenerate `Mobile-Favorites.md` after mobile-relevant Library changes.
+10. Check `External Program Skill Wiring Matrix.md` when an external AI surface changes.
+11. Update `Meta/Vault Cleanup Queue.md` with unresolved items only.
 
 ## Current Verified State
 
@@ -73,8 +86,11 @@ Run weekly or after major imports/AI sessions:
 - `.gitignore` includes `_PRIVATE/`, `99_PRIVATE/`, `99-PRIVATE/`, and adult/private archive patterns.
 - `_PRIVATE/SMUT/` exists locally and is ignored by Git through `_PRIVATE/`.
 - `99-PRIVATE/` exists and is ignored by Git.
+- `Meta/Second Brain Completion Audit.md` exists and marks the full goal not complete while high-risk cleanup remains.
 - `second-brain-control-loop` and `vault-cleaner` validate against the Library Dictionary.
 - `Mobile-Favorites.md` begins with the second-brain control loop.
+- `Meta/Second Brain Runbook.md` exists as the daily/weekly/triggered operating cadence.
+- `Meta/Second Brain Learning Ledger.md` exists as the learning promotion queue.
 
 ## Remaining Risks
 
@@ -94,6 +110,7 @@ Every maintenance run should report:
 
 - What was checked.
 - What changed.
+- What learning was promoted or queued.
 - What was verified.
 - What remains unresolved.
 - The next smallest action.

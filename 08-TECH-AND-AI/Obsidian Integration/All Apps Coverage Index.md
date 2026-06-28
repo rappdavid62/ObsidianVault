@@ -35,6 +35,7 @@ Each app needs a live capture path, metadata convention, linkback proof, and ret
 - [[Apps - Obsidian Web Clipper]]
 - [[Apps - OpenAI Developers]]
 - [[Apps - Product Design]]
+- [[Apps - Scite]]
 - [[Apps - Slack]]
 
 ## Minimum Proof Per App

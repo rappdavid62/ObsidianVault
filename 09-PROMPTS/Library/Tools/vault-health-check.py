@@ -11,6 +11,7 @@ Use --write to refresh Meta/Second Brain Health Report.md.
 from __future__ import annotations
 
 import argparse
+import json
 import subprocess
 import sys
 from datetime import datetime
@@ -27,6 +28,9 @@ REQUIRED_PATHS = [
     "Meta/AI Handoff Summary.md",
     "Meta/Second Brain Operations Dashboard.md",
     "Meta/Vault Cleanup Queue.md",
+    "Meta/Second Brain Completion Audit.md",
+    "Meta/Second Brain Runbook.md",
+    "Meta/Second Brain Learning Ledger.md",
     "Meta/Legacy Bundle Migration Inventory.md",
     "09-PROMPTS/Library/README.md",
     "09-PROMPTS/Library/Hubs/00-Hub.md",
@@ -83,6 +87,16 @@ GENERATED_CHECKS = [
         "09-PROMPTS/Library/Tools/master_context_latest.txt",
         "C:\\ROOT_OBSIDIAN\\DOV\\09-PROMPTS\\Library",
     ),
+]
+
+APP_TRACKER_PATH = VAULT / "08-TECH-AND-AI" / "Obsidian Integration" / "app-proof-tracker.json"
+LEARNING_LEDGER_PATH = VAULT / "Meta" / "Second Brain Learning Ledger.md"
+CLEANUP_QUEUE_PATH = VAULT / "Meta" / "Vault Cleanup Queue.md"
+
+PRIVATE_REVIEW_CANDIDATES = [
+    "00-CAPTURE/App Captures/TMHLBB.md",
+    "00-CAPTURE/App Captures/Clippings/TMWLBB.md",
+    "09-PROMPTS/Prompt-Library/BE_Roleplay_Generator.md",
 ]
 
 
@@ -155,6 +169,130 @@ def check_generated_outputs() -> list[str]:
     return lines
 
 
+def app_note_name(app: str) -> str:
+    return f"Apps - {app}.md"
+
+
+def check_app_tracker() -> list[str]:
+    if not APP_TRACKER_PATH.exists():
+        return ["- MISSING: `08-TECH-AND-AI/Obsidian Integration/app-proof-tracker.json`"]
+
+    try:
+        data = json.loads(APP_TRACKER_PATH.read_text(encoding="utf-8-sig"))
+    except json.JSONDecodeError as exc:
+        return [f"- RISK: app proof tracker JSON is invalid: {exc}"]
+
+    apps = data.get("apps", [])
+    counts: dict[str, int] = {}
+    missing_notes = []
+    for app in apps:
+        status = app.get("status", "unknown")
+        counts[status] = counts.get(status, 0) + 1
+        note = VAULT / "08-TECH-AND-AI" / "Obsidian Integration" / app_note_name(app.get("app", ""))
+        evidence = str(app.get("evidenceNote", ""))
+        if not note.exists() and not evidence.startswith("00-CAPTURE"):
+            missing_notes.append(app.get("app", "<unnamed>"))
+
+    lines = [f"- OK: {len(apps)} apps tracked"]
+    for status in sorted(counts):
+        lines.append(f"- INFO: {counts[status]} `{status}`")
+    if missing_notes:
+        lines.append("- RISK: app tracker entries without app notes: " + ", ".join(missing_notes))
+    else:
+        lines.append("- OK: every tracker app has an app note or capture evidence")
+    return lines
+
+
+def check_learning_ledger() -> list[str]:
+    if not LEARNING_LEDGER_PATH.exists():
+        return ["- MISSING: `Meta/Second Brain Learning Ledger.md`"]
+
+    text = read_text(LEARNING_LEDGER_PATH)
+    open_items = 0
+    promoted_items = 0
+    in_fence = False
+    for line in text.splitlines():
+        stripped = line.strip()
+        if stripped.startswith("```"):
+            in_fence = not in_fence
+            continue
+        if in_fence:
+            continue
+        if line.lstrip().startswith("- [ ]"):
+            open_items += 1
+        if line.lstrip().startswith("- [x]"):
+            promoted_items += 1
+    lines = [
+        f"- OK: `Meta/Second Brain Learning Ledger.md` exists",
+        f"- INFO: {open_items} open learning inbox items",
+        f"- INFO: {promoted_items} promoted learning items",
+    ]
+    if "## Inbox" not in text or "## Promoted" not in text:
+        lines.append("- RISK: learning ledger is missing `Inbox` or `Promoted` sections")
+    return lines
+
+
+def check_cleanup_queue() -> tuple[list[str], bool]:
+    if not CLEANUP_QUEUE_PATH.exists():
+        return ["- MISSING: `Meta/Vault Cleanup Queue.md`"], True
+
+    text = read_text(CLEANUP_QUEUE_PATH)
+    high_risks = text.count("Risk Level: High")
+    medium_risks = text.count("Risk Level: Medium")
+    low_risks = text.count("Risk Level: Low")
+    existing_private_candidates = [
+        item for item in PRIVATE_REVIEW_CANDIDATES if (VAULT / item).exists()
+    ]
+
+    lines = [
+        "- OK: `Meta/Vault Cleanup Queue.md` exists",
+        f"- INFO: {high_risks} high-risk cleanup items, {medium_risks} medium-risk, {low_risks} low-risk",
+    ]
+    if existing_private_candidates:
+        lines.append("- RISK: private/adult review candidates still exist and need explicit human approval before move/archive:")
+        for item in existing_private_candidates:
+            tracked_code, tracked_output = run(["git", "ls-files", "--", item])
+            ignored_code, ignored_output = run(["git", "check-ignore", "-v", "--", item])
+            tracked = bool(tracked_output.strip())
+            ignored = ignored_code == 0
+            state = "tracked by Git" if tracked else "not tracked by Git"
+            if ignored:
+                first_ignore = ignored_output.splitlines()[0] if ignored_output else "ignored"
+                state += f"; ignored ({first_ignore})"
+            else:
+                state += "; not ignored"
+            lines.append(f"  - `{item}` ({state})")
+    else:
+        lines.append("- OK: no configured private/adult review candidates currently exist at the watched paths")
+
+    if "Do not delete files permanently" not in text:
+        lines.append("- RISK: cleanup queue is missing the non-destructive deletion rule")
+
+    return lines, bool(existing_private_candidates or high_risks)
+
+
+def count_learning_ledger_items() -> tuple[int, int]:
+    if not LEARNING_LEDGER_PATH.exists():
+        return 0, 0
+
+    text = read_text(LEARNING_LEDGER_PATH)
+    open_items = 0
+    promoted_items = 0
+    in_fence = False
+    for line in text.splitlines():
+        stripped = line.strip()
+        if stripped.startswith("```"):
+            in_fence = not in_fence
+            continue
+        if in_fence:
+            continue
+        if line.lstrip().startswith("- [ ]"):
+            open_items += 1
+        if line.lstrip().startswith("- [x]"):
+            promoted_items += 1
+    return open_items, promoted_items
+
+
 def iter_markdown_and_text_files(root: Path):
     suffixes = {".md", ".txt", ".json", ".py", ".ps1"}
     for path in root.rglob("*"):
@@ -170,6 +308,8 @@ def check_drift() -> tuple[list[str], list[str]]:
         if not root.exists():
             continue
         for path in iter_markdown_and_text_files(root):
+            if path in {TOOL_PATH, REPORT_PATH}:
+                continue
             rel_path = rel(path)
             text = read_text(path)
             for pattern in DRIFT_PATTERNS:
@@ -207,8 +347,10 @@ def check_git_status() -> list[str]:
 
 def build_report() -> str:
     active_drift, allowed_drift = check_drift()
+    open_learning, _promoted_learning = count_learning_ledger_items()
+    cleanup_lines, cleanup_attention = check_cleanup_queue()
     now = datetime.now().strftime("%Y-%m-%d %H:%M")
-    health = "attention needed" if active_drift else "stable with known open loops"
+    health = "attention needed" if active_drift or cleanup_attention else "stable with known open loops"
 
     parts = [
         "---",
@@ -238,6 +380,18 @@ def build_report() -> str:
         "",
         *check_generated_outputs(),
         "",
+        "## App Proof Tracker",
+        "",
+        *check_app_tracker(),
+        "",
+        "## Learning Ledger",
+        "",
+        *check_learning_ledger(),
+        "",
+        "## Cleanup Queue",
+        "",
+        *cleanup_lines,
+        "",
         "## Source-Truth Drift",
         "",
     ]
@@ -259,16 +413,18 @@ def build_report() -> str:
 
     parts.extend(["", "## Git State", "", *check_git_status()])
 
-    parts.extend(
-        [
-            "",
-            "## Next Small Action",
-            "",
-            "- Review any active Source-Truth Drift items first.",
-            "- Then run `library-gardener` if Library files changed.",
-            "- Then run `vault-cleaner` for unresolved file-placement or privacy-boundary items.",
-        ]
-    )
+    next_actions = ["", "## Next Small Action", ""]
+    if active_drift:
+        next_actions.append("- Review active Source-Truth Drift items first.")
+    elif cleanup_attention:
+        next_actions.append("- Resolve or explicitly defer high-risk cleanup items in `Meta/Vault Cleanup Queue.md` before any push.")
+    elif open_learning:
+        next_actions.append("- Promote or clarify open items in `Meta/Second Brain Learning Ledger.md`.")
+    else:
+        next_actions.append("- Run the weekly loop in `Meta/Second Brain Runbook.md` after the current changes settle.")
+    next_actions.append("- Run `library-gardener` if Library files changed.")
+    next_actions.append("- Run `vault-cleaner` for unresolved file-placement or privacy-boundary items.")
+    parts.extend(next_actions)
 
     return "\n".join(parts) + "\n"
 

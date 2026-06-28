@@ -249,6 +249,16 @@
                      "status":  "deferred_on_demand"
                  },
                  {
+                     "app":  "Scite",
+                     "capture":  false,
+                     "metadata":  false,
+                     "linkback":  false,
+                     "retrieval":  false,
+                     "evidenceNote":  "Deferred: optional evidence-check proof, complete when actively needed",
+                     "sourceExample":  "",
+                     "status":  "deferred_on_demand"
+                 },
+                 {
                      "app":  "Slack",
                      "capture":  true,
                      "metadata":  true,

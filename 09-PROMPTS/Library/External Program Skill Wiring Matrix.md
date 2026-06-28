@@ -41,15 +41,35 @@ Claude, Gemini, Grok, ChatGPT, Codex, Cursor, phone notes, and local models are 
 
 | Surface | Best input method | What to load | Writeback rule |
 |---|---|---|---|
-| Codex | Local files in DOV plus emitted skill blocks | Read `Meta/AI Handoff Summary.md`, `Hubs/00-Hub.md`, then the task skill | Patch DOV notes directly only when asked or when completing an active vault task |
-| ChatGPT | Uploaded files, pasted emits, or Project knowledge | `README.md`, `Hubs/00-Hub.md`, `Mobile-Favorites.md`, and task skills | Turn durable improvements into Library note edits, not chat-only memory |
+| ChatGPT | Uploaded files, Custom GPT instructions, or pasted emits | `ChatGPT-System-Prompt.md`, `README.md`, `Hubs/00-Hub.md`, `Mobile-Favorites.md` | Turn durable improvements into Library note edits, not chat-only memory |
+| Antigravity IDE | Direct workspace file-system reads | `Antigravity-Instructions.md`, direct vault files, `.cursorrules` | Read/write files directly; run `sync-all.py` on changes to propagate |
+| Codex | Local goal runs and env toml config | `Codex-Instructions.md`, `Meta/AI Handoff Summary.md`, `Hubs/00-Hub.md` | Log task summaries to `00-CAPTURE/App Captures/` with source_app: Codex |
+| Grok Build | Native skills in `~/.grok/skills` | `Grok-Build-Instructions.md`, sync-all output from DOV Library | Edit DOV source note, then resync |
 | Claude | Project instructions plus uploaded Library files | `Claude-Project-Instructions.md`, `master_context_latest.txt`, and core skills | Fold useful Claude outputs back into atomic notes before regenerating exports |
-| Gemini | System prompt or first message plus uploaded files | `Gemini-System-Prompt.md`, `master_context_latest.txt`, `Mobile-Favorites.md` | Same as Claude: no separate Gemini-only skill fork |
-| Grok | Generated `.grok/skills` output | `sync-to-grok.py` or `sync-all.py` output from DOV Library | Edit DOV source note, then resync |
+| Gemini | System prompt, native skills, or uploaded files | `Gemini-System-Prompt.md`, `master_context_latest.txt`, `Mobile-Favorites.md` | Same as Claude: no separate Gemini-only skill fork |
 | Cursor / IDE agents | Repo instructions or pasted context | `AI Handoff Summary.md`, `/tp`, `/brain`, task skill | Keep code/project facts separate from vault source-truth notes |
 | Phone | Generated phone export | `Mobile-Favorites.md` | Capture rough notes, then promote durable pieces in DOV |
 | Local models | Pasted context window or local retrieval folder | `master_context_latest.txt` plus selected skills | Mark model output as unverified until checked against files |
 | Obsidian | Direct vault notes | `Meta/Second Brain Operations Dashboard.md` and this matrix | DOV remains the source of truth |
+
+
+## Codex Plugin Routing
+
+Use plugin/app tools as task-specific retrieval or action surfaces. They do not become new sources of truth. Capture durable outputs back into DOV.
+
+| Plugin / app surface | Route through | Capture target | Proof status |
+|---|---|---|---|
+| GitHub | `Apps - GitHub.md`, repo issue/PR/deploy notes | `00-CAPTURE/App Captures/` or project source note | Complete in tracker, but verify current repo/session before claims |
+| Google Drive | `Apps - Google Drive.md`, Drive file summary notes | `00-CAPTURE/App Captures/` or source note | Complete in tracker, but connector access is session-specific |
+| OpenAI Developers | `Apps - OpenAI Developers.md`, API/build decision notes | `00-CAPTURE/App Captures/` or project source note | Deferred on demand |
+| Life Science Research | `Apps - Life Science Research.md`; use `life-science-research:research-router-skill` for broad questions | Evidence summary note | Deferred low priority until an active research task |
+| Scite | `Apps - Scite.md` | Citation/evidence check note | Deferred on demand |
+| Netlify | `Apps - Netlify.md`; use `netlify:netlify-ai-gateway` before model choices in Netlify AI work | Deploy or AI gateway decision note | Complete for app proof, but live deploy/model support needs current verification |
+| Product Design | `Apps - Product Design.md`; `product-design:url-to-code` requires Product Design get-context and source-capture proof first | Design direction or build note | Deferred on demand |
+| Build Web Apps | `Apps - Build Web Apps.md` and relevant frontend skills | App build decision/project note | Deferred low priority until a build task |
+| Build Web Data Visualization | `Apps - Build Web Data Visualization.md` and data-viz skills | Chart/data decision note | Deferred low priority until a visualization task |
+
+When a plugin session produces reusable instructions, promote them to `09-PROMPTS/Library/Skills/`, `Prompts/`, `Protocols/`, or `Contexts/`. When it produces one-off evidence, store it in the relevant app capture or project note.
 
 ## Emit Commands
 

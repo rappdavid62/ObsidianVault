@@ -60,3 +60,9 @@ _PRIVATE/**
 99-PRIVATE/
 
 99-PRIVATE/**
+
+
+
+
+# Ignore Smart Environment folder
+.smart-env

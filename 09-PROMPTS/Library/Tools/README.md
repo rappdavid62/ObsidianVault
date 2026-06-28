@@ -58,7 +58,18 @@ Generates a single clean `Mobile-Favorites.md` (or custom path) containing the m
 python export-for-phone.py
 ```
 
-Open the resulting file on your phone (via Google Drive) and you have a portable "quick copy" version of your best tools.
+Open the resulting file on your phone and you have a portable "quick copy" version of your best tools.
+
+### vault-health-check.py - Second-brain monitoring report
+
+Checks the core DOV control surfaces, private Git ignore boundaries, generated output freshness, stale source-truth phrases, and current Git state.
+
+```powershell
+python vault-health-check.py
+python vault-health-check.py --write
+```
+
+Use `--write` to refresh `Meta/Second Brain Health Report.md` after a `/brain`, `library-gardener`, or `/vault-cleaner` pass.
 
 ### sync-to-grok.py — Live integration with this Grok environment
 

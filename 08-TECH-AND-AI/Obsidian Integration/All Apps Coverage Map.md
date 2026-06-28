@@ -33,6 +33,7 @@ tags:
 | Obsidian Web Clipper | source | One clipper template test |
 | OpenAI Developers | app-log / decision | One API/build note |
 | Product Design | decision / source | One design direction note |
+| Scite | source | One citation/evidence summary |
 | Slack | capture / task / decision | One actionable thread |
 
 Every app must prove capture, metadata, linkback, and retrieval.

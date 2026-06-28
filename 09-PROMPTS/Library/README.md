@@ -46,6 +46,10 @@ Read these in order when starting a serious session:
 - `External Program Skill Wiring Matrix.md` - how external programs should receive this same skill layer.
 - `Skills/second-brain-control-loop.md` - top-level monitor/learn/improve operator skill.
 - `Skills/vault-cleaner.md` - safe file organization and cleanup skill.
+- `Tools/vault-health-check.py` - repeatable second-brain health report generator.
+- `Meta/Second Brain Completion Audit.md` - requirement-by-requirement readiness and blocker audit.
+- `Meta/Second Brain Runbook.md` - daily, weekly, and triggered maintenance cadence.
+- `Meta/Second Brain Learning Ledger.md` - queue for useful lessons before they are promoted into durable notes.
 
 ## Daily Use
 
@@ -65,6 +69,7 @@ skill bootstrap-session daily-execution --with-master --clip
 skill --validate library-gardener
 python "C:\ROOT_OBSIDIAN\DOV\09-PROMPTS\Library\Tools\build-master-context.py" --daily --clip
 python "C:\ROOT_OBSIDIAN\DOV\09-PROMPTS\Library\Tools\export-for-phone.py"
+python "C:\ROOT_OBSIDIAN\DOV\09-PROMPTS\Library\Tools\vault-health-check.py" --write
 ```
 
 ## Core Portable Commands
@@ -95,8 +100,12 @@ The loop is:
 2. Promote durable patterns into atomic Library notes.
 3. Validate against `Dictionary.md` and `SCHEMA.md`.
 4. Regenerate `Mobile-Favorites.md` and context exports.
-5. Point external programs back to this folder.
-6. Log unresolved cleanup in `Meta/Vault Cleanup Queue.md`.
+5. Refresh `Meta/Second Brain Health Report.md`.
+6. Check `Meta/Second Brain Completion Audit.md` before claiming the full goal is complete.
+7. Follow `Meta/Second Brain Runbook.md` for cadence.
+8. Review `Meta/Second Brain Learning Ledger.md` and promote durable lessons.
+9. Point external programs back to this folder.
+10. Log unresolved cleanup in `Meta/Vault Cleanup Queue.md`.
 
 ## Source Honesty
 

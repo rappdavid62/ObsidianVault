@@ -35,6 +35,7 @@ Mark an app complete only when all four checks pass.
 | Obsidian Web Clipper | [ ] | [ ] | [ ] | [ ] | inbox |
 | OpenAI Developers | [ ] | [ ] | [ ] | [ ] | inbox |
 | Product Design | [ ] | [ ] | [ ] | [ ] | inbox |
+| Scite | [ ] | [ ] | [ ] | [ ] | inbox |
 | Slack | [ ] | [ ] | [ ] | [ ] | inbox |
 
 ## Definition Of Done

@@ -44,6 +44,7 @@ tags:
 | Netlify | Deploy/incident/env change | Deploy/admin URL, status, follow-up |
 | OpenAI Developers | API/key/agent decision | Docs URL or project path, model/tool choice |
 | Product Design | Brief/direction/critique | Artifact URL/path and design decision |
+| Scite | Citation/evidence check | Source URL, claim, support/contrast status |
 | CircleCI | Build/config/deploy note | Build/job/config URL and evidence |
 | HyperFrames | Composition/render decision | Composition path or render URL |
 | Life Science Research | Paper/dataset evidence | Source URL, key claim, evidence strength |

@@ -44,7 +44,11 @@ Everything else is a derivative, snapshot, app-specific surface, or project arti
    - Read `Meta/AI Command Layer.md`.
    - Read `09-PROMPTS/Library/Hubs/00-Hub.md`.
    - Read `08-TECH-AND-AI/Obsidian Integration/Integration Hub.md`.
+   - Read `Meta/Second Brain Completion Audit.md` before claiming full-goal completion.
+   - Read `Meta/Second Brain Runbook.md`.
    - Read `Meta/Vault Cleanup Queue.md`.
+   - Read `Meta/Second Brain Learning Ledger.md`.
+   - Run `Tools/vault-health-check.py` when local command execution is available.
    - Check current worktree/file state before relying on prior memory.
 
 2. **Classify the run**
@@ -71,12 +75,15 @@ Everything else is a derivative, snapshot, app-specific surface, or project arti
    - Duplicate source-of-truth claims across `Meta/`, `09-PROMPTS/`, and project folders.
 
 5. **Promote learning**
+   - Review `Meta/Second Brain Learning Ledger.md` for unresolved lessons.
    - If a session produces a better reusable instruction, add it to the relevant atomic skill/prompt/context note.
    - If the learning is a one-off fact, put it in the relevant project or context note.
    - If the learning is unresolved, add it to `Meta/Vault Cleanup Queue.md` or the relevant tracker.
+   - If the lesson is useful but not ready to promote, add or update an inbox item in `Meta/Second Brain Learning Ledger.md`.
    - Bump `version` and `last_reviewed` only on notes actually reviewed or changed.
 
 6. **Regenerate derivatives**
+   - Run `Tools/vault-health-check.py --write` after major maintenance to refresh the current health report.
    - Run `Tools/export-for-phone.py` after mobile-relevant Library changes.
    - Run `Tools/emit-skill.py --validate <name>` on changed skills/prompts.
    - Run `Tools/build-master-context.py --daily` after changing core daily context.
@@ -105,11 +112,19 @@ Everything else is a derivative, snapshot, app-specific surface, or project arti
 - `priority-audit`
 - `tool-mode-decider`
 - `09-PROMPTS/Library/Hubs/00-Hub.md`
+- `Meta/Second Brain Completion Audit.md`
+- `Meta/Second Brain Runbook.md`
 - `Meta/Vault Cleanup Queue.md`
+- `Meta/Second Brain Learning Ledger.md`
+- `Meta/Second Brain Health Report.md`
 - `08-TECH-AND-AI/Obsidian Integration/App Proof Dashboard.md`
+- `09-PROMPTS/Library/Tools/vault-health-check.py`
 
 ## Notes & History
 
 - Created on 2026-06-28 to make the second-brain layer explicit instead of implied across scattered governance notes.
+- 2026-06-28: Added the learning ledger as the durable holding surface for lessons before promotion into Library, project, app-proof, or cleanup notes.
+- 2026-06-28: Added the runbook as the daily/weekly/triggered cadence for running the second-brain loops.
+- 2026-06-28: Added the completion audit as the requirement-by-requirement gate before marking the full DOV goal complete.
 - This is the top-level operator skill. It coordinates other skills; it does not replace them.
 - Default stance is non-destructive: report, link, archive, or queue before deleting/moving unless David explicitly approves a specific cleanup action.
