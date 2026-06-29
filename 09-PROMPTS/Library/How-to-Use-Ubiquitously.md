@@ -79,27 +79,6 @@ Keep a small "Daily Use" section at the top with your current top 5–7 skills.
 
 ### 5. This Grok CLI Environment (special integration)
 
-Relevant skill(s) for this conversation:
-[paste one or more emitted skills here]
-
-My current status:
-[paste your status block + one non-negotiable]
-
-Use the skill's instructions exactly. Bottom line first. Be realistic about my energy and constraints. Use values and language from the Dictionary when relevant.
-```
-
-This pattern turns any model into "you with your full Library loaded."
-
-### 4. Phone / On the Go
-
-1. Run `python export-for-phone.py` (from the Tools folder).
-2. The generated `Mobile-Favorites.md` syncs via Google Drive / OneDrive.
-3. On phone: open the file → long-press the skill you need → Copy → paste into any chat app.
-
-Keep a small "Daily Use" section at the top with your current top 5–7 skills.
-
-### 5. This Grok CLI Environment (special integration)
-
 - High-value skills are kept in sync with `~/.grok/skills/` via `sync-to-grok.py`.
 - They become real, description-driven, auto-triggerable skills in this environment.
 - You can say: "Use the library version of daily-job-search with my current status" or "Build a pack with mvd-anchors and floor-wins".

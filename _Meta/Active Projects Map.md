@@ -5,12 +5,12 @@ Expected Use Case: Live map of active projects, source-truth paths, blockers, an
 Archive or Active: Active
 Supersedes:
 Replaced By:
-Canonical Home: Meta/Active Projects Map.md
+Canonical Home: _Meta/Active Projects Map.md
 Related Files:
-  - Meta/Vault Master Index.md
-  - Meta/Master Context.md
-  - Meta/Second Brain Operations Dashboard.md
-  - Meta/Vault Cleanup Queue.md
+  - _Meta/Vault Master Index.md
+  - _Meta/Master Context.md
+  - _Meta/Second Brain Operations Dashboard.md
+  - _Meta/Vault Cleanup Queue.md
 Last Reviewed: 2026-06-28
 ---
 
@@ -26,19 +26,19 @@ This file tells David and AI agents what projects are active and where their sou
 
 Status: Active  
 Primary Deployment Target: AI Infrastructure  
-Source Path: `Meta/`, `08-TECH-AND-AI/`, `09-PROMPTS/Library/`  
+Source Path: `_Meta/`, `08-TECH-AND-AI/`, `09-PROMPTS/Library/`  
 Source Truth:
 
-- `Meta/Master Context.md`
-- `Meta/System Governance.md`
-- `Meta/AI Command Layer.md`
-- `Meta/Second Brain Operations Dashboard.md`
-- `Meta/Vault Master Index.md`
+- `_Meta/Master Context.md`
+- `_Meta/System Governance.md`
+- `_Meta/AI Command Layer.md`
+- `_Meta/Second Brain Operations Dashboard.md`
+- `_Meta/Vault Master Index.md`
 - `09-PROMPTS/Library/Hubs/00-Hub.md`
 
 Current Blocker: remaining generated-surface drift; old AI_SYSTEM copies are already archived and registered.
 
-Next Action: run `/brain` weekly and use `Meta/Legacy Bundle Migration Inventory.md` for archived AI_SYSTEM reference.
+Next Action: run `/brain` weekly and use `_Meta/Legacy Bundle Migration Inventory.md` for archived AI_SYSTEM reference.
 
 ### 2. Prompt / Skill Library
 
@@ -57,7 +57,7 @@ Source Truth:
 
 Current Blocker: legacy prompt bundle files exist under `09-PROMPTS/Prompt-Library/`.
 
-Next Action: use `Meta/Legacy Bundle Migration Inventory.md`; migrate only missing durable behavior into atomic Library notes.
+Next Action: use `_Meta/Legacy Bundle Migration Inventory.md`; migrate only missing durable behavior into atomic Library notes.
 
 ### 3. State Not Fate / Polaris
 
@@ -104,7 +104,7 @@ Next Action: triage writing folder for public voice corpus vs private material.
 - `State_Not_Fate_Core_Recovery_OS.zip`
 - `State_Not_Fate_Main_Frame_Beta (2).zip`
 - `.cursorrules` exports
-- archived old AI_SYSTEM copies registered in `Meta/Legacy Bundle Migration Inventory.md`
+- archived old AI_SYSTEM copies registered in `_Meta/Legacy Bundle Migration Inventory.md`
 
 ## Next Project Review
 

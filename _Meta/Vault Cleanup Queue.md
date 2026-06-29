@@ -5,11 +5,11 @@ Expected Use Case: Queue of unresolved vault cleanup, privacy, duplicate, archiv
 Archive or Active: Active
 Supersedes:
 Replaced By:
-Canonical Home: Meta/Vault Cleanup Queue.md
+Canonical Home: _Meta/Vault Cleanup Queue.md
 Related Files:
-  - Meta/Vault Master Index.md
-  - Meta/System Governance.md
-  - Meta/Legacy Bundle Migration Inventory.md
+  - _Meta/Vault Master Index.md
+  - _Meta/System Governance.md
+  - _Meta/Legacy Bundle Migration Inventory.md
   - 09-PROMPTS/Library/Skills/vault-cleaner.md
   - 09-PROMPTS/Library/Skills/second-brain-control-loop.md
 Last Reviewed: 2026-06-28
@@ -50,11 +50,11 @@ Absent historical paths from older queue snapshots:
 - `00-CAPTURE/App Captures/` is the current capture path.
 - `second-brain-control-loop` and `vault-cleaner` now exist as canonical Library skills.
 - `01-PROJECTS/STATENOTFATE/Source Truth - Live Deploy vs Vault Artifacts.md` now separates DOV vault artifacts from live deploy work.
-- `Meta/Legacy Bundle Migration Inventory.md` now inventories `09-PROMPTS/Prompt-Library/` and archived AI_SYSTEM copies.
+- `_Meta/Legacy Bundle Migration Inventory.md` now inventories `09-PROMPTS/Prompt-Library/` and archived AI_SYSTEM copies.
 
 ## Source-Truth Cleanup
 
-### 2. Promote AI system files to `Meta/`
+### 2. Promote AI system files to `_Meta/`
 
 Old Paths:
 
@@ -64,15 +64,15 @@ Old Paths:
 
 New Paths:
 
-- `Meta/Master Context.md`
-- `Meta/System Governance.md`
-- `Meta/AI Command Layer.md`
+- `_Meta/Master Context.md`
+- `_Meta/System Governance.md`
+- `_Meta/AI Command Layer.md`
 
 Issue: Same governance/context ideas are split across old paths.  
 Recommended Action: Keep Meta as canonical. Archive or mark old copies superseded.  
 Risk Level: Medium.  
 Current Evidence: `08-TECH-AND-AI/AI_SYSTEM/` is absent; superseded copies are already under `04-ARCHIVES/Superseded-AI-System/`.  
-Next Step: Use `Meta/Legacy Bundle Migration Inventory.md` as the register; do not recreate `08-TECH-AND-AI/AI_SYSTEM/`.
+Next Step: Use `_Meta/Legacy Bundle Migration Inventory.md` as the register; do not recreate `08-TECH-AND-AI/AI_SYSTEM/`.
 
 ### 3. Prompt library duplication
 
@@ -84,7 +84,7 @@ Paths:
 Issue: `Library/` is structured and governed; `Prompt-Library/` appears older/looser.  
 Recommended Action: Treat `09-PROMPTS/Library/` as canonical. Review `Prompt-Library/` for migration/archive.  
 Risk Level: Medium.  
-Current Evidence: `Meta/Legacy Bundle Migration Inventory.md` lists current legacy bundle files and recommended action.  
+Current Evidence: `_Meta/Legacy Bundle Migration Inventory.md` lists current legacy bundle files and recommended action.  
 Next Step: Migrate only missing durable behavior into atomic Library notes; do not bulk-copy legacy bundles.
 
 ### 4. State Not Fate source confusion

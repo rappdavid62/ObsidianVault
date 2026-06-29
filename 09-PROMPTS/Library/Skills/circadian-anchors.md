@@ -4,7 +4,7 @@ name: circadian-anchors
 aliases: [circadian, light, rhythm, sleep-anchors, /circadian]
 description: >
   Establish and protect a minimal set of circadian and biological rhythm anchors (light exposure timing, wake/sleep window, meal/movement cues) that regulate energy availability, mood prediction, and floor stability. Treat as non-negotiable MVD layer especially on variable or low-energy days.
-domain: [health, recovery, execution]
+domain: [health, execution]
 energy: low
 invocation: ["/circadian", "light anchor", "fix my rhythm", "energy biology today"]
 compatible_with: [grok, claude, gpt, local, all]

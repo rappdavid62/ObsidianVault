@@ -5,7 +5,8 @@ vault-health-check.py
 Creates a compact DOV second-brain health report.
 
 Default behavior is read-only: print the report to stdout.
-Use --write to refresh Meta/Second Brain Health Report.md.
+Use --write to refresh _Meta/Second Brain Health Report.md.
+Use --fail-on-attention to exit 2 when unresolved risks need attention.
 """
 
 from __future__ import annotations
@@ -20,18 +21,21 @@ from pathlib import Path
 
 TOOL_PATH = Path(__file__).resolve()
 VAULT = TOOL_PATH.parents[3]
-REPORT_PATH = VAULT / "Meta" / "Second Brain Health Report.md"
+META_DIR_NAME = "_Meta"
+META_DISPLAY = "_Meta"
+REPORT_REL = f"{META_DIR_NAME}/Second Brain Health Report.md"
+REPORT_PATH = VAULT / REPORT_REL
 
 REQUIRED_PATHS = [
-    "Meta/Master Context.md",
-    "Meta/AI Command Layer.md",
-    "Meta/AI Handoff Summary.md",
-    "Meta/Second Brain Operations Dashboard.md",
-    "Meta/Vault Cleanup Queue.md",
-    "Meta/Second Brain Completion Audit.md",
-    "Meta/Second Brain Runbook.md",
-    "Meta/Second Brain Learning Ledger.md",
-    "Meta/Legacy Bundle Migration Inventory.md",
+    f"{META_DIR_NAME}/Master Context.md",
+    f"{META_DIR_NAME}/AI Command Layer.md",
+    f"{META_DIR_NAME}/AI Handoff Summary.md",
+    f"{META_DIR_NAME}/Second Brain Operations Dashboard.md",
+    f"{META_DIR_NAME}/Vault Cleanup Queue.md",
+    f"{META_DIR_NAME}/Second Brain Completion Audit.md",
+    f"{META_DIR_NAME}/Second Brain Runbook.md",
+    f"{META_DIR_NAME}/Second Brain Learning Ledger.md",
+    f"{META_DIR_NAME}/Legacy Bundle Migration Inventory.md",
     "09-PROMPTS/Library/README.md",
     "09-PROMPTS/Library/Hubs/00-Hub.md",
     "09-PROMPTS/Library/External Program Skill Wiring Matrix.md",
@@ -42,6 +46,7 @@ REQUIRED_PATHS = [
     "09-PROMPTS/Library/Tools/build-master-context.py",
     "09-PROMPTS/Library/Tools/export-for-phone.py",
     "09-PROMPTS/Library/Tools/vault-health-check.py",
+    "09-PROMPTS/Library/Tools/vault-watcher.py",
     "08-TECH-AND-AI/Obsidian Integration/Integration Hub.md",
     "08-TECH-AND-AI/Obsidian Integration/app-proof-tracker.json",
     "00-CAPTURE/App Captures",
@@ -63,7 +68,7 @@ DRIFT_PATTERNS = [
 ]
 
 DRIFT_SCAN_ROOTS = [
-    "Meta",
+    META_DIR_NAME,
     "09-PROMPTS/Library",
     "08-TECH-AND-AI/Obsidian Integration",
 ]
@@ -90,8 +95,8 @@ GENERATED_CHECKS = [
 ]
 
 APP_TRACKER_PATH = VAULT / "08-TECH-AND-AI" / "Obsidian Integration" / "app-proof-tracker.json"
-LEARNING_LEDGER_PATH = VAULT / "Meta" / "Second Brain Learning Ledger.md"
-CLEANUP_QUEUE_PATH = VAULT / "Meta" / "Vault Cleanup Queue.md"
+LEARNING_LEDGER_PATH = VAULT / META_DIR_NAME / "Second Brain Learning Ledger.md"
+CLEANUP_QUEUE_PATH = VAULT / META_DIR_NAME / "Vault Cleanup Queue.md"
 
 PRIVATE_REVIEW_CANDIDATES = [
     "00-CAPTURE/App Captures/TMHLBB.md",
@@ -205,7 +210,7 @@ def check_app_tracker() -> list[str]:
 
 def check_learning_ledger() -> list[str]:
     if not LEARNING_LEDGER_PATH.exists():
-        return ["- MISSING: `Meta/Second Brain Learning Ledger.md`"]
+        return [f"- MISSING: `{META_DISPLAY}/Second Brain Learning Ledger.md`"]
 
     text = read_text(LEARNING_LEDGER_PATH)
     open_items = 0
@@ -223,7 +228,7 @@ def check_learning_ledger() -> list[str]:
         if line.lstrip().startswith("- [x]"):
             promoted_items += 1
     lines = [
-        f"- OK: `Meta/Second Brain Learning Ledger.md` exists",
+        f"- OK: `{META_DISPLAY}/Second Brain Learning Ledger.md` exists",
         f"- INFO: {open_items} open learning inbox items",
         f"- INFO: {promoted_items} promoted learning items",
     ]
@@ -234,7 +239,7 @@ def check_learning_ledger() -> list[str]:
 
 def check_cleanup_queue() -> tuple[list[str], bool]:
     if not CLEANUP_QUEUE_PATH.exists():
-        return ["- MISSING: `Meta/Vault Cleanup Queue.md`"], True
+        return [f"- MISSING: `{META_DISPLAY}/Vault Cleanup Queue.md`"], True
 
     text = read_text(CLEANUP_QUEUE_PATH)
     high_risks = text.count("Risk Level: High")
@@ -245,7 +250,7 @@ def check_cleanup_queue() -> tuple[list[str], bool]:
     ]
 
     lines = [
-        "- OK: `Meta/Vault Cleanup Queue.md` exists",
+        f"- OK: `{META_DISPLAY}/Vault Cleanup Queue.md` exists",
         f"- INFO: {high_risks} high-risk cleanup items, {medium_risks} medium-risk, {low_risks} low-risk",
     ]
     if existing_private_candidates:
@@ -323,12 +328,12 @@ def check_drift() -> tuple[list[str], list[str]]:
     return active, allowed
 
 
-def check_git_status() -> list[str]:
+def check_git_status() -> tuple[list[str], bool]:
     code, output = run(["git", "status", "--short", "--untracked-files=all"])
     if code != 0:
-        return [f"- UNKNOWN: `git status` failed: {output or 'no output'}"]
+        return [f"- UNKNOWN: `git status` failed: {output or 'no output'}"], True
     if not output:
-        return ["- OK: worktree is clean"]
+        return ["- OK: worktree is clean"], False
 
     lines = output.splitlines()
     modified = sum(1 for line in lines if line.startswith(" M") or line.startswith("M "))
@@ -342,15 +347,19 @@ def check_git_status() -> list[str]:
         summary.append(f"- `{line}`")
     if len(lines) > 25:
         summary.append(f"- ... {len(lines) - 25} more paths omitted")
-    return summary
+    if deleted:
+        summary.append("- RISK: tracked files are deleted in Git state; resolve or explicitly approve the rename/removal before push.")
+    return summary, bool(deleted)
 
 
-def build_report() -> str:
+def build_report() -> tuple[str, bool]:
     active_drift, allowed_drift = check_drift()
     open_learning, _promoted_learning = count_learning_ledger_items()
     cleanup_lines, cleanup_attention = check_cleanup_queue()
+    git_lines, git_attention = check_git_status()
     now = datetime.now().strftime("%Y-%m-%d %H:%M")
-    health = "attention needed" if active_drift or cleanup_attention else "stable with known open loops"
+    attention_needed = bool(active_drift or cleanup_attention or git_attention)
+    health = "attention needed" if attention_needed else "stable with known open loops"
 
     parts = [
         "---",
@@ -358,7 +367,7 @@ def build_report() -> str:
         "Primary Deployment Target: AI Infrastructure",
         "Expected Use Case: Current generated health report for DOV second-brain maintenance.",
         "Archive or Active: Active",
-        "Canonical Home: Meta/Second Brain Health Report.md",
+        f"Canonical Home: {META_DISPLAY}/Second Brain Health Report.md",
         f"Last Generated: {now}",
         "---",
         "",
@@ -411,35 +420,46 @@ def build_report() -> str:
     else:
         parts.append("- OK: no allowed watchlist hits.")
 
-    parts.extend(["", "## Git State", "", *check_git_status()])
+    parts.extend(["", "## Git State", "", *git_lines])
 
     next_actions = ["", "## Next Small Action", ""]
     if active_drift:
         next_actions.append("- Review active Source-Truth Drift items first.")
+    elif git_attention:
+        next_actions.append("- Resolve or explicitly approve tracked-file deletions/renames in Git state before any push.")
     elif cleanup_attention:
-        next_actions.append("- Resolve or explicitly defer high-risk cleanup items in `Meta/Vault Cleanup Queue.md` before any push.")
+        next_actions.append(f"- Resolve or explicitly defer high-risk cleanup items in `{META_DISPLAY}/Vault Cleanup Queue.md` before any push.")
     elif open_learning:
-        next_actions.append("- Promote or clarify open items in `Meta/Second Brain Learning Ledger.md`.")
+        next_actions.append(f"- Promote or clarify open items in `{META_DISPLAY}/Second Brain Learning Ledger.md`.")
     else:
-        next_actions.append("- Run the weekly loop in `Meta/Second Brain Runbook.md` after the current changes settle.")
+        next_actions.append(f"- Run the weekly loop in `{META_DISPLAY}/Second Brain Runbook.md` after the current changes settle.")
     next_actions.append("- Run `library-gardener` if Library files changed.")
     next_actions.append("- Run `vault-cleaner` for unresolved file-placement or privacy-boundary items.")
     parts.extend(next_actions)
 
-    return "\n".join(parts) + "\n"
+    return "\n".join(parts) + "\n", attention_needed
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Generate a DOV second-brain health report.")
-    parser.add_argument("--write", action="store_true", help="Write Meta/Second Brain Health Report.md")
+    parser.add_argument("--write", action="store_true", help=f"Write {REPORT_REL}")
+    parser.add_argument(
+        "--fail-on-attention",
+        action="store_true",
+        help="Exit 2 when the generated report says attention is needed",
+    )
     args = parser.parse_args()
 
-    report = build_report()
+    report, attention_needed = build_report()
     if args.write:
+        REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
         REPORT_PATH.write_text(report, encoding="utf-8")
         print(f"Wrote {REPORT_PATH}")
     else:
         print(report)
+    if args.fail_on_attention and attention_needed:
+        print("vault-health-check: attention needed; exiting 2", file=sys.stderr)
+        return 2
     return 0
 
 

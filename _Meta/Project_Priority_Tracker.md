@@ -5,12 +5,12 @@ Expected Use Case: Canonical priority order and next action list for all project
 Archive or Active: Active
 Supersedes:
 Replaced By:
-Canonical Home: Meta/Project_Priority_Tracker.md
+Canonical Home: _Meta/Project_Priority_Tracker.md
 Related Files:
-  - Meta/Master Context.md
-  - Meta/Active Projects Map.md
-  - Meta/Second Brain Operations Dashboard.md
-  - Meta/Legacy Bundle Migration Inventory.md
+  - _Meta/Master Context.md
+  - _Meta/Active Projects Map.md
+  - _Meta/Second Brain Operations Dashboard.md
+  - _Meta/Legacy Bundle Migration Inventory.md
 Last Reviewed: 2026-06-28
 ---
 
@@ -40,4 +40,4 @@ Last Reviewed: 2026-06-28
 
 * **Primary Target**: Personal Operating Manual
 * **Context**: Reducing chaos, triaging rough capture files, and sorting inbox contents.
-* **Next Action**: Review existing private candidates named in `Meta/Vault Cleanup Queue.md`; move only with explicit approval.
+* **Next Action**: Review existing private candidates named in `_Meta/Vault Cleanup Queue.md`; move only with explicit approval.

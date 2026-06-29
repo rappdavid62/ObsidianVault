@@ -76,6 +76,6 @@ Gemini output becomes part of the second brain only after review and promotion i
 - `09-PROMPTS/Library/Prompts/`
 - `09-PROMPTS/Library/Protocols/`
 - `09-PROMPTS/Library/Contexts/`
-- `Meta/Vault Cleanup Queue.md` for unresolved risks
+- `_Meta/Vault Cleanup Queue.md` for unresolved risks
 
 After writeback, regenerate phone and external outputs from DOV.

@@ -5,13 +5,13 @@ Expected Use Case: Requirement-by-requirement readiness audit for the DOV organi
 Archive or Active: Active
 Supersedes:
 Replaced By:
-Canonical Home: Meta/Second Brain Completion Audit.md
+Canonical Home: _Meta/Second Brain Completion Audit.md
 Related Files:
-  - Meta/Second Brain Operations Dashboard.md
-  - Meta/Second Brain Health Report.md
-  - Meta/Vault Cleanup Queue.md
-  - Meta/Second Brain Runbook.md
-  - Meta/Second Brain Learning Ledger.md
+  - _Meta/Second Brain Operations Dashboard.md
+  - _Meta/Second Brain Health Report.md
+  - _Meta/Vault Cleanup Queue.md
+  - _Meta/Second Brain Runbook.md
+  - _Meta/Second Brain Learning Ledger.md
   - 09-PROMPTS/Library/Hubs/00-Hub.md
   - 09-PROMPTS/Library/External Program Skill Wiring Matrix.md
   - 09-PROMPTS/Library/Skills/second-brain-control-loop.md
@@ -31,16 +31,16 @@ The current blocking issue is not missing structure. It is human approval for pr
 
 | Requirement | Evidence | Current Status |
 |---|---|---|
-| Organize and optimize DOV around a clear control layer | `Meta/Second Brain Operations Dashboard.md`, `Meta/Second Brain Runbook.md`, `Meta/Vault Master Index.md`, `Meta/Vault Cleanup Queue.md` | Mostly achieved |
+| Organize and optimize DOV around a clear control layer | `_Meta/Second Brain Operations Dashboard.md`, `_Meta/Second Brain Runbook.md`, `_Meta/Vault Master Index.md`, `_Meta/Vault Cleanup Queue.md` | Mostly achieved |
 | One canonical reusable skill set across programs | `09-PROMPTS/Library/README.md`, `09-PROMPTS/Library/Hubs/00-Hub.md`, `09-PROMPTS/Library/External Program Skill Wiring Matrix.md` | Achieved |
 | External programs route back to the same skill layer | `External Program Skill Wiring Matrix.md`, app notes under `08-TECH-AND-AI/Obsidian Integration/`, `app-proof-tracker.json` | Achieved for routing; live connector proof remains session-specific |
 | App/connector proof is tracked honestly | `app-proof-tracker.json`, `App Proof Dashboard.md`, `Apps - Scite.md` | Achieved; 26 apps tracked, deferred states explicit |
-| Second brain can monitor vault health | `09-PROMPTS/Library/Tools/vault-health-check.py`, `Meta/Second Brain Health Report.md` | Achieved |
+| Second brain can monitor vault health | `09-PROMPTS/Library/Tools/vault-health-check.py`, `_Meta/Second Brain Health Report.md` | Achieved |
 | Second brain can bring problems to attention | Health report shows attention-needed status when cleanup risk exists | Achieved |
-| File gardener / vault cleaner loop exists | `09-PROMPTS/Library/Skills/vault-cleaner.md`, `Meta/Vault Cleanup Queue.md` | Achieved, with unresolved human-approval item |
+| File gardener / vault cleaner loop exists | `09-PROMPTS/Library/Skills/vault-cleaner.md`, `_Meta/Vault Cleanup Queue.md` | Achieved, with unresolved human-approval item |
 | Library gardener loop exists | `09-PROMPTS/Library/Skills/library-gardener.md`, `09-PROMPTS/Library/Hubs/00-Hub.md` | Achieved |
-| Learning loop exists | `Meta/Second Brain Learning Ledger.md`, `/brain` promotion rules | Achieved |
-| Daily/weekly operating cadence exists | `Meta/Second Brain Runbook.md`, `nightly-personal-systems-review.md` | Achieved |
+| Learning loop exists | `_Meta/Second Brain Learning Ledger.md`, `/brain` promotion rules | Achieved |
+| Daily/weekly operating cadence exists | `_Meta/Second Brain Runbook.md`, `nightly-personal-systems-review.md` | Achieved |
 | Generated portable outputs reflect current source notes | `Mobile-Favorites.md`, `Tools/master_context_latest.txt`, health report generated-output checks | Achieved as of last health report |
 | Private/sensitive boundaries are protected | `.gitignore`, health report private-boundary checks, cleanup queue | Protected structurally, but cleanup decision remains unresolved |
 | Safe push/sync readiness | Health report cleanup queue section | Not achieved until private/adult candidates are moved, archived, sanitized, or explicitly deferred |
@@ -57,8 +57,8 @@ Watched paths:
 
 Evidence:
 
-- `Meta/Vault Cleanup Queue.md`
-- `Meta/Second Brain Health Report.md`
+- `_Meta/Vault Cleanup Queue.md`
+- `_Meta/Second Brain Health Report.md`
 
 Status:
 
@@ -81,7 +81,7 @@ Status:
 
 Do not mark the full goal complete until:
 
-1. `Meta/Second Brain Health Report.md` does not show unresolved high-risk cleanup items, or those items are explicitly deferred by David.
+1. `_Meta/Second Brain Health Report.md` does not show unresolved high-risk cleanup items, or those items are explicitly deferred by David.
 2. `vault-health-check.py --write` runs successfully.
 3. `second-brain-control-loop`, `vault-cleaner`, and the changed Library notes validate where applicable.
 4. Current `git status --short --untracked-files=all` has been reviewed.

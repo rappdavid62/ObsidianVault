@@ -4,7 +4,7 @@ name: floor-wins
 aliases: [floorwin, proof-log, /floorwin]
 description: >
   Log even the tiniest actions as visible external proof on low/collapse days. Floor wins repair the damaged reward system, feed the hope meter and resilience-rate, and accelerate restart speed. Never let a day with any action go unregistered.
-domain: [recovery, execution, low-energy]
+domain: [recovery, execution]
 energy: low
 invocation: ["/floor", "log floor win", "register proof today"]
 compatible_with: [grok, claude, gpt, local, all]

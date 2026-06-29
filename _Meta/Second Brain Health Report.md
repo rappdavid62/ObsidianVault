@@ -3,8 +3,8 @@ Status: Active
 Primary Deployment Target: AI Infrastructure
 Expected Use Case: Current generated health report for DOV second-brain maintenance.
 Archive or Active: Active
-Canonical Home: Meta/Second Brain Health Report.md
-Last Generated: 2026-06-28 05:26
+Canonical Home: _Meta/Second Brain Health Report.md
+Last Generated: 2026-06-28 15:26
 ---
 
 # Second Brain Health Report
@@ -15,15 +15,15 @@ DOV health is **attention needed**. The canonical Library path is `C:\ROOT_OBSID
 
 ## Required Surfaces
 
-- OK: `Meta/Master Context.md`
-- OK: `Meta/AI Command Layer.md`
-- OK: `Meta/AI Handoff Summary.md`
-- OK: `Meta/Second Brain Operations Dashboard.md`
-- OK: `Meta/Vault Cleanup Queue.md`
-- OK: `Meta/Second Brain Completion Audit.md`
-- OK: `Meta/Second Brain Runbook.md`
-- OK: `Meta/Second Brain Learning Ledger.md`
-- OK: `Meta/Legacy Bundle Migration Inventory.md`
+- OK: `_Meta/Master Context.md`
+- OK: `_Meta/AI Command Layer.md`
+- OK: `_Meta/AI Handoff Summary.md`
+- OK: `_Meta/Second Brain Operations Dashboard.md`
+- OK: `_Meta/Vault Cleanup Queue.md`
+- OK: `_Meta/Second Brain Completion Audit.md`
+- OK: `_Meta/Second Brain Runbook.md`
+- OK: `_Meta/Second Brain Learning Ledger.md`
+- OK: `_Meta/Legacy Bundle Migration Inventory.md`
 - OK: `09-PROMPTS/Library/README.md`
 - OK: `09-PROMPTS/Library/Hubs/00-Hub.md`
 - OK: `09-PROMPTS/Library/External Program Skill Wiring Matrix.md`
@@ -34,6 +34,7 @@ DOV health is **attention needed**. The canonical Library path is `C:\ROOT_OBSID
 - OK: `09-PROMPTS/Library/Tools/build-master-context.py`
 - OK: `09-PROMPTS/Library/Tools/export-for-phone.py`
 - OK: `09-PROMPTS/Library/Tools/vault-health-check.py`
+- OK: `09-PROMPTS/Library/Tools/vault-watcher.py`
 - OK: `08-TECH-AND-AI/Obsidian Integration/Integration Hub.md`
 - OK: `08-TECH-AND-AI/Obsidian Integration/app-proof-tracker.json`
 - OK: `00-CAPTURE/App Captures`
@@ -61,13 +62,13 @@ DOV health is **attention needed**. The canonical Library path is `C:\ROOT_OBSID
 
 ## Learning Ledger
 
-- OK: `Meta/Second Brain Learning Ledger.md` exists
+- OK: `_Meta/Second Brain Learning Ledger.md` exists
 - INFO: 0 open learning inbox items
-- INFO: 4 promoted learning items
+- INFO: 6 promoted learning items
 
 ## Cleanup Queue
 
-- OK: `Meta/Vault Cleanup Queue.md` exists
+- OK: `_Meta/Vault Cleanup Queue.md` exists
 - INFO: 2 high-risk cleanup items, 2 medium-risk, 2 low-risk
 - RISK: private/adult review candidates still exist and need explicit human approval before move/archive:
   - `00-CAPTURE/App Captures/TMHLBB.md` (tracked by Git; not ignored)
@@ -88,32 +89,38 @@ DOV health is **attention needed**. The canonical Library path is `C:\ROOT_OBSID
 
 ## Git State
 
-- INFO: 21 changed/untracked paths
-- INFO: 16 modified, 5 untracked, 0 deleted
-- `M "08-TECH-AND-AI/Obsidian Integration/All Apps Coverage Index.md"`
-- ` M "08-TECH-AND-AI/Obsidian Integration/All Apps Coverage Map.md"`
-- ` M "08-TECH-AND-AI/Obsidian Integration/App Coverage Checklist.md"`
-- ` M "08-TECH-AND-AI/Obsidian Integration/App Proof Dashboard.md"`
-- ` M "08-TECH-AND-AI/Obsidian Integration/Connector Capture Recipes.md"`
-- ` M "08-TECH-AND-AI/Obsidian Integration/Integration Hub.md"`
-- ` M "08-TECH-AND-AI/Obsidian Integration/app-proof-tracker.json"`
+- INFO: 43 changed/untracked paths
+- INFO: 12 modified, 16 untracked, 15 deleted
+- `M .cursorrules`
+- ` M 09-PROMPTS/Library/Claude-Project-Instructions.md`
 - ` M "09-PROMPTS/Library/External Program Skill Wiring Matrix.md"`
+- ` M 09-PROMPTS/Library/Gemini-System-Prompt.md`
+- ` M 09-PROMPTS/Library/How-to-Use-Ubiquitously.md`
 - ` M 09-PROMPTS/Library/Hubs/00-Hub.md`
 - ` M 09-PROMPTS/Library/Mobile-Favorites.md`
 - ` M 09-PROMPTS/Library/README.md`
 - ` M 09-PROMPTS/Library/Skills/second-brain-control-loop.md`
+- ` M 09-PROMPTS/Library/Skills/vault-cleaner.md`
 - ` M 09-PROMPTS/Library/Tools/README.md`
-- ` M 09-PROMPTS/Library/Tools/master_context_latest.txt`
 - ` M 09-PROMPTS/Library/Tools/vault-health-check.py`
-- ` M "Meta/Second Brain Operations Dashboard.md"`
-- `?? "08-TECH-AND-AI/Obsidian Integration/Apps - Scite.md"`
-- `?? "Meta/Second Brain Completion Audit.md"`
-- `?? "Meta/Second Brain Health Report.md"`
-- `?? "Meta/Second Brain Learning Ledger.md"`
-- `?? "Meta/Second Brain Runbook.md"`
+- ` D "Meta/AI Command Layer.md"`
+- ` D "Meta/AI Handoff Summary.md"`
+- ` D "Meta/Active Projects Map.md"`
+- ` D Meta/Device_Sync_Protocol.md`
+- ` D "Meta/Legacy Bundle Migration Inventory.md"`
+- ` D "Meta/Master Context.md"`
+- ` D Meta/Project_Priority_Tracker.md`
+- ` D "Meta/Second Brain Completion Audit.md"`
+- ` D "Meta/Second Brain Health Report.md"`
+- ` D "Meta/Second Brain Learning Ledger.md"`
+- ` D "Meta/Second Brain Operations Dashboard.md"`
+- ` D "Meta/Second Brain Runbook.md"`
+- ` D "Meta/System Governance.md"`
+- ... 18 more paths omitted
+- RISK: tracked files are deleted in Git state; resolve or explicitly approve the rename/removal before push.
 
 ## Next Small Action
 
-- Resolve or explicitly defer high-risk cleanup items in `Meta/Vault Cleanup Queue.md` before any push.
+- Resolve or explicitly approve tracked-file deletions/renames in Git state before any push.
 - Run `library-gardener` if Library files changed.
 - Run `vault-cleaner` for unresolved file-placement or privacy-boundary items.

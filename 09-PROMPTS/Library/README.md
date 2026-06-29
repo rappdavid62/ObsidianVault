@@ -26,8 +26,8 @@ Everything else is a derivative surface:
 
 Read these in order when starting a serious session:
 
-1. `Meta/Master Context.md`
-2. `Meta/AI Command Layer.md`
+1. `_Meta/Master Context.md`
+2. `_Meta/AI Command Layer.md`
 3. `09-PROMPTS/Library/Hubs/00-Hub.md`
 4. `09-PROMPTS/Library/External Program Skill Wiring Matrix.md`
 5. `09-PROMPTS/Library/How-to-Use-Ubiquitously.md`
@@ -47,9 +47,9 @@ Read these in order when starting a serious session:
 - `Skills/second-brain-control-loop.md` - top-level monitor/learn/improve operator skill.
 - `Skills/vault-cleaner.md` - safe file organization and cleanup skill.
 - `Tools/vault-health-check.py` - repeatable second-brain health report generator.
-- `Meta/Second Brain Completion Audit.md` - requirement-by-requirement readiness and blocker audit.
-- `Meta/Second Brain Runbook.md` - daily, weekly, and triggered maintenance cadence.
-- `Meta/Second Brain Learning Ledger.md` - queue for useful lessons before they are promoted into durable notes.
+- `_Meta/Second Brain Completion Audit.md` - requirement-by-requirement readiness and blocker audit.
+- `_Meta/Second Brain Runbook.md` - daily, weekly, and triggered maintenance cadence.
+- `_Meta/Second Brain Learning Ledger.md` - queue for useful lessons before they are promoted into durable notes.
 
 ## Daily Use
 
@@ -70,6 +70,7 @@ skill --validate library-gardener
 python "C:\ROOT_OBSIDIAN\DOV\09-PROMPTS\Library\Tools\build-master-context.py" --daily --clip
 python "C:\ROOT_OBSIDIAN\DOV\09-PROMPTS\Library\Tools\export-for-phone.py"
 python "C:\ROOT_OBSIDIAN\DOV\09-PROMPTS\Library\Tools\vault-health-check.py" --write
+python "C:\ROOT_OBSIDIAN\DOV\09-PROMPTS\Library\Tools\vault-health-check.py" --fail-on-attention
 ```
 
 ## Core Portable Commands
@@ -100,12 +101,12 @@ The loop is:
 2. Promote durable patterns into atomic Library notes.
 3. Validate against `Dictionary.md` and `SCHEMA.md`.
 4. Regenerate `Mobile-Favorites.md` and context exports.
-5. Refresh `Meta/Second Brain Health Report.md`.
-6. Check `Meta/Second Brain Completion Audit.md` before claiming the full goal is complete.
-7. Follow `Meta/Second Brain Runbook.md` for cadence.
-8. Review `Meta/Second Brain Learning Ledger.md` and promote durable lessons.
+5. Refresh `_Meta/Second Brain Health Report.md`.
+6. Check `_Meta/Second Brain Completion Audit.md` before claiming the full goal is complete.
+7. Follow `_Meta/Second Brain Runbook.md` for cadence.
+8. Review `_Meta/Second Brain Learning Ledger.md` and promote durable lessons.
 9. Point external programs back to this folder.
-10. Log unresolved cleanup in `Meta/Vault Cleanup Queue.md`.
+10. Log unresolved cleanup in `_Meta/Vault Cleanup Queue.md`.
 
 ## Source Honesty
 

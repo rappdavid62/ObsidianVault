@@ -8,7 +8,7 @@ domain: [meta, systems, library]
 energy: medium
 invocation: ["/vault-cleaner", "run vault cleaner", "clean up the vault", "file gardener"]
 compatible_with: [all, obsidian, gpt, claude, local]
-version: 1
+version: 2
 last_reviewed: 2026-06-28
 tags: [meta, maintenance, systems, external-memory, standards]
 ---
@@ -25,7 +25,7 @@ Keep DOV organized without turning cleanup into chaos. This skill audits file pl
 - After large imports, zips, app captures, generated packs, or AI-assisted reorgs.
 - When old folder names, duplicate notes, or stale paths make the vault hard to trust.
 - Before moving, archiving, deleting, or renaming anything.
-- When `Meta/Vault Cleanup Queue.md` needs review.
+- When `_Meta/Vault Cleanup Queue.md` needs review.
 
 ## Safety Rules
 
@@ -39,9 +39,9 @@ Keep DOV organized without turning cleanup into chaos. This skill audits file pl
 ## Core Process
 
 1. **Read governance**
-   - `Meta/System Governance.md`
-   - `Meta/AI Command Layer.md`
-   - `Meta/Vault Cleanup Queue.md`
+   - `_Meta/System Governance.md`
+   - `_Meta/AI Command Layer.md`
+   - `_Meta/Vault Cleanup Queue.md`
    - `09-PROMPTS/Library/Hubs/00-Hub.md`
 
 2. **Inspect current state**
@@ -61,7 +61,7 @@ Keep DOV organized without turning cleanup into chaos. This skill audits file pl
 
 4. **Act conservatively**
    - Fix small path/reference drift when the correct current path is proven.
-   - Add unresolved work to `Meta/Vault Cleanup Queue.md`.
+   - Add unresolved work to `_Meta/Vault Cleanup Queue.md`.
    - Regenerate derivative files only through existing tools.
    - Move files only when the destination and safety rule are clear.
    - Do not mass rename, delete, or flatten folders without explicit approval.
@@ -78,7 +78,7 @@ Keep DOV organized without turning cleanup into chaos. This skill audits file pl
 - **Bottom Line**: Current cleanup health in one sentence.
 - **Checked**: Files, folders, trackers, and commands inspected.
 - **Fixed Now**: Small safe corrections made.
-- **Queued**: Cleanup items added or left in `Meta/Vault Cleanup Queue.md`.
+- **Queued**: Cleanup items added or left in `_Meta/Vault Cleanup Queue.md`.
 - **Risks**: Privacy, source-truth, or sync risks.
 - **Needs Approval**: Any move/delete/archive action that should not be automatic.
 - **Next Small Action**: One concrete cleanup step.
@@ -88,11 +88,12 @@ Keep DOV organized without turning cleanup into chaos. This skill audits file pl
 - `second-brain-control-loop`
 - `library-gardener`
 - `ai-setup-audit`
-- `Meta/Vault Cleanup Queue.md`
-- `Meta/System Governance.md`
+- `_Meta/Vault Cleanup Queue.md`
+- `_Meta/System Governance.md`
 - `09-PROMPTS/Library/README.md`
 
 ## Notes & History
 
 - Created on 2026-06-28 to turn the existing cleanup queue into a reusable, cross-program skill.
+- 2026-06-28: Retargeted governance and cleanup queue paths from legacy `Meta/` references to the live `_Meta/` folder.
 - This skill is intentionally conservative. A trusted second brain should make cleanup safer, not more dramatic.

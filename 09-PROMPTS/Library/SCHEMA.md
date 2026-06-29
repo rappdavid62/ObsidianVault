@@ -40,7 +40,7 @@ aliases: [short, /invocations]        # optional, for human convenience
 description: >
   One or two sentences that tell an AI *exactly when and why* to use this.
   This field is critical for auto-invocation (matches .grok SKILL.md style).
-domain: [job, execution, social, research, meta, low-energy, ...]  # from Dictionary
+domain: [job, execution, social, research, meta, ...]  # from Dictionary (energy/tags are separate fields)
 energy: low | medium | high | any     # from Dictionary
 invocation: ["/jobsearch", "daily job hunt"]   # natural language + slash forms
 compatible_with: [grok, claude, gpt-4o, local, all]  # from Dictionary

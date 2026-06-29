@@ -5,10 +5,10 @@ Expected Use Case: Track legacy prompt bundles and superseded AI-system files so
 Archive or Active: Active
 Supersedes:
 Replaced By:
-Canonical Home: Meta/Legacy Bundle Migration Inventory.md
+Canonical Home: _Meta/Legacy Bundle Migration Inventory.md
 Related Files:
-  - Meta/Second Brain Operations Dashboard.md
-  - Meta/Vault Cleanup Queue.md
+  - _Meta/Second Brain Operations Dashboard.md
+  - _Meta/Vault Cleanup Queue.md
   - 09-PROMPTS/Library/README.md
   - 09-PROMPTS/Library/Hubs/00-Hub.md
 Last Reviewed: 2026-06-28
@@ -43,11 +43,11 @@ The old `08-TECH-AND-AI/AI_SYSTEM/` folder is not present in the current `08-TEC
 
 | Archived item | Current role | Canonical replacement |
 |---|---|---|
-| `AI SYSTEM SYSTEM GOVERNANCE.md` | Archived governance copy | `Meta/System Governance.md` |
-| `AI_SYSTEM/AI SYSTEM SYSTEM GOVERNANCE.md` | Archived governance copy | `Meta/System Governance.md` |
-| `AI_SYSTEM/CURRENT_STATUS.md` | Archived status copy | `Meta/Master Context.md` plus active project status notes |
-| `AI_SYSTEM/MASTER_CONTEXT.md` | Archived master context copy | `Meta/Master Context.md` |
-| `AI_SYSTEM/SKILL.md` | Archived AI-system skill copy | `Meta/AI Command Layer.md` and `09-PROMPTS/Library/Skills/second-brain-control-loop.md` |
+| `AI SYSTEM SYSTEM GOVERNANCE.md` | Archived governance copy | `_Meta/System Governance.md` |
+| `AI_SYSTEM/AI SYSTEM SYSTEM GOVERNANCE.md` | Archived governance copy | `_Meta/System Governance.md` |
+| `AI_SYSTEM/CURRENT_STATUS.md` | Archived status copy | `_Meta/Master Context.md` plus active project status notes |
+| `AI_SYSTEM/MASTER_CONTEXT.md` | Archived master context copy | `_Meta/Master Context.md` |
+| `AI_SYSTEM/SKILL.md` | Archived AI-system skill copy | `_Meta/AI Command Layer.md` and `09-PROMPTS/Library/Skills/second-brain-control-loop.md` |
 
 ## Migration Rule
 

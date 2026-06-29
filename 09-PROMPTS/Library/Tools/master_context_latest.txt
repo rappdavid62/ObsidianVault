@@ -1,6 +1,4 @@
-﻿# Using default daily pack (low-energy first)
-
-# MASTER CONTEXT — Source of Truth: Obsidian 09-PROMPTS/Library/
+# MASTER CONTEXT â€” Source of Truth: Obsidian 09-PROMPTS/Library/
 You are operating from my personal, canonical skill & prompt library.
 The single source of truth lives at C:\ROOT_OBSIDIAN\DOV\09-PROMPTS\Library.
 All skills below come from there. Use them exactly as written.
@@ -114,7 +112,7 @@ INSTRUCTIONS FOR THE AI OPERATOR:
 - No fluff, no moralizing, no "you've got this" unless it is earned by the plan.
 
 ## Related
-- [[council-strategy]] (use /tp + /council together for high-stakes decisions)
+- council-strategy (use /tp + /council together for high-stakes decisions)
 - Domain skills that the council members would draw from
 
 ## Notes
@@ -174,7 +172,7 @@ INSTRUCTIONS FOR THE AI OPERATOR:
 - /coach — Execution + job search operator lens (volume, tailoring, follow-up systems)
 
 ## Related
-- [[thoroughness-protocol]] — Almost always prefix /council with /tp
+- thoroughness-protocol — Almost always prefix /council with /tp
 - Domain skills that the council members would draw from
 
 ## Notes
@@ -430,7 +428,7 @@ INSTRUCTIONS FOR THE AI OPERATOR:
 - No fluff, no moralizing, no "you've got this" unless it is earned by the plan.
 
 ## Related
-- [[council-strategy]] (use /tp + /council together for high-stakes decisions)
+- council-strategy (use /tp + /council together for high-stakes decisions)
 - Domain skills that the council members would draw from
 
 ## Notes
@@ -492,10 +490,10 @@ Never:
 - Any active status block elements that affect the floor (e.g. meds timing, important appointment)
 
 ## Related Skills & Prompts
-- [[daily-job-search]] (scale way down or skip entirely on true collapse days)
-- [[thoroughness-protocol]] (use lightly — collapse days are not the time for heavy /tp)
-- [[floor-wins]] (the logging and proof side)
-- [[weekly-review]] — review MVD effectiveness weekly.
+- daily-job-search (scale way down or skip entirely on true collapse days)
+- thoroughness-protocol (use lightly — collapse days are not the time for heavy /tp)
+- floor-wins (the logging and proof side)
+- weekly-review — review MVD effectiveness weekly.
 - The original "09_Low_Energy_Execution_Command.md" from David library
 
 ## Notes & History
@@ -562,7 +560,7 @@ Stop wasting cognitive energy and tokens by defaulting to "just paste everything
 - Recent status
 
 ## Related
-- [[ai-setup-audit]] (the bigger periodic full ecosystem reinforcement audit skill)
+- ai-setup-audit (the bigger periodic full ecosystem reinforcement audit skill)
 - All the skills (this one decides which to load)
 - The original "08_Tool_Mode_Decider.md"
 
@@ -626,10 +624,10 @@ Always separate:
 - Priority role list
 
 ## Related Skills & Prompts
-- [[low-energy-execution]] (scale way down or skip entirely on true collapse days)
-- [[resume-tailoring]]
-- [[apply-today]]
-- [[council-strategy]] (for big decisions about which roles to chase hard)
+- low-energy-execution (scale way down or skip entirely on true collapse days)
+- resume-tailoring
+- apply-today
+- council-strategy (for big decisions about which roles to chase hard)
 - The full David AI Prompt Library commands for the classic 12-command flow
 
 ## Notes & History
@@ -693,8 +691,8 @@ Tone rules: Polite, direct, clear. Not needy. Not robotic. Not over-explained. P
 - Your current energy (affects how much "safer" vs "authentic" we bias toward)
 
 ## Related Skills & Prompts
-- [[low-energy-execution]] (on collapse days, default to very short or "no send for now")
-- [[council-strategy]] (for big relationship or boundary decisions)
+- low-energy-execution (on collapse days, default to very short or "no send for now")
+- council-strategy (for big relationship or boundary decisions)
 - The Social Translator section from the AI Life Coach Friend system
 
 ## Notes & History

@@ -43,14 +43,14 @@ Claude, Gemini, Grok, ChatGPT, Codex, Cursor, phone notes, and local models are 
 |---|---|---|---|
 | ChatGPT | Uploaded files, Custom GPT instructions, or pasted emits | `ChatGPT-System-Prompt.md`, `README.md`, `Hubs/00-Hub.md`, `Mobile-Favorites.md` | Turn durable improvements into Library note edits, not chat-only memory |
 | Antigravity IDE | Direct workspace file-system reads | `Antigravity-Instructions.md`, direct vault files, `.cursorrules` | Read/write files directly; run `sync-all.py` on changes to propagate |
-| Codex | Local goal runs and env toml config | `Codex-Instructions.md`, `Meta/AI Handoff Summary.md`, `Hubs/00-Hub.md` | Log task summaries to `00-CAPTURE/App Captures/` with source_app: Codex |
+| Codex | Local goal runs and env toml config | `Codex-Instructions.md`, `_Meta/AI Handoff Summary.md`, `Hubs/00-Hub.md` | Log task summaries to `00-CAPTURE/App Captures/` with source_app: Codex |
 | Grok Build | Native skills in `~/.grok/skills` | `Grok-Build-Instructions.md`, sync-all output from DOV Library | Edit DOV source note, then resync |
 | Claude | Project instructions plus uploaded Library files | `Claude-Project-Instructions.md`, `master_context_latest.txt`, and core skills | Fold useful Claude outputs back into atomic notes before regenerating exports |
 | Gemini | System prompt, native skills, or uploaded files | `Gemini-System-Prompt.md`, `master_context_latest.txt`, `Mobile-Favorites.md` | Same as Claude: no separate Gemini-only skill fork |
 | Cursor / IDE agents | Repo instructions or pasted context | `AI Handoff Summary.md`, `/tp`, `/brain`, task skill | Keep code/project facts separate from vault source-truth notes |
 | Phone | Generated phone export | `Mobile-Favorites.md` | Capture rough notes, then promote durable pieces in DOV |
 | Local models | Pasted context window or local retrieval folder | `master_context_latest.txt` plus selected skills | Mark model output as unverified until checked against files |
-| Obsidian | Direct vault notes | `Meta/Second Brain Operations Dashboard.md` and this matrix | DOV remains the source of truth |
+| Obsidian | Direct vault notes | `_Meta/Second Brain Operations Dashboard.md` and this matrix | DOV remains the source of truth |
 
 
 ## Codex Plugin Routing
@@ -91,7 +91,7 @@ If clipboard access is unavailable, run the same commands without `--clip` and p
 3. Promote only durable improvements into `09-PROMPTS/Library`.
 4. Validate the changed skill or prompt.
 5. Regenerate mobile and external outputs.
-6. Update `Meta/Vault Cleanup Queue.md` only for unresolved risks.
+6. Update `_Meta/Vault Cleanup Queue.md` only for unresolved risks.
 
 ## Guardrails
 

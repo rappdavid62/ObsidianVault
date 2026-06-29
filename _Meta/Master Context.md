@@ -5,12 +5,12 @@ Expected Use Case: Durable baseline context for AI tools and future sessions wor
 Archive or Active: Active
 Supersedes: 08-TECH-AND-AI/AI_SYSTEM/MASTER_CONTEXT.md
 Replaced By:
-Canonical Home: Meta/Master Context.md
+Canonical Home: _Meta/Master Context.md
 Related Files:
-  - Meta/System Governance.md
-  - Meta/AI Command Layer.md
-  - Meta/AI Handoff Summary.md
-  - Meta/Active Projects Map.md
+  - _Meta/System Governance.md
+  - _Meta/AI Command Layer.md
+  - _Meta/AI Handoff Summary.md
+  - _Meta/Active Projects Map.md
   - 09-PROMPTS/Library/Hubs/00-Hub.md
 Last Reviewed: 2026-06-22
 ---
@@ -123,11 +123,11 @@ Use this file as starting context for helping David. Do not treat it as complete
 
 Check related files for details when needed, especially:
 
-- `Meta/System Governance.md`
-- `Meta/AI Command Layer.md`
-- `Meta/AI Handoff Summary.md`
-- `Meta/Active Projects Map.md`
-- `Meta/Vault Cleanup Queue.md`
+- `_Meta/System Governance.md`
+- `_Meta/AI Command Layer.md`
+- `_Meta/AI Handoff Summary.md`
+- `_Meta/Active Projects Map.md`
+- `_Meta/Vault Cleanup Queue.md`
 - `09-PROMPTS/Library/Hubs/00-Hub.md`
 - `01-PROJECTS/2026-SNF-Substrate-Systems-Project/01-Context/Current-Status.md`
 - `01-PROJECTS/2026-SNF-Substrate-Systems-Project/04-Tracking/job_search_tracker.md`

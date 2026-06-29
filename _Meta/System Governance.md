@@ -5,11 +5,11 @@ Expected Use Case: Rules for keeping David’s second brain, AI agents, automati
 Archive or Active: Active
 Supersedes: 08-TECH-AND-AI/AI_SYSTEM/AI SYSTEM SYSTEM GOVERNANCE.md
 Replaced By:
-Canonical Home: Meta/System Governance.md
+Canonical Home: _Meta/System Governance.md
 Related Files:
-  - Meta/Master Context.md
-  - Meta/AI Command Layer.md
-  - Meta/Vault Cleanup Queue.md
+  - _Meta/Master Context.md
+  - _Meta/AI Command Layer.md
+  - _Meta/Vault Cleanup Queue.md
 Last Reviewed: 2026-06-22
 ---
 
@@ -154,7 +154,7 @@ First check:
 5. Is this useful enough to save?
 6. Can it be linked instead of duplicated?
 
-If unsure, put it in `Meta/Vault Cleanup Queue.md` or `00-CAPTURE/`.
+If unsure, put it in `_Meta/Vault Cleanup Queue.md` or `00-CAPTURE/`.
 
 ## Current Status
 

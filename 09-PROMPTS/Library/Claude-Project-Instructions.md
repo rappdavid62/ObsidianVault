@@ -74,6 +74,6 @@ Claude output only counts as learning after it is reviewed and promoted into one
 - `09-PROMPTS/Library/Prompts/`
 - `09-PROMPTS/Library/Protocols/`
 - `09-PROMPTS/Library/Contexts/`
-- `Meta/Vault Cleanup Queue.md` for unresolved risks
+- `_Meta/Vault Cleanup Queue.md` for unresolved risks
 
 After writeback, regenerate `Mobile-Favorites.md` and any pasted context blocks.

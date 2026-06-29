@@ -1,4 +1,4 @@
-# Mobile Favorites - Obsidian Skill & Prompt Library
+# Mobile Favorites â€“ Obsidian Skill & Prompt Library
 # Generated for quick copy-paste on phone
 # Source: C:\ROOT_OBSIDIAN\DOV\09-PROMPTS\Library
 # Tip: Start with /bootstrap, then add /daily-execution, /tp, /low, or /council when needed.
@@ -16,7 +16,7 @@ domain: [meta, systems, library, ai-setup]
 energy: medium
 invocation: ["/brain", "run second brain control loop", "monitor and improve the vault", "make the vault smarter"]
 compatible_with: [all, obsidian, gpt, claude, local, phone]
-version: 1
+version: 2
 last_reviewed: 2026-06-28
 tags: [meta, maintenance, systems, external-memory, standards]
 ---
@@ -49,14 +49,14 @@ Everything else is a derivative, snapshot, app-specific surface, or project arti
 ## Core Process
 
 1. **Bootstrap the current state**
-   - Read `Meta/Master Context.md`.
-   - Read `Meta/AI Command Layer.md`.
+   - Read `_Meta/Master Context.md`.
+   - Read `_Meta/AI Command Layer.md`.
    - Read `09-PROMPTS/Library/Hubs/00-Hub.md`.
    - Read `08-TECH-AND-AI/Obsidian Integration/Integration Hub.md`.
-   - Read `Meta/Second Brain Completion Audit.md` before claiming full-goal completion.
-   - Read `Meta/Second Brain Runbook.md`.
-   - Read `Meta/Vault Cleanup Queue.md`.
-   - Read `Meta/Second Brain Learning Ledger.md`.
+   - Read `_Meta/Second Brain Completion Audit.md` before claiming full-goal completion.
+   - Read `_Meta/Second Brain Runbook.md`.
+   - Read `_Meta/Vault Cleanup Queue.md`.
+   - Read `_Meta/Second Brain Learning Ledger.md`.
    - Run `Tools/vault-health-check.py` when local command execution is available.
    - Check current worktree/file state before relying on prior memory.
 
@@ -81,14 +81,14 @@ Everything else is a derivative, snapshot, app-specific surface, or project arti
    - Generated packs that disagree with atomic notes.
    - App proof notes that disagree with `app-proof-tracker.json`.
    - Private/adult/sensitive material outside local-only areas.
-   - Duplicate source-of-truth claims across `Meta/`, `09-PROMPTS/`, and project folders.
+   - Duplicate source-of-truth claims across `_Meta/`, `09-PROMPTS/`, and project folders.
 
 5. **Promote learning**
-   - Review `Meta/Second Brain Learning Ledger.md` for unresolved lessons.
+   - Review `_Meta/Second Brain Learning Ledger.md` for unresolved lessons.
    - If a session produces a better reusable instruction, add it to the relevant atomic skill/prompt/context note.
    - If the learning is a one-off fact, put it in the relevant project or context note.
-   - If the learning is unresolved, add it to `Meta/Vault Cleanup Queue.md` or the relevant tracker.
-   - If the lesson is useful but not ready to promote, add or update an inbox item in `Meta/Second Brain Learning Ledger.md`.
+   - If the learning is unresolved, add it to `_Meta/Vault Cleanup Queue.md` or the relevant tracker.
+   - If the lesson is useful but not ready to promote, add or update an inbox item in `_Meta/Second Brain Learning Ledger.md`.
    - Bump `version` and `last_reviewed` only on notes actually reviewed or changed.
 
 6. **Regenerate derivatives**
@@ -121,11 +121,11 @@ Everything else is a derivative, snapshot, app-specific surface, or project arti
 - `priority-audit`
 - `tool-mode-decider`
 - `09-PROMPTS/Library/Hubs/00-Hub.md`
-- `Meta/Second Brain Completion Audit.md`
-- `Meta/Second Brain Runbook.md`
-- `Meta/Vault Cleanup Queue.md`
-- `Meta/Second Brain Learning Ledger.md`
-- `Meta/Second Brain Health Report.md`
+- `_Meta/Second Brain Completion Audit.md`
+- `_Meta/Second Brain Runbook.md`
+- `_Meta/Vault Cleanup Queue.md`
+- `_Meta/Second Brain Learning Ledger.md`
+- `_Meta/Second Brain Health Report.md`
 - `08-TECH-AND-AI/Obsidian Integration/App Proof Dashboard.md`
 - `09-PROMPTS/Library/Tools/vault-health-check.py`
 
@@ -135,6 +135,7 @@ Everything else is a derivative, snapshot, app-specific surface, or project arti
 - 2026-06-28: Added the learning ledger as the durable holding surface for lessons before promotion into Library, project, app-proof, or cleanup notes.
 - 2026-06-28: Added the runbook as the daily/weekly/triggered cadence for running the second-brain loops.
 - 2026-06-28: Added the completion audit as the requirement-by-requirement gate before marking the full DOV goal complete.
+- 2026-06-28: Retargeted control-layer paths from legacy `Meta/` references to the live `_Meta/` folder.
 - This is the top-level operator skill. It coordinates other skills; it does not replace them.
 - Default stance is non-destructive: report, link, archive, or queue before deleting/moving unless David explicitly approves a specific cleanup action.
 
@@ -151,7 +152,7 @@ domain: [meta, systems, library]
 energy: medium
 invocation: ["/vault-cleaner", "run vault cleaner", "clean up the vault", "file gardener"]
 compatible_with: [all, obsidian, gpt, claude, local]
-version: 1
+version: 2
 last_reviewed: 2026-06-28
 tags: [meta, maintenance, systems, external-memory, standards]
 ---
@@ -169,7 +170,7 @@ Keep DOV organized without turning cleanup into chaos. This skill audits file pl
 - After large imports, zips, app captures, generated packs, or AI-assisted reorgs.
 - When old folder names, duplicate notes, or stale paths make the vault hard to trust.
 - Before moving, archiving, deleting, or renaming anything.
-- When `Meta/Vault Cleanup Queue.md` needs review.
+- When `_Meta/Vault Cleanup Queue.md` needs review.
 
 ## Safety Rules
 
@@ -183,9 +184,9 @@ Keep DOV organized without turning cleanup into chaos. This skill audits file pl
 ## Core Process
 
 1. **Read governance**
-   - `Meta/System Governance.md`
-   - `Meta/AI Command Layer.md`
-   - `Meta/Vault Cleanup Queue.md`
+   - `_Meta/System Governance.md`
+   - `_Meta/AI Command Layer.md`
+   - `_Meta/Vault Cleanup Queue.md`
    - `09-PROMPTS/Library/Hubs/00-Hub.md`
 
 2. **Inspect current state**
@@ -205,7 +206,7 @@ Keep DOV organized without turning cleanup into chaos. This skill audits file pl
 
 4. **Act conservatively**
    - Fix small path/reference drift when the correct current path is proven.
-   - Add unresolved work to `Meta/Vault Cleanup Queue.md`.
+   - Add unresolved work to `_Meta/Vault Cleanup Queue.md`.
    - Regenerate derivative files only through existing tools.
    - Move files only when the destination and safety rule are clear.
    - Do not mass rename, delete, or flatten folders without explicit approval.
@@ -222,7 +223,7 @@ Keep DOV organized without turning cleanup into chaos. This skill audits file pl
 - **Bottom Line**: Current cleanup health in one sentence.
 - **Checked**: Files, folders, trackers, and commands inspected.
 - **Fixed Now**: Small safe corrections made.
-- **Queued**: Cleanup items added or left in `Meta/Vault Cleanup Queue.md`.
+- **Queued**: Cleanup items added or left in `_Meta/Vault Cleanup Queue.md`.
 - **Risks**: Privacy, source-truth, or sync risks.
 - **Needs Approval**: Any move/delete/archive action that should not be automatic.
 - **Next Small Action**: One concrete cleanup step.
@@ -232,13 +233,14 @@ Keep DOV organized without turning cleanup into chaos. This skill audits file pl
 - `second-brain-control-loop`
 - `library-gardener`
 - `ai-setup-audit`
-- `Meta/Vault Cleanup Queue.md`
-- `Meta/System Governance.md`
+- `_Meta/Vault Cleanup Queue.md`
+- `_Meta/System Governance.md`
 - `09-PROMPTS/Library/README.md`
 
 ## Notes & History
 
 - Created on 2026-06-28 to turn the existing cleanup queue into a reusable, cross-program skill.
+- 2026-06-28: Retargeted governance and cleanup queue paths from legacy `Meta/` references to the live `_Meta/` folder.
 - This skill is intentionally conservative. A trusted second brain should make cleanup safer, not more dramatic.
 
 

@@ -5,14 +5,14 @@ Expected Use Case: High-level navigation map for David’s Obsidian vault and AI
 Archive or Active: Active
 Supersedes:
 Replaced By:
-Canonical Home: Meta/Vault Master Index.md
+Canonical Home: _Meta/Vault Master Index.md
 Related Files:
-  - Meta/Master Context.md
-  - Meta/AI Command Layer.md
-  - Meta/Second Brain Operations Dashboard.md
-  - Meta/Legacy Bundle Migration Inventory.md
-  - Meta/Active Projects Map.md
-  - Meta/Vault Cleanup Queue.md
+  - _Meta/Master Context.md
+  - _Meta/AI Command Layer.md
+  - _Meta/Second Brain Operations Dashboard.md
+  - _Meta/Legacy Bundle Migration Inventory.md
+  - _Meta/Active Projects Map.md
+  - _Meta/Vault Cleanup Queue.md
 Last Reviewed: 2026-06-28
 ---
 
@@ -146,7 +146,7 @@ Purpose: imported or clipped web/reference material.
 
 Status: Triage when used; promote durable items into project/resource notes.
 
-### `Meta/`
+### `_Meta/`
 
 Purpose: current governance, context, operations, and source-truth maps.
 
@@ -175,10 +175,10 @@ _PRIVATE/SMUT/
 Canonical AI infrastructure files should now live in:
 
 ```text
-Meta/
+_Meta/
 ```
 
-The older `08-TECH-AND-AI/AI_SYSTEM/` files are not present in the current `08-TECH-AND-AI/` root. Superseded copies are registered in `Meta/Legacy Bundle Migration Inventory.md`.
+The older `08-TECH-AND-AI/AI_SYSTEM/` files are not present in the current `08-TECH-AND-AI/` root. Superseded copies are registered in `_Meta/Legacy Bundle Migration Inventory.md`.
 
 The prompt/skill source truth remains:
 
@@ -189,13 +189,13 @@ The prompt/skill source truth remains:
 Canonical second-brain operations dashboard:
 
 ```text
-Meta/Second Brain Operations Dashboard.md
+_Meta/Second Brain Operations Dashboard.md
 ```
 
 Legacy bundle/archive register:
 
 ```text
-Meta/Legacy Bundle Migration Inventory.md
+_Meta/Legacy Bundle Migration Inventory.md
 ```
 
 Top-level operator skills:
@@ -208,7 +208,7 @@ Top-level operator skills:
 ## Immediate Risks
 
 1. Adult/private review candidates must be moved before pushing.
-2. Legacy `09-PROMPTS/Prompt-Library/` material needs selective migration/archive review through `Meta/Legacy Bundle Migration Inventory.md`.
+2. Legacy `09-PROMPTS/Prompt-Library/` material needs selective migration/archive review through `_Meta/Legacy Bundle Migration Inventory.md`.
 3. State Not Fate zips are archive/export material, not automatically live source.
 4. `.cursorrules` is derivative and may contain older/conflicting facts. Do not treat it as canonical.
 

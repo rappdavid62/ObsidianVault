@@ -4,7 +4,7 @@ name: mvd-anchors
 aliases: [mvd, anchors, /mvd]
 description: >
   Define and protect the Minimum Viable Day (MVD) floor with tiny, non-negotiable biological and identity anchors on low/collapse energy days. Generate proof, preserve self-trust, and enable fast restart speed. Use every morning or whenever energy is near zero.
-domain: [recovery, execution, low-energy]
+domain: [recovery, execution]
 energy: low
 invocation: ["/mvd", "mvd anchors", "floor anchors today", "set my mvd"]
 compatible_with: [grok, claude, gpt, local, all]

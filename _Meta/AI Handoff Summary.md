@@ -5,13 +5,13 @@ Expected Use Case: Compact handoff David can paste into any AI tool to explain t
 Archive or Active: Active
 Supersedes:
 Replaced By:
-Canonical Home: Meta/AI Handoff Summary.md
+Canonical Home: _Meta/AI Handoff Summary.md
 Related Files:
-  - Meta/Master Context.md
-  - Meta/System Governance.md
-  - Meta/AI Command Layer.md
-  - Meta/Second Brain Operations Dashboard.md
-  - Meta/Legacy Bundle Migration Inventory.md
+  - _Meta/Master Context.md
+  - _Meta/System Governance.md
+  - _Meta/AI Command Layer.md
+  - _Meta/Second Brain Operations Dashboard.md
+  - _Meta/Legacy Bundle Migration Inventory.md
   - 09-PROMPTS/Library/External Program Skill Wiring Matrix.md
 Last Reviewed: 2026-06-28
 ---
@@ -30,15 +30,15 @@ If access is missing, ask for pasted content, uploaded files, folder tree, zip, 
 
 ## Canonical Files To Read First
 
-1. `Meta/Master Context.md`
-2. `Meta/System Governance.md`
-3. `Meta/AI Command Layer.md`
-4. `Meta/Vault Master Index.md`
-5. `Meta/Active Projects Map.md`
-6. `Meta/Vault Cleanup Queue.md`
+1. `_Meta/Master Context.md`
+2. `_Meta/System Governance.md`
+3. `_Meta/AI Command Layer.md`
+4. `_Meta/Vault Master Index.md`
+5. `_Meta/Active Projects Map.md`
+6. `_Meta/Vault Cleanup Queue.md`
 7. `09-PROMPTS/Library/Hubs/00-Hub.md`
-8. `Meta/Second Brain Operations Dashboard.md`
-9. `Meta/Legacy Bundle Migration Inventory.md`
+8. `_Meta/Second Brain Operations Dashboard.md`
+9. `_Meta/Legacy Bundle Migration Inventory.md`
 10. `09-PROMPTS/Library/External Program Skill Wiring Matrix.md`
 
 ## Active Priorities

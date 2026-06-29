@@ -5,12 +5,12 @@ Expected Use Case: Practical cadence map for running DOV as a second brain witho
 Archive or Active: Active
 Supersedes:
 Replaced By:
-Canonical Home: Meta/Second Brain Runbook.md
+Canonical Home: _Meta/Second Brain Runbook.md
 Related Files:
-  - Meta/Second Brain Operations Dashboard.md
-  - Meta/Second Brain Health Report.md
-  - Meta/Second Brain Learning Ledger.md
-  - Meta/Vault Cleanup Queue.md
+  - _Meta/Second Brain Operations Dashboard.md
+  - _Meta/Second Brain Health Report.md
+  - _Meta/Second Brain Learning Ledger.md
+  - _Meta/Vault Cleanup Queue.md
   - 09-PROMPTS/Library/Skills/second-brain-control-loop.md
   - 09-PROMPTS/Library/Skills/nightly-personal-systems-review.md
   - 09-PROMPTS/Library/Skills/library-gardener.md
@@ -40,8 +40,8 @@ Run when energy allows, ideally near the existing 9 PM review cadence.
 
 1. Run `/nightly` from `09-PROMPTS/Library/Skills/nightly-personal-systems-review.md`.
 2. Register 1-5 concrete proofs from the day.
-3. Add useful reusable lessons to `Meta/Second Brain Learning Ledger.md`.
-4. Add unresolved cleanup risks to `Meta/Vault Cleanup Queue.md`.
+3. Add useful reusable lessons to `_Meta/Second Brain Learning Ledger.md`.
+4. Add unresolved cleanup risks to `_Meta/Vault Cleanup Queue.md`.
 5. Stop after one first action for tomorrow.
 
 Floor version:
@@ -54,13 +54,14 @@ Floor version:
 
 Run when the vault has changed or once per week.
 
-1. Read `Meta/Second Brain Operations Dashboard.md`.
+1. Read `_Meta/Second Brain Operations Dashboard.md`.
 2. Run `python "09-PROMPTS\Library\Tools\vault-health-check.py" --write`.
-3. Run `/brain`.
-4. Review `Meta/Second Brain Learning Ledger.md`.
-5. Run `library-gardener` only if Library notes changed.
-6. Run `/vault-cleaner` only if file placement, privacy, stale paths, or source-truth drift changed.
-7. Regenerate `Mobile-Favorites.md` if the portable skill surface changed.
+3. Run `python "09-PROMPTS\Library\Tools\vault-health-check.py" --fail-on-attention` before any push, publish, or external sync.
+4. Run `/brain`.
+5. Review `_Meta/Second Brain Learning Ledger.md`.
+6. Run `library-gardener` only if Library notes changed.
+7. Run `/vault-cleaner` only if file placement, privacy, stale paths, or source-truth drift changed.
+8. Regenerate `Mobile-Favorites.md` if the portable skill surface changed.
 
 ## Triggered Runs
 
@@ -73,7 +74,7 @@ Run the relevant loop after these events:
 | New file import, zip, capture batch, or old folder discovered | `/vault-cleaner` |
 | Prompt, skill, protocol, or context changed | `emit-skill.py --validate <name>` and phone export if relevant |
 | State Not Fate deploy/source claim | Check the SNF source-boundary note before any production claim |
-| Private/adult/sensitive file found | Queue in `Meta/Vault Cleanup Queue.md`; do not quote or move without approval |
+| Private/adult/sensitive file found | Queue in `_Meta/Vault Cleanup Queue.md`; do not quote or move without approval |
 
 ## Output Contract
 

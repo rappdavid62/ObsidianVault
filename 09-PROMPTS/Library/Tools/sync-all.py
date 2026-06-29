@@ -5,7 +5,7 @@ sync-all.py
 Unified sync script that:
 1. Scans Obsidian Library Skills and Protocols (09-PROMPTS/Library/).
 2. Validates each note's frontmatter against the Dictionary.md standards.
-a3. Formats and writes them as native skills for Grok (~/.grok/skills/) and Gemini (~/.gemini/config/plugins/snf-library-plugin/skills/).
+3. Formats and writes them as native skills for Grok (~/.grok/skills/) and Gemini (~/.gemini/config/plugins/snf-library-plugin/skills/).
 4. Re-runs phone favorites export to Library/Mobile-Favorites.md.
 5. Builds a consolidated master context and writes it to:
    - Library/Tools/master_context_latest.txt
@@ -132,6 +132,49 @@ def to_grok_skill(name: str, fm: dict, body: str) -> str:
     out.append("Prefer editing the source in the vault and re-syncing.")
     return "\n".join(out)
 
+def _harvest_dictionary_table(text: str, section_keyword: str) -> set[str]:
+    """First column values from a markdown table under a ## section heading."""
+    values: set[str] = set()
+    in_section = False
+    for line in text.splitlines():
+        stripped = line.strip()
+        if stripped.startswith("## ") and section_keyword in stripped:
+            in_section = True
+            continue
+        if in_section and stripped.startswith("## "):
+            break
+        if not in_section or not stripped.startswith("|"):
+            continue
+        if re.match(r"^\|\s*-+", stripped):
+            continue
+        cells = [cell.strip() for cell in stripped.strip("|").split("|")]
+        if not cells:
+            continue
+        val = cells[0].strip().lower()
+        if val and val not in {"value", "domain", "type", "energy"}:
+            values.add(val)
+    return values
+
+
+def _harvest_dictionary_tags(text: str) -> set[str]:
+    """Bullet-list tag tokens under the Tags section."""
+    tags: set[str] = set()
+    in_section = False
+    for line in text.splitlines():
+        stripped = line.strip()
+        if stripped.startswith("## Tags"):
+            in_section = True
+            continue
+        if in_section and stripped.startswith("## "):
+            break
+        if in_section and stripped.startswith("- "):
+            for part in stripped[2:].split(","):
+                tag = part.strip().lower()
+                if tag:
+                    tags.add(tag)
+    return tags
+
+
 def load_dictionary(vault: Path) -> dict:
     result = {
         "types": set(),
@@ -143,24 +186,22 @@ def load_dictionary(vault: Path) -> dict:
     if not dict_path.exists():
         result["types"] = {"skill", "prompt", "protocol", "context", "guide", "hub", "meta"}
         result["energies"] = {"collapse", "low", "medium", "high", "any", "variable"}
-        result["domains"] = {"meta", "library", "context", "job", "execution", "social", "research", "decision-making", "recovery", "health", "creative", "ai-setup", "philosophy", "finance", "prs", "sobriety", "career", "systems", "philosophy-snf"}
-        result["tags"] = {"low-energy", "mvd", "floor", "anchors", "floor-wins", "proof", "restart", "no-shame", "daily", "weekly", "visible-proof", "external-memory", "hope-activation", "reading-error", "prediction-error", "cognitive-offloading", "substrate", "restart-speed", "resilience-rate", "hope-meter", "counter-script", "trigger-scan", "state-not-fate", "philosophy-snf", "sobriety"}
+        result["domains"] = {
+            "meta", "library", "context", "job", "execution", "social", "research",
+            "decision-making", "recovery", "health", "creative", "ai-setup", "philosophy",
+            "finance", "prs", "sobriety", "career", "systems", "philosophy-snf",
+        }
         return result
 
     text = dict_path.read_text(encoding="utf-8", errors="ignore")
-    
-    # Simple harvesting
-    for e in ["collapse", "low", "medium", "high", "any", "variable"]:
-        if e in text.lower():
-            result["energies"].add(e)
-            
-    known_domains = ["meta", "library", "context", "job", "execution", "social", "research", "decision-making", "recovery", "health", "creative", "ai-setup", "philosophy", "finance", "prs", "sobriety", "career", "systems", "philosophy-snf"]
-    for d in known_domains:
-        if d in text:
-            result["domains"].add(d)
+    result["types"] = _harvest_dictionary_table(text, "Types")
+    result["domains"] = _harvest_dictionary_table(text, "Domains")
+    result["energies"] = _harvest_dictionary_table(text, "Energy")
+    result["tags"] = _harvest_dictionary_tags(text)
 
+    # Safety net if table parsing misses anything
     result["types"].update({"skill", "prompt", "protocol", "context", "guide", "hub", "meta"})
-    result["domains"].update({"context", "philosophy-snf", "sobriety", "recovery", "execution"})
+    result["energies"].update({"collapse", "low", "medium", "high", "any", "variable"})
     return result
 
 def validate_skill(path: Path, allowed: dict) -> list[str]:

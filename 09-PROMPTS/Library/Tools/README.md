@@ -50,6 +50,18 @@ python build-master-context.py --skills mvd-anchors,floor-wins,prs-safety-check
 
 This is the best way to give any AI (Claude, GPT, local, Cursor, etc.) a strong "you + your full Library" context in one go.
 
+### sync-all.py — Unified synchronization engine
+Unified export and propagation engine. It validates skills against Dictionary.md, formats and writes native skills to Grok (`~/.grok/skills`) and Gemini (`~/.gemini/config/plugins/snf-library-plugin/skills`), regenerates `Mobile-Favorites.md`, and updates `.cursorrules` at the vault roots.
+```powershell
+python sync-all.py
+```
+
+### vault-watcher.py — Guarded real-time auto-sync watcher
+A lightweight background script that uses polling to monitor the Prompt Library folder. When a save is detected inside `09-PROMPTS/Library/`, it runs `vault-health-check.py --fail-on-attention` first. It triggers `sync-all.py` only when the strict health gate passes, so unresolved private-boundary, cleanup, source-truth, or tracked-deletion risks do not propagate outward.
+```powershell
+python vault-watcher.py
+```
+
 ### export-for-phone.py — Mobile ubiquity
 
 Generates a single clean `Mobile-Favorites.md` (or custom path) containing the most useful skills in a format that's easy to open and copy on a phone.
@@ -67,9 +79,12 @@ Checks the core DOV control surfaces, private Git ignore boundaries, generated o
 ```powershell
 python vault-health-check.py
 python vault-health-check.py --write
+python vault-health-check.py --fail-on-attention
 ```
 
-Use `--write` to refresh `Meta/Second Brain Health Report.md` after a `/brain`, `library-gardener`, or `/vault-cleaner` pass.
+Use `--write` to refresh `_Meta/Second Brain Health Report.md` after a `/brain`, `library-gardener`, or `/vault-cleaner` pass.
+
+Use `--fail-on-attention` for pre-push or automation checks. It exits with code `2` when the report finds active source-truth drift, unresolved high-risk cleanup/private-boundary items, or tracked-file deletions in Git state.
 
 ### sync-to-grok.py — Live integration with this Grok environment
 

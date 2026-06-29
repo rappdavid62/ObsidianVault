@@ -5,11 +5,11 @@ Expected Use Case: Operating rules for AI tools working with David’s vault, fi
 Archive or Active: Active
 Supersedes: 08-TECH-AND-AI/AI_SYSTEM/SKILL.md
 Replaced By:
-Canonical Home: Meta/AI Command Layer.md
+Canonical Home: _Meta/AI Command Layer.md
 Related Files:
-  - Meta/Master Context.md
-  - Meta/System Governance.md
-  - Meta/AI Handoff Summary.md
+  - _Meta/Master Context.md
+  - _Meta/System Governance.md
+  - _Meta/AI Handoff Summary.md
 Last Reviewed: 2026-06-22
 ---
 
@@ -37,11 +37,11 @@ If the source is missing, ask for one of:
 
 Read these first when available:
 
-1. `Meta/Master Context.md`
-2. `Meta/System Governance.md`
-3. `Meta/Vault Master Index.md`
-4. `Meta/Active Projects Map.md`
-5. `Meta/Vault Cleanup Queue.md`
+1. `_Meta/Master Context.md`
+2. `_Meta/System Governance.md`
+3. `_Meta/Vault Master Index.md`
+4. `_Meta/Active Projects Map.md`
+5. `_Meta/Vault Cleanup Queue.md`
 6. `09-PROMPTS/Library/Hubs/00-Hub.md`
 
 ## Canonical Skill Layer
@@ -103,7 +103,7 @@ Use this default response format:
 
 ## File Creation Rule
 
-Before creating any new durable file, apply `Meta/System Governance.md`:
+Before creating any new durable file, apply `_Meta/System Governance.md`:
 
 - assign one Primary Deployment Target
 - check for existing canonical home

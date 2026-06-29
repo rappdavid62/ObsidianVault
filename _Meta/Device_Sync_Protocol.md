@@ -5,10 +5,10 @@ Expected Use Case: Guidance for safe git sync and conflict resolution across dev
 Archive or Active: Active
 Supersedes:
 Replaced By:
-Canonical Home: Meta/Device_Sync_Protocol.md
+Canonical Home: _Meta/Device_Sync_Protocol.md
 Related Files:
   - git-sync.ps1
-  - Meta/Master Context.md
+  - _Meta/Master Context.md
 Last Reviewed: 2026-06-25
 ---
 
