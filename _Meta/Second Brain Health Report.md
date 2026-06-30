@@ -4,7 +4,7 @@ Primary Deployment Target: AI Infrastructure
 Expected Use Case: Current generated health report for DOV second-brain maintenance.
 Archive or Active: Active
 Canonical Home: _Meta/Second Brain Health Report.md
-Last Generated: 2026-06-30 02:13
+Last Generated: 2026-06-30 02:16
 ---
 
 # Second Brain Health Report
@@ -86,38 +86,37 @@ DOV health is **attention needed**. The canonical Library path is `C:\ROOT_OBSID
 
 ## Git State
 
-- INFO: 156 changed/untracked paths
-- INFO: 2 modified, 147 untracked, 6 deleted
-- `D  01-PROJECTS/STATENOTFATE/5-year-architecture-one-pager.md`
-- `D  01-PROJECTS/STATENOTFATE/NOTES.md`
-- `D  01-PROJECTS/STATENOTFATE/anchor-library-v2.md`
-- `D  "01-PROJECTS/STATENOTFATE/depress q.md"`
-- `D  01-PROJECTS/STATENOTFATE/evolving-intake-questionnaire.md`
-- `D  "01-PROJECTS/STATENOTFATE/universal_prompt_and_skill_library 1.md"`
-- `M  01-PROJECTS/STATENOTFATE/universal_prompt_and_skill_library.md`
-- `M  09-PROMPTS/Library/Dictionary.md`
-- `MM "_Meta/Second Brain Health Report.md"`
-- `?? 01-PROJECTS/STATENOTFATE/snf-capture-stubs.md`
-- `?? 01-PROJECTS/SUICIDE_PREVENTION/NotebookLM_Suicide_Prevention_State_Not_Fate_Handoff.md`
-- `?? "08-TECH-AND-AI/ClickUp for an Obsidian First Personal System.pdf"`
-- `?? "08-TECH-AND-AI/Codex Course - AI Wisebase Learning Pack.md"`
-- `?? "08-TECH-AND-AI/Codex Course PDFs/Codex Course Part 1 - Foundations.pdf"`
-- `?? "08-TECH-AND-AI/Codex Course PDFs/Codex Course Part 2 - Setup and Skills.pdf"`
-- `?? "08-TECH-AND-AI/Codex Course PDFs/Codex Course Part 3 - Plugins and Tools.pdf"`
-- `?? "08-TECH-AND-AI/Codex Course PDFs/Codex Course Part 4 - Review Automation and Reference.pdf"`
-- `?? 09-PROMPTS/Library/Tools/daily-status.ps1`
-- `?? 09-PROMPTS/Library/Tools/git-cleanup-prep.py`
-- `?? 09-PROMPTS/Library/Tools/start-vault-watcher.ps1`
-- `?? 09-PROMPTS/Library/Tools/validate-library.py`
-- `?? 09-PROMPTS/Library/Tools/vault-watcher.py`
+- INFO: 134 changed/untracked paths
+- INFO: 0 modified, 134 untracked, 0 deleted
 - `?? Untitled.md`
 - `?? tmp/pdfs/chrome-profile-part-1/Crashpad/metadata`
 - `?? tmp/pdfs/chrome-profile-part-1/Crashpad/reports/3270b0be-9160-4989-a92e-74c9401baf59.dmp`
-- ... 131 more paths omitted
-- RISK: tracked files are deleted in Git state; resolve or explicitly approve the rename/removal before push.
+- `?? tmp/pdfs/chrome-profile-part-1/Crashpad/settings.dat`
+- `?? tmp/pdfs/chrome-profile-part-1/CrashpadMetrics-active.pma`
+- `?? "tmp/pdfs/chrome-profile-part-1/Default/Account Web Data"`
+- `?? "tmp/pdfs/chrome-profile-part-1/Default/Account Web Data-journal"`
+- `?? "tmp/pdfs/chrome-profile-part-1/Default/Affiliation Database"`
+- `?? "tmp/pdfs/chrome-profile-part-1/Default/Affiliation Database-journal"`
+- `?? tmp/pdfs/chrome-profile-part-1/Default/Cache/Cache_Data/data_0`
+- `?? tmp/pdfs/chrome-profile-part-1/Default/Cache/Cache_Data/data_1`
+- `?? tmp/pdfs/chrome-profile-part-1/Default/Cache/Cache_Data/data_2`
+- `?? tmp/pdfs/chrome-profile-part-1/Default/Cache/Cache_Data/data_3`
+- `?? tmp/pdfs/chrome-profile-part-1/Default/Cache/Cache_Data/index`
+- `?? tmp/pdfs/chrome-profile-part-1/Default/Cache/No_Vary_Search/journal.baj`
+- `?? tmp/pdfs/chrome-profile-part-1/Default/Cache/No_Vary_Search/snapshot.baf`
+- `?? tmp/pdfs/chrome-profile-part-1/Default/ClientCertificates/LOCK`
+- `?? tmp/pdfs/chrome-profile-part-1/Default/ClientCertificates/LOG`
+- `?? "tmp/pdfs/chrome-profile-part-1/Default/Code Cache/js/index"`
+- `?? "tmp/pdfs/chrome-profile-part-1/Default/Code Cache/js/index-dir/the-real-index"`
+- `?? "tmp/pdfs/chrome-profile-part-1/Default/Code Cache/wasm/index"`
+- `?? "tmp/pdfs/chrome-profile-part-1/Default/Code Cache/wasm/index-dir/the-real-index"`
+- `?? tmp/pdfs/chrome-profile-part-1/Default/DawnGraphiteCache/data_0`
+- `?? tmp/pdfs/chrome-profile-part-1/Default/DawnGraphiteCache/data_1`
+- `?? tmp/pdfs/chrome-profile-part-1/Default/DawnGraphiteCache/data_2`
+- ... 109 more paths omitted
 
 ## Next Small Action
 
-- Resolve or explicitly approve tracked-file deletions/renames in Git state before any push.
+- Resolve or explicitly defer high-risk cleanup items in `_Meta/Vault Cleanup Queue.md` before any push.
 - Run `library-gardener` if Library files changed.
 - Run `vault-cleaner` for unresolved file-placement or privacy-boundary items.
