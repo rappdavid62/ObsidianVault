@@ -19,15 +19,16 @@ Use this when:
 
 ## Types (`type`)
 
-| Value     | Description                                      | When to use                                      | Example notes                  |
-|-----------|--------------------------------------------------|--------------------------------------------------|--------------------------------|
-| skill     | Structured, repeatable capability with steps/rules | Agentic behaviors you want to invoke or compose | daily-job-search, low-energy-execution |
-| prompt    | Lighter, one-shot or template-style instructions | Quick reusable prompts or command blocks        | Specific command templates     |
-| protocol  | High-level meta-instructions or frameworks       | Universal ways of thinking/operating            | thoroughness-protocol, council-strategy |
-| context   | Reusable background information or status        | Persistent facts that get injected              | master-bio                     |
-| guide     | Explanatory or how-to documentation              | Usage instructions for the system itself        | how-to-use-ubiquitously        |
-| hub       | Dashboard / MOC for discovery and overview       | Central indexes and live views                  | 00-Hub                         |
-| meta      | Self-referential notes about the Library         | Schema, dictionary, gardener processes          | SCHEMA, dictionary, library-gardener |
+| Value            | Description                                      | When to use                                      | Example notes                  |
+|------------------|--------------------------------------------------|--------------------------------------------------|--------------------------------|
+| skill            | Structured, repeatable capability with steps/rules | Agentic behaviors you want to invoke or compose | daily-job-search, low-energy-execution |
+| prompt           | Lighter, one-shot or template-style instructions | Quick reusable prompts or command blocks        | Specific command templates     |
+| protocol         | High-level meta-instructions or frameworks       | Universal ways of thinking/operating            | thoroughness-protocol, council-strategy |
+| context          | Reusable background information or status        | Persistent facts that get injected              | master-bio                     |
+| guide            | Explanatory or how-to documentation              | Usage instructions for the system itself        | how-to-use-ubiquitously        |
+| hub              | Dashboard / MOC for discovery and overview       | Central indexes and live views                  | 00-Hub                         |
+| meta             | Self-referential notes about the Library         | Schema, dictionary, gardener processes          | SCHEMA, dictionary, library-gardener |
+| scoured-resource | Scoured mental health / self-help material       | Fact, snippet, contact, or exercise from internet | depression-treatments-cbt      |
 
 ## Domains (`domain`)
 

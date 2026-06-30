@@ -1,0 +1,158 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+4 0 obj
+<< /Length 3288 >>
+stream
+BT /F1 8.50 Tf 54.00 764.00 Td (Codex Course Part 1 - Foundations) Tj ET
+0.75 w 54.00 754.00 m 558.00 754.00 l S
+BT /F1 8.50 Tf 520.00 26.00 Td (Page 1) Tj ET
+BT /F2 9.00 Tf 54.00 696.00 Td (Codex Course for David) Tj ET
+BT /F2 22.00 Tf 54.00 666.00 Td (Codex Course Part 1 - Foundations) Tj ET
+BT /F1 12.50 Tf 54.00 634.00 Td (What Codex is, the prompt formula, plans, goals, threads, and context.) Tj ET
+0.75 w 54.00 607.00 m 558.00 607.00 l S
+BT /F1 10.50 Tf 54.00 583.00 Td (Source note: built from the DOV Codex Course - AI Wisebase Learning Pack. Official Codex) Tj ET
+BT /F1 10.50 Tf 54.00 569.00 Td (source refreshed on 2026-06-29.) Tj ET
+BT /F2 15.00 Tf 54.00 537.00 Td (Course Promise) Tj ET
+0.75 w 54.00 524.00 m 558.00 524.00 l S
+BT /F1 10.50 Tf 54.00 512.00 Td (By the end, David should be able to:) Tj ET
+BT /F1 10.50 Tf 66.00 493.00 Td (- Choose the right Codex surface for a task: app, CLI, IDE extension, cloud, Browser,) Tj ET
+BT /F1 10.50 Tf 66.00 479.00 Td (Chrome, Computer Use, or connector.) Tj ET
+BT /F1 10.50 Tf 66.00 463.00 Td (- Prompt Codex with clear goal, context, constraints, and done-when criteria.) Tj ET
+BT /F1 10.50 Tf 66.00 447.00 Td (- Use plans, goals, reviews, and tests without overcomplicating the work.) Tj ET
+BT /F1 10.50 Tf 66.00 431.00 Td (- Understand what skills, plugins, MCP servers, hooks, memories, rules, and automations) Tj ET
+BT /F1 10.50 Tf 66.00 417.00 Td (are for.) Tj ET
+BT /F1 10.50 Tf 66.00 401.00 Td (- Decide when to let Codex act, when to ask it to inspect first, and when to keep the task) Tj ET
+BT /F1 10.50 Tf 66.00 387.00 Td (read-only.) Tj ET
+BT /F1 10.50 Tf 66.00 371.00 Td (- Turn repeated workflows into reusable skills or automations.) Tj ET
+BT /F1 10.50 Tf 66.00 355.00 Td (- Use AI Wisebase as the learning memory: course notes, flashcards, quizzes, knowledge) Tj ET
+BT /F1 10.50 Tf 66.00 341.00 Td (graph, and concept videos.) Tj ET
+BT /F2 12.50 Tf 54.00 319.00 Td (Module 1 - What Codex Is) Tj ET
+BT /F1 10.50 Tf 54.00 300.00 Td (Codex is OpenAI's software-development agent. It can write code, understand unfamiliar) Tj ET
+BT /F1 10.50 Tf 54.00 286.00 Td (codebases, review code, debug failures, and automate repetitive development tasks.) Tj ET
+BT /F1 10.50 Tf 54.00 267.00 Td (Core idea: Codex works best when treated like a configured teammate, not a one-off chatbot.) Tj ET
+BT /F1 10.50 Tf 54.00 248.00 Td (Practice:) Tj ET
+BT /F3 8.50 Tf 64.00 226.00 Td (Explain what Codex can do in this workspace. Separate coding, research, file editing, browser) Tj ET
+BT /F3 8.50 Tf 64.00 215.00 Td (testing, app control, and connected-app actions.) Tj ET
+BT /F1 10.50 Tf 54.00 196.00 Td (Mastery check:) Tj ET
+BT /F1 10.50 Tf 66.00 177.00 Td (- David can explain the difference between asking ChatGPT a question and asking Codex to) Tj ET
+BT /F1 10.50 Tf 66.00 163.00 Td (work in a local project.) Tj ET
+BT /F1 10.50 Tf 66.00 147.00 Td (- David can name at least three risks Codex helps manage through sandboxing, approvals,) Tj ET
+BT /F1 10.50 Tf 66.00 133.00 Td (and review.) Tj ET
+BT /F1 10.50 Tf 54.00 114.00 Td (Sources:) Tj ET
+BT /F1 10.50 Tf 66.00 95.00 Td (- https://developers.openai.com/codex/overview) Tj ET
+BT /F1 10.50 Tf 66.00 79.00 Td (- https://developers.openai.com/codex/learn/best-practices) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 10 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 3496 >>
+stream
+BT /F1 8.50 Tf 54.00 764.00 Td (Codex Course Part 1 - Foundations) Tj ET
+0.75 w 54.00 754.00 m 558.00 754.00 l S
+BT /F1 8.50 Tf 520.00 26.00 Td (Page 2) Tj ET
+BT /F2 12.50 Tf 54.00 735.00 Td (Module 2 - The Prompt Formula) Tj ET
+BT /F1 10.50 Tf 54.00 716.00 Td (Use this default structure:) Tj ET
+BT /F3 8.50 Tf 64.00 694.00 Td (Goal:) Tj ET
+BT /F3 8.50 Tf 64.00 683.00 Td (Context:) Tj ET
+BT /F3 8.50 Tf 64.00 672.00 Td (Constraints:) Tj ET
+BT /F3 8.50 Tf 64.00 661.00 Td (Done when:) Tj ET
+BT /F1 10.50 Tf 54.00 642.00 Td (Example:) Tj ET
+BT /F3 8.50 Tf 64.00 620.00 Td (Goal: Create a short guide that teaches me how to use Codex Browser and Computer Use.) Tj ET
+BT /F3 8.50 Tf 64.00 609.00 Td (Context: I am on Windows in C:\\ROOT_OBSIDIAN\\DOV and I use Obsidian as my second brain.) Tj ET
+BT /F3 8.50 Tf 64.00 598.00 Td (Constraints: Keep it beginner-friendly. Separate safe read-only actions from actions that) Tj ET
+BT /F3 8.50 Tf 64.00 587.00 Td (change files or accounts.) Tj ET
+BT /F3 8.50 Tf 64.00 576.00 Td (Done when: The guide has a 20-minute practice exercise and a checklist I can follow.) Tj ET
+BT /F1 10.50 Tf 54.00 557.00 Td (Practice:) Tj ET
+BT /F1 10.50 Tf 66.00 538.00 Td (- Rewrite three vague requests into the four-part format.) Tj ET
+BT /F1 10.50 Tf 66.00 522.00 Td (- Ask Codex to critique the prompt before doing the task.) Tj ET
+BT /F1 10.50 Tf 66.00 506.00 Td (- Ask Codex to identify missing context.) Tj ET
+BT /F1 10.50 Tf 54.00 487.00 Td (Mastery check:) Tj ET
+BT /F1 10.50 Tf 66.00 468.00 Td (- David can turn a fuzzy idea into a scoped prompt without needing a perfect technical) Tj ET
+BT /F1 10.50 Tf 66.00 454.00 Td (vocabulary.) Tj ET
+BT /F1 10.50 Tf 54.00 435.00 Td (Sources:) Tj ET
+BT /F1 10.50 Tf 66.00 416.00 Td (- https://developers.openai.com/codex/prompting) Tj ET
+BT /F1 10.50 Tf 66.00 400.00 Td (- https://developers.openai.com/codex/workflows) Tj ET
+BT /F2 12.50 Tf 54.00 378.00 Td (Module 3 - Plans, Goals, Threads, and Context) Tj ET
+BT /F1 10.50 Tf 54.00 359.00 Td (Use Plan mode when the work is unclear, risky, or multi-step. Use Goal mode when the task) Tj ET
+BT /F1 10.50 Tf 54.00 345.00 Td (may take many steps and needs a persistent definition of success.) Tj ET
+BT /F1 10.50 Tf 54.00 326.00 Td (Key terms:) Tj ET
+BT /F1 10.50 Tf 66.00 307.00 Td (- Thread: one Codex working conversation.) Tj ET
+BT /F1 10.50 Tf 66.00 291.00 Td (- Local thread: runs on this machine and can use local files and commands.) Tj ET
+BT /F1 10.50 Tf 66.00 275.00 Td (- Cloud thread: runs in an isolated remote environment.) Tj ET
+BT /F1 10.50 Tf 66.00 259.00 Td (- Context window: the amount of conversation, files, and tool output Codex can actively) Tj ET
+BT /F1 10.50 Tf 66.00 245.00 Td (hold.) Tj ET
+BT /F1 10.50 Tf 66.00 229.00 Td (- Compaction: Codex summarizes long context so work can continue.) Tj ET
+BT /F1 10.50 Tf 54.00 210.00 Td (Practice:) Tj ET
+BT /F3 8.50 Tf 64.00 188.00 Td (/plan) Tj ET
+BT /F3 8.50 Tf 64.00 177.00 Td (Interview me until this project idea is specific enough to become a Codex goal. Then draft the) Tj ET
+BT /F3 8.50 Tf 64.00 166.00 Td (final /goal text.) Tj ET
+BT /F1 10.50 Tf 54.00 147.00 Td (Mastery check:) Tj ET
+BT /F1 10.50 Tf 66.00 128.00 Td (- David can decide whether a task should be a one-off prompt, a plan, a goal, or an) Tj ET
+BT /F1 10.50 Tf 66.00 114.00 Td (automation.) Tj ET
+BT /F1 10.50 Tf 54.00 95.00 Td (Sources:) Tj ET
+BT /F1 10.50 Tf 66.00 76.00 Td (- https://developers.openai.com/codex/prompting) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 10 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 1460 >>
+stream
+BT /F1 8.50 Tf 54.00 764.00 Td (Codex Course Part 1 - Foundations) Tj ET
+0.75 w 54.00 754.00 m 558.00 754.00 l S
+BT /F1 8.50 Tf 520.00 26.00 Td (Page 3) Tj ET
+BT /F1 10.50 Tf 66.00 738.00 Td (- https://developers.openai.com/codex/app/commands) Tj ET
+BT /F2 12.50 Tf 54.00 716.00 Td (Checkpoint Quiz 1 - Core Use) Tj ET
+BT /F1 10.50 Tf 66.00 697.00 Td (1. What are the four parts of the default Codex prompt formula?) Tj ET
+BT /F1 10.50 Tf 66.00 681.00 Td (2. When should David use Plan mode instead of asking Codex to start editing immediately?) Tj ET
+BT /F1 10.50 Tf 66.00 665.00 Td (3. What is the difference between a local thread and a cloud thread?) Tj ET
+BT /F1 10.50 Tf 66.00 649.00 Td (4. Why should "done when" criteria include verification?) Tj ET
+BT /F1 10.50 Tf 66.00 633.00 Td (5. What is one safe read-only task David can ask Codex to do in this vault?) Tj ET
+BT /F1 10.50 Tf 54.00 614.00 Td (Answer key:) Tj ET
+BT /F1 10.50 Tf 66.00 595.00 Td (1. Goal, context, constraints, done when.) Tj ET
+BT /F1 10.50 Tf 66.00 579.00 Td (2. When the task is unclear, risky, complex, or needs clarification.) Tj ET
+BT /F1 10.50 Tf 66.00 563.00 Td (3. Local runs on David's machine; cloud runs in an isolated remote environment.) Tj ET
+BT /F1 10.50 Tf 66.00 547.00 Td (4. So Codex can test or confirm the work instead of only claiming it is done.) Tj ET
+BT /F1 10.50 Tf 66.00 531.00 Td (5. Inspect relevant notes and report paths without editing files.) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 10 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R] /Count 3 >>
+endobj
+11 0 obj
+<< /Type /Catalog /Pages 10 0 R >>
+endobj
+xref
+0 12
+0000000000 65535 f 
+0000000015 00000 n 
+0000000085 00000 n 
+0000000160 00000 n 
+0000000228 00000 n 
+0000003568 00000 n 
+0000003715 00000 n 
+0000007263 00000 n 
+0000007410 00000 n 
+0000008922 00000 n 
+0000009069 00000 n 
+0000009139 00000 n 
+trailer
+<< /Size 12 /Root 11 0 R >>
+startxref
+9190
+%%EOF

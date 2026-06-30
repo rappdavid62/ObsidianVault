@@ -1,1 +1,0 @@
-Complete low-energy anchors + graded advanced moves (from council synthesis)

@@ -1,0 +1,144 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+4 0 obj
+<< /Length 3093 >>
+stream
+BT /F1 8.50 Tf 54.00 764.00 Td (Codex Course Part 2 - Setup and Skills) Tj ET
+0.75 w 54.00 754.00 m 558.00 754.00 l S
+BT /F1 8.50 Tf 520.00 26.00 Td (Page 1) Tj ET
+BT /F2 9.00 Tf 54.00 696.00 Td (Codex Course for David) Tj ET
+BT /F2 22.00 Tf 54.00 666.00 Td (Codex Course Part 2 - Setup and Skills) Tj ET
+BT /F1 12.50 Tf 54.00 634.00 Td (Permissions, AGENTS.md, config.toml, durable guidance, and reusable skills.) Tj ET
+0.75 w 54.00 607.00 m 558.00 607.00 l S
+BT /F1 10.50 Tf 54.00 583.00 Td (Source note: built from the DOV Codex Course - AI Wisebase Learning Pack. Official Codex) Tj ET
+BT /F1 10.50 Tf 54.00 569.00 Td (source refreshed on 2026-06-29.) Tj ET
+BT /F2 12.50 Tf 54.00 540.00 Td (Module 4 - Local Files, Sandbox, Approvals, and Trust) Tj ET
+BT /F1 10.50 Tf 54.00 521.00 Td (Codex can read and edit files depending on the current permission profile. In this current) Tj ET
+BT /F1 10.50 Tf 54.00 507.00 Td (session, the workspace root is writable, while access outside approved roots is restricted.) Tj ET
+BT /F1 10.50 Tf 54.00 488.00 Td (Simple rule:) Tj ET
+BT /F1 10.50 Tf 66.00 469.00 Td (- Read-only tasks are safest.) Tj ET
+BT /F1 10.50 Tf 66.00 453.00 Td (- Workspace-write tasks are normal for editing files in the project.) Tj ET
+BT /F1 10.50 Tf 66.00 437.00 Td (- Full-access or network tasks need more care.) Tj ET
+BT /F1 10.50 Tf 66.00 421.00 Td (- Destructive commands, secrets, account settings, and broad system changes should be) Tj ET
+BT /F1 10.50 Tf 66.00 407.00 Td (explicit.) Tj ET
+BT /F1 10.50 Tf 54.00 388.00 Td (Practice:) Tj ET
+BT /F3 8.50 Tf 64.00 366.00 Td (Inspect this vault for Codex learning notes. Do not edit anything. Report only the paths that) Tj ET
+BT /F3 8.50 Tf 64.00 355.00 Td (look relevant and what each one is for.) Tj ET
+BT /F1 10.50 Tf 54.00 336.00 Td (Then:) Tj ET
+BT /F3 8.50 Tf 64.00 314.00 Td (Create one new learning note in the best location. Keep edits scoped to that file only.) Tj ET
+BT /F1 10.50 Tf 54.00 295.00 Td (Mastery check:) Tj ET
+BT /F1 10.50 Tf 66.00 276.00 Td (- David can tell whether Codex is reading, editing, running a command, using a connector,) Tj ET
+BT /F1 10.50 Tf 66.00 262.00 Td (or operating the GUI.) Tj ET
+BT /F1 10.50 Tf 54.00 243.00 Td (Sources:) Tj ET
+BT /F1 10.50 Tf 66.00 224.00 Td (- https://developers.openai.com/codex/permissions) Tj ET
+BT /F1 10.50 Tf 66.00 208.00 Td (- https://developers.openai.com/codex/agent-approvals-security) Tj ET
+BT /F2 12.50 Tf 54.00 186.00 Td (Module 5 - AGENTS.md, Config, and Reusable Guidance) Tj ET
+BT /F1 10.50 Tf 54.00 167.00 Td (Use AGENTS.md for durable repo instructions: how to run tests, what not to change, project) Tj ET
+BT /F1 10.50 Tf 54.00 153.00 Td (conventions, verification steps, and review expectations.) Tj ET
+BT /F1 10.50 Tf 54.00 134.00 Td (Use config.toml for Codex settings: model defaults, sandbox profiles, MCP servers, hooks,) Tj ET
+BT /F1 10.50 Tf 54.00 120.00 Td (feature flags, and other durable configuration.) Tj ET
+BT /F1 10.50 Tf 54.00 101.00 Td (Rule of thumb:) Tj ET
+BT /F1 10.50 Tf 66.00 82.00 Td (- Prompt: applies now.) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 10 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 3371 >>
+stream
+BT /F1 8.50 Tf 54.00 764.00 Td (Codex Course Part 2 - Setup and Skills) Tj ET
+0.75 w 54.00 754.00 m 558.00 754.00 l S
+BT /F1 8.50 Tf 520.00 26.00 Td (Page 2) Tj ET
+BT /F1 10.50 Tf 66.00 738.00 Td (- AGENTS.md: applies to this repo or folder.) Tj ET
+BT /F1 10.50 Tf 66.00 722.00 Td (- User config: applies across Codex sessions.) Tj ET
+BT /F1 10.50 Tf 66.00 706.00 Td (- Skill: reusable task workflow.) Tj ET
+BT /F1 10.50 Tf 66.00 690.00 Td (- Plugin: installable package of skills, apps, MCP servers, and related assets.) Tj ET
+BT /F1 10.50 Tf 54.00 671.00 Td (Practice:) Tj ET
+BT /F3 8.50 Tf 64.00 649.00 Td (Read the current project guidance files and summarize what instructions Codex should follow in) Tj ET
+BT /F3 8.50 Tf 64.00 638.00 Td (this vault. Do not change files.) Tj ET
+BT /F1 10.50 Tf 54.00 619.00 Td (Mastery check:) Tj ET
+BT /F1 10.50 Tf 66.00 600.00 Td (- David can name the smallest durable place to store a repeated instruction.) Tj ET
+BT /F1 10.50 Tf 54.00 581.00 Td (Sources:) Tj ET
+BT /F1 10.50 Tf 66.00 562.00 Td (- https://developers.openai.com/codex/guides/agents-md) Tj ET
+BT /F1 10.50 Tf 66.00 546.00 Td (- https://developers.openai.com/codex/config-basic) Tj ET
+BT /F2 12.50 Tf 54.00 524.00 Td (Module 6 - Skills) Tj ET
+BT /F1 10.50 Tf 54.00 505.00 Td (Skills are reusable workflows. A skill is a folder with a SKILL.md file and optional) Tj ET
+BT /F1 10.50 Tf 54.00 491.00 Td (scripts, references, and assets. Codex sees skill names and descriptions first, then reads) Tj ET
+BT /F1 10.50 Tf 54.00 477.00 Td (the full skill only when it decides the task matches.) Tj ET
+BT /F1 10.50 Tf 54.00 458.00 Td (Use skills when:) Tj ET
+BT /F1 10.50 Tf 66.00 439.00 Td (- A workflow repeats.) Tj ET
+BT /F1 10.50 Tf 66.00 423.00 Td (- A task needs special steps or reference files.) Tj ET
+BT /F1 10.50 Tf 66.00 407.00 Td (- You want Codex to follow a known process reliably.) Tj ET
+BT /F1 10.50 Tf 54.00 388.00 Td (Practice:) Tj ET
+BT /F3 8.50 Tf 64.00 366.00 Td (Help me design a Codex skill for turning messy Obsidian capture notes into organized project) Tj ET
+BT /F3 8.50 Tf 64.00 355.00 Td (notes. Ask clarifying questions first, then draft the SKILL.md.) Tj ET
+BT /F1 10.50 Tf 54.00 336.00 Td (Mastery check:) Tj ET
+BT /F1 10.50 Tf 66.00 317.00 Td (- David can explain the difference between a prompt, a skill, and a plugin.) Tj ET
+BT /F1 10.50 Tf 54.00 298.00 Td (Sources:) Tj ET
+BT /F1 10.50 Tf 66.00 279.00 Td (- https://developers.openai.com/codex/skills) Tj ET
+BT /F1 10.50 Tf 66.00 263.00 Td (- https://agentskills.io) Tj ET
+BT /F2 12.50 Tf 54.00 241.00 Td (Checkpoint Quiz 2 - Durable Setup) Tj ET
+BT /F1 10.50 Tf 66.00 222.00 Td (1. What belongs in AGENTS.md?) Tj ET
+BT /F1 10.50 Tf 66.00 206.00 Td (2. What belongs in config.toml?) Tj ET
+BT /F1 10.50 Tf 66.00 190.00 Td (3. What is a skill?) Tj ET
+BT /F1 10.50 Tf 66.00 174.00 Td (4. What is a plugin?) Tj ET
+BT /F1 10.50 Tf 66.00 158.00 Td (5. Why is MCP useful?) Tj ET
+BT /F1 10.50 Tf 54.00 139.00 Td (Answer key:) Tj ET
+BT /F1 10.50 Tf 66.00 120.00 Td (1. Durable project guidance, commands, conventions, constraints, and verification) Tj ET
+BT /F1 10.50 Tf 66.00 106.00 Td (expectations.) Tj ET
+BT /F1 10.50 Tf 66.00 90.00 Td (2. Codex settings such as model defaults, sandbox profiles, permissions, MCP servers,) Tj ET
+BT /F1 10.50 Tf 66.00 76.00 Td (hooks, and feature flags.) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 10 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 522 >>
+stream
+BT /F1 8.50 Tf 54.00 764.00 Td (Codex Course Part 2 - Setup and Skills) Tj ET
+0.75 w 54.00 754.00 m 558.00 754.00 l S
+BT /F1 8.50 Tf 520.00 26.00 Td (Page 3) Tj ET
+BT /F1 10.50 Tf 66.00 738.00 Td (3. A reusable workflow with SKILL.md plus optional scripts, references, and assets.) Tj ET
+BT /F1 10.50 Tf 66.00 722.00 Td (4. An installable bundle that can include skills, apps, MCP servers, hooks, and assets.) Tj ET
+BT /F1 10.50 Tf 66.00 706.00 Td (5. It gives Codex structured access to tools and external context.) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 10 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R] /Count 3 >>
+endobj
+11 0 obj
+<< /Type /Catalog /Pages 10 0 R >>
+endobj
+xref
+0 12
+0000000000 65535 f 
+0000000015 00000 n 
+0000000085 00000 n 
+0000000160 00000 n 
+0000000228 00000 n 
+0000003373 00000 n 
+0000003520 00000 n 
+0000006943 00000 n 
+0000007090 00000 n 
+0000007663 00000 n 
+0000007810 00000 n 
+0000007880 00000 n 
+trailer
+<< /Size 12 /Root 11 0 R >>
+startxref
+7931
+%%EOF

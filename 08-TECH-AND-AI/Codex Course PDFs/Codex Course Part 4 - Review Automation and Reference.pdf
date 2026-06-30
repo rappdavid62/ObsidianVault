@@ -1,0 +1,250 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+4 0 obj
+<< /Length 2852 >>
+stream
+BT /F1 8.50 Tf 54.00 764.00 Td (Codex Course Part 4 - Review, Automation, and Reference) Tj ET
+0.75 w 54.00 754.00 m 558.00 754.00 l S
+BT /F1 8.50 Tf 520.00 26.00 Td (Page 1) Tj ET
+BT /F2 9.00 Tf 54.00 696.00 Td (Codex Course for David) Tj ET
+BT /F2 22.00 Tf 54.00 666.00 Td (Codex Course Part 4 - Review,) Tj ET
+BT /F2 22.00 Tf 54.00 639.00 Td (Automation, and Reference) Tj ET
+BT /F1 12.50 Tf 54.00 607.00 Td (Review, testing, automations, subagents, hooks, rules, memories, final exam,) Tj ET
+BT /F1 12.50 Tf 54.00 590.00 Td (and quick reference.) Tj ET
+0.75 w 54.00 563.00 m 558.00 563.00 l S
+BT /F1 10.50 Tf 54.00 539.00 Td (Source note: built from the DOV Codex Course - AI Wisebase Learning Pack. Official Codex) Tj ET
+BT /F1 10.50 Tf 54.00 525.00 Td (source refreshed on 2026-06-29.) Tj ET
+BT /F2 12.50 Tf 54.00 496.00 Td (Module 10 - Review, Testing, and Git) Tj ET
+BT /F1 10.50 Tf 54.00 477.00 Td (Codex should not just make changes. It should verify them.) Tj ET
+BT /F1 10.50 Tf 54.00 458.00 Td (Ask for:) Tj ET
+BT /F1 10.50 Tf 66.00 439.00 Td (- smallest relevant test) Tj ET
+BT /F1 10.50 Tf 66.00 423.00 Td (- lint or type check when appropriate) Tj ET
+BT /F1 10.50 Tf 66.00 407.00 Td (- manual verification steps) Tj ET
+BT /F1 10.50 Tf 66.00 391.00 Td (- review of the diff before acceptance) Tj ET
+BT /F1 10.50 Tf 66.00 375.00 Td (- file and line references for findings) Tj ET
+BT /F1 10.50 Tf 54.00 356.00 Td (Practice:) Tj ET
+BT /F3 8.50 Tf 64.00 334.00 Td (Review the uncommitted changes like a serious code reviewer. Findings first, ordered by) Tj ET
+BT /F3 8.50 Tf 64.00 323.00 Td (severity, with exact file references. If there are no issues, say so and name any test gaps.) Tj ET
+BT /F1 10.50 Tf 54.00 304.00 Td (Mastery check:) Tj ET
+BT /F1 10.50 Tf 66.00 285.00 Td (- David can ask for a review in a way that produces actionable findings rather than vague) Tj ET
+BT /F1 10.50 Tf 66.00 271.00 Td (commentary.) Tj ET
+BT /F1 10.50 Tf 54.00 252.00 Td (Sources:) Tj ET
+BT /F1 10.50 Tf 66.00 233.00 Td (- https://developers.openai.com/codex/app/review) Tj ET
+BT /F1 10.50 Tf 66.00 217.00 Td (- https://developers.openai.com/codex/integrations/github) Tj ET
+BT /F2 12.50 Tf 54.00 195.00 Td (Module 11 - Automations) Tj ET
+BT /F1 10.50 Tf 54.00 176.00 Td (Automations run recurring Codex tasks. They can add findings to the inbox or archive) Tj ET
+BT /F1 10.50 Tf 54.00 162.00 Td (themselves if nothing matters.) Tj ET
+BT /F1 10.50 Tf 54.00 143.00 Td (Use a thread automation when the task should wake up the same conversation. Use a) Tj ET
+BT /F1 10.50 Tf 54.00 129.00 Td (standalone/project automation when each run should be independent.) Tj ET
+BT /F1 10.50 Tf 54.00 110.00 Td (Good automation prompt ingredients:) Tj ET
+BT /F1 10.50 Tf 66.00 91.00 Td (- What to check.) Tj ET
+BT /F1 10.50 Tf 66.00 75.00 Td (- Where to check.) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 3273 >>
+stream
+BT /F1 8.50 Tf 54.00 764.00 Td (Codex Course Part 4 - Review, Automation, and Reference) Tj ET
+0.75 w 54.00 754.00 m 558.00 754.00 l S
+BT /F1 8.50 Tf 520.00 26.00 Td (Page 2) Tj ET
+BT /F1 10.50 Tf 66.00 738.00 Td (- Cadence.) Tj ET
+BT /F1 10.50 Tf 66.00 722.00 Td (- What counts as a finding.) Tj ET
+BT /F1 10.50 Tf 66.00 706.00 Td (- What to ignore.) Tj ET
+BT /F1 10.50 Tf 66.00 690.00 Td (- Whether to edit, report only, or ask first.) Tj ET
+BT /F1 10.50 Tf 66.00 674.00 Td (- When to stop.) Tj ET
+BT /F1 10.50 Tf 54.00 655.00 Td (Practice:) Tj ET
+BT /F3 8.50 Tf 64.00 633.00 Td (Draft an automation prompt that checks this vault weekly for stale Codex learning notes. It) Tj ET
+BT /F3 8.50 Tf 64.00 622.00 Td (should report only, not edit.) Tj ET
+BT /F1 10.50 Tf 54.00 603.00 Td (Mastery check:) Tj ET
+BT /F1 10.50 Tf 66.00 584.00 Td (- David can distinguish "remind me in this thread" from "run a recurring project check.") Tj ET
+BT /F1 10.50 Tf 54.00 565.00 Td (Sources:) Tj ET
+BT /F1 10.50 Tf 66.00 546.00 Td (- https://developers.openai.com/codex/app/automations) Tj ET
+BT /F2 12.50 Tf 54.00 524.00 Td (Module 12 - Subagents, Hooks, Rules, and Memories) Tj ET
+BT /F1 10.50 Tf 54.00 505.00 Td (Advanced features:) Tj ET
+BT /F1 10.50 Tf 66.00 486.00 Td (- Subagents: parallel workers for read-heavy exploration, test triage, summaries, or) Tj ET
+BT /F1 10.50 Tf 66.00 472.00 Td (independent reviews.) Tj ET
+BT /F1 10.50 Tf 66.00 456.00 Td (- Hooks: scripts that run at lifecycle events such as before tool use, after tool use,) Tj ET
+BT /F1 10.50 Tf 66.00 442.00 Td (before compaction, or when a turn stops.) Tj ET
+BT /F1 10.50 Tf 66.00 426.00 Td (- Rules: command policy that controls what Codex can run outside the sandbox.) Tj ET
+BT /F1 10.50 Tf 66.00 410.00 Td (- Memories: local recall layer for stable preferences and recurring workflows.) Tj ET
+BT /F1 10.50 Tf 54.00 391.00 Td (Use these only when the simpler surface is not enough.) Tj ET
+BT /F1 10.50 Tf 54.00 372.00 Td (Practice:) Tj ET
+BT /F3 8.50 Tf 64.00 350.00 Td (Use parallel subagents to inspect three separate areas of this vault: Codex notes, Obsidian) Tj ET
+BT /F3 8.50 Tf 64.00 339.00 Td (integration notes, and prompt-library skills. Return one merged summary with file paths.) Tj ET
+BT /F1 10.50 Tf 54.00 320.00 Td (Mastery check:) Tj ET
+BT /F1 10.50 Tf 66.00 301.00 Td (- David can explain when advanced machinery saves time and when it adds risk or) Tj ET
+BT /F1 10.50 Tf 66.00 287.00 Td (complexity.) Tj ET
+BT /F1 10.50 Tf 54.00 268.00 Td (Sources:) Tj ET
+BT /F1 10.50 Tf 66.00 249.00 Td (- https://developers.openai.com/codex/subagents) Tj ET
+BT /F1 10.50 Tf 66.00 233.00 Td (- https://developers.openai.com/codex/hooks) Tj ET
+BT /F1 10.50 Tf 66.00 217.00 Td (- https://developers.openai.com/codex/rules) Tj ET
+BT /F1 10.50 Tf 66.00 201.00 Td (- https://developers.openai.com/codex/memories) Tj ET
+BT /F2 15.00 Tf 54.00 176.00 Td (Four-Week Course Schedule) Tj ET
+0.75 w 54.00 163.00 m 558.00 163.00 l S
+BT /F2 12.50 Tf 54.00 148.00 Td (Week 1 - Core Use) Tj ET
+BT /F1 10.50 Tf 66.00 129.00 Td (- Day 1: Module 1) Tj ET
+BT /F1 10.50 Tf 66.00 113.00 Td (- Day 2: Module 2) Tj ET
+BT /F1 10.50 Tf 66.00 97.00 Td (- Day 3: Module 3) Tj ET
+BT /F1 10.50 Tf 66.00 81.00 Td (- Day 4: Module 4) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 3450 >>
+stream
+BT /F1 8.50 Tf 54.00 764.00 Td (Codex Course Part 4 - Review, Automation, and Reference) Tj ET
+0.75 w 54.00 754.00 m 558.00 754.00 l S
+BT /F1 8.50 Tf 520.00 26.00 Td (Page 3) Tj ET
+BT /F1 10.50 Tf 66.00 738.00 Td (- Day 5: Review flashcards and do one read-only vault inspection) Tj ET
+BT /F1 10.50 Tf 54.00 719.00 Td (Outcome: David can prompt Codex safely and understand what it is doing.) Tj ET
+BT /F2 12.50 Tf 54.00 697.00 Td (Week 2 - Durable Setup) Tj ET
+BT /F1 10.50 Tf 66.00 678.00 Td (- Day 1: Module 5) Tj ET
+BT /F1 10.50 Tf 66.00 662.00 Td (- Day 2: Module 6) Tj ET
+BT /F1 10.50 Tf 66.00 646.00 Td (- Day 3: Module 7) Tj ET
+BT /F1 10.50 Tf 66.00 630.00 Td (- Day 4: Module 8) Tj ET
+BT /F1 10.50 Tf 66.00 614.00 Td (- Day 5: Create or revise one small skill draft) Tj ET
+BT /F1 10.50 Tf 54.00 595.00 Td (Outcome: David can decide where repeated instructions and capabilities belong.) Tj ET
+BT /F2 12.50 Tf 54.00 573.00 Td (Week 3 - Real Tools) Tj ET
+BT /F1 10.50 Tf 66.00 554.00 Td (- Day 1: Module 9) Tj ET
+BT /F1 10.50 Tf 66.00 538.00 Td (- Day 2: Module 10) Tj ET
+BT /F1 10.50 Tf 66.00 522.00 Td (- Day 3: Practice Browser on a local or public page) Tj ET
+BT /F1 10.50 Tf 66.00 506.00 Td (- Day 4: Practice review mode on a small change) Tj ET
+BT /F1 10.50 Tf 66.00 490.00 Td (- Day 5: Explain the workflow back to AI Wisebase) Tj ET
+BT /F1 10.50 Tf 54.00 471.00 Td (Outcome: David can test, inspect, and review real work without guessing.) Tj ET
+BT /F2 12.50 Tf 54.00 449.00 Td (Week 4 - Automation and Advanced Work) Tj ET
+BT /F1 10.50 Tf 66.00 430.00 Td (- Day 1: Module 11) Tj ET
+BT /F1 10.50 Tf 66.00 414.00 Td (- Day 2: Module 12) Tj ET
+BT /F1 10.50 Tf 66.00 398.00 Td (- Day 3: Draft one reporting-only automation) Tj ET
+BT /F1 10.50 Tf 66.00 382.00 Td (- Day 4: Draft one subagent task) Tj ET
+BT /F1 10.50 Tf 66.00 366.00 Td (- Day 5: Final practical exam) Tj ET
+BT /F1 10.50 Tf 54.00 347.00 Td (Outcome: David can turn repeated work into durable systems.) Tj ET
+BT /F2 15.00 Tf 54.00 322.00 Td (Final Practical Exam) Tj ET
+0.75 w 54.00 309.00 m 558.00 309.00 l S
+BT /F1 10.50 Tf 54.00 297.00 Td (Ask Codex:) Tj ET
+BT /F3 8.50 Tf 64.00 275.00 Td (I want to improve my Codex learning system in this DOV vault.) Tj ET
+BT /F3 8.50 Tf 64.00 264.00 Td () Tj ET
+BT /F3 8.50 Tf 64.00 253.00 Td (Goal: Inspect the current Codex, AI, prompt-library, and integration notes. Create one small) Tj ET
+BT /F3 8.50 Tf 64.00 242.00 Td (improvement that helps me learn Codex better.) Tj ET
+BT /F3 8.50 Tf 64.00 231.00 Td (Context: This is an Obsidian vault at C:\\ROOT_OBSIDIAN\\DOV.) Tj ET
+BT /F3 8.50 Tf 64.00 220.00 Td (Constraints: Keep edits minimal. Do not reorganize the vault. Do not touch private files. Use) Tj ET
+BT /F3 8.50 Tf 64.00 209.00 Td (official Codex docs for product claims.) Tj ET
+BT /F3 8.50 Tf 64.00 198.00 Td (Done when: You create or update one learning note, explain what changed, and give me one next) Tj ET
+BT /F3 8.50 Tf 64.00 187.00 Td (practice exercise.) Tj ET
+BT /F1 10.50 Tf 54.00 168.00 Td (Passing answer:) Tj ET
+BT /F1 10.50 Tf 66.00 149.00 Td (- Codex inspects before editing.) Tj ET
+BT /F1 10.50 Tf 66.00 133.00 Td (- It keeps scope small.) Tj ET
+BT /F1 10.50 Tf 66.00 117.00 Td (- It uses current official documentation for product claims.) Tj ET
+BT /F1 10.50 Tf 66.00 101.00 Td (- It creates a useful note.) Tj ET
+BT /F1 10.50 Tf 66.00 85.00 Td (- It reports what changed and how to practice next.) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 2944 >>
+stream
+BT /F1 8.50 Tf 54.00 764.00 Td (Codex Course Part 4 - Review, Automation, and Reference) Tj ET
+0.75 w 54.00 754.00 m 558.00 754.00 l S
+BT /F1 8.50 Tf 520.00 26.00 Td (Page 4) Tj ET
+BT /F2 12.50 Tf 54.00 735.00 Td (Final Quiz - Surface Choice) Tj ET
+BT /F1 10.50 Tf 54.00 716.00 Td (For each need, choose the best surface:) Tj ET
+BT /F1 10.50 Tf 66.00 697.00 Td (1. "Remember this repo's test command every time.") Tj ET
+BT /F1 10.50 Tf 66.00 681.00 Td (2. "Run this recurring weekly report.") Tj ET
+BT /F1 10.50 Tf 66.00 665.00 Td (3. "Connect Codex to a documentation server.") Tj ET
+BT /F1 10.50 Tf 66.00 649.00 Td (4. "Package a reusable workflow for installation.") Tj ET
+BT /F1 10.50 Tf 66.00 633.00 Td (5. "Click through a visible Windows app.") Tj ET
+BT /F1 10.50 Tf 66.00 617.00 Td (6. "Preview a local unauthenticated web app.") Tj ET
+BT /F1 10.50 Tf 66.00 601.00 Td (7. "Store a repeated task workflow.") Tj ET
+BT /F1 10.50 Tf 66.00 585.00 Td (8. "Do a parallel read-heavy investigation.") Tj ET
+BT /F1 10.50 Tf 54.00 566.00 Td (Answer key:) Tj ET
+BT /F1 10.50 Tf 66.00 547.00 Td (1. AGENTS.md) Tj ET
+BT /F1 10.50 Tf 66.00 531.00 Td (2. Automation) Tj ET
+BT /F1 10.50 Tf 66.00 515.00 Td (3. MCP) Tj ET
+BT /F1 10.50 Tf 66.00 499.00 Td (4. Plugin) Tj ET
+BT /F1 10.50 Tf 66.00 483.00 Td (5. Computer Use) Tj ET
+BT /F1 10.50 Tf 66.00 467.00 Td (6. Browser) Tj ET
+BT /F1 10.50 Tf 66.00 451.00 Td (7. Skill) Tj ET
+BT /F1 10.50 Tf 66.00 435.00 Td (8. Subagents) Tj ET
+BT /F2 15.00 Tf 54.00 410.00 Td (Quick Reference) Tj ET
+0.75 w 54.00 397.00 m 558.00 397.00 l S
+BT /F1 10.50 Tf 54.00 385.00 Td (Need | Use) Tj ET
+BT /F1 10.50 Tf 54.00 369.00 Td (One-time task constraint | Prompt) Tj ET
+BT /F1 10.50 Tf 54.00 353.00 Td (Unclear task | Plan mode) Tj ET
+BT /F1 10.50 Tf 54.00 337.00 Td (Long task with success criteria | Goal mode) Tj ET
+BT /F1 10.50 Tf 54.00 321.00 Td (Repo-specific durable guidance | AGENTS.md) Tj ET
+BT /F1 10.50 Tf 54.00 305.00 Td (Personal or project settings | config.toml) Tj ET
+BT /F1 10.50 Tf 54.00 289.00 Td (Reusable workflow | Skill) Tj ET
+BT /F1 10.50 Tf 54.00 273.00 Td (Installable bundle of skills/apps/MCP | Plugin) Tj ET
+BT /F1 10.50 Tf 54.00 257.00 Td (External live tools or context | MCP or connector) Tj ET
+BT /F1 10.50 Tf 54.00 241.00 Td (Local unauthenticated web preview | Browser) Tj ET
+BT /F1 10.50 Tf 54.00 225.00 Td (Logged-in Chrome state | Chrome) Tj ET
+BT /F1 10.50 Tf 54.00 209.00 Td (Desktop GUI operation | Computer Use) Tj ET
+BT /F1 10.50 Tf 54.00 193.00 Td (Recurring check | Automation) Tj ET
+BT /F1 10.50 Tf 54.00 177.00 Td (Command permission policy | Rules) Tj ET
+BT /F1 10.50 Tf 54.00 161.00 Td (Lifecycle script | Hook) Tj ET
+BT /F1 10.50 Tf 54.00 145.00 Td (Stable personal recall | Memories) Tj ET
+BT /F1 10.50 Tf 54.00 129.00 Td (Parallel read-heavy investigation | Subagents) Tj ET
+BT /F2 15.00 Tf 54.00 104.00 Td (Maintenance Rule) Tj ET
+0.75 w 54.00 91.00 m 558.00 91.00 l S
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 423 >>
+stream
+BT /F1 8.50 Tf 54.00 764.00 Td (Codex Course Part 4 - Review, Automation, and Reference) Tj ET
+0.75 w 54.00 754.00 m 558.00 754.00 l S
+BT /F1 8.50 Tf 520.00 26.00 Td (Page 5) Tj ET
+BT /F1 10.50 Tf 54.00 738.00 Td (Refresh this course when Codex features, plugin availability, or OpenAI docs change. Product) Tj ET
+BT /F1 10.50 Tf 54.00 724.00 Td (claims should come from current official docs, not from memory alone.) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R] /Count 5 >>
+endobj
+15 0 obj
+<< /Type /Catalog /Pages 14 0 R >>
+endobj
+xref
+0 16
+0000000000 65535 f 
+0000000015 00000 n 
+0000000085 00000 n 
+0000000160 00000 n 
+0000000228 00000 n 
+0000003132 00000 n 
+0000003279 00000 n 
+0000006604 00000 n 
+0000006751 00000 n 
+0000010253 00000 n 
+0000010400 00000 n 
+0000013397 00000 n 
+0000013546 00000 n 
+0000014021 00000 n 
+0000014170 00000 n 
+0000014254 00000 n 
+trailer
+<< /Size 16 /Root 15 0 R >>
+startxref
+14305
+%%EOF

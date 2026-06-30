@@ -4,7 +4,7 @@ Primary Deployment Target: AI Infrastructure
 Expected Use Case: Current generated health report for DOV second-brain maintenance.
 Archive or Active: Active
 Canonical Home: _Meta/Second Brain Health Report.md
-Last Generated: 2026-06-28 15:26
+Last Generated: 2026-06-30 02:13
 ---
 
 # Second Brain Health Report
@@ -70,10 +70,7 @@ DOV health is **attention needed**. The canonical Library path is `C:\ROOT_OBSID
 
 - OK: `_Meta/Vault Cleanup Queue.md` exists
 - INFO: 2 high-risk cleanup items, 2 medium-risk, 2 low-risk
-- RISK: private/adult review candidates still exist and need explicit human approval before move/archive:
-  - `00-CAPTURE/App Captures/TMHLBB.md` (tracked by Git; not ignored)
-  - `00-CAPTURE/App Captures/Clippings/TMWLBB.md` (tracked by Git; not ignored)
-  - `09-PROMPTS/Prompt-Library/BE_Roleplay_Generator.md` (tracked by Git; not ignored)
+- OK: no configured private/adult review candidates currently exist at the watched paths
 
 ## Source-Truth Drift
 
@@ -89,34 +86,34 @@ DOV health is **attention needed**. The canonical Library path is `C:\ROOT_OBSID
 
 ## Git State
 
-- INFO: 43 changed/untracked paths
-- INFO: 12 modified, 16 untracked, 15 deleted
-- `M .cursorrules`
-- ` M 09-PROMPTS/Library/Claude-Project-Instructions.md`
-- ` M "09-PROMPTS/Library/External Program Skill Wiring Matrix.md"`
-- ` M 09-PROMPTS/Library/Gemini-System-Prompt.md`
-- ` M 09-PROMPTS/Library/How-to-Use-Ubiquitously.md`
-- ` M 09-PROMPTS/Library/Hubs/00-Hub.md`
-- ` M 09-PROMPTS/Library/Mobile-Favorites.md`
-- ` M 09-PROMPTS/Library/README.md`
-- ` M 09-PROMPTS/Library/Skills/second-brain-control-loop.md`
-- ` M 09-PROMPTS/Library/Skills/vault-cleaner.md`
-- ` M 09-PROMPTS/Library/Tools/README.md`
-- ` M 09-PROMPTS/Library/Tools/vault-health-check.py`
-- ` D "Meta/AI Command Layer.md"`
-- ` D "Meta/AI Handoff Summary.md"`
-- ` D "Meta/Active Projects Map.md"`
-- ` D Meta/Device_Sync_Protocol.md`
-- ` D "Meta/Legacy Bundle Migration Inventory.md"`
-- ` D "Meta/Master Context.md"`
-- ` D Meta/Project_Priority_Tracker.md`
-- ` D "Meta/Second Brain Completion Audit.md"`
-- ` D "Meta/Second Brain Health Report.md"`
-- ` D "Meta/Second Brain Learning Ledger.md"`
-- ` D "Meta/Second Brain Operations Dashboard.md"`
-- ` D "Meta/Second Brain Runbook.md"`
-- ` D "Meta/System Governance.md"`
-- ... 18 more paths omitted
+- INFO: 156 changed/untracked paths
+- INFO: 2 modified, 147 untracked, 6 deleted
+- `D  01-PROJECTS/STATENOTFATE/5-year-architecture-one-pager.md`
+- `D  01-PROJECTS/STATENOTFATE/NOTES.md`
+- `D  01-PROJECTS/STATENOTFATE/anchor-library-v2.md`
+- `D  "01-PROJECTS/STATENOTFATE/depress q.md"`
+- `D  01-PROJECTS/STATENOTFATE/evolving-intake-questionnaire.md`
+- `D  "01-PROJECTS/STATENOTFATE/universal_prompt_and_skill_library 1.md"`
+- `M  01-PROJECTS/STATENOTFATE/universal_prompt_and_skill_library.md`
+- `M  09-PROMPTS/Library/Dictionary.md`
+- `MM "_Meta/Second Brain Health Report.md"`
+- `?? 01-PROJECTS/STATENOTFATE/snf-capture-stubs.md`
+- `?? 01-PROJECTS/SUICIDE_PREVENTION/NotebookLM_Suicide_Prevention_State_Not_Fate_Handoff.md`
+- `?? "08-TECH-AND-AI/ClickUp for an Obsidian First Personal System.pdf"`
+- `?? "08-TECH-AND-AI/Codex Course - AI Wisebase Learning Pack.md"`
+- `?? "08-TECH-AND-AI/Codex Course PDFs/Codex Course Part 1 - Foundations.pdf"`
+- `?? "08-TECH-AND-AI/Codex Course PDFs/Codex Course Part 2 - Setup and Skills.pdf"`
+- `?? "08-TECH-AND-AI/Codex Course PDFs/Codex Course Part 3 - Plugins and Tools.pdf"`
+- `?? "08-TECH-AND-AI/Codex Course PDFs/Codex Course Part 4 - Review Automation and Reference.pdf"`
+- `?? 09-PROMPTS/Library/Tools/daily-status.ps1`
+- `?? 09-PROMPTS/Library/Tools/git-cleanup-prep.py`
+- `?? 09-PROMPTS/Library/Tools/start-vault-watcher.ps1`
+- `?? 09-PROMPTS/Library/Tools/validate-library.py`
+- `?? 09-PROMPTS/Library/Tools/vault-watcher.py`
+- `?? Untitled.md`
+- `?? tmp/pdfs/chrome-profile-part-1/Crashpad/metadata`
+- `?? tmp/pdfs/chrome-profile-part-1/Crashpad/reports/3270b0be-9160-4989-a92e-74c9401baf59.dmp`
+- ... 131 more paths omitted
 - RISK: tracked files are deleted in Git state; resolve or explicitly approve the rename/removal before push.
 
 ## Next Small Action
