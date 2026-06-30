@@ -4,7 +4,7 @@ Primary Deployment Target: AI Infrastructure
 Expected Use Case: Current generated health report for DOV second-brain maintenance.
 Archive or Active: Active
 Canonical Home: _Meta/Second Brain Health Report.md
-Last Generated: 2026-06-30 10:00
+Last Generated: 2026-06-30 11:51
 ---
 
 # Second Brain Health Report
@@ -86,34 +86,9 @@ DOV health is **attention needed**. The canonical Library path is `C:\ROOT_OBSID
 
 ## Git State
 
-- INFO: 134 changed/untracked paths
-- INFO: 0 modified, 134 untracked, 0 deleted
-- `?? Untitled.md`
-- `?? tmp/pdfs/chrome-profile-part-1/Crashpad/metadata`
-- `?? tmp/pdfs/chrome-profile-part-1/Crashpad/reports/3270b0be-9160-4989-a92e-74c9401baf59.dmp`
-- `?? tmp/pdfs/chrome-profile-part-1/Crashpad/settings.dat`
-- `?? tmp/pdfs/chrome-profile-part-1/CrashpadMetrics-active.pma`
-- `?? "tmp/pdfs/chrome-profile-part-1/Default/Account Web Data"`
-- `?? "tmp/pdfs/chrome-profile-part-1/Default/Account Web Data-journal"`
-- `?? "tmp/pdfs/chrome-profile-part-1/Default/Affiliation Database"`
-- `?? "tmp/pdfs/chrome-profile-part-1/Default/Affiliation Database-journal"`
-- `?? tmp/pdfs/chrome-profile-part-1/Default/Cache/Cache_Data/data_0`
-- `?? tmp/pdfs/chrome-profile-part-1/Default/Cache/Cache_Data/data_1`
-- `?? tmp/pdfs/chrome-profile-part-1/Default/Cache/Cache_Data/data_2`
-- `?? tmp/pdfs/chrome-profile-part-1/Default/Cache/Cache_Data/data_3`
-- `?? tmp/pdfs/chrome-profile-part-1/Default/Cache/Cache_Data/index`
-- `?? tmp/pdfs/chrome-profile-part-1/Default/Cache/No_Vary_Search/journal.baj`
-- `?? tmp/pdfs/chrome-profile-part-1/Default/Cache/No_Vary_Search/snapshot.baf`
-- `?? tmp/pdfs/chrome-profile-part-1/Default/ClientCertificates/LOCK`
-- `?? tmp/pdfs/chrome-profile-part-1/Default/ClientCertificates/LOG`
-- `?? "tmp/pdfs/chrome-profile-part-1/Default/Code Cache/js/index"`
-- `?? "tmp/pdfs/chrome-profile-part-1/Default/Code Cache/js/index-dir/the-real-index"`
-- `?? "tmp/pdfs/chrome-profile-part-1/Default/Code Cache/wasm/index"`
-- `?? "tmp/pdfs/chrome-profile-part-1/Default/Code Cache/wasm/index-dir/the-real-index"`
-- `?? tmp/pdfs/chrome-profile-part-1/Default/DawnGraphiteCache/data_0`
-- `?? tmp/pdfs/chrome-profile-part-1/Default/DawnGraphiteCache/data_1`
-- `?? tmp/pdfs/chrome-profile-part-1/Default/DawnGraphiteCache/data_2`
-- ... 109 more paths omitted
+- INFO: 1 changed/untracked paths
+- INFO: 1 modified, 0 untracked, 0 deleted
+- `M "_Meta/Second Brain Health Report.md"`
 
 ## Next Small Action
 
