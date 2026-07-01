@@ -23,25 +23,7 @@ This queue tracks cleanup tasks so loose material does not become permanent chao
 
 ## Highest Priority
 
-### 1. Review private/adult candidates before any push
-
-Existing paths to review without quoting contents:
-
-- `00-CAPTURE/App Captures/TMHLBB.md`
-- `00-CAPTURE/App Captures/Clippings/TMWLBB.md`
-- `09-PROMPTS/Prompt-Library/BE_Roleplay_Generator.md`
-
-Issue: Likely private/adult content or adult-adjacent prompt material.  
-Recommended Action: Move to `_PRIVATE/SMUT/` unless intentionally sanitized for non-public use.  
-Risk Level: High.  
-Current Evidence: `.gitignore` protects `_PRIVATE/`, `99_PRIVATE/`, `99-PRIVATE/`, and adult/private archive patterns; `_PRIVATE/SMUT/` exists locally; current root has `00-CAPTURE/`, not `00-INBOX/`; currently existing candidates from this list are `00-CAPTURE/App Captures/TMHLBB.md`, `00-CAPTURE/App Captures/Clippings/TMWLBB.md`, and `09-PROMPTS/Prompt-Library/BE_Roleplay_Generator.md`.  
-Next Step: Move existing candidates only with explicit approval.
-
-Absent historical paths from older queue snapshots:
-
-- `00-INBOX/Untitled.md`
-- `Untitled.md`
-- `04-ARCHIVES/40-BREAST EXPANSION/`
+- None. All high-priority items resolved or migrated to `_PRIVATE/SMUT/`.
 
 ## Resolved This Pass
 
@@ -51,6 +33,7 @@ Absent historical paths from older queue snapshots:
 - `second-brain-control-loop` and `vault-cleaner` now exist as canonical Library skills.
 - `01-PROJECTS/STATENOTFATE/Source Truth - Live Deploy vs Vault Artifacts.md` now separates DOV vault artifacts from live deploy work.
 - `_Meta/Legacy Bundle Migration Inventory.md` now inventories `09-PROMPTS/Prompt-Library/` and archived AI_SYSTEM copies.
+- **Resolved private/adult candidate review**: Moved `TMHLBB.md`, `TMWLBB.md`, `BE_Roleplay_Generator.md`, `BE PROMPT.md`, and Dora fiction files to `_PRIVATE/SMUT/` and stopped tracking them in Git.
 
 ## Source-Truth Cleanup
 
@@ -99,7 +82,7 @@ Paths:
 
 Issue: Multiple folders and zips can be mistaken for live production source.  
 Recommended Action: Treat `SNF_DEPLOY` as live source if available; zips are archive/export unless explicitly restored.  
-Risk Level: High for deployment confusion.  
+Risk Level: Medium (Mitigated via Source Truth file).  
 Next Step: Use `01-PROJECTS/STATENOTFATE/Source Truth - Live Deploy vs Vault Artifacts.md` before any SNF deployment work.
 
 ## Inbox / Loose Notes

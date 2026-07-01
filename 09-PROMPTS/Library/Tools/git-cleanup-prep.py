@@ -25,6 +25,13 @@ PRIVATE_RISK_FILES = [
     "00-CAPTURE/App Captures/TMHLBB.md",
     "00-CAPTURE/App Captures/Clippings/TMWLBB.md",
     "09-PROMPTS/Prompt-Library/BE_Roleplay_Generator.md",
+    "09-PROMPTS/Prompt-Library/BE PROMPT.md",
+    "01-PROJECTS/STATENOTFATE/scoured_data/fiction---dora,-a-love-story-1.md",
+    "01-PROJECTS/STATENOTFATE/scoured_data/fiction---dora,-a-love-story-2.md",
+    "01-PROJECTS/STATENOTFATE/scoured_data/fiction---dora,-a-love-story.md",
+    "Clippings/Processed/FICTION - Dora, A love story 1.md",
+    "Clippings/Processed/FICTION - Dora, A love story 2.md",
+    "Clippings/Processed/FICTION - Dora, A love story.md",
 ]
 
 PRIVATE_DEST = "_PRIVATE/SMUT"

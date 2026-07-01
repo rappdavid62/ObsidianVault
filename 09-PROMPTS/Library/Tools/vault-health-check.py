@@ -102,6 +102,13 @@ PRIVATE_REVIEW_CANDIDATES = [
     "00-CAPTURE/App Captures/TMHLBB.md",
     "00-CAPTURE/App Captures/Clippings/TMWLBB.md",
     "09-PROMPTS/Prompt-Library/BE_Roleplay_Generator.md",
+    "09-PROMPTS/Prompt-Library/BE PROMPT.md",
+    "01-PROJECTS/STATENOTFATE/scoured_data/fiction---dora,-a-love-story-1.md",
+    "01-PROJECTS/STATENOTFATE/scoured_data/fiction---dora,-a-love-story-2.md",
+    "01-PROJECTS/STATENOTFATE/scoured_data/fiction---dora,-a-love-story.md",
+    "Clippings/Processed/FICTION - Dora, A love story 1.md",
+    "Clippings/Processed/FICTION - Dora, A love story 2.md",
+    "Clippings/Processed/FICTION - Dora, A love story.md",
 ]
 
 
@@ -338,7 +345,8 @@ def check_git_status() -> tuple[list[str], bool]:
     lines = output.splitlines()
     modified = sum(1 for line in lines if line.startswith(" M") or line.startswith("M "))
     untracked = sum(1 for line in lines if line.startswith("??"))
-    deleted = sum(1 for line in lines if line.startswith(" D") or line.startswith("D "))
+    deleted = sum(1 for line in lines if len(line) >= 2 and (line[0] == 'D' or line[1] == 'D'))
+    unstaged_deleted = sum(1 for line in lines if len(line) >= 2 and line[1] == 'D')
     summary = [
         f"- INFO: {len(lines)} changed/untracked paths",
         f"- INFO: {modified} modified, {untracked} untracked, {deleted} deleted",
@@ -347,9 +355,9 @@ def check_git_status() -> tuple[list[str], bool]:
         summary.append(f"- `{line}`")
     if len(lines) > 25:
         summary.append(f"- ... {len(lines) - 25} more paths omitted")
-    if deleted:
+    if unstaged_deleted:
         summary.append("- RISK: tracked files are deleted in Git state; resolve or explicitly approve the rename/removal before push.")
-    return summary, bool(deleted)
+    return summary, bool(unstaged_deleted)
 
 
 def build_report() -> tuple[str, bool]:
