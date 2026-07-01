@@ -4,7 +4,7 @@ Primary Deployment Target: AI Infrastructure
 Expected Use Case: Current generated health report for DOV second-brain maintenance.
 Archive or Active: Active
 Canonical Home: _Meta/Second Brain Health Report.md
-Last Generated: 2026-07-01 06:09
+Last Generated: 2026-07-01 10:11
 ---
 
 # Second Brain Health Report
@@ -86,27 +86,9 @@ DOV health is **stable with known open loops**. The canonical Library path is `C
 
 ## Git State
 
-- INFO: 19 changed/untracked paths
-- INFO: 4 modified, 0 untracked, 4 deleted
-- `A  01-PROJECTS/SUICIDE_PREVENTION/ANTI_GRAVITY_HANDOFF_PACKAGE_2026-06-30/00_README_FIRST.md`
-- `A  01-PROJECTS/SUICIDE_PREVENTION/ANTI_GRAVITY_HANDOFF_PACKAGE_2026-06-30/01_Anti_Gravity_Master_Handoff.md`
-- `A  01-PROJECTS/SUICIDE_PREVENTION/ANTI_GRAVITY_HANDOFF_PACKAGE_2026-06-30/02_Source_Map_And_Access_Honesty.md`
-- `A  01-PROJECTS/SUICIDE_PREVENTION/ANTI_GRAVITY_HANDOFF_PACKAGE_2026-06-30/03_Essays.md`
-- `A  01-PROJECTS/SUICIDE_PREVENTION/NOTEBOOKLM_RECOVERED_TO_OBSIDIAN_2026-06-30/00_README_FIRST.md`
-- `A  01-PROJECTS/SUICIDE_PREVENTION/NOTEBOOKLM_RECOVERED_TO_OBSIDIAN_2026-06-30/01_Source_Honesty_And_Recovery_Map.md`
-- `A  01-PROJECTS/SUICIDE_PREVENTION/NOTEBOOKLM_RECOVERED_TO_OBSIDIAN_2026-06-30/02_NotebookLM_Suicide_Corpus_Parsed.md`
-- `A  01-PROJECTS/SUICIDE_PREVENTION/NOTEBOOKLM_RECOVERED_TO_OBSIDIAN_2026-06-30/03_Depression_Project_Architecture_Parsed.md`
-- `A  01-PROJECTS/SUICIDE_PREVENTION/NOTEBOOKLM_RECOVERED_TO_OBSIDIAN_2026-06-30/04_Anti_Gravity_And_State_Not_Fate_Parsed.md`
-- `A  01-PROJECTS/SUICIDE_PREVENTION/NOTEBOOKLM_RECOVERED_TO_OBSIDIAN_2026-06-30/05_Essay_Set_Parsed.md`
-- `A  01-PROJECTS/SUICIDE_PREVENTION/NOTEBOOKLM_RECOVERED_TO_OBSIDIAN_2026-06-30/06_Open_Gaps_And_Next_Retrieval_Targets.md`
-- `M  09-PROMPTS/Library/Tools/git-cleanup-prep.py`
-- `M  09-PROMPTS/Library/Tools/vault-health-check.py`
-- `D  "09-PROMPTS/Prompt-Library/BE PROMPT.md"`
-- `D  "Clippings/FICTION - Dora, A love story 1.md"`
-- `D  "Clippings/FICTION - Dora, A love story 2.md"`
-- `D  "Clippings/FICTION - Dora, A love story.md"`
-- `M  "_Meta/Second Brain Health Report.md"`
-- ` M "_Meta/Vault Cleanup Queue.md"`
+- INFO: 1 changed/untracked paths
+- INFO: 1 modified, 0 untracked, 0 deleted
+- `M 01-PROJECTS/2026-SNF-Substrate-Systems-Project/01-Context/Current-Status.md`
 
 ## Next Small Action
 
