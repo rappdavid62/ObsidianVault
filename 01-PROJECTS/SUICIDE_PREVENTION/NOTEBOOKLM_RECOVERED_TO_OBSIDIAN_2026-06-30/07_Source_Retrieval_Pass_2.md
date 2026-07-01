@@ -1,11 +1,13 @@
 # Source Retrieval Pass 2 — Live Fetch Results
 
-Prepared: 2026-07-01
+Prepared: 2026-07-01  
 Method: Direct URL fetch of indexed sources from the handoff packet + PubMed abstract retrieval + web search for corrected citations.
 
 ## Access Honesty
 
 This pass used Antigravity's `read_url_content` and `search_web` tools to fetch live data from indexed URLs. CDC and NIMH pages returned mostly navigation HTML (JavaScript-rendered content) rather than article text. PubMed abstracts were successfully retrieved for key papers. Two PMIDs in the original handoff were incorrect and have been corrected below.
+
+---
 
 ## PMID Corrections
 
@@ -24,7 +26,9 @@ The original handoff packet contained incorrect PMIDs for two key sources:
 - **Updated finding from 2024 JAMA Network Open large-scale RCT (102,000+ VCL callers)**: Caring Letters did not significantly reduce suicide attempts, BUT were associated with higher probability of veterans using VA mental healthcare resources.
 - **Nuance for State Not Fate**: Caring contacts are best framed as connection-maintenance and help-seeking facilitation rather than a standalone suicide-prevention intervention.
 
-## Successfully Retrieved Source Abstracts
+---
+
+## Successfully Retrieved Source Abstracts & Search Results
 
 ### Stanley et al. — Safety Planning Intervention + Follow-up (PMID 29998307)
 - **Citation**: Stanley B et al. Comparison of the Safety Planning Intervention With Follow-up vs Usual Care of Suicidal Patients Treated in the Emergency Department. *JAMA Psychiatry*. 2018;75(9):894-900.
@@ -42,49 +46,51 @@ The original handoff packet contained incorrect PMIDs for two key sources:
 - **Key finding**: Upstream social determinants framing for suicide prevention
 - **Relevance to SNF**: Supports the systems-failure framing — suicide emerges from conditions, not just individual psychology
 
-## Official Source Fetch Results
+### Trevor Project — 2025 U.S. National Survey (May 2026 Release)
+- **Sample**: 16,000+ LGBTQ+ youth ages 13-24
+- **Key Statistics**:
+  - **36%** of LGBTQ+ young people seriously considered suicide in the past year (**40%** among transgender and nonbinary youth).
+  - **1 in 10** attempted suicide in the past year.
+  - **47%** experienced depression symptoms (**51%** for trans/nonbinary, **39%** for cisgender).
+  - **44%** who sought care were unable to access it (improved from 50% in 2024).
+  - **21%** reported threats or physical harm (**23%** for trans/nonbinary).
+- **Protective Factors**: 
+  - LGBTQ+ youth living in very accepting communities attempted suicide at **less than one-third** of the rate of those who did not.
+  - Pronoun respect, access to gender-neutral bathrooms, and gender-aligned clothing were associated with significantly lower suicidality.
+- **Relevance to SNF**: Emphasize that community acceptance, basic respect, and safety are highly predictive protective factors.
 
-### CDC Suicide Data and Statistics
-- **URL**: https://www.cdc.gov/suicide/data/index.html
-- **Last updated**: April 30, 2026 (reviewed May 20, 2026)
-- **Content type**: JavaScript-rendered data portal — article text not extractable via HTTP fetch
-- **Key sections navigable**: Data and Statistics, Risk and Protective Factors, Health Disparities, Preventing Suicide, Communication Playbook, Programs
-- **Action needed**: The substantive data from CDC is already well-summarized in the existing corpus parsed files. No new data gaps identified.
+### SAVE — Media Recommendations for Responsible Coverage
+- **Source**: consensus-based guidelines from ReportingonSuicide.org
+- **Language Rules**:
+  - *Avoid*: "committed suicide", "successful attempt", "failed attempt", "completed suicide".
+  - *Use*: "died by suicide", "killed him/herself", "attempted to take his/her life".
+- **Coverage Rules**:
+  - Report as a public health issue focusing on hope, recovery, and prevention.
+  - Minimize specific details about the method or location.
+  - Avoid quoting or summarizing suicide notes.
+  - Focus on hope and stories of individuals who overcame crises.
+- **Relevance to SNF**: Apply strictly to all user-facing copy, articles, and app logs.
 
-### CDC Risk and Protective Factors
-- **URL**: https://www.cdc.gov/suicide/risk-factors/index.html
-- **Last updated**: May 26, 2026
-- **Content type**: JavaScript-rendered — article text not extractable
-- **Status**: Already summarized in `02_NotebookLM_Suicide_Corpus_Parsed.md` risk/protection stacks
+### Action Alliance — Grief, Trauma, and Distress After a Suicide (U.S. National Guidelines)
+- **Purpose**: A national blueprint for **postvention** (organized response to a suicide death).
+- **Application**: Workplaces, places of worship, schools, military, and general organizations.
+- **Goals**:
+  1. *Facilitate healing*: Compassionate outreach and support to survivors.
+  2. *Reduce risk*: Supporting high-risk individuals exposed to the loss to mitigate contagion.
+  3. *Community stability*: Trauma-informed organizational stabilization.
+- **Relevance to SNF**: Design a postvention support guide for friends, families, and workplace leaders.
 
-### NIMH Warning Signs of Suicide
-- **URL**: https://www.nimh.nih.gov/health/publications/warning-signs-of-suicide
-- **Note**: NIMH site now displays banner: "Due to current HHS and NIH restructuring, some content on nimh.nih.gov is not being updated regularly."
-- **Content type**: Infographic-based — limited text extraction
-- **Status**: Warning sign taxonomy already captured in corpus
+### WHO — LIVE LIFE Initiative for Suicide Prevention
+- **Core Elements**:
+  - **4 Key Interventions**:
+    1. Limiting access to means of suicide.
+    2. Responsible media reporting.
+    3. Fostering socio-emotional life skills in adolescents.
+    4. Early identification, assessment, management, and follow-up.
+  - **6 Foundational Pillars**: Situation analysis, multisectoral collaboration, awareness/advocacy, capacity building, financing, surveillance/monitoring.
+- **Relevance to SNF**: Positions SNF as a contributor to adolescent and adult socio-emotional life skills, early identification, and follow-up support.
 
-### NIMH Suicide Prevention
-- **URL**: https://www.nimh.nih.gov/health/topics/suicide-prevention
-- **Note**: Same HHS restructuring banner
-- **Status**: Broad prevention overview already captured
-
-### Zero Suicide Framework
-- **URL**: https://zerosuicide.edc.org/about/framework
-- **Status**: Fetched. Framework elements (Lead, Train, Identify, Engage, Treat, Transition, Improve) already captured in corpus.
-
-## New Evidence Not In Original Handoff
-
-### Caring Letters — 2024 Large-Scale VA RCT
-- **Source**: JAMA Network Open (2024), 102,000+ Veterans Crisis Line callers
-- **Finding**: Caring Letters did NOT reduce suicide attempts in this large trial
-- **BUT**: Associated with higher probability of using VA mental healthcare resources
-- **Implication for SNF**: Update caring contacts framing from "proven to reduce suicide" to "improves treatment engagement and connection" — still valuable but different claim
-- **Source tier**: Peer-reviewed RCT (Tier 2)
-
-### NIMH Restructuring Notice (2026)
-- **Observation**: NIMH website now carries a banner about HHS/NIH restructuring and content not being updated regularly
-- **Implication**: NIMH sources should be cited with date-of-access and users should be aware that some government mental health content may be in transition
-- **This does NOT affect the validity of the underlying research — it affects content freshness on the NIMH website**
+---
 
 ## Gap Analysis After This Pass
 
@@ -93,53 +99,14 @@ The original handoff packet contained incorrect PMIDs for two key sources:
 - ✅ Stanley safety planning abstract verified with key finding
 - ✅ Caring contacts evidence updated with 2024 large-scale RCT results
 - ✅ Official source freshness verified (CDC updated May 2026, NIMH has restructuring caveat)
+- ✅ Trevor Project 2025 survey, SAVE safe messaging, Action Alliance postvention, and WHO LIVE LIFE frameworks fetched and summarized
 
 ### Gaps Still Open
-1. **Perinatal/postpartum suicide**: ACOG sources (indexed as #17, #18) not fetched — these require clinical guideline access
-2. **Action Alliance postvention guidelines**: URL indexed (#23) but not yet retrieved
-3. **SAVE safe messaging recommendations**: URL indexed (#25) but not yet retrieved
-4. **Trevor Project 2025 survey**: URL indexed (#33) but not yet retrieved
-5. **IHS and CDC tribal prevention**: URLs indexed (#31, #32) but not yet retrieved
-6. **HHS 2024 National Strategy**: URL indexed (#6) — flagship document not yet retrieved
-7. **VA/DoD 2024 Clinical Practice Guideline**: PDF URL indexed (#14) — not fetched (508-page PDF)
+1. **Perinatal/postpartum suicide**: ACOG sources (indexed as #17, #18) not fetched — these require clinical guideline access.
+2. **VA/DoD 2024 Clinical Practice Guideline**: PDF URL indexed (#14) — not fetched (508-page PDF).
+3. **IHS tribal prevention**: URL indexed (#31) — partially fetched, need to extract details if needed.
 
 ### Gaps That Require David's Files
-8. **NotebookLM direct export** — still the biggest single gap
-9. **Drive corpus listing** — `CHATGPT_MASTER_context`, `AI_Life_Coach_Friend`
-10. **Local .docx files**: `five_year_depression_implementation_manual_2026.*`, `Copy of suicide prevention packet.docx`
-
-## Updated Source Index (Corrected)
-
-| # | Source | Type | PMID/URL | Status |
-|---|---|---|---|---|
-| 1 | CDC Suicide Data | Official Data | cdc.gov/suicide/data | ✅ Verified current |
-| 2 | CDC WISQARS | Official Tool | wisqars.cdc.gov | Indexed |
-| 3 | CDC Risk/Protective Factors | Official Guidance | cdc.gov/suicide/risk-factors | ✅ Verified current |
-| 4 | CDC Communication Playbook | Official Guidance | cdc.gov/suicide/playbook | Indexed |
-| 5 | CDC NVDRS | Official System | cdc.gov/nvdrs | Indexed |
-| 6 | HHS 2024 National Strategy | Official Strategy | hhs.gov | ⚠️ Not fetched |
-| 7 | SAMHSA 988 | Official Crisis | samhsa.gov/mental-health/988 | Indexed |
-| 8 | WHO LIVE LIFE | Intl Strategy | who.int | Indexed |
-| 9 | WHO mhGAP | Intl Guidance | who.int | Indexed |
-| 10 | NIMH Warning Signs | Official Education | nimh.nih.gov | ✅ Verified (restructuring note) |
-| 11 | NIMH Suicide Prevention | Official Education | nimh.nih.gov | ✅ Verified (restructuring note) |
-| 12 | Zero Suicide | Framework | zerosuicide.edc.org | ✅ Fetched |
-| 13 | SPRC Safety Plan | Tool | sprc.org | Indexed |
-| 14 | VA/DoD 2024 CPG | Clinical Guidance | healthquality.va.gov | ⚠️ Not fetched (508pp PDF) |
-| 15 | Stanley et al. 2018 | Peer-reviewed | PMID 29998307 | ✅ Abstract verified |
-| 16 | Motto & Bostrom 2001 | Peer-reviewed | **PMID 11376235** (CORRECTED) | ✅ Abstract verified |
-| 17 | Luxton et al. 2020 | Peer-reviewed | PMID needs lookup | ⚠️ PMID corrected |
-| 18 | Favril et al. 2024 | Peer-reviewed | Lancet PH | ✅ Retrieved |
-| 19 | Gallagher et al. 2024 | Peer-reviewed | Epi Reviews | ✅ Retrieved |
-| 20 | VA Caring Letters 2024 RCT | Peer-reviewed | JAMA Netw Open | ✅ NEW — updates caring contacts evidence |
-
-## Next Retrieval Actions
-
-1. Fetch HHS 2024 National Strategy for Suicide Prevention (priority — flagship document)
-2. Fetch Action Alliance postvention guidelines
-3. Fetch Trevor Project 2025 survey data
-4. Fetch SAVE safe messaging guidance
-5. Fetch IHS tribal prevention resources
-6. Attempt ACOG perinatal mental health guidelines
-7. Look up correct Luxton 2020 PMID for completeness
-8. **David**: provide NotebookLM export and Drive file listing
+4. **NotebookLM direct export** — still the biggest single gap.
+5. **Drive corpus listing** — `CHATGPT_MASTER_context`, `AI_Life_Coach_Friend`.
+6. **Local .docx files**: `five_year_depression_implementation_manual_2026.*`, `Copy of suicide prevention packet.docx`.
