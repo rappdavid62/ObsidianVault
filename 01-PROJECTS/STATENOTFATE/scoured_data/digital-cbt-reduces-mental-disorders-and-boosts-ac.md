@@ -5,7 +5,7 @@ source_url: "https://pubmed.ncbi.nlm.nih.gov/42129330/"
 category: "Treatments"
 severity: "info"
 priority_score: 5
-last_scoured: "2026-06-30"
+last_scoured: "2026-07-02"
 tags: [mental-health, self-help, scoured-data, treatments]
 ---
 

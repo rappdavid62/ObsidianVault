@@ -1,0 +1,329 @@
+# State Not Fate Suicide Prevention Research Handoff
+
+Date: 2026-06-29
+Purpose: source-disposition map, ranked idea stack, and build handoff for the suicide-prevention and education surfaces in State Not Fate.
+Boundary: research and education support, not clinical advice. For U.S. crisis-facing context, call or text 988 for the Suicide and Crisis Lifeline. Call 911 for immediate danger.
+
+## 1. Just Sources With Disposition
+
+1. CDC Suicide Data and Statistics
+URL: https://www.cdc.gov/suicide/data/index.html
+Type: official data
+Disposition: anchor source
+Effect on project: consolidates the appendix as a public-health document rather than a purely personal or motivational one.
+
+2. CDC Risk and Protective Factors for Suicide
+URL: https://www.cdc.gov/suicide/risk-factors/index.html
+Type: official public-health guidance
+Disposition: wrote a chapter
+Effect on project: supports the risk stack / protection stack language and keeps warning signs separate from long-range risk context.
+
+3. CDC WISQARS
+URL: https://wisqars.cdc.gov/
+Type: official data tool
+Disposition: opened a new line of inquiry
+Effect on project: supports future state-level, age-level, and demographic visualizations for the appendix.
+
+4. 988 Suicide & Crisis Lifeline
+URL: https://988lifeline.org/
+Type: official crisis system
+Disposition: permanent routing anchor
+Effect on project: sets the non-negotiable crisis handoff for public-facing pages.
+
+5. NIMH Suicide Prevention
+URL: https://www.nimh.nih.gov/health/topics/suicide-prevention
+Type: official public education / research context
+Disposition: anchor source
+Effect on project: supports plain-language warning-sign education and keeps terminology grounded.
+
+6. VA/DoD Clinical Practice Guideline for Patients at Risk for Suicide
+URL: https://www.healthquality.va.gov/guidelines/mh/srb/
+Type: major clinical guideline
+Disposition: wrote a chapter
+Effect on project: supports care transitions, safety planning, acute management, and follow-up concepts.
+
+7. HHS National Strategy for Suicide Prevention
+URL: https://www.hhs.gov/programs/prevention-and-wellness/mental-health-substance-use-disorder/national-strategy-suicide-prevention/index.html
+Type: official strategy
+Disposition: revolutionized framing
+Effect on project: moved the appendix from crisis-only content to a whole-of-society model that includes equity, systems, and infrastructure.
+
+8. WHO LIVE LIFE Initiative for Suicide Prevention
+URL: https://www.who.int/initiatives/live-life-initiative-for-suicide-prevention
+Type: international public-health framework
+Disposition: opened a new line of inquiry
+Effect on project: supports scalable prevention and non-specialist settings, useful for community and global framing.
+
+9. WHO mhGAP
+URL: https://www.who.int/publications/i/item/9789241549790
+Type: international clinical/public-health guidance
+Disposition: consolidation source
+Effect on project: reinforces prevention in general health and non-specialist care settings.
+
+10. Zero Suicide Framework
+URL: https://zerosuicide.edc.org/about/framework
+Type: healthcare system framework
+Disposition: wrote a chapter
+Effect on project: structures care pathways as Lead, Train, Identify, Engage, Treat, Transition, Improve.
+
+11. SPRC Stanley-Brown Safety Plan
+URL: https://sprc.org/resources/stanley-brown-safety-plan/
+Type: practice tool
+Disposition: wrote a chapter
+Effect on project: gives the project a stable way to talk about collaborative safety planning without role confusion.
+
+12. Action Alliance Postvention Guidance
+URL: https://theactionalliance.org/resource/responding-grief-trauma-and-distress-after-suicide-us-national-guidelines
+Type: national postvention guidance
+Disposition: opened a new line of inquiry
+Effect on project: expands the appendix beyond prevention-before-crisis into grief, contagion risk, and response after loss.
+
+13. After a Suicide: A Toolkit for Schools
+URL: https://sprc.org/resources/after-suicide-toolkit-schools
+Type: guide / toolkit
+Disposition: wrote a chapter
+Effect on project: supports school and community postvention, memorialization boundaries, and contagion-aware response.
+
+14. SAVE Media Recommendations
+URL: https://www.save.org/media/media-recommendations/
+Type: nonprofit safe messaging guidance
+Disposition: wrote a chapter
+Effect on project: strengthens public-language, media, and responsible-communication sections.
+
+15. Indian Health Service Suicide Prevention
+URL: https://www.ihs.gov/suicideprevention/
+Type: official population-specific resource
+Disposition: opened a new equity chapter
+Effect on project: strengthens the AI/AN and culturally grounded prevention lane.
+
+16. Trevor Project 2024 National Survey on LGBTQ+ Youth Mental Health
+URL: https://www.thetrevorproject.org/survey-2024/
+Type: survey / nonprofit research
+Disposition: consolidation source
+Effect on project: supports the LGBTQ+ section with current access-barrier and supportive-environment context.
+
+17. NAMI Community and Culture Pages
+URL: https://www.nami.org/community-and-culture/hispanic-latinx/
+Type: established nonprofit support resource
+Disposition: routing and framing support
+Effect on project: strengthens culturally legible routing for newer community sections without overclaiming clinical evidence.
+
+18. NAMI Mental Health at Work
+URL: https://stigmafree.nami.org/mental-health-at-work/
+Type: established nonprofit workplace resource
+Disposition: routing and framing support
+Effect on project: supports the work, unemployment, and financial-strain lane with practical function and stigma-aware context.
+
+19. Stanley et al. Safety Planning Intervention With Follow-up
+URL: https://pubmed.ncbi.nlm.nih.gov/29998307/
+Type: peer-reviewed research
+Disposition: research anchor
+Effect on project: supports aftercare, follow-up, and continuity messaging.
+
+20. Motto / Caring Letters model and Luxton et al. Caring Letters implementation
+URLs: https://pubmed.ncbi.nlm.nih.gov/11775719/ | https://pubmed.ncbi.nlm.nih.gov/24582736/
+Type: peer-reviewed research / implementation
+Disposition: wrote a chapter
+Effect on project: supports connection-based follow-up and low-burden contact as prevention infrastructure.
+
+21. Recent 2024-2026 clinical summaries, press releases, and AI-generated source lists
+Type: secondary or unverified synthesis
+Disposition: loose end / watchlist
+Effect on project: may point to updates on C-SSRS, ASQ, perinatal screening, ketamine/esketamine, SAINT, or prescribing safety, but should not become public claims until checked against primary documents.
+
+## 2. Twenty Most Pertinent And Influential Thoughts, Ideas, Or People For SNF
+
+Ranking key:
+- Importance: how central it is to SNF.
+- Influence: how much it shapes architecture or language.
+- Detrimental: how risky it becomes if misunderstood or overclaimed.
+
+1. Depression is a state, not a fate.
+Importance: 10
+Influence: 10
+Detrimental if mishandled: 4
+Project effect: consolidates the entire SNF premise and supports non-fatalistic recovery framing.
+
+2. Suicidality is a public-health, clinical, community, and equity problem.
+Importance: 10
+Influence: 10
+Detrimental if ignored: 9
+Project effect: revolutionizes the appendix away from private struggle only and toward systems thinking.
+
+3. State Not Fate must not claim to assess, diagnose, predict, or prevent suicide.
+Importance: 10
+Influence: 10
+Detrimental if violated: 10
+Project effect: refutes any drift toward fake risk scores, false certainty, or unsafe AI overreach.
+
+4. Risk factors are not the same thing as warning signs.
+Importance: 9
+Influence: 9
+Detrimental if blurred: 8
+Project effect: supports cleaner education and prevents category confusion.
+
+5. Protection stack matters as much as risk stack.
+Importance: 9
+Influence: 9
+Detrimental if underused: 7
+Project effect: consolidates the project's constructive, action-oriented recovery design.
+
+6. 988 and emergency routing must be immediate and visible.
+Importance: 10
+Influence: 9
+Detrimental if weak: 10
+Project effect: supports the safety kernel and honest crisis routing.
+
+7. Care transitions are high-risk periods.
+Importance: 9
+Influence: 8
+Detrimental if missed: 9
+Project effect: opened the aftercare section and supports follow-up continuity design.
+
+8. Safety planning plus follow-up is one of the strongest practical intervention lanes.
+Importance: 9
+Influence: 8
+Detrimental if overclaimed: 5
+Project effect: supports the planning and supporter-script surfaces.
+
+9. Community trust and belonging are prevention infrastructure.
+Importance: 9
+Influence: 8
+Detrimental if sentimentalized: 6
+Project effect: consolidates the project's focus on isolation, shame, and reconnection.
+
+10. Shame, isolation, and social erasure are major danger multipliers.
+Importance: 9
+Influence: 8
+Detrimental if framed moralistically: 8
+Project effect: supports SNF's tone, self-trust work, and supporter language.
+
+11. Warning-sign education should be text-first and behavior-specific.
+Importance: 8
+Influence: 8
+Detrimental if vague: 7
+Project effect: supports a clearer appendix and better accessibility.
+
+12. Means safety should be discussed as harm reduction without procedural detail.
+Importance: 9
+Influence: 7
+Detrimental if mishandled: 10
+Project effect: supports safety while preserving strong boundaries.
+
+13. Perinatal and postpartum risk needs dedicated treatment.
+Importance: 8
+Influence: 7
+Detrimental if omitted: 7
+Project effect: opens a population-specific lane that broadens the appendix's seriousness.
+
+14. Youth, veterans, LGBTQ+, AI/AN, older adults, rural communities, and disability contexts need distinct framing.
+Importance: 8
+Influence: 7
+Detrimental if flattened: 8
+Project effect: supports the equity-aware tabs and prevents generic prevention language.
+
+15. State Not Fate should measure education and help-seeking, not clinical certainty.
+Importance: 9
+Influence: 8
+Detrimental if violated: 9
+Project effect: refutes risk-score logic and supports ethical analytics.
+
+16. Supporter scripts are high-value because people freeze when worried.
+Importance: 8
+Influence: 8
+Detrimental if too clinical: 5
+Project effect: supports the family/friend helper lane and practical usefulness.
+
+17. Zero Suicide is influential because it treats prevention as system design.
+Importance: 8
+Influence: 8
+Detrimental if copied too literally into a consumer app: 6
+Project effect: supports architecture thinking and care-pathway explanation.
+
+18. WHO LIVE LIFE and mhGAP matter because prevention must work outside specialty care.
+Importance: 7
+Influence: 7
+Detrimental if treated as one-size-fits-all: 5
+Project effect: opens community and primary-care framing.
+
+19. Postvention belongs in the appendix because prevention does not end after a death or attempt.
+Importance: 7
+Influence: 7
+Detrimental if absent: 6
+Project effect: opened a new underdeveloped chapter for SNF.
+
+20. Watchlist discipline matters.
+Importance: 8
+Influence: 8
+Detrimental if ignored: 9
+Project effect: refutes AI-hype integration of unverified 2024-2026 guideline summaries, device claims, and press-release language.
+
+## 3. Handoff For The New Suicide Prevention And Education Tabs In SNF
+
+Primary build goal:
+Make the suicide-prevention area feel like a serious educational appendix and supporter-preparation layer, not a lightweight crisis widget and not a fake clinical tool.
+
+What the tabs should do:
+
+1. Get Safe Now
+- Keep 988 and 911 context visible.
+- Use low-friction language: reduce danger for the next hour, contact a human, do not solve life while flooded.
+- Keep personal contacts and calm scripts easy to reach.
+
+2. Warning Signs And Risk
+- Separate warning signs, acute danger indicators, background risks, and protection stack.
+- Show behavior changes, agitation, hopelessness, isolation, substance use, shame, sleep disruption, and care dropout in plain language.
+- Avoid score-like language.
+
+3. Support Plan And Reflection
+- Keep this collaborative and practical.
+- Include scripts for asking for help, helping someone else, and preparing for a care visit.
+- Build around a support map: anchor person, buffer contact, recurring environment.
+
+4. Clinical And Community Guide
+- Keep this as an educational map, not treatment instructions.
+- Explain public health, clinical care, community trust, care transitions, population-specific considerations, and data infrastructure.
+- Link outward to official sources and toolkits.
+
+5. Evidence / Sources
+- Tag every major source by type and disposition.
+- Use categories: official anchor, implementation tool, research anchor, project synthesis, watchlist.
+- Show why each source matters and how it should or should not influence public claims.
+
+6. Population-aware lanes to keep building
+- Perinatal / postpartum
+- Youth and school
+- Veterans
+- LGBTQ+
+- AI/AN and tribal/community grounded sources
+- Older adult / rural / disability
+- Black communities and racism-shaped stress
+- Latino / immigrant / refugee communities
+- Work / unemployment / financial-strain pathways
+
+7. Missing content still worth building
+- Measurement section for appendix engagement and help-seeking without risk scoring.
+Current status: supporter script library, postvention section, and safer messaging section are now present in the public appendix; future work should deepen them rather than treating them as missing.
+- Visual quick maps and text-first infographic-style aids are now present in the public appendix; future work should deepen them with more settings-specific and population-specific variants.
+- Community support paths and helper compare blocks are now present in the public appendix; future work should deepen them with more source-backed routing examples and population-specific nuances.
+- An evidence glossary for route cards is now present in the public appendix so the page explains why direct questions, short route cards, context-aware framing, and no-risk-score rules are used.
+- Setting playbooks are now present in the public appendix so home, work/school, community/faith, and health/benefits settings each have a first move, common mistake, escalation cue, route cards, and source footing.
+- Population-aware prevention tabs now carry route cards and source footing, so they function more like mini-modules than short summaries.
+
+8. Product boundaries to keep visible
+- This is research and education support, not crisis counseling or medical advice.
+- Do not ask for graphic detail.
+- Do not imply the app can determine true suicide risk.
+- Do not present journaling or self-reflection as sufficient in acute danger.
+
+9. Watchlist topics for future verification
+- Recent BC and India depression/suicide guideline summaries.
+- Recent claims about C-SSRS / ASQ use updates.
+- Recent SAINT, ketamine, esketamine, and neuromodulation claims specifically tied to suicidality.
+- Prescribing-safety language from primary-care protocols.
+- More official perinatal and postpartum suicide-prevention sources.
+
+10. Wisebase packaging recommendation
+- Save this handoff as a reusable source-disposition note.
+- Pair it with the NotebookLM suicide-prevention handoff and the David Core AI Knowledge Pack.
+- Upload future official-source PDFs and validated summaries as separate items, not merged into one giant note.

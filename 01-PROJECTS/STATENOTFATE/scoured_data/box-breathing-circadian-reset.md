@@ -5,7 +5,7 @@ source_url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5455070/"
 category: "Meditative Practices"
 severity: "info"
 priority_score: 9
-last_scoured: "2026-06-30"
+last_scoured: "2026-07-02"
 tags: [mental-health, self-help, scoured-data, meditative-practices]
 ---
 

@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suicide Prevention Appendix - State Not Fate</title>
+    <meta name="description" content="A public-facing suicide-prevention appendix for State Not Fate covering warning signs, safety planning, care transitions, public-health strategy, crisis resources, and source transparency.">
+    <meta property="og:title" content="State Not Fate - Suicide Prevention Appendix">
+    <meta property="og:description" content="Interactive public education on warning signs, support actions, crisis resources, care transitions, and prevention frameworks.">
+    <link rel="canonical" href="https://statenotfate.netlify.app/suicide-prevention">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="index.css?v=2.6">
+</head>
+<body>
+    <a class="skip-link" href="#public-main">Skip to suicide prevention appendix content</a>
+    <header class="public-header" data-public-site>
+        <nav class="public-nav" aria-label="Public site navigation">
+            <a class="public-brand" href="/">State Not Fate</a>
+            <div class="public-nav-links">
+                <a href="/#learn">Learn</a>
+                <a href="/#program">Start / Try the program</a>
+                <a href="/suicide-prevention" aria-current="page">Suicide Prevention</a>
+                <a href="/evidence">Evidence / Sources</a>
+                <a href="/contact">Contact / Join</a>
+                <a href="/crisis">Crisis Help</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="public-main" class="public-page" data-public-site>
+        <h1>Suicide Prevention Appendix</h1>
+        <p class="public-summary">This page is public education and support infrastructure for State Not Fate. It is not crisis counseling, diagnosis, clinical risk scoring, or a substitute for emergency or professional care.</p>
+
+        <section class="source-card" style="border-left: 3px solid var(--accent-red);">
+            <h2>Urgent Support First</h2>
+            <p>If there is immediate danger, call 911 or your local emergency number. In the U.S., people can call or text 988 for the Suicide and Crisis Lifeline. If you are supporting someone else, stay with them while you contact live human help.</p>
+        </section>
+
+        <nav class="source-card" aria-label="Appendix section links">
+            <h2>On This Page</h2>
+            <div class="claim-strength-row">
+                <a class="btn btn-secondary btn-small" href="#how-prevention-works">How Prevention Works</a>
+                <a class="btn btn-secondary btn-small" href="#navigators">Navigators</a>
+                <a class="btn btn-secondary btn-small" href="#warning-signs">Warning Signs</a>
+                <a class="btn btn-secondary btn-small" href="#care-transitions">Care Transitions</a>
+                <a class="btn btn-secondary btn-small" href="#populations">Populations</a>
+                <a class="btn btn-secondary btn-small" href="#measurement">Measurement</a>
+                <a class="btn btn-secondary btn-small" href="#sources">Sources</a>
+                <a class="btn btn-secondary btn-small" href="#boundaries">Boundaries</a>
+            </div>
+        </nav>
+
+        <section class="public-grid" aria-label="Public appendix overview">
+            <article>
+                <h2>What this page does</h2>
+                <p>Explains warning signs, support actions, safety-planning concepts, crisis-routing language, and prevention frameworks in plain language.</p>
+            </article>
+            <article>
+                <h2>What it does not do</h2>
+                <p>It does not diagnose, score, predict, or guarantee prevention. It also does not replace clinicians, emergency care, or trusted human support.</p>
+            </article>
+            <article>
+                <h2>Why this belongs here</h2>
+                <p>Depression can narrow perceived options. A public appendix helps separate suicidal states from moral failure and points people toward safer next steps.</p>
+            </article>
+        </section>
+
+        <section id="how-prevention-works" class="source-card">
+            <h2>How Prevention Works</h2>
+            <p class="text-secondary" style="font-size:0.92rem; line-height:1.6;">Suicide prevention is not only a crisis-line topic. Official frameworks treat it as a layered problem shaped by public health, healthcare systems, community trust, and everyday support.</p>
+            <div class="suicide-action-map" role="tablist" aria-label="Prevention architecture views">
+                <button class="btn btn-secondary btn-small snf-architecture-btn active" data-architecture="public_health" aria-pressed="true">Public Health</button>
+                <button class="btn btn-secondary btn-small snf-architecture-btn" data-architecture="clinical" aria-pressed="false">Clinical Care</button>
+                <button class="btn btn-secondary btn-small snf-architecture-btn" data-architecture="community" aria-pressed="false">Community Trust</button>
+                <button class="btn btn-secondary btn-small snf-architecture-btn" data-architecture="daily_life" aria-pressed="false">Daily Life</button>
+            </div>
+            <div id="public-architecture-display" class="suicide-info-panel" aria-live="polite"></div>
+        </section>
+
+        <section id="navigators" class="suicide-education-grid" aria-label="Role and setting navigators">
+            <article class="source-card">
+                <h2>Scenario Navigator</h2>
+                <p class="text-secondary" style="font-size:0.9rem; line-height:1.5;">Choose the situation that fits best. This is a navigation aid for the next support move, not a diagnosis.</p>
+                <div class="suicide-scenario-picker" role="tablist" aria-label="Public suicide prevention scenarios">
+                    <button class="btn btn-secondary btn-small suicide-scenario-btn active" data-scenario="self_low" aria-pressed="true">I Am Struggling</button>
+                    <button class="btn btn-secondary btn-small suicide-scenario-btn" data-scenario="supporting" aria-pressed="false">I Am Helping Someone</button>
+                    <button class="btn btn-secondary btn-small suicide-scenario-btn" data-scenario="post_crisis" aria-pressed="false">After A Crisis</button>
+                    <button class="btn btn-secondary btn-small suicide-scenario-btn" data-scenario="care_team" aria-pressed="false">Talking To Care Team</button>
+                </div>
+                <div id="public-scenario-display" class="suicide-info-panel" aria-live="polite"></div>
+            </article>
+
+            <article class="source-card">
+                <h2>Settings Where Prevention Happens</h2>
+                <p class="text-secondary" style="font-size:0.9rem; line-height:1.5;">Prevention also shows up at home, in primary care, at school or work, and in community spaces.</p>
+                <div class="suicide-setting-picker" role="tablist" aria-label="Public suicide prevention settings">
+                    <button class="btn btn-secondary btn-small suicide-setting-btn active" data-setting="home" aria-pressed="true">Home</button>
+                    <button class="btn btn-secondary btn-small suicide-setting-btn" data-setting="primary_care" aria-pressed="false">Primary Care</button>
+                    <button class="btn btn-secondary btn-small suicide-setting-btn" data-setting="school_work" aria-pressed="false">School / Work</button>
+                    <button class="btn btn-secondary btn-small suicide-setting-btn" data-setting="community" aria-pressed="false">Community</button>
+                </div>
+                <div id="public-setting-display" class="suicide-info-panel" aria-live="polite"></div>
+            </article>
+        </section>
+
+        <section id="warning-signs" class="appendix-education-grid" aria-label="Warning signs and protective factors">
+            <details class="glass-card appendix-detail-card" open>
+                <summary>Warning signs, escalation, and acute danger</summary>
+                <div class="appendix-detail-body">
+                    <div class="appendix-two-col">
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Warning signs</strong><br>
+                            Hopelessness, feeling trapped, talking about being a burden, sleep collapse, increased substance use, withdrawal, rage, and marked mood or behavior change.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Acute concern</strong><br>
+                            Current intent, a specific plan, inability to stay safe, severe agitation, psychosis, or rapidly escalating behavior should be treated as urgent human-support situations.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Background risk stack</strong><br>
+                            Prior attempt, depression or other mental illness, trauma, substance use, acute loss, chronic pain, isolation, financial or legal crisis, and care drop-out can all increase risk.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Protection stack</strong><br>
+                            Connectedness, belonging, reasons for living, cultural identity, coping skills, quality care, crisis access, reduced access to immediate danger, and follow-up contact all matter.
+                        </div>
+                    </div>
+                </div>
+            </details>
+
+            <details class="glass-card appendix-detail-card" open>
+                <summary>Warning signs by domain</summary>
+                <div class="appendix-detail-body">
+                    <div class="appendix-two-col">
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Sleep and body</strong><br>
+                            Severe insomnia, sleeping almost all day, agitation, appetite collapse, pain spikes, intoxication, or sudden exhaustion can all be important context.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Language and meaning</strong><br>
+                            Statements about burden, worthlessness, finality, disappearing, or people being better off without them need direct, calm follow-up.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Behavior and environment</strong><br>
+                            Pulling away, giving things away, major recklessness, abrupt shutdown, or visible collapse in living conditions can signal escalation.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Social and care context</strong><br>
+                            Recent discharge, breakup, job loss, loss of housing, relapse, conflict, shame after a crisis, or dropping out of care can all create dangerous windows.
+                        </div>
+                    </div>
+                </div>
+            </details>
+
+            <details class="glass-card appendix-detail-card" open>
+                <summary>Myths, realities, and safer public language</summary>
+                <div class="appendix-detail-body">
+                    <div class="appendix-two-col">
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Myth:</strong> Asking directly about suicide always makes things worse.<br><br>
+                            <strong style="color:var(--text-primary);">Reality:</strong> Direct, calm questions are part of safer support and can reduce isolation.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Myth:</strong> One cause explains the whole crisis.<br><br>
+                            <strong style="color:var(--text-primary);">Reality:</strong> Risk usually grows through a stack: depression, shame, sleep disruption, isolation, acute stress, substance use, and access to danger.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Use language like:</strong><br>
+                            suicidal thoughts, unsafe, need support now, died by suicide, support after suicide loss.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Avoid language like:</strong><br>
+                            sensational details, romantic framing, simple cause claims, "attention-seeking," or method-specific descriptions.
+                        </div>
+                    </div>
+                </div>
+            </details>
+        </section>
+
+        <section id="care-transitions" class="source-card">
+            <h2>Care Transitions and Aftercare</h2>
+            <p class="text-secondary" style="font-size:0.92rem; line-height:1.6;">A lot of risk is concentrated around dangerous transitions: emergency visits, discharge, shame after a terrifying night, breakups, relapse, sudden isolation, or dropping out of care. Prevention is stronger when follow-up is concrete and repeated.</p>
+            <div class="suicide-script-picker" role="tablist" aria-label="Care transition stages">
+                <button class="btn btn-secondary btn-small snf-transition-btn active" data-transition="same_day" aria-pressed="true">Same Day</button>
+                <button class="btn btn-secondary btn-small snf-transition-btn" data-transition="first_72" aria-pressed="false">First 72 Hours</button>
+                <button class="btn btn-secondary btn-small snf-transition-btn" data-transition="week_one" aria-pressed="false">Week One</button>
+                <button class="btn btn-secondary btn-small snf-transition-btn" data-transition="weeks_two_four" aria-pressed="false">Weeks 2-4</button>
+            </div>
+            <div id="public-transition-display" class="suicide-info-panel" aria-live="polite"></div>
+        </section>
+
+        <section class="appendix-education-grid" aria-label="Safety planning and supporter guidance">
+            <details class="glass-card appendix-detail-card" open>
+                <summary>Safety planning, aftercare, and caring contacts</summary>
+                <div class="appendix-detail-body">
+                    <p class="text-secondary" style="font-size:0.9rem; line-height:1.6;">A collaborative safety plan usually includes warning signs, coping steps, reachable people, professional resources, and ways to reduce immediate danger. The point is not a perfect document. The point is reducing friction when judgment is impaired.</p>
+                    <ul style="margin:0; padding-left:1.1rem; color:var(--text-secondary); font-size:0.88rem; line-height:1.6;">
+                        <li>Follow-up should be brief, repeated, and human.</li>
+                        <li>Caring contact can be simple: "Checking in. You do not need to perform for me. How safe do you feel right now?"</li>
+                        <li>Do not assume a calmer tone means the risk is fully resolved.</li>
+                        <li>Productive questions are direct, calm, and practical: What changed, what feels most dangerous, and who can stay connected with you now?</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details class="glass-card appendix-detail-card" open>
+                <summary>What supporters can do right now</summary>
+                <div class="appendix-detail-body">
+                    <div class="appendix-two-col">
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Useful moves</strong><br>
+                            Stay calm, ask directly, reduce isolation, help contact a trusted person, help contact 988, and shorten the time horizon to the next safe step.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Moves that often backfire</strong><br>
+                            Debating whether the person "should" feel this way, demanding gratitude, overpromising secrecy, or treating one reassuring sentence as proof the danger is gone.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">What to prepare</strong><br>
+                            A short supporter script, a contact ladder, local crisis resources, transportation options, and a plan for what to do if the person cannot stay safe.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">What State Not Fate can add</strong><br>
+                            Reflection prompts, scripts, reminders, education, and source-grounded routing. It should not become a fake clinical assessor.
+                        </div>
+                    </div>
+                </div>
+            </details>
+        </section>
+
+        <section id="supporter-scripts" class="source-card">
+            <h2>Supporter Script Library</h2>
+            <p class="text-secondary" style="font-size:0.92rem; line-height:1.6;">When people get scared, they often either freeze or overtalk. Short, direct language is usually safer than trying to perform perfect wisdom. These scripts are educational examples, not a substitute for 988, emergency response, or trained clinical support.</p>
+            <div class="suicide-setting-picker" role="tablist" aria-label="Supporter script examples">
+                <button class="btn btn-secondary btn-small snf-script-btn active" data-script="opening" aria-pressed="true">Open The Door</button>
+                <button class="btn btn-secondary btn-small snf-script-btn" data-script="ask_direct" aria-pressed="false">Ask Directly</button>
+                <button class="btn btn-secondary btn-small snf-script-btn" data-script="stay_with" aria-pressed="false">Stay With Them</button>
+                <button class="btn btn-secondary btn-small snf-script-btn" data-script="handoff" aria-pressed="false">Help With Handoff</button>
+            </div>
+            <div id="public-script-display" class="suicide-info-panel" aria-live="polite"></div>
+        </section>
+
+        <section class="appendix-education-grid" aria-label="Postvention and safe messaging">
+            <details class="glass-card appendix-detail-card" open>
+                <summary>Postvention after a suicide death or crisis shockwave</summary>
+                <div class="appendix-detail-body">
+                    <p class="text-secondary" style="font-size:0.9rem; line-height:1.6;">Postvention means response after a suicide death or a suicide-related shock to a family, school, workplace, or community. Good postvention supports grief, reduces chaos, and lowers the risk of harmful contagion or social fragmentation.</p>
+                    <div class="appendix-two-col">
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">What helps</strong><br>
+                            clear facts, crisis-resource reminders, support for those most affected, practical routines, and trusted people checking in without forcing public performance.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">What can go wrong</strong><br>
+                            rumor spirals, sensational retelling, memorial pressure, assigning one simple cause, or leaving vulnerable people alone after intense public attention.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Where SNF fits</strong><br>
+                            SNF can educate about grief, ripple effects, and support steps. It should not position itself as the lead responder for a school, workplace, or community death.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Who should still be involved</strong><br>
+                            crisis lines, clinicians, school or workplace leaders, family systems, peer supports, and community-based resources.
+                        </div>
+                    </div>
+                </div>
+            </details>
+
+            <details class="glass-card appendix-detail-card" open>
+                <summary>Safe messaging and responsible public language</summary>
+                <div class="appendix-detail-body">
+                    <div class="appendix-two-col">
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Do</strong><br>
+                            use plain language, include 988 or crisis context when appropriate, emphasize complexity, and highlight that support is possible.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Do not</strong><br>
+                            publish graphic detail, frame suicide as inevitable, glamorize the death, or imply one event fully explains it.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Safer wording</strong><br>
+                            died by suicide, suicide loss, suicidal thoughts, immediate safety concern, needs support now, support after a crisis.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Why this matters</strong><br>
+                            public language can either reduce isolation and encourage help-seeking or increase contagion risk and confusion.
+                        </div>
+                    </div>
+                </div>
+            </details>
+        </section>
+
+        <section id="populations" class="source-card">
+            <h2>Population-Aware and Equity-Aware Prevention</h2>
+            <p class="text-secondary" style="font-size:0.92rem; line-height:1.6;">Some groups face different pressure stacks, help-seeking barriers, or care-transition risks. Public education should name that reality without flattening people into categories.</p>
+            <div class="suicide-setting-picker" role="tablist" aria-label="Population-aware prevention views">
+                <button class="btn btn-secondary btn-small snf-population-btn active" data-population="youth" aria-pressed="true">Youth</button>
+                <button class="btn btn-secondary btn-small snf-population-btn" data-population="perinatal" aria-pressed="false">Perinatal</button>
+                <button class="btn btn-secondary btn-small snf-population-btn" data-population="veterans" aria-pressed="false">Veterans</button>
+                <button class="btn btn-secondary btn-small snf-population-btn" data-population="lgbtq" aria-pressed="false">LGBTQ+</button>
+                <button class="btn btn-secondary btn-small snf-population-btn" data-population="tribal" aria-pressed="false">Tribal / AIAN</button>
+                <button class="btn btn-secondary btn-small snf-population-btn" data-population="older_rural" aria-pressed="false">Older / Rural</button>
+                <button class="btn btn-secondary btn-small snf-population-btn" data-population="black" aria-pressed="false">Black Communities</button>
+                <button class="btn btn-secondary btn-small snf-population-btn" data-population="latino_immigrant" aria-pressed="false">Latino / Immigrant</button>
+                <button class="btn btn-secondary btn-small snf-population-btn" data-population="disability" aria-pressed="false">Disability / Neurodivergence</button>
+                <button class="btn btn-secondary btn-small snf-population-btn" data-population="workplace" aria-pressed="false">Work / Financial Strain</button>
+            </div>
+            <div id="public-population-display" class="suicide-info-panel" aria-live="polite"></div>
+        </section>
+
+        <section id="visual-aids" class="appendix-education-grid" aria-label="Visual aids and quick maps">
+            <details class="glass-card appendix-detail-card" open>
+                <summary>Quick map: what kind of signal am I looking at?</summary>
+                <div class="appendix-detail-body">
+                    <div class="appendix-two-col">
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Warning sign</strong><br>
+                            A current change that may suggest escalation: disappearing, agitated texting, not sleeping, giving things away, saying people would be better off without them.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Background risk factor</strong><br>
+                            A longer-range condition that can increase vulnerability: prior attempt, trauma, depression, chronic pain, substance use, isolation, financial crisis, care drop-out.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Acute danger indicator</strong><br>
+                            Signs that the time horizon may be very short: active intent, inability to stay safe, intoxication plus despair, psychosis, extreme agitation, or a current plan.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Protective factor</strong><br>
+                            A support or condition that can reduce danger: connectedness, reasons for living, affirming people, crisis access, care follow-up, and a safer environment.
+                        </div>
+                    </div>
+                </div>
+            </details>
+
+            <details class="glass-card appendix-detail-card" open>
+                <summary>Quick map: what helps in the next 10 minutes, day, and week?</summary>
+                <div class="appendix-detail-body">
+                    <div class="appendix-two-col">
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Next 10 minutes</strong><br>
+                            reduce isolation, ask directly, bring in one live human, lower access to immediate danger, and move toward 988 or emergency help if safety is shaky.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Next 24 hours</strong><br>
+                            build a contact ladder, simplify decisions, confirm where the person is sleeping, and make the next support step specific instead of vague.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Next week</strong><br>
+                            prevent drop-out, reinforce follow-up, rebuild one or two protective routines, and watch for shame-driven disappearance.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">What SNF is good for</strong><br>
+                            education, scripts, reflection, and route-finding. It is not a substitute for trained crisis response or treatment.
+                        </div>
+                    </div>
+                </div>
+            </details>
+        </section>
+
+        <section id="community-paths" class="source-card">
+            <h2>Community Support Paths</h2>
+            <p class="text-secondary" style="font-size:0.92rem; line-height:1.6;">These are not diagnostic profiles. They are teaching maps for common pressure stacks, support barriers, and more useful helper responses in a few high-impact contexts.</p>
+            <div class="suicide-setting-picker" role="tablist" aria-label="Community support path examples">
+                <button class="btn btn-secondary btn-small snf-community-btn active" data-community="black" aria-pressed="true">Black Communities</button>
+                <button class="btn btn-secondary btn-small snf-community-btn" data-community="latino_immigrant" aria-pressed="false">Latino / Immigrant</button>
+                <button class="btn btn-secondary btn-small snf-community-btn" data-community="disability" aria-pressed="false">Disability / Neurodivergence</button>
+                <button class="btn btn-secondary btn-small snf-community-btn" data-community="workplace" aria-pressed="false">Work / Financial Strain</button>
+            </div>
+            <div id="public-community-display" class="suicide-info-panel" aria-live="polite"></div>
+        </section>
+
+        <section class="appendix-education-grid" aria-label="Community compare blocks and route examples">
+            <details class="glass-card appendix-detail-card" open>
+                <summary>Helper compare blocks: common miss vs better move</summary>
+                <div class="appendix-detail-body">
+                    <div class="appendix-two-col">
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Common miss</strong><br>
+                            "They are functioning, talking normally, or still going to work, so it cannot be that bad."
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Better move</strong><br>
+                            Treat calm presentation and ongoing function as incomplete information. Ask directly about safety, burden, and whether they feel trapped.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Common miss</strong><br>
+                            "They just need motivation, gratitude, or a better attitude."
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Better move</strong><br>
+                            Lower the decision load, slow the time horizon, and help with one concrete next action or one live human contact.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Common miss</strong><br>
+                            "If they have not asked for help clearly, they probably do not want help."
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Better move</strong><br>
+                            Remember that shame, language barriers, overload, or mistrust can distort how help-seeking sounds. Offer a contained doorway instead of waiting for a perfect request.
+                        </div>
+                    </div>
+                </div>
+            </details>
+
+            <details class="glass-card appendix-detail-card" open>
+                <summary>Route examples by setting</summary>
+                <div class="appendix-detail-body">
+                    <div class="appendix-two-col">
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Family / close relationships</strong><br>
+                            Use clear check-ins, one shared phrase for immediate support, and one agreed next step if things escalate tonight.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Work / school</strong><br>
+                            Route toward one trusted person, one practical accommodation or pause, and one clear follow-up instead of punishment-only or vague "take care of yourself" responses.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Community / faith / peer spaces</strong><br>
+                            Trusted messengers can reduce isolation fast, but they should still know when to pull in 988, clinicians, or emergency care.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Health and benefits systems</strong><br>
+                            Help may need to include rides, insurance help, benefits paperwork, translation, or making the appointment while the person is present.
+                        </div>
+                    </div>
+                </div>
+            </details>
+        </section>
+
+        <section class="appendix-education-grid" aria-label="Evidence glossary for routes">
+            <details class="glass-card appendix-detail-card" open>
+                <summary>Evidence glossary: why these route cards are framed this way</summary>
+                <div class="appendix-detail-body">
+                    <div class="appendix-two-col">
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Why direct questions appear so often</strong><br>
+                            Official guidance and major practice frameworks consistently support calm, direct questions over vague hinting when someone may be unsafe.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Why the page focuses on reducing decision load</strong><br>
+                            Crisis states often narrow thinking, increase overwhelm, and make ordinary tasks harder. Practical support can lower danger faster than abstract encouragement.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Why culture and context are named explicitly</strong><br>
+                            Help-seeking is shaped by trust, language, identity, history, and systems experience. Neutral-sounding advice can fail if it ignores those realities.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Why SNF avoids scoring people</strong><br>
+                            Risk factors and warning signs are educational tools, not a way for a public product to claim it knows a person's true suicide risk.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Why route cards are short</strong><br>
+                            In high-stress situations, shorter scripts and smaller steps are easier to use than long, emotionally demanding instructions.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Why source footing is shown inside the module</strong><br>
+                            The appendix should show whether a point comes from official guidance, implementation support, research, or project synthesis so the user can read it honestly.
+                        </div>
+                    </div>
+                </div>
+            </details>
+        </section>
+
+        <section id="setting-playbooks" class="source-card">
+            <h2>Setting Playbooks</h2>
+            <p class="text-secondary" style="font-size:0.92rem; line-height:1.6;">Support looks different in different environments. These playbooks are not formal protocols. They are educational maps for what a safer first move, a common mistake, and a clearer escalation path can look like in each setting.</p>
+            <div class="suicide-setting-picker" role="tablist" aria-label="Setting playbooks">
+                <button class="btn btn-secondary btn-small snf-playbook-btn active" data-playbook="home" aria-pressed="true">Home</button>
+                <button class="btn btn-secondary btn-small snf-playbook-btn" data-playbook="work_school" aria-pressed="false">Work / School</button>
+                <button class="btn btn-secondary btn-small snf-playbook-btn" data-playbook="community" aria-pressed="false">Community / Faith</button>
+                <button class="btn btn-secondary btn-small snf-playbook-btn" data-playbook="health" aria-pressed="false">Health / Benefits</button>
+            </div>
+            <div id="public-playbook-display" class="suicide-info-panel" aria-live="polite"></div>
+        </section>
+
+        <section id="measurement" class="appendix-education-grid" aria-label="Measurement and surveillance">
+            <details class="glass-card appendix-detail-card" open>
+                <summary>Public-health data and surveillance</summary>
+                <div class="appendix-detail-body">
+                    <div class="appendix-two-col">
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">CDC suicide data and disparities</strong><br>
+                            Useful for high-level mortality trends, population disparities, and public-health framing.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">NVDRS and WISQARS</strong><br>
+                            Useful for context-rich violent death reporting, injury data, and nonfatal self-harm surveillance.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Community indicator tools</strong><br>
+                            Public-health partners use indicator systems and dashboards to track upstream conditions, not just deaths.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Safe messaging data use</strong><br>
+                            Data should guide prevention and communication quality, not become sensational or fatalistic storytelling.
+                        </div>
+                    </div>
+                </div>
+            </details>
+
+            <details class="glass-card appendix-detail-card" open>
+                <summary>How State Not Fate should measure impact</summary>
+                <div class="appendix-detail-body">
+                    <div class="appendix-two-col">
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Measure engagement and help-seeking</strong><br>
+                            Track whether people reach the appendix, open sources, save scripts, or click crisis/help routes.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Measure educational clarity</strong><br>
+                            Track whether users can distinguish warning signs, risk factors, protective factors, and acute danger.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Measure support preparation</strong><br>
+                            Track whether users prepare a script, identify a trusted person, or review a safety-plan concept.
+                        </div>
+                        <div class="suicide-info-panel">
+                            <strong style="color:var(--text-primary);">Do not build suicide risk scores</strong><br>
+                            Public product analytics should not pretend to assess, predict, or quantify a person's true suicide risk.
+                        </div>
+                    </div>
+                </div>
+            </details>
+        </section>
+
+        <section id="sources" class="source-card">
+            <h2>Source Atlas</h2>
+            <p class="text-secondary" style="font-size:0.9rem; line-height:1.5;">This appendix is grounded first in official guidance and major prevention frameworks, then supported by practice tools and carefully labeled research lanes.</p>
+            <div class="claim-strength-row" style="margin-bottom:0.9rem;">
+                <span class="claim-chip claim-chip-official">Official data and guidance</span>
+                <span class="claim-chip claim-chip-framework">Frameworks and implementation</span>
+                <span class="claim-chip claim-chip-research">Peer-reviewed and evaluation research</span>
+                <span class="claim-chip claim-chip-boundary">Product boundary</span>
+            </div>
+            <div class="source-list" style="max-width: 100%; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem;">
+                <article class="source-card">
+                    <span class="claim-chip claim-chip-official">Official data</span>
+                    <h3 style="margin-top:0.6rem;">CDC Suicide Data and Statistics</h3>
+                    <p>Baseline mortality, disparities, and public-health framing.</p>
+                    <a href="https://www.cdc.gov/suicide/data/index.html" target="_blank" rel="noopener noreferrer">Open CDC source</a>
+                </article>
+                <article class="source-card">
+                    <span class="claim-chip claim-chip-official">Official guidance</span>
+                    <h3 style="margin-top:0.6rem;">CDC Risk and Protective Factors</h3>
+                    <p>Clear risk/protective factor model across individual, relationship, community, and societal levels.</p>
+                    <a href="https://www.cdc.gov/suicide/risk-factors/index.html" target="_blank" rel="noopener noreferrer">Open CDC source</a>
+                </article>
+                <article class="source-card">
+                    <span class="claim-chip claim-chip-official">Official data tool</span>
+                    <h3 style="margin-top:0.6rem;">CDC WISQARS and NVDRS</h3>
+                    <p>Mortality, injury, and violent-death systems for surveillance and context.</p>
+                    <a href="https://wisqars.cdc.gov/" target="_blank" rel="noopener noreferrer">Open WISQARS</a>
+                </article>
+                <article class="source-card">
+                    <span class="claim-chip claim-chip-official">Official crisis system</span>
+                    <h3 style="margin-top:0.6rem;">SAMHSA 988</h3>
+                    <p>U.S. crisis-resource context, routing, and help-seeking language.</p>
+                    <a href="https://www.samhsa.gov/mental-health/988" target="_blank" rel="noopener noreferrer">Open SAMHSA source</a>
+                </article>
+                <article class="source-card">
+                    <span class="claim-chip claim-chip-official">Official public education</span>
+                    <h3 style="margin-top:0.6rem;">NIMH Suicide Prevention</h3>
+                    <p>Warning-sign education, definitions, and research context.</p>
+                    <a href="https://www.nimh.nih.gov/health/topics/suicide-prevention" target="_blank" rel="noopener noreferrer">Open NIMH source</a>
+                </article>
+                <article class="source-card">
+                    <span class="claim-chip claim-chip-framework">Clinical guidance</span>
+                    <h3 style="margin-top:0.6rem;">VA/DoD 2024 Suicide Risk Guideline</h3>
+                    <p>Clinical workflow, acute management, safety planning, family support, and follow-up.</p>
+                    <a href="https://www.healthquality.va.gov/guidelines/mh/srb/" target="_blank" rel="noopener noreferrer">Open VA/DoD source</a>
+                </article>
+                <article class="source-card">
+                    <span class="claim-chip claim-chip-framework">National strategy</span>
+                    <h3 style="margin-top:0.6rem;">HHS National Strategy for Suicide Prevention</h3>
+                    <p>Whole-of-society model for prevention, crisis services, surveillance, and equity.</p>
+                    <a href="https://www.hhs.gov/programs/prevention-and-wellness/mental-health-substance-use-disorder/national-strategy-suicide-prevention/index.html" target="_blank" rel="noopener noreferrer">Open HHS source</a>
+                </article>
+                <article class="source-card">
+                    <span class="claim-chip claim-chip-framework">Global framework</span>
+                    <h3 style="margin-top:0.6rem;">WHO LIVE LIFE and mhGAP</h3>
+                    <p>Global public-health and non-specialist care frameworks for scalable prevention.</p>
+                    <a href="https://www.who.int/publications/i/item/9789240026629" target="_blank" rel="noopener noreferrer">Open WHO source</a>
+                </article>
+                <article class="source-card">
+                    <span class="claim-chip claim-chip-framework">Implementation toolkit</span>
+                    <h3 style="margin-top:0.6rem;">Zero Suicide and SPRC</h3>
+                    <p>Practice tools for systems change, aftercare, care transitions, and clinical implementation.</p>
+                    <a href="https://zerosuicide.edc.org/toolkit" target="_blank" rel="noopener noreferrer">Open Zero Suicide toolkit</a>
+                </article>
+                <article class="source-card">
+                    <span class="claim-chip claim-chip-framework">Community implementation</span>
+                    <h3 style="margin-top:0.6rem;">Action Alliance and Community-Led Prevention</h3>
+                    <p>Community coalition, implementation, and post-discharge coordination resources.</p>
+                    <a href="https://theactionalliance.org/resource/transforming-communities-key-elements-implementation-comprehensive-community-based-suicide" target="_blank" rel="noopener noreferrer">Open Action Alliance source</a>
+                </article>
+                <article class="source-card">
+                    <span class="claim-chip claim-chip-framework">Postvention guidance</span>
+                    <h3 style="margin-top:0.6rem;">Action Alliance Postvention Guidelines</h3>
+                    <p>Guidance for grief, trauma, and distress after a suicide death.</p>
+                    <a href="https://theactionalliance.org/resource/responding-grief-trauma-and-distress-after-suicide-us-national-guidelines" target="_blank" rel="noopener noreferrer">Open postvention source</a>
+                </article>
+                <article class="source-card">
+                    <span class="claim-chip claim-chip-framework">School/community toolkit</span>
+                    <h3 style="margin-top:0.6rem;">After a Suicide: Toolkit for Schools</h3>
+                    <p>Coordinated postvention response, memorialization guidance, and contagion-aware response planning.</p>
+                    <a href="https://sprc.org/resources/after-suicide-toolkit-schools" target="_blank" rel="noopener noreferrer">Open school toolkit</a>
+                </article>
+                <article class="source-card">
+                    <span class="claim-chip claim-chip-framework">Safe messaging</span>
+                    <h3 style="margin-top:0.6rem;">SAVE Media Recommendations</h3>
+                    <p>Responsible public coverage principles that reduce contagion risk and improve help-seeking messaging.</p>
+                    <a href="https://www.save.org/media/media-recommendations/" target="_blank" rel="noopener noreferrer">Open messaging source</a>
+                </article>
+                <article class="source-card">
+                    <span class="claim-chip claim-chip-official">Population-specific official source</span>
+                    <h3 style="margin-top:0.6rem;">Indian Health Service Suicide Prevention</h3>
+                    <p>Culturally grounded prevention framing for AI/AN communities.</p>
+                    <a href="https://www.ihs.gov/suicideprevention/" target="_blank" rel="noopener noreferrer">Open IHS source</a>
+                </article>
+                <article class="source-card">
+                    <span class="claim-chip claim-chip-research">Population-specific survey</span>
+                    <h3 style="margin-top:0.6rem;">Trevor Project 2025 LGBTQ+ Youth Survey</h3>
+                    <p>Supports the LGBTQ+ section with data on support, access barriers, and youth help-seeking context from the May 2026 release.</p>
+                    <a href="https://www.thetrevorproject.org/survey-2025/" target="_blank" rel="noopener noreferrer">Open survey source</a>
+                </article>
+                <article class="source-card">
+                    <span class="claim-chip claim-chip-framework">Community support resource</span>
+                    <h3 style="margin-top:0.6rem;">NAMI Community and Culture Pages</h3>
+                    <p>Supports culturally aware routing for Black/African American, Hispanic/Latinx, Indigenous, LGBTQ+, and disability-related mental-health support pages.</p>
+                    <a href="https://www.nami.org/community-and-culture/hispanic-latinx/" target="_blank" rel="noopener noreferrer">Open NAMI community source</a>
+                </article>
+                <article class="source-card">
+                    <span class="claim-chip claim-chip-framework">Work and function support</span>
+                    <h3 style="margin-top:0.6rem;">NAMI Mental Health at Work</h3>
+                    <p>Supports the work, unemployment, and financial-strain lane with practical workplace mental-health framing.</p>
+                    <a href="https://stigmafree.nami.org/mental-health-at-work/" target="_blank" rel="noopener noreferrer">Open work source</a>
+                </article>
+                <article class="source-card">
+                    <span class="claim-chip claim-chip-research">Peer-reviewed RCT</span>
+                    <h3 style="margin-top:0.6rem;">Stanley-Brown Safety Planning (SPI+)</h3>
+                    <p>Evidence that safety planning combined with structured follow-up reduces suicidal behavior and increases care engagement.</p>
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/29998307/" target="_blank" rel="noopener noreferrer">Open Stanley SPI+ study (PMID 29998307)</a>
+                </article>
+                <article class="source-card">
+                    <span class="claim-chip claim-chip-research">Peer-reviewed RCT</span>
+                    <h3 style="margin-top:0.6rem;">Caring Contacts (Motto & Luxton Studies)</h3>
+                    <p>Motto's RCT (PMID 11376235) proved non-demanding contacts reduce suicide. Modern VA RCTs (2020, 2024) show mixed mortality impact but higher treatment engagement.</p>
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/11376235/" target="_blank" rel="noopener noreferrer">Open Motto RCT (PMID 11376235)</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="source-disposition" class="source-card">
+            <h2>How State Not Fate Uses Sources</h2>
+            <p class="text-secondary" style="font-size:0.9rem; line-height:1.5;">A source is not just a link. It has a disposition inside the project, meaning what kind of authority it has and how far it should reach into public language, design, or education.</p>
+            <div class="source-list" style="max-width: 100%; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem;">
+                <article class="source-card">
+                    <span class="claim-chip claim-chip-official">Anchor source</span>
+                    <h3 style="margin-top:0.6rem;">Use for baseline truth</h3>
+                    <p>CDC, NIMH, SAMHSA, HHS, WHO, VA/DoD, and similar sources define the public-health and crisis-support backbone.</p>
+                </article>
+                <article class="source-card">
+                    <span class="claim-chip claim-chip-framework">Implementation source</span>
+                    <h3 style="margin-top:0.6rem;">Use to shape workflows</h3>
+                    <p>Zero Suicide, SPRC, Action Alliance, and related frameworks help explain care transitions, support planning, and outreach.</p>
+                </article>
+                <article class="source-card">
+                    <span class="claim-chip claim-chip-research">Research source</span>
+                    <h3 style="margin-top:0.6rem;">Use for narrow claims</h3>
+                    <p>Peer-reviewed studies support specific ideas like safety planning plus follow-up, but should not be stretched into universal product claims.</p>
+                </article>
+                <article class="source-card">
+                    <span class="claim-chip claim-chip-watchlist">Loose end</span>
+                    <h3 style="margin-top:0.6rem;">Use to open a new inquiry</h3>
+                    <p>Recent AI summaries, press releases, and unverified clinical tables can point to a useful next search, but they stay out of hard public claims until checked.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="boundaries" class="source-card">
+            <h2>State Not Fate Boundary</h2>
+            <div class="suicide-boundary-grid">
+                <div class="suicide-info-panel">
+                    <strong style="color:var(--text-primary);">Can do</strong><br><br>
+                    educate, support reflection, help prepare a safety plan, help prepare messages to trusted people, and route users toward human support.
+                </div>
+                <div class="suicide-info-panel">
+                    <strong style="color:var(--text-primary);">Cannot do</strong><br><br>
+                    diagnose, predict behavior, replace 988 or emergency care, create clinical certainty from checklists, or treat journaling as enough during crisis.
+                </div>
+                <div class="suicide-info-panel">
+                    <strong style="color:var(--text-primary);">Measurement rule</strong><br><br>
+                    Measure educational engagement, support preparation, and route use. Do not build a fake suicide-risk score.
+                </div>
+                <div class="suicide-info-panel">
+                    <strong style="color:var(--text-primary);">Tone rule</strong><br><br>
+                    Calm, direct, adult, non-sensational, non-graphic, and honest about limits. No crisis gamification.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const architectureViews = {
+            public_health: {
+                title: "Public health and policy layer",
+                summary: "Prevention is stronger when the environment gets safer before a single person reaches a crisis point.",
+                bullets: [
+                    "Official frameworks emphasize safer environments, better data, safer communication, and better access to care.",
+                    "This layer includes surveillance, upstream prevention, safer media, means safety, and attention to social determinants.",
+                    "State Not Fate can explain this layer, but it cannot replace institutions, care systems, or community infrastructure."
+                ]
+            },
+            clinical: {
+                title: "Clinical care layer",
+                summary: "Healthcare settings matter because they can identify danger, build safety plans, treat depression, and prevent people from disappearing between visits.",
+                bullets: [
+                    "Clinical systems may use screening, collaborative safety planning, follow-up contact, and higher-intensity treatment when appropriate.",
+                    "Care transitions matter because danger often clusters around discharge, shame after crises, and treatment drop-out.",
+                    "State Not Fate should help users prepare for care, not pretend to be the care team."
+                ]
+            },
+            community: {
+                title: "Community trust and belonging layer",
+                summary: "A lot of prevention lives in whether support is trusted, local, culturally legible, and reachable before a situation becomes acute.",
+                bullets: [
+                    "Community prevention includes schools, workplaces, faith spaces, peer spaces, local leaders, and family systems.",
+                    "Belonging and trusted messengers can reduce the gap between needing help and accepting help.",
+                    "State Not Fate can offer scripts and education that make human connection easier."
+                ]
+            },
+            daily_life: {
+                title: "Daily life and protective routine layer",
+                summary: "People often first notice danger in everyday functioning: sleep drift, vanishing, overload, shame, collapse in food or hygiene, and abrupt isolation.",
+                bullets: [
+                    "Protective routines include connection, reasons for living, simple anchors, support scripts, and knowing how to escalate.",
+                    "Daily-life prevention is not the same as self-sufficiency; it is about noticing earlier and asking for help sooner.",
+                    "State Not Fate is best used here: support, preparation, and educational routing."
+                ]
+            }
+        };
+
+        const scenarios = {
+            self_low: {
+                title: "I am struggling and I need the next right step",
+                summary: "Focus on reducing danger, reducing isolation, and shortening the time horizon.",
+                bullets: [
+                    "Do not ask yourself to solve your whole life while your state is narrowed.",
+                    "Use one grounding step, one human contact step, and one environmental safety step.",
+                    "If safety feels shaky, move to 988 or emergency escalation faster rather than waiting for certainty."
+                ]
+            },
+            supporting: {
+                title: "I am helping someone else",
+                summary: "Your job is connection, reality-testing, and handoff, not perfect words.",
+                bullets: [
+                    "Ask directly about suicidal thoughts and immediate safety.",
+                    "Stay calm and avoid shaming, arguing, or overpromising secrecy.",
+                    "Help the person get to trusted support, 988, or emergency care when needed."
+                ]
+            },
+            post_crisis: {
+                title: "This is after a crisis or after a frightening night",
+                summary: "The danger is not automatically over just because the peak has passed.",
+                bullets: [
+                    "Plan contact for the next day or two instead of assuming relief means full stability.",
+                    "Write down warning signs, contacts, and the next follow-up appointment or check-in.",
+                    "Use caring contacts and practical structure to prevent the shame-and-disappearance cycle."
+                ]
+            },
+            care_team: {
+                title: "I need to talk to a therapist, psychiatrist, or doctor",
+                summary: "Bring concrete observations instead of trying to summarize your whole identity.",
+                bullets: [
+                    "Name warning signs, recent safety concerns, sleep shifts, substance use, agitation, or withdrawal.",
+                    "Bring one short message about what support or follow-up you think is missing.",
+                    "Ask directly about safety planning, monitoring, and care-transition support if recent risk has risen."
+                ]
+            }
+        };
+
+        const settingsGuide = {
+            home: {
+                title: "Home and close relationships",
+                summary: "Home is where warning signs are often first visible and where practical safety steps matter most.",
+                bullets: [
+                    "Keep contact pathways obvious: who to text, who to call, and what phrase means 'stay with me now.'",
+                    "Reduce isolation and lower access to danger during high-risk periods.",
+                    "Treat sleep collapse, disappearance, rage, and sudden hopelessness as support signals, not attitude problems."
+                ]
+            },
+            primary_care: {
+                title: "Primary care and general medical settings",
+                summary: "Many people disclose distress first in ordinary medical care, not specialty mental-health care.",
+                bullets: [
+                    "Brief screening, direct questions, and clear handoff pathways matter.",
+                    "Primary care can help with follow-up, medication monitoring, sleep, pain, and referral escalation.",
+                    "A good handoff is warm and specific, not just 'here is a number to call later.'"
+                ]
+            },
+            school_work: {
+                title: "School and work settings",
+                summary: "These settings often notice functioning changes before anyone hears the deeper story.",
+                bullets: [
+                    "Withdrawal, attendance problems, abrupt performance drops, and visible overwhelm can be important flags.",
+                    "Support should focus on connection, safety, and referral rather than discipline-first reactions.",
+                    "Privacy matters, but so does not leaving a struggling person alone with a collapsing week."
+                ]
+            },
+            community: {
+                title: "Community and public-health settings",
+                summary: "Prevention is stronger when it is trusted, local, and connected to real belonging.",
+                bullets: [
+                    "Safer media, outreach, culturally grounded support, and trusted messengers all matter.",
+                    "Community prevention is not only about crisis lines; it is also about reducing stigma and increasing reachable support.",
+                    "Equity matters because suicide risk is shaped by access, identity, history, environment, and exclusion."
+                ]
+            }
+        };
+
+        const transitionGuide = {
+            same_day: {
+                title: "Same day after crisis disclosure, ED visit, or discharge",
+                summary: "The first move is not inspiration. It is continuity.",
+                bullets: [
+                    "Confirm who knows, where the person is going, and what the next human contact point is.",
+                    "Make sure crisis resources, transportation, and a short support plan are visible before the person is alone.",
+                    "Write down one concrete next step so the burden is not left entirely to memory."
+                ]
+            },
+            first_72: {
+                title: "First 72 hours",
+                summary: "This window is often fragile because people can feel ashamed, exhausted, relieved, or ready to disappear.",
+                bullets: [
+                    "Use brief outreach, not silence: a check-in message, one support call, one planned follow-up.",
+                    "Reduce decision load: meals, rides, medication reminders, appointments, and one trusted person aware of the situation.",
+                    "Do not mistake temporary calm for full safety."
+                ]
+            },
+            week_one: {
+                title: "Week one",
+                summary: "The aim is to stop drift and drop-out before they become the next emergency.",
+                bullets: [
+                    "Confirm follow-up appointments or care handoffs actually happened.",
+                    "Review warning signs, stressors, and what tends to happen when shame starts building.",
+                    "Keep contact steady enough that the person does not need to perform wellness to deserve it."
+                ]
+            },
+            weeks_two_four: {
+                title: "Weeks two to four",
+                summary: "Aftercare becomes maintenance: connection, monitoring, and restoration of ordinary supports.",
+                bullets: [
+                    "Rebuild small routines, practical supports, and belonging rather than shifting immediately to high expectations.",
+                    "Review what made the crisis worse and what made support easier to reach.",
+                    "Use repeated contact and a realistic plan for the next destabilizing moment."
+                ]
+            }
+        };
+
+        const populationGuide = {
+            youth: {
+                title: "Youth and young adults",
+                summary: "Belonging, family conflict, school context, digital life, bullying, and early treatment monitoring all matter here.",
+                bullets: [
+                    "Support should include direct adult connection, school or campus coordination when safe, and attention to social exclusion.",
+                    "Do not reduce youth suicidality to one app, one conflict, or one diagnosis.",
+                    "Affirming spaces and trusted adults can be protective."
+                ],
+                routeCards: [
+                    "Route card: one trusted adult, one school or campus support contact, and one clear next check-in can matter more than a vague promise to 'reach out if needed.'",
+                    "Route card: when digital conflict or bullying is part of the crisis, reduce exposure and add live human support quickly."
+                ],
+                sourceNote: "Source footing: youth framing here is supported by official warning-sign guidance and youth-focused survey/context resources such as the Trevor Project."
+            },
+            perinatal: {
+                title: "Perinatal and postpartum",
+                summary: "Severe depression, psychosis, mania, and parent-or-infant safety concerns require explicit screening and rapid escalation.",
+                bullets: [
+                    "Differentiate intrusive distressing thoughts from active suicidal or psychotic danger with real human assessment.",
+                    "Treat rapid mood shifts, delusions, inability to sleep, or fear of being left alone as urgent.",
+                    "Support should include family, obstetric, pediatric, and mental-health coordination when possible."
+                ],
+                routeCards: [
+                    "Route card: bring in one safe adult, one obstetric or medical contact, and one immediate plan for who stays with the parent if safety is uncertain.",
+                    "Route card: if psychosis, mania, or parent-or-infant safety concerns are present, move toward urgent live care instead of reflection-only support."
+                ],
+                sourceNote: "Source footing: this lane follows the appendix's high-risk perinatal framing and the rule that intrusive thoughts and active danger must not be treated as the same thing."
+            },
+            veterans: {
+                title: "Veterans and service members",
+                summary: "Transition stress, trauma, identity shifts, sleep disruption, pain, and firearm access may shape support needs differently.",
+                bullets: [
+                    "Veteran-specific crisis and prevention resources matter because the context can differ from civilian care pathways.",
+                    "Safe messaging is especially important; avoid simple hero/failure narratives.",
+                    "Belonging, transition support, and follow-up care matter as much as acute crisis routing."
+                ],
+                routeCards: [
+                    "Route card: use veteran-specific crisis routing when relevant and do not assume a civilian support path automatically feels trustworthy.",
+                    "Route card: focus on transition strain, sleep, pain, and isolation as part of the risk stack instead of treating the issue as only a mood problem."
+                ],
+                sourceNote: "Source footing: this lane is grounded in veteran-specific crisis pathways and the appendix's clinical/public-health framing for transition and follow-up."
+            },
+            lgbtq: {
+                title: "LGBTQ+ people",
+                summary: "Risk is often shaped by rejection, discrimination, fear, isolation, and hostile environments rather than identity itself.",
+                bullets: [
+                    "Affirming adults, affirming spaces, and safer peer/community contact can be strongly protective.",
+                    "Avoid language that treats identity as the pathology.",
+                    "Support should be identity-safe, direct, and non-shaming."
+                ],
+                routeCards: [
+                    "Route card: identity-safe support first, then practical crisis routing, rather than forcing the person to defend or explain themselves before getting help.",
+                    "Route card: one affirming human plus one clear next support step can reduce the gap between distress and help-seeking."
+                ],
+                sourceNote: "Source footing: this lane is supported by identity-safe prevention framing and LGBTQ+ youth survey/context resources already included in the source base."
+            },
+            tribal: {
+                title: "Tribal, AIAN, and culturally grounded prevention",
+                summary: "Prevention is stronger when it respects history, community, culture, and local knowledge instead of dropping in as generic outside advice.",
+                bullets: [
+                    "Trusted local leadership, cultural continuity, and community connection matter.",
+                    "Official tribal and Indian Health Service materials are important because they resist flattening the context.",
+                    "Belonging and intergenerational connection are prevention resources, not side notes."
+                ],
+                routeCards: [
+                    "Route card: local trusted leadership and culturally grounded support should be treated as real prevention infrastructure, not optional extras.",
+                    "Route card: route toward crisis care when needed, but do not erase community and cultural support from the response."
+                ],
+                sourceNote: "Source footing: this lane leans on Indian Health Service and culturally grounded prevention framing rather than generic one-size-fits-all advice."
+            },
+            older_rural: {
+                title: "Older adults and rural communities",
+                summary: "Isolation, grief, chronic pain, transportation barriers, firearm access, and healthcare distance can all intensify risk.",
+                bullets: [
+                    "Support may need to be simpler, more practical, and more local: rides, contact ladders, primary-care linkage, and repeated outreach.",
+                    "Do not assume a quiet presentation means low danger.",
+                    "Function loss, widowhood, and shrinking social worlds deserve direct attention."
+                ],
+                routeCards: [
+                    "Route card: one ride, one primary-care link, one local contact ladder, and one repeated outreach plan can all be prevention work.",
+                    "Route card: practical distance and isolation barriers may need as much attention as emotional language."
+                ],
+                sourceNote: "Source footing: this lane follows the appendix's practical-access framing and the public-health emphasis on isolation, pain, and local barriers."
+            },
+            black: {
+                title: "Black communities and racism-shaped stress",
+                summary: "Prevention work should account for racism, grief exposure, mistrust created by systems harm, and the difference between needing help and trusting help.",
+                bullets: [
+                    "Support is stronger when it is culturally legible, community-trusted, and not built on shame or surveillance.",
+                    "Family, faith, peer leadership, and local community anchors can be protective when they are safe and reachable.",
+                    "Do not flatten Black experiences into one story; prevention should name context, belonging, and barriers to care."
+                ],
+                routeCards: [
+                    "Route card: trusted community contact plus direct safety language can be safer than waiting for a perfect clinical disclosure.",
+                    "Route card: when systems mistrust is high, explain the next support step plainly so it does not feel like punishment-first escalation."
+                ],
+                sourceNote: "Source footing: this lane uses community-and-culture routing support and the appendix's anti-shame, anti-surveillance framing."
+            },
+            latino_immigrant: {
+                title: "Latino, immigrant, and refugee communities",
+                summary: "Language access, immigration stress, family role pressure, trauma, isolation, and fear of systems can all shape whether help feels reachable.",
+                bullets: [
+                    "Support should be plain-language, culturally aware, and realistic about privacy fears and mixed-status family concerns.",
+                    "Trusted community groups, bilingual supports, and family-safe outreach can matter as much as formal referrals.",
+                    "Do not assume low disclosure means low distress; people may be protecting family, work, or legal stability while struggling."
+                ],
+                routeCards: [
+                    "Route card: one bilingual or plain-language support path plus one concrete next move can reduce paralysis fast.",
+                    "Route card: if systems fear is high, explain privacy and the immediate goal before asking for more disclosure."
+                ],
+                sourceNote: "Source footing: this lane uses culturally aware routing support and the appendix's privacy, language-access, and family-context framing."
+            },
+            disability: {
+                title: "Disability, chronic illness, and neurodivergence",
+                summary: "Risk can rise through pain, exhaustion, communication mismatch, sensory overload, loss of autonomy, and repeated misunderstanding by helpers.",
+                bullets: [
+                    "Make support communication concrete, low-burden, and adaptable rather than assuming one conversational style fits everyone.",
+                    "Treat burnout, masking, overload, dependence stress, and healthcare trauma as meaningful context rather than character flaws.",
+                    "Accessibility is part of prevention: readable text, low-friction steps, calmer pacing, and multiple ways to ask for help."
+                ],
+                routeCards: [
+                    "Route card: use the person's clearest communication method, reduce choices, and lower sensory and admin burden before demanding long explanation.",
+                    "Route card: accessibility changes can be prevention changes when overload and misunderstanding are part of the risk stack."
+                ],
+                sourceNote: "Source footing: this lane depends on the appendix's accessibility rules and low-burden support framing rather than one narrow clinical model."
+            },
+            workplace: {
+                title: "Workplace strain, unemployment, and financial crisis",
+                summary: "Job loss, debt, identity collapse, humiliation, housing instability, and benefit problems can sharply intensify suicidal states.",
+                bullets: [
+                    "Support should take practical stress seriously: money fear, schedule chaos, transportation, documentation, and next-step paralysis.",
+                    "Workplaces can help through culture, training, and response pathways; they can also make things worse through punishment-only reactions.",
+                    "Do not treat financial or work collapse as secondary context. For many people it is a major part of the risk stack."
+                ],
+                routeCards: [
+                    "Route card: identify one financial or administrative next step, one supportive contact, and one same-day safety check rather than trying to solve the whole future.",
+                    "Route card: in job or school collapse, practical stabilization can be part of suicide prevention, not a separate issue."
+                ],
+                sourceNote: "Source footing: this lane uses practical function and stigma-aware work framing rather than treating employment stress as secondary."
+            }
+        };
+
+        const communityPaths = {
+            black: {
+                title: "Black communities: support path",
+                summary: "A lot of harm happens when distress is interpreted through discipline, suspicion, or forced toughness instead of support.",
+                bullets: [
+                    "Pressure stack: racism-shaped stress, grief exposure, mistrust of systems, isolation, faith or family pressure, and practical survival burden.",
+                    "Helpful path: trusted community contact, non-shaming language, culturally legible support, and crisis routing that does not feel like punishment-first escalation.",
+                    "What helpers often miss: low disclosure does not mean low pain, and the person may be protecting themselves from judgment rather than avoiding help."
+                ],
+                routeCards: [
+                    "Route card: start with one trusted person, one direct safety question, and one non-punitive next step.",
+                    "Route card: if faith or family is central, involve the safest version of that support rather than the most shaming version."
+                ],
+                sourceNote: "Source footing: NAMI Community and Culture pages help here with routing, support-language, and community-legible connection paths."
+            },
+            latino_immigrant: {
+                title: "Latino / immigrant communities: support path",
+                summary: "People may be carrying fear, family role strain, language barriers, and privacy concerns all at once.",
+                bullets: [
+                    "Pressure stack: immigration stress, trauma, work instability, mixed-status family fear, language mismatch, and not wanting to burden relatives.",
+                    "Helpful path: bilingual or plain-language support, family-safe outreach when appropriate, trusted community organizations, and concrete practical help.",
+                    "What helpers often miss: a person may sound composed while still feeling trapped because losing work, housing, or privacy feels catastrophic."
+                ],
+                routeCards: [
+                    "Route card: simplify the ask, lower the paperwork barrier, and offer a bilingual or plain-language support path when possible.",
+                    "Route card: when privacy fears are high, focus first on one safe person, one safer setting, and one practical next move."
+                ],
+                sourceNote: "Source footing: NAMI Hispanic/Latinx community resources support the routing and culturally aware framing used here."
+            },
+            disability: {
+                title: "Disability / neurodivergence: support path",
+                summary: "A big part of prevention here is reducing overload and misunderstanding, not demanding more performance from an already overwhelmed person.",
+                bullets: [
+                    "Pressure stack: pain, burnout, masking, sensory overload, dependence stress, communication mismatch, and repeated healthcare frustration.",
+                    "Helpful path: concrete language, reduced decision load, accessible communication, calmer pacing, and respecting autonomy while adding support.",
+                    "What helpers often miss: shutdown, flat affect, overload, or low eye contact are not proof the person is unreachable or low-risk."
+                ],
+                routeCards: [
+                    "Route card: reduce choices, name one step at a time, and use the person's clearest communication channel rather than the one most comfortable for the helper.",
+                    "Route card: if the person is overloaded, lowering sensory and admin burden may matter before deeper discussion."
+                ],
+                sourceNote: "Source footing: NAMI disability-related community resources and the appendix accessibility rules support this lane's low-burden, concrete communication approach."
+            },
+            workplace: {
+                title: "Work / financial strain: support path",
+                summary: "Job collapse and money fear can become identity collapse very quickly, especially when shame and isolation are already present.",
+                bullets: [
+                    "Pressure stack: unemployment, debt, benefit problems, housing fear, humiliation, lost routine, and a shrinking sense of future.",
+                    "Helpful path: practical next steps, reduced admin burden, one live contact, a short-term plan for safety and survival, and non-moralizing support.",
+                    "What helpers often miss: the person may not need inspiration first. They may need help slowing panic and facing one concrete problem at a time."
+                ],
+                routeCards: [
+                    "Route card: help sort the next 24 hours from the whole life problem, then identify one bill, one benefits task, or one support call.",
+                    "Route card: in work or school settings, one trusted person plus one realistic accommodation can be more protective than generic encouragement."
+                ],
+                sourceNote: "Source footing: NAMI Mental Health at Work supports this lane's function, stigma, and practical-support framing."
+            }
+        };
+
+        const supporterScripts = {
+            opening: {
+                title: "Open the door without overwhelming the person",
+                summary: "The aim is to create contact, not to force a giant confession.",
+                bullets: [
+                    "Try: 'You seem really overloaded and I wanted to check on you.'",
+                    "Try: 'You do not need to make this sound okay for me. I just want the real version.'",
+                    "Avoid speeches, guilt, or making the person reassure you before they feel safe."
+                ]
+            },
+            ask_direct: {
+                title: "Ask directly about suicide and immediate safety",
+                summary: "Calm directness is usually safer than vague hints when you are genuinely worried.",
+                bullets: [
+                    "Try: 'Are you having thoughts about killing yourself or not being safe right now?'",
+                    "If yes, follow with: 'Do you feel like you might act on this tonight or soon?'",
+                    "Do not panic, shame, or treat one calm answer as the end of the conversation."
+                ]
+            },
+            stay_with: {
+                title: "Stay with the person and reduce isolation",
+                summary: "The goal is to lower danger and get live support into the room, phone, or plan.",
+                bullets: [
+                    "Try: 'I am staying with you while we figure out the next safe step.'",
+                    "Try: 'Let's call or text 988 together, or bring in one person you trust.'",
+                    "Reduce decision load: transportation, water, food, charger, medication, or a safer place to be."
+                ]
+            },
+            handoff: {
+                title: "Help with the handoff instead of disappearing after the first talk",
+                summary: "Support is stronger when the person is not left alone to carry the whole next step.",
+                bullets: [
+                    "Try: 'Who should know about tonight so you are not carrying this alone tomorrow?'",
+                    "Try: 'Let's write down the next check-in, appointment, or person to contact before we stop talking.'",
+                    "If the person cannot stay safe, move to 988, emergency care, or another live response quickly."
+                ]
+            }
+        };
+
+        const settingPlaybooks = {
+            home: {
+                title: "Home and close-relationship playbook",
+                summary: "Home is often where the first meaningful shift is visible and where support can get more specific fast.",
+                bullets: [
+                    "First move: ask directly, reduce isolation, and identify one person who stays connected for the next few hours.",
+                    "Common mistake: turning the conversation into a lecture, argument, or demand for reassurance.",
+                    "Escalation cue: if safety feels shaky, the person cannot stay safe, or intent seems immediate, move toward 988 or emergency help faster."
+                ],
+                routeCards: [
+                    "Route card: shared phrase, one contact ladder, one safer place to be, one agreed next check-in.",
+                    "Route card: reduce immediate danger and do not leave memory alone to carry the whole plan."
+                ],
+                sourceNote: "Source footing: this playbook follows the appendix's official crisis-routing rule, safety-planning logic, and caring-contact / continuity framing."
+            },
+            work_school: {
+                title: "Work / school playbook",
+                summary: "These settings often notice function collapse before they hear the deeper story, so the response needs to be humane and practical.",
+                bullets: [
+                    "First move: route toward one trusted person, one practical accommodation or pause, and one clear follow-up.",
+                    "Common mistake: punishment-only reactions, attendance pressure, or treating the situation as a character problem.",
+                    "Escalation cue: if the person sounds trapped, disappears, or may not be safe leaving alone, treat it as a live support problem, not an HR-only or discipline-only issue."
+                ],
+                routeCards: [
+                    "Route card: one supportive contact, one realistic pause or coverage plan, one next-step handoff.",
+                    "Route card: do not settle for 'take care of yourself' without a concrete follow-up path."
+                ],
+                sourceNote: "Source footing: this playbook builds on school/work warning-sign framing, community support logic, and NAMI Mental Health at Work as a routing support source."
+            },
+            community: {
+                title: "Community / faith / peer-space playbook",
+                summary: "Trusted messengers can reduce isolation quickly, but they need a clear boundary between supportive presence and pretending to be the whole crisis system.",
+                bullets: [
+                    "First move: connect with warmth, keep language plain, and bring in another safe human if the person seems overwhelmed or withdrawn.",
+                    "Common mistake: treating spiritual, peer, or community support as a reason to avoid crisis lines, clinicians, or emergency care when they are needed.",
+                    "Escalation cue: if the person cannot stay safe or is deteriorating fast, trusted community support should become a bridge to live crisis or clinical support."
+                ],
+                routeCards: [
+                    "Route card: trusted messenger plus crisis routing is stronger than either one alone.",
+                    "Route card: the goal is belonging with escalation capacity, not belonging instead of escalation."
+                ],
+                sourceNote: "Source footing: this playbook follows the appendix's community-trust framing, Action Alliance / postvention logic, and no-false-certainty rule."
+            },
+            health: {
+                title: "Health / benefits / access-system playbook",
+                summary: "Sometimes the support gap is not only emotional. It is transportation, paperwork, insurance, translation, or getting through the next appointment.",
+                bullets: [
+                    "First move: help turn the next care step into something concrete, with fewer barriers and one person aware of the plan.",
+                    "Common mistake: assuming a referral alone is enough or treating missed paperwork and missed appointments as laziness.",
+                    "Escalation cue: if the person is unsafe now, the answer is not only forms and scheduling. Pull in 988 or emergency support while the access problem is still being solved."
+                ],
+                routeCards: [
+                    "Route card: rides, benefits help, appointment support, translation, and a same-day contact plan can all be prevention work.",
+                    "Route card: practical barriers can be part of the risk stack, not just inconvenience."
+                ],
+                sourceNote: "Source footing: this playbook builds on the appendix's primary-care, care-transition, and non-specialist-setting prevention framing."
+            }
+        };
+
+        function renderInfoPanel(targetId, item) {
+            document.getElementById(targetId).innerHTML = `
+                <div style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.55;">
+                    <div style="font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.35rem;">${item.title}</div>
+                    <div style="margin-bottom: 0.65rem;">${item.summary}</div>
+                    <ul style="margin: 0; padding-left: 1.15rem;">
+                        ${item.bullets.map((step) => `<li style="margin-bottom: 0.35rem;">${step}</li>`).join("")}
+                    </ul>
+                    ${item.routeCards ? `
+                        <div style="margin-top: 0.85rem; display: grid; gap: 0.55rem;">
+                            ${item.routeCards.map((card) => `<div style="padding: 0.65rem 0.75rem; border: 1px solid var(--card-border); border-radius: 12px; background: rgba(255,255,255,0.02);">${card}</div>`).join("")}
+                        </div>
+                    ` : ""}
+                    ${item.sourceNote ? `
+                        <div style="margin-top: 0.75rem; font-size: 0.82rem; color: var(--text-muted);">
+                            ${item.sourceNote}
+                        </div>
+                    ` : ""}
+                </div>
+            `;
+        }
+
+        function wireButtonGroup(selector, dataAttribute, renderFn) {
+            document.querySelectorAll(selector).forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    document.querySelectorAll(selector).forEach((other) => {
+                        other.classList.remove("active");
+                        other.setAttribute("aria-pressed", "false");
+                    });
+                    btn.classList.add("active");
+                    btn.setAttribute("aria-pressed", "true");
+                    renderFn(btn.getAttribute(dataAttribute));
+                });
+            });
+        }
+
+        function renderArchitecture(key) {
+            renderInfoPanel("public-architecture-display", architectureViews[key] || architectureViews.public_health);
+        }
+
+        function renderScenario(key) {
+            renderInfoPanel("public-scenario-display", scenarios[key] || scenarios.self_low);
+        }
+
+        function renderSetting(key) {
+            renderInfoPanel("public-setting-display", settingsGuide[key] || settingsGuide.home);
+        }
+
+        function renderTransition(key) {
+            renderInfoPanel("public-transition-display", transitionGuide[key] || transitionGuide.same_day);
+        }
+
+        function renderPopulation(key) {
+            renderInfoPanel("public-population-display", populationGuide[key] || populationGuide.youth);
+        }
+
+        function renderScript(key) {
+            renderInfoPanel("public-script-display", supporterScripts[key] || supporterScripts.opening);
+        }
+
+        function renderCommunityPath(key) {
+            renderInfoPanel("public-community-display", communityPaths[key] || communityPaths.black);
+        }
+
+        function renderPlaybook(key) {
+            renderInfoPanel("public-playbook-display", settingPlaybooks[key] || settingPlaybooks.home);
+        }
+
+        wireButtonGroup(".snf-architecture-btn", "data-architecture", renderArchitecture);
+        wireButtonGroup(".suicide-scenario-btn", "data-scenario", renderScenario);
+        wireButtonGroup(".suicide-setting-btn", "data-setting", renderSetting);
+        wireButtonGroup(".snf-transition-btn", "data-transition", renderTransition);
+        wireButtonGroup(".snf-population-btn", "data-population", renderPopulation);
+        wireButtonGroup(".snf-script-btn", "data-script", renderScript);
+        wireButtonGroup(".snf-community-btn", "data-community", renderCommunityPath);
+        wireButtonGroup(".snf-playbook-btn", "data-playbook", renderPlaybook);
+
+        renderArchitecture("public_health");
+        renderScenario("self_low");
+        renderSetting("home");
+        renderTransition("same_day");
+        renderPopulation("youth");
+        renderScript("opening");
+        renderCommunityPath("black");
+        renderPlaybook("home");
+    </script>
+</body>
+</html>

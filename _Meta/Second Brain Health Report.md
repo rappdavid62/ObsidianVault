@@ -4,7 +4,7 @@ Primary Deployment Target: AI Infrastructure
 Expected Use Case: Current generated health report for DOV second-brain maintenance.
 Archive or Active: Active
 Canonical Home: _Meta/Second Brain Health Report.md
-Last Generated: 2026-07-01 10:11
+Last Generated: 2026-07-02 02:17
 ---
 
 # Second Brain Health Report
@@ -86,9 +86,34 @@ DOV health is **stable with known open loops**. The canonical Library path is `C
 
 ## Git State
 
-- INFO: 1 changed/untracked paths
-- INFO: 1 modified, 0 untracked, 0 deleted
-- `M 01-PROJECTS/2026-SNF-Substrate-Systems-Project/01-Context/Current-Status.md`
+- INFO: 46 changed/untracked paths
+- INFO: 28 modified, 16 untracked, 0 deleted
+- `M  .obsidian/community-plugins.json`
+- `M  01-PROJECTS/STATENOTFATE/scoured_data/988-suicide-&-crisis-lifeline.md`
+- `M  01-PROJECTS/STATENOTFATE/scoured_data/a-qualitative-multicenter-study-of-participant-exp.md`
+- `M  01-PROJECTS/STATENOTFATE/scoured_data/box-breathing-circadian-reset.md`
+- `M  01-PROJECTS/STATENOTFATE/scoured_data/canada-protocol_-an-ethical-checklist-for-the-use-.md`
+- `M  01-PROJECTS/STATENOTFATE/scoured_data/cbt-thought-record-workflow.md`
+- `M  01-PROJECTS/STATENOTFATE/scoured_data/circadian-lock-&-light-exposure-protocol.md`
+- `M  01-PROJECTS/STATENOTFATE/scoured_data/components-and-delivery-formats-of-cognitive-behav.md`
+- `M  01-PROJECTS/STATENOTFATE/scoured_data/crisis-safety-planning-template-(stanley-brown).md`
+- `M  01-PROJECTS/STATENOTFATE/scoured_data/depression-diagnosis-from-patient-interviews-using.md`
+- `M  01-PROJECTS/STATENOTFATE/scoured_data/digital-cbt-reduces-mental-disorders-and-boosts-ac.md`
+- `M  01-PROJECTS/STATENOTFATE/scoured_data/effect-of-mindfulness-and-mindful-art-on-beginners.md`
+- `M  01-PROJECTS/STATENOTFATE/scoured_data/effects-of-personalized-nursing-combined-with-mind.md`
+- `M  01-PROJECTS/STATENOTFATE/scoured_data/figsim_-a-dataset-for-fine-grained-suicide-severit.md`
+- `M  01-PROJECTS/STATENOTFATE/scoured_data/from-somatic-experiencing-to-felt-safety_-assessin.md`
+- `M  01-PROJECTS/STATENOTFATE/scoured_data/innovations-in-crisis-line-interventions..md`
+- `M  01-PROJECTS/STATENOTFATE/scoured_data/interbrain-connectivity-during-mindfulness-and-med.md`
+- `M  01-PROJECTS/STATENOTFATE/scoured_data/mindfulness-meditation-and-respiration_-accelerome.md`
+- `M  01-PROJECTS/STATENOTFATE/scoured_data/mobilization-with-movement-plus-exercise-versus-ex.md`
+- `M  01-PROJECTS/STATENOTFATE/scoured_data/motivators,-barriers,-and-likelihood-of-contacting.md`
+- `M  01-PROJECTS/STATENOTFATE/scoured_data/protocol-for-a-randomized-trial-to-predict-the-eff.md`
+- `M  01-PROJECTS/STATENOTFATE/scoured_data/stutter-diagnosis-and-therapy-system-based-on-deep.md`
+- `M  01-PROJECTS/STATENOTFATE/scoured_data/the-belong-framework_-an-lgbtqia+-inclusive-suicid.md`
+- `M  01-PROJECTS/STATENOTFATE/scoured_data/therapeutic-massage-and-homecare-to-reduce-dissoci.md`
+- `M  01-PROJECTS/STATENOTFATE/scoured_data/thousand-voices-of-trauma_-a-large-scale-synthetic.md`
+- ... 21 more paths omitted
 
 ## Next Small Action
 

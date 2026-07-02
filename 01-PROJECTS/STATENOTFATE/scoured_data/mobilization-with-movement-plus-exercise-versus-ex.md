@@ -5,7 +5,7 @@ source_url: "https://pubmed.ncbi.nlm.nih.gov/40722073/"
 category: "Exercises"
 severity: "info"
 priority_score: 8
-last_scoured: "2026-06-30"
+last_scoured: "2026-07-02"
 tags: [mental-health, self-help, scoured-data, exercises]
 ---
 

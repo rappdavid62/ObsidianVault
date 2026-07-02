@@ -1,0 +1,9 @@
+Triple Chronotherapy (TCT) rapidly reduces suicidal ideation by **realigning severely disrupted circadian rhythms**, as severe insomnia and circadian fragmentation are recognized as proximal, modifiable risk factors for near-term suicidal thoughts and behaviors. While standard therapies can take weeks or months to work, TCT stabilizes mood and reduces suicidal ideation within just a few days.
+
+The acute TCT protocol achieves this through a continuous 4-day intervention consisting of three core phases:
+
+- **Total Sleep Deprivation (33 to 36 hours):** The protocol begins with a supervised period of continuous wakefulness. This acts as a rapid "neurobiological reset" that temporarily alters serotonergic, dopaminergic, and glutamatergic signaling in the brain's frontostriatal networks, leading to a rapid improvement in acute depressive symptoms.
+- **Sleep Phase Advance:** To sustain the rapid antidepressant effects achieved during the sleep deprivation phase, patients undergo a structured adjustment of their sleep-wake schedule. They are instructed to sleep during an early, advanced window (such as 18:00 to 01:00) which is then shifted forward by about two hours each subsequent night until their biological rhythms align with a standard, socially integrated sleep schedule.
+- **Bright Light Therapy and Photic Suppression:** Starting on the morning of the second day, patients use a specialized 10,000-lux light box for 30 to 60 minutes upon waking. This bright light exposure suppresses melatonin secretion, phase-advances the internal circadian clock, and stabilizes mood. Conversely, to protect the circadian rhythm from artificial evening light, patients wear amber, blue-light-blocking glasses for one to three hours before bedtime.
+
+Clinical trials have shown this combination to be highly tolerable and effective, with patients' scores on suicide severity scales dropping significantly by the fifth day of the intervention.

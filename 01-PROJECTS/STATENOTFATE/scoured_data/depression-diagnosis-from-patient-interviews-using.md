@@ -5,7 +5,7 @@ source_url: "http://arxiv.org/abs/2508.19390v2"
 category: "Treatments"
 severity: "info"
 priority_score: 7
-last_scoured: "2026-06-30"
+last_scoured: "2026-07-02"
 tags: [mental-health, self-help, scoured-data, treatments]
 ---
 
